@@ -1,0 +1,51 @@
+{
+  "name": "@diogo-coelho/bricks",
+  "version": "0.0.3-BETA",
+  "description": "A UI components library for Vue.js",
+  "main": "./dist/bricks-ui-lib.umd.js",
+  "type": "module",
+  "scripts": {
+	"build:lib": "vite build && vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diogo-coelho/bricks.git"
+  },
+  "keywords": [
+    "UI components",
+    "library",
+    "Vue.js",
+    "bricks"
+  ],
+  "author": "Diogo Coelho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diogo-coelho/bricks/issues"
+  },
+  "homepage": "https://github.com/diogo-coelho/bricks#readme",
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.0",
+    "@vitejs/plugin-vue": "^4.2.1",
+    "@vue/tsconfig": "^0.3.2",
+    "sass": "^1.62.1",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.5",
+    "vite-plugin-css-injected-by-js": "^3.1.0",
+    "vue-tsc": "^1.6.4"
+  },
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/bricks-ui-lib.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/bricks-ui-lib.es.js",
+      "require": "./dist/bricks-ui-lib.umd.js"
+    }
+  },
+  "types": "./dist/types/index.d.ts"
+}
