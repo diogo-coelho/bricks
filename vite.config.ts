@@ -2,21 +2,18 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
-
 export default defineConfig({
-	plugins: [vue(), cssInjectedByJsPlugin()],
+	plugins: [vue()],
 	resolve: {
 		alias: {
 			"@/": new URL("./src/", import.meta.url).pathname
 		},
 	},
 	build: {
-		cssCodeSplit: true,
 		target: "esnext",
 		lib: {
 			entry: path.resolve(__dirname, "src/index.ts"),
-			name: "BricksUiLibrary",
+			name: "BricksLibrary",
 			fileName: (format) => `bricks-ui-lib.${format}.js`,
 		},
 		rollupOptions: {
@@ -25,7 +22,7 @@ export default defineConfig({
 				globals: {
 					vue: "Vue"
 				},
-				exports: "named"
+				exports: "named",
 			},
 		},
 	},

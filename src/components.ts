@@ -1,5 +1,5 @@
-import BrButton from './components/BrButton.vue'
-import BrInput from './components/BrInput.vue'
+import BrButton from './components/button'
+import BrInput from './components/input'
 
 export {
 	BrButton,
