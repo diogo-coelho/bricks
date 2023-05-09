@@ -5,10 +5,13 @@
   "main": "./dist/bricks-ui-lib.umd.js",
   "type": "module",
   "scripts": {
-	"build:sass": "sass --no-charset ./src/styles/index.scss > dist/index.css && cleancss -o dist/index.min.css dist/index.css",
+    "build:sass": "sass --no-charset ./src/styles/index.scss > dist/index.css && cleancss -o dist/index.min.css dist/index.css",
     "build:lib": "rimraf dist && vite build && vue-tsc --emitDeclarationOnly && npm run build:sass",
-	"publish:lib": "npm run build:lib && npm publish",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "publish:lib": "npm run build:lib && npm publish",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+	"test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -40,12 +43,13 @@
     "vite": "^4.3.5",
     "vite-plugin-css-injected-by-js": "^3.1.0",
     "vite-plugin-libcss": "^1.0.6",
+    "vitepress": "^1.0.0-alpha.75",
     "vue-tsc": "^1.6.4"
   },
   "files": [
     "dist",
-	"package.json",
-	"README.md"
+    "package.json",
+    "README.md"
   ],
   "module": "./dist/bricks-ui-lib.es.js",
   "exports": {
@@ -53,7 +57,7 @@
       "import": "./dist/bricks-ui-lib.es.js",
       "require": "./dist/bricks-ui-lib.umd.js"
     },
-	"./index.min.css": "./dist/index.min.css"
+    "./index.min.css": "./dist/index.min.css"
   },
   "types": "./dist/types/index.d.ts"
 }
