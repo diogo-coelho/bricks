@@ -13,7 +13,7 @@ yarn add @diogo-coelho/bricks
 
 To include the complete library on your own application, use the following snippet:
 
-``` bash
+``` vue
 import { createApp } from 'vue'
 import App from './App.vue'
 import BricksLibrary from '@diogo-coelho/bricks'
@@ -24,7 +24,7 @@ app.mount('#app')
 ```
 
 If you don't want include all the components, it's also possible include them individually 
-``` bash
+``` vue
 import { BrInput } from '@diogo-coelho/bricks'
 
 const app = createApp(App)
