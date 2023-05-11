@@ -1,4 +1,5 @@
 .br-button {
-	background-color: red;
-	color: aqua;
+  padding: var(--br-spacing-2x-small) var(--br-spacing-x-small);
+  background-color: var(--br-color-neutral-100);
+  color: var(--br-color-black);
 }
