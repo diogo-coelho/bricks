@@ -36,6 +36,28 @@ Passe o atributo `variant` para configurar a variante do botão.
 <BrButton variant="danger">Danger</BrButton>
 ```
 
+### Disabled
+
+Para desabilitar o componente `BrButton`, passe o atributo `disabled` como uma prop.
+
+<div class="inline-flex w-full">
+	<BrButton class="mr-x-small" disabled>Default</BrButton>
+	<BrButton class="mr-x-small" variant="primary" disabled>Primary</BrButton>
+	<BrButton class="mr-x-small" variant="neutral" disabled>Neutral</BrButton>
+	<BrButton class="mr-x-small" variant="success" disabled>Success</BrButton>
+	<BrButton class="mr-x-small" variant="warning" disabled>Warning</BrButton>
+	<BrButton disabled variant="danger">Danger</BrButton>
+</div>
+
+```vue 
+<BrButton disabled>Default</BrButton>
+<BrButton variant="primary" disabled>Primary</BrButton>
+<BrButton variant="neutral" disabled>Neutral</BrButton>
+<BrButton variant="success" disabled>Success</BrButton>
+<BrButton variant="warning" disabled>Warning</BrButton>
+<BrButton variant="danger" disabled>Danger</BrButton>
+```
+
 <style lang="sass">
 @import '../../src/styles/index.scss'
 </style>

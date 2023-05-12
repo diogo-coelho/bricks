@@ -28,9 +28,10 @@
   }
 
   &:disabled {
-	background-color: var(--br-color-neutral-100);
+	background-color: transparent;
 	color: var(--br-color-neutral-200);
-	cursor: pointer;
+	border: 1px solid var(--br-color-neutral-200);
+	cursor: not-allowed;
   }
 
   &--primary {
@@ -50,9 +51,10 @@
 	}
 	
 	&:disabled {
-	  background-color: var(--br-color-primary-100);
-	  color: var(--br-color-neutral-200);
-	  cursor: pointer;
+	  background-color: var(--br-color-primary-200);
+	  color: var(--br-color-white);
+	  border: none;
+	  cursor: not-allowed;
 	}
   }
 
@@ -73,9 +75,10 @@
 	}
 	
 	&:disabled {
-	  background-color: var(--br-color-neutral-100);
-	  color: var(--br-color-neutral-200);
-	  cursor: pointer;
+	  background-color: var(--br-color-neutral-200);
+	  color: var(--br-color-white);
+	  border: none;
+	  cursor: not-allowed;
 	}
   }
 
@@ -96,9 +99,10 @@
 	}
 	
 	&:disabled {
-	  background-color: var(--br-color-success-100);
-	  color: var(--br-color-neutral-200);
-	  cursor: pointer;
+	  background-color: var(--br-color-success-200);
+	  color: var(--br-color-white);
+	  border: none;
+	  cursor: not-allowed;
 	}
   }
 
@@ -119,9 +123,10 @@
 	}
 	
 	&:disabled {
-	  background-color: var(--br-color-warning-100);
-	  color: var(--br-color-neutral-200);
-	  cursor: pointer;
+	  background-color: var(--br-color-warning-200);
+	  color: var(--br-color-white);
+	  border: none;
+	  cursor: not-allowed;
 	}
   }
 
@@ -142,9 +147,10 @@
 	}
 	
 	&:disabled {
-	  background-color: var(--br-color-danger-100);
-	  color: var(--br-color-neutral-200);
-	  cursor: pointer;
+	  background-color: var(--br-color-danger-200);
+	  color: var(--br-color-white);
+	  border: none;
+	  cursor: not-allowed;
 	}
   }
 }
