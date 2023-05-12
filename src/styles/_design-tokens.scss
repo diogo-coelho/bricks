@@ -238,5 +238,36 @@
 	--br-spacing-2x-large: 2.25rem;
 	--br-spacing-3x-large: 3rem;
 	--br-spacing-4x-large: 4.5rem;
+
+	// Border-radius tokens
+	--br-border-radius-small: 0.1875rem;
+	--br-border-radius-medium: 0.25rem;
+	--br-border-radius-large: 0.5rem;
+	--br-border-radius-x-large: 1rem;
+	--br-border-radius-circle: 50%;
+	--br-border-radius-pill: 9999px;
+
+	// Typography tokens
+	// Font Family
+	--br-font-sans: Montserrat, 'Open Sans', sans-serif;
+	--br-font-serif: 'Roboto Serif', 'Times New Roman', serif;
+	--br-font-mono: 'Ubuntu Mono', Consolas, monospace;
+
+	// Font Size
+	--br-font-size-2x-small: 0.625rem;
+	--br-font-size-x-small: 0.75rem;
+	--br-font-size-small: 0.875rem;
+	--br-font-size-medium: 1rem;
+	--br-font-size-large: 1.25rem;
+	--br-font-size-x-large: 1.5rem;
+	--br-font-size-2x-large: 2.25rem;
+	--br-font-size-3x-large: 3rem;
+	--br-font-size-4x-large: 4.5rem;
+
+	// Font Weight
+	--br-font-weight-thin: 200;
+	--br-font-weight-normal: 400;
+	--br-font-weight-bold: 600;
+	--br-font-weight-superbold: 700;
 }
 

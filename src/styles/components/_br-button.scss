@@ -1,5 +1,239 @@
 .br-button {
-  padding: var(--br-spacing-2x-small) var(--br-spacing-x-small);
-  background-color: var(--br-color-neutral-100);
-  color: var(--br-color-black);
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  text-decoration: none;
+  font-size: var(--br-font-size-small);
+  font-weight: var(--br-font-weight-bold);
+  padding: var(--br-spacing-x-small) var(--br-spacing-small);
+  background-color: transparent;
+  border: 1px solid var(--br-color-primary-200);
+  color: var(--br-color-primary-500);
+  border-radius: var(--br-border-radius-small);
+
+  &:hover:not(:disabled) {
+	background-color: var(--br-color-primary-50);
+	color: var(--br-color-primary-600);
+  }
+  
+  &:focus:not(:disabled), 
+  &:focus-within:not(:disabled), 
+  &:focus-visible:not(:disabled) {
+	outline: var(--br-spacing-3x-small) solid var(--br-color-primary-100);
+  }
+
+  &:disabled {
+	background-color: var(--br-color-neutral-100);
+	color: var(--br-color-neutral-200);
+	cursor: pointer;
+  }
+
+  &--primary {
+	background-color: var(--br-color-primary-500);
+	color: var(--br-color-white);
+	border: none;
+
+	&:hover:not(:disabled) {
+	  background-color: var(--br-color-primary-600);
+	  color: var(--br-color-white);
+	}
+	  
+	&:focus:not(:disabled), 
+	&:focus-within:not(:disabled), 
+	&:focus-visible:not(:disabled) {
+	  outline: var(--br-spacing-3x-small) solid var(--br-color-primary-100);
+	}
+	
+	&:disabled {
+	  background-color: var(--br-color-primary-100);
+	  color: var(--br-color-neutral-200);
+	  cursor: pointer;
+	}
+  }
+
+  &--neutral {
+	background-color: var(--br-color-neutral-500);
+	color: var(--br-color-white);
+	border: none;
+
+	&:hover:not(:disabled) {
+	  background-color: var(--br-color-neutral-600);
+	  color: var(--br-color-white);
+	}
+	  
+	&:focus:not(:disabled), 
+	&:focus-within:not(:disabled), 
+	&:focus-visible:not(:disabled) {
+	  outline: var(--br-spacing-3x-small) solid var(--br-color-neutral-100);
+	}
+	
+	&:disabled {
+	  background-color: var(--br-color-neutral-100);
+	  color: var(--br-color-neutral-200);
+	  cursor: pointer;
+	}
+  }
+
+  &--success {
+	background-color: var(--br-color-success-500);
+	color: var(--br-color-white);
+	border: none;
+
+	&:hover:not(:disabled) {
+	  background-color: var(--br-color-success-600);
+	  color: var(--br-color-white);
+	}
+	  
+	&:focus:not(:disabled), 
+	&:focus-within:not(:disabled), 
+	&:focus-visible:not(:disabled) {
+	  outline: var(--br-spacing-3x-small) solid var(--br-color-success-100);
+	}
+	
+	&:disabled {
+	  background-color: var(--br-color-success-100);
+	  color: var(--br-color-neutral-200);
+	  cursor: pointer;
+	}
+  }
+
+  &--warning {
+	background-color: var(--br-color-warning-500);
+	color: var(--br-color-white);
+	border: none;
+
+	&:hover:not(:disabled) {
+	  background-color: var(--br-color-warning-600);
+	  color: var(--br-color-white);
+	}
+	  
+	&:focus:not(:disabled), 
+	&:focus-within:not(:disabled), 
+	&:focus-visible:not(:disabled) {
+	  outline: var(--br-spacing-3x-small) solid var(--br-color-warning-100);
+	}
+	
+	&:disabled {
+	  background-color: var(--br-color-warning-100);
+	  color: var(--br-color-neutral-200);
+	  cursor: pointer;
+	}
+  }
+
+  &--danger {
+	background-color: var(--br-color-danger-500);
+	color: var(--br-color-white);
+	border: none;
+
+	&:hover:not(:disabled) {
+	  background-color: var(--br-color-danger-600);
+	  color: var(--br-color-white);
+	}
+	  
+	&:focus:not(:disabled), 
+	&:focus-within:not(:disabled), 
+	&:focus-visible:not(:disabled) {
+	  outline: var(--br-spacing-3x-small) solid var(--br-color-danger-100);
+	}
+	
+	&:disabled {
+	  background-color: var(--br-color-danger-100);
+	  color: var(--br-color-neutral-200);
+	  cursor: pointer;
+	}
+  }
+}
+
+
+// Ripple effect
+.ripple {
+	background-position: center;
+  	transition: background 0.5s;
+	
+	&:hover:not(:disabled) {
+	  	background: var(--br-color-primary-100) 
+	  			  radial-gradient(circle, transparent 1%, var(--br-color-primary-100) 1%) 
+				  center/15000%;
+	}
+
+	&:active:not(:disabled) {
+	  background-color: var(--br-color-primary-200);
+	  background-size: 100%;
+	  transition: background 0s;
+	}
+
+	&.br-button--primary:not(:disabled) {
+		&:hover:not(:disabled) {
+			background: var(--br-color-primary-600) 
+				  radial-gradient(circle, transparent 1%, var(--br-color-primary-600) 1%) 
+				center/15000%;
+		}
+
+		&:active:not(:disabled) {
+			background-color: var(--br-color-primary-700);
+			background-size: 100%;
+			transition: background 0s;
+		}
+  	}
+
+	&.br-button--neutral:not(:disabled) {
+		&:hover:not(:disabled) {
+			background: var(--br-color-neutral-600) 
+				  radial-gradient(circle, transparent 1%, var(--br-color-neutral-600) 1%) 
+				center/15000%;
+		}
+
+		&:active:not(:disabled) {
+			background-color: var(--br-color-neutral-700);
+			background-size: 100%;
+			transition: background 0s;
+		}
+  	}
+
+	&.br-button--success:not(:disabled) {
+		&:hover:not(:disabled) {
+			background: var(--br-color-success-600) 
+				  radial-gradient(circle, transparent 1%, var(--br-color-success-600) 1%) 
+				center/15000%;
+		}
+
+		&:active:not(:disabled) {
+			background-color: var(--br-color-success-700);
+			background-size: 100%;
+			transition: background 0s;
+		}
+  	}
+
+	&.br-button--warning:not(:disabled) {
+		&:hover:not(:disabled) {
+			background: var(--br-color-warning-600) 
+				  radial-gradient(circle, transparent 1%, var(--br-color-warning-600) 1%) 
+				center/15000%;
+		}
+
+		&:active:not(:disabled) {
+			background-color: var(--br-color-warning-700);
+			background-size: 100%;
+			transition: background 0s;
+		}
+  	}
+
+	&.br-button--danger:not(:disabled) {
+		&:hover:not(:disabled) {
+			background: var(--br-color-danger-600) 
+				  radial-gradient(circle, transparent 1%, var(--br-color-danger-600) 1%) 
+				center/15000%;
+		}
+
+		&:active:not(:disabled) {
+			background-color: var(--br-color-danger-700);
+			background-size: 100%;
+			transition: background 0s;
+		}
+  	}
 }
