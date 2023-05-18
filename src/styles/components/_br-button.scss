@@ -15,46 +15,172 @@
   border: 1px solid var(--br-color-primary-200);
   color: var(--br-color-primary-500);
   border-radius: var(--br-border-radius-small);
+  height: auto;
 
-  &:hover:not(:disabled) {
+  a, * {
+	color: var(--br-color-primary-500);
+	fill: var(--br-color-primary-500);
+	font-weight: var(--br-font-weight-bold);
+	text-decoration: none;
+  }
+
+  &:hover:not(:disabled):not(.disabled) {
 	background-color: var(--br-color-primary-50);
 	color: var(--br-color-primary-600);
+
+	a, * {
+		color: var(--br-color-primary-600);
+		fill: var(--br-color-primary-600);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	}
   }
   
-  &:focus:not(:disabled), 
-  &:focus-within:not(:disabled), 
-  &:focus-visible:not(:disabled) {
+  &:focus:not(:disabled):not(.disabled), 
+  &:focus-within:not(:disabled):not(.disabled), 
+  &:focus-visible:not(:disabled):not(.disabled) {
 	outline: var(--br-spacing-3x-small) solid var(--br-color-primary-100);
+	text-decoration: none;
   }
 
-  &:disabled {
+  &:disabled, 
+  &.disabled {
 	background-color: transparent;
 	color: var(--br-color-neutral-200);
 	border: 1px solid var(--br-color-neutral-200);
 	cursor: not-allowed;
+
+	a, * {
+		color: var(--br-color-neutral-200);
+		fill: var(--br-color-neutral-200);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	}
   }
 
+  // Variants
   &--primary {
 	background-color: var(--br-color-primary-500);
 	color: var(--br-color-white);
 	border: none;
 
-	&:hover:not(:disabled) {
+	a, * {
+		color: var(--br-color-white);
+		fill: var(--br-color-white);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	}
+
+	&:hover:not(:disabled):not(.disabled) {
 	  background-color: var(--br-color-primary-600);
 	  color: var(--br-color-white);
+
+	  a, * {
+		color: var(--br-color-white);
+		fill: var(--br-color-white);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
 	}
 	  
-	&:focus:not(:disabled), 
-	&:focus-within:not(:disabled), 
-	&:focus-visible:not(:disabled) {
+	&:focus:not(:disabled):not(.disabled), 
+	&:focus-within:not(:disabled):not(.disabled), 
+	&:focus-visible:not(:disabled):not(.disabled) {
 	  outline: var(--br-spacing-3x-small) solid var(--br-color-primary-100);
 	}
 	
-	&:disabled {
+	&:disabled, 
+	&.disabled {
 	  background-color: var(--br-color-primary-200);
 	  color: var(--br-color-white);
 	  border: none;
 	  cursor: not-allowed;
+
+	  a, * {
+		color: var(--br-color-white);
+		fill: var(--br-color-white);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
+	}
+
+	&.outline {
+	  background-color: transparent;
+	  color: var(--br-color-primary-500);
+	  border: 1px solid var(--br-color-primary-500);
+
+	  a, * {
+		color: var(--br-color-primary-500);
+		fill: var(--br-color-primary-500);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
+
+	  &:hover:not(:disabled):not(.disabled) {
+		background-color: var(--br-color-primary-500);
+		color: var(--br-color-white);
+
+		a, * {
+		  color: var(--br-color-white);
+		  fill: var(--br-color-white);
+		  font-weight: var(--br-font-weight-bold);
+		  text-decoration: none;
+		}
+	  }
+
+	  &:disabled, 
+	  &.disabled {
+		background-color: transparent;
+		color: var(--br-color-primary-200);
+		border: 1px solid var(--br-color-primary-200);
+
+		a, * {
+			color: var(--br-color-primary-200);
+			fill: var(--br-color-primary-200);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+	  }
+	}
+
+	&.text {
+	  background-color: transparent;
+	  border:transparent;
+	  color: var(--br-color-primary-500);
+
+	  a, * {
+		color: var(--br-color-primary-500);
+		fill: var(--br-color-primary-500);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
+
+	  &:hover:not(:disabled):not(.disabled) {
+		background-color: transparent;
+		border:transparent;
+		color: var(--br-color-primary-600);
+
+		a, * {
+			color: var(--br-color-primary-600);
+			fill: var(--br-color-primary-600);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+	  }
+
+	  &:disabled, 
+	  &.disabled {
+		background-color: transparent;
+		border: transparent;
+		color: var(--br-color-primary-200);
+
+		a, * {
+			color: var(--br-color-primary-200);
+			fill: var(--br-color-primary-200);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+	  }
 	}
   }
 
@@ -63,22 +189,123 @@
 	color: var(--br-color-white);
 	border: none;
 
-	&:hover:not(:disabled) {
+	a, * {
+		color: var(--br-color-white);
+		fill: var(--br-color-white);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	}
+
+	&:hover:not(:disabled):not(.disabled) {
 	  background-color: var(--br-color-neutral-600);
 	  color: var(--br-color-white);
+
+	  a, * {
+		color: var(--br-color-white);
+		fill: var(--br-color-white);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
 	}
 	  
-	&:focus:not(:disabled), 
-	&:focus-within:not(:disabled), 
-	&:focus-visible:not(:disabled) {
+	&:focus:not(:disabled):not(.disabled), 
+	&:focus-within:not(:disabled):not(.disabled), 
+	&:focus-visible:not(:disabled):not(.disabled) {
 	  outline: var(--br-spacing-3x-small) solid var(--br-color-neutral-100);
 	}
 	
-	&:disabled {
+	&:disabled, 
+	&.disabled {
 	  background-color: var(--br-color-neutral-200);
 	  color: var(--br-color-white);
 	  border: none;
 	  cursor: not-allowed;
+
+	  a, * {
+		color: var(--br-color-white);
+		fill: var(--br-color-white);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
+	}
+
+	&.outline {
+	  background-color: transparent;
+	  color: var(--br-color-neutral-500);
+	  border: 1px solid var(--br-color-neutral-500);
+
+	  a, * {
+		color: var(--br-color-neutral-500);
+		fill: var(--br-color-neutral-500);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
+
+	  &:hover:not(:disabled):not(.disabled) {
+		background-color: var(--br-color-neutral-500);
+		color: var(--br-color-white);
+
+		a, * {
+			color: var(--br-color-white);
+			fill: var(--br-color-white);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+	  }
+
+	  &:disabled, 
+	  &.disabled {
+		background-color: transparent;
+		color: var(--br-color-neutral-200);
+		border: 1px solid var(--br-color-neutral-200);
+
+		a, * {
+			color: var(--br-color-neutral-200);
+			fill: var(--br-color-neutral-200);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+	  }
+	}
+
+	&.text {
+		background-color: transparent;
+		border:transparent;
+		color: var(--br-color-neutral-500);
+
+		a, * {
+			color: var(--br-color-neutral-500);
+			fill: var(--br-color-neutral-500);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+  
+		&:hover:not(:disabled):not(.disabled) {
+		  background-color: transparent;
+		  border:transparent;
+		  color: var(--br-color-neutral-600);
+
+		  a, * {
+			color: var(--br-color-neutral-600);
+			fill: var(--br-color-neutral-600);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		  }
+		}
+  
+		&:disabled, 
+		&.disabled {
+		  background-color: transparent;
+		  border: transparent;
+		  color: var(--br-color-neutral-200);
+
+		  a, * {
+			color: var(--br-color-neutral-200);
+			fill: var(--br-color-neutral-200);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		  }
+		}
 	}
   }
 
@@ -87,22 +314,123 @@
 	color: var(--br-color-white);
 	border: none;
 
-	&:hover:not(:disabled) {
+	a, * {
+		color: var(--br-color-white);
+		fill: var(--br-color-white);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	}
+
+	&:hover:not(:disabled):not(.disabled) {
 	  background-color: var(--br-color-success-600);
 	  color: var(--br-color-white);
+
+	  a, * {
+		color: var(--br-color-white);
+		fill: var(--br-color-white);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
 	}
 	  
-	&:focus:not(:disabled), 
-	&:focus-within:not(:disabled), 
-	&:focus-visible:not(:disabled) {
+	&:focus:not(:disabled):not(.disabled), 
+	&:focus-within:not(:disabled):not(.disabled), 
+	&:focus-visible:not(:disabled):not(.disabled) {
 	  outline: var(--br-spacing-3x-small) solid var(--br-color-success-100);
 	}
 	
-	&:disabled {
+	&:disabled, 
+	&.disabled {
 	  background-color: var(--br-color-success-200);
 	  color: var(--br-color-white);
 	  border: none;
 	  cursor: not-allowed;
+
+	  a, * {
+		color: var(--br-color-white);
+		fill: var(--br-color-white);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
+	}
+
+	&.outline {
+	  background-color: transparent;
+	  color: var(--br-color-success-500);
+	  border: 1px solid var(--br-color-success-500);
+
+	  a, * {
+		color: var(--br-color-success-500);
+		fill: var(--br-color-success-500);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
+
+	  &:hover:not(:disabled):not(.disabled) {
+		background-color: var(--br-color-success-500);
+		color: var(--br-color-white);
+
+		a, * {
+			color: var(--br-color-white);
+			fill: var(--br-color-white);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+	  }
+
+	  &:disabled, 
+	  &.disabled {
+		background-color: transparent;
+		color: var(--br-color-success-200);
+		border: 1px solid var(--br-color-success-200);
+
+		a, * {
+			color: var(--br-color-success-200);
+			fill: var(--br-color-success-200);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+	  }
+	}
+
+	&.text {
+		background-color: transparent;
+		border:transparent;
+		color: var(--br-color-success-500);
+
+		a, * {
+			color: var(--br-color-success-500);
+			fill: var(--br-color-success-500);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+  
+		&:hover:not(:disabled):not(.disabled) {
+		  background-color: transparent;
+		  border:transparent;
+		  color: var(--br-color-success-600);
+
+		  a, * {
+			color: var(--br-color-success-600);
+			fill: var(--br-color-success-600);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		  }
+		}
+  
+		&:disabled, 
+		&.disabled {
+		  background-color: transparent;
+		  border: transparent;
+		  color: var(--br-color-success-200);
+
+		  a, * {
+			color: var(--br-color-success-200);
+			fill: var(--br-color-success-200);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		  }
+		}
 	}
   }
 
@@ -111,23 +439,123 @@
 	color: var(--br-color-white);
 	border: none;
 
-	&:hover:not(:disabled) {
+	a, * {
+		color: var(--br-color-white);
+		fill: var(--br-color-white);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	}
+
+	&:hover:not(:disabled):not(.disabled) {
 	  background-color: var(--br-color-warning-600);
 	  color: var(--br-color-white);
+
+	  a, * {
+		color: var(--br-color-white);
+		fill: var(--br-color-white);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
 	}
 	  
-	&:focus:not(:disabled), 
-	&:focus-within:not(:disabled), 
-	&:focus-visible:not(:disabled) {
+	&:focus:not(:disabled):not(.disabled), 
+	&:focus-within:not(:disabled):not(.disabled), 
+	&:focus-visible:not(:disabled):not(.disabled) {
 	  outline: var(--br-spacing-3x-small) solid var(--br-color-warning-100);
 	}
 	
-	&:disabled {
+	&:disabled, &.disabled{
 	  background-color: var(--br-color-warning-200);
 	  color: var(--br-color-white);
 	  border: none;
 	  cursor: not-allowed;
+
+	  a, * {
+		color: var(--br-color-white);
+		fill: var(--br-color-white);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
 	}
+
+	&.outline {
+	  background-color: transparent;
+	  color: var(--br-color-warning-500);
+	  border: 1px solid var(--br-color-warning-500);
+
+	  a, * {
+		color: var(--br-color-warning-500);
+		fill: var(--br-color-warning-500);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
+
+	  &:hover:not(:disabled):not(.disabled) {
+		background-color: var(--br-color-warning-500);
+		color: var(--br-color-white);
+
+		a, * {
+			color: var(--br-color-white);
+			fill: var(--br-color-white);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+	  }
+
+	  &:disabled, 
+	  &.disabled {
+		background-color: transparent;
+		color: var(--br-color-warning-200);
+		border: 1px solid var(--br-color-warning-200);
+
+		a, * {
+			color: var(--br-color-warning-200);
+			fill: var(--br-color-warning-200);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+	  }
+	}
+
+	&.text {
+	  background-color: transparent;
+	  border:transparent;
+	  color: var(--br-color-warning-500);
+
+	  a, * {
+		color: var(--br-color-warning-500);
+		fill: var(--br-color-warning-500);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
+  
+	  &:hover:not(:disabled):not(.disabled) {
+	    background-color: transparent;
+	    border:transparent;
+	    color: var(--br-color-warning-600);
+
+		a, * {
+			color: var(--br-color-warning-600);
+			fill: var(--br-color-warning-600);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+	  }
+  
+	  &:disabled, 
+	  &.disabled {
+	    background-color: transparent;
+	    border: transparent;
+	    color: var(--br-color-warning-200);
+
+		a, * {
+			color: var(--br-color-warning-200);
+			fill: var(--br-color-warning-200);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+	  }
+	}	
   }
 
   &--danger {
@@ -135,22 +563,175 @@
 	color: var(--br-color-white);
 	border: none;
 
-	&:hover:not(:disabled) {
+	a, * {
+		color: var(--br-color-white);
+		fill: var(--br-color-white);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	}
+
+	&:hover:not(:disabled):not(.disabled) {
 	  background-color: var(--br-color-danger-600);
 	  color: var(--br-color-white);
+
+	  a, * {
+		color: var(--br-color-white);
+		fill: var(--br-color-white);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
 	}
 	  
-	&:focus:not(:disabled), 
-	&:focus-within:not(:disabled), 
-	&:focus-visible:not(:disabled) {
+	&:focus:not(:disabled):not(.disabled), 
+	&:focus-within:not(:disabled):not(.disabled), 
+	&:focus-visible:not(:disabled):not(.disabled) {
 	  outline: var(--br-spacing-3x-small) solid var(--br-color-danger-100);
 	}
 	
-	&:disabled {
+	&:disabled, 
+	&.disabled {
 	  background-color: var(--br-color-danger-200);
 	  color: var(--br-color-white);
 	  border: none;
 	  cursor: not-allowed;
+
+	  a, * {
+		color: var(--br-color-white);
+		fill: var(--br-color-white);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
+	}
+
+	&.outline {
+	  background-color: transparent;
+	  color: var(--br-color-danger-500);
+	  border: 1px solid var(--br-color-danger-500);
+
+	  a, * {
+		color: var(--br-color-danger-500);
+		fill: var(--br-color-danger-500);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
+
+	  &:hover:not(:disabled):not(.disabled) {
+		background-color: var(--br-color-danger-500);
+		color: var(--br-color-white);
+
+		a, * {
+			color: var(--br-color-white);
+			fill: var(--br-color-white);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+	  }
+
+	  &:disabled, 
+	  &.disabled {
+		background-color: transparent;
+		color: var(--br-color-danger-200);
+		border: 1px solid var(--br-color-danger-200);
+
+		a, * {
+			color: var(--br-color-danger-200);
+			fill: var(--br-color-danger-200);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+	  }
+	}
+
+	&.text {
+	  background-color: transparent;
+	  border:transparent;
+	  color: var(--br-color-danger-500);
+
+	  a, * {
+		color: var(--br-color-danger-500);
+		fill: var(--br-color-danger-500);
+		font-weight: var(--br-font-weight-bold);
+		text-decoration: none;
+	  }
+	
+	  &:hover:not(:disabled):not(.disabled) {
+	    background-color: transparent;
+ 	    border:transparent;
+	    color: var(--br-color-danger-600);
+
+		a, * {
+			color: var(--br-color-danger-600);
+			fill: var(--br-color-danger-600);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+	  }
+	
+	  &:disabled, 
+	  &.disabled {
+	    background-color: transparent;
+	    border: transparent;
+	    color: var(--br-color-danger-200);
+
+		a, * {
+			color: var(--br-color-danger-200);
+			fill: var(--br-color-danger-200);
+			font-weight: var(--br-font-weight-bold);
+			text-decoration: none;
+		}
+	  }
+	}
+  }
+
+  // Sizes
+  &--small {
+    padding: var(--br-spacing-2x-small) var(--br-spacing-x-small);	
+	font-size: var(--br-font-size-x-small);
+  }
+
+  &--medium {
+    padding: var(--br-spacing-small) var(--br-spacing-medium);	
+	font-size: var(--br-font-size-medium);
+  }
+
+  &--large {
+    padding: var(--br-spacing-large) var(--br-spacing-x-large);	
+	font-size: var(--br-font-size-large);
+  }
+
+  // Pill
+  &--pill {
+	border-radius: var(--br-border-radius-pill);
+  }
+
+  // Outline
+  &.outline {
+	&:hover:not(:disabled):not(.disabled) {
+	  background-color: var(--br-color-primary-500);
+	  color: var(--br-color-white);
+	}
+  }
+
+  // Text 
+  &.text {
+	background-color: transparent;
+	border: transparent;
+
+	&:hover:not(:disabled):not(.disabled) {
+	  background-color: transparent;
+	  border: transparent;
+	}
+
+	&:focus:not(:disabled):not(.disabled), 
+	&:focus-within:not(:disabled):not(.disabled), 
+	&:focus-visible:not(:disabled):not(.disabled) {
+	  outline: transparent;
+	}
+
+	&:disabled, 
+	&.disabled {
+	  background-color: transparent;
+	  border: transparent;
 	}
   }
 }
@@ -161,83 +742,165 @@
 	background-position: center;
   	transition: background 0.5s;
 	
-	&:hover:not(:disabled) {
+	&:hover:not(:disabled):not(.disabled):not(.outline):not(.text) {
 	  	background: var(--br-color-primary-100) 
 	  			  radial-gradient(circle, transparent 1%, var(--br-color-primary-100) 1%) 
 				  center/15000%;
 	}
 
-	&:active:not(:disabled) {
+	&:active:not(:disabled):not(.disabled):not(.outline):not(.text) {
 	  background-color: var(--br-color-primary-200);
 	  background-size: 100%;
 	  transition: background 0s;
 	}
 
-	&.br-button--primary:not(:disabled) {
-		&:hover:not(:disabled) {
-			background: var(--br-color-primary-600) 
-				  radial-gradient(circle, transparent 1%, var(--br-color-primary-600) 1%) 
+	&.outline:hover:not(:disabled):not(.disabled):not(.text) {
+		background: var(--br-color-primary-500) 
+				  radial-gradient(circle, transparent 1%, var(--br-color-primary-500) 1%) 
+				center/15000%;
+	}
+
+	&.outline:active:not(:disabled):not(.disabled):not(.text) {
+		background-color: var(--br-color-primary-600);
+		background-size: 100%;
+		transition: background 0s;
+	}
+
+	&.br-button--primary:not(:disabled):not(.disabled):not(.outline):not(.text) {
+		&:hover:not(:disabled):not(.disabled) {
+			background: var(--br-color-primary-700) 
+				  radial-gradient(circle, transparent 1%, var(--br-color-primary-700) 1%) 
 				center/15000%;
 		}
 
-		&:active:not(:disabled) {
-			background-color: var(--br-color-primary-700);
+		&:active:not(:disabled):not(.disabled) {
+			background-color: var(--br-color-primary-800);
 			background-size: 100%;
 			transition: background 0s;
 		}
   	}
 
-	&.br-button--neutral:not(:disabled) {
-		&:hover:not(:disabled) {
-			background: var(--br-color-neutral-600) 
-				  radial-gradient(circle, transparent 1%, var(--br-color-neutral-600) 1%) 
+	&.br-button--primary:not(:disabled):not(.disabled):not(.text).outline {
+		&:hover:not(:disabled):not(.disabled) {
+			background: var(--br-color-primary-500) 
+				  radial-gradient(circle, transparent 1%, var(--br-color-primary-500) 1%) 
 				center/15000%;
 		}
 
-		&:active:not(:disabled) {
-			background-color: var(--br-color-neutral-700);
+		&:active:not(:disabled):not(.disabled) {
+			background-color: var(--br-color-primary-600);
 			background-size: 100%;
 			transition: background 0s;
 		}
   	}
 
-	&.br-button--success:not(:disabled) {
-		&:hover:not(:disabled) {
-			background: var(--br-color-success-600) 
-				  radial-gradient(circle, transparent 1%, var(--br-color-success-600) 1%) 
+	&.br-button--neutral:not(:disabled):not(.disabled):not(.text):not(.outline) {
+		&:hover:not(:disabled):not(.disabled) {
+			background: var(--br-color-neutral-700) 
+				  radial-gradient(circle, transparent 1%, var(--br-color-neutral-700) 1%) 
 				center/15000%;
 		}
 
-		&:active:not(:disabled) {
-			background-color: var(--br-color-success-700);
+		&:active:not(:disabled):not(.disabled) {
+			background-color: var(--br-color-neutral-800);
 			background-size: 100%;
 			transition: background 0s;
 		}
   	}
 
-	&.br-button--warning:not(:disabled) {
-		&:hover:not(:disabled) {
-			background: var(--br-color-warning-600) 
-				  radial-gradient(circle, transparent 1%, var(--br-color-warning-600) 1%) 
+	&.br-button--neutral:not(:disabled):not(.disabled):not(.text).outline {
+		&:hover:not(:disabled):not(.disabled) {
+			background: var(--br-color-neutral-500) 
+				  radial-gradient(circle, transparent 1%, var(--br-color-neutral-500) 1%) 
 				center/15000%;
 		}
 
-		&:active:not(:disabled) {
-			background-color: var(--br-color-warning-700);
+		&:active:not(:disabled):not(.disabled) {
+			background-color: var(--br-color-neutral-600);
 			background-size: 100%;
 			transition: background 0s;
 		}
   	}
 
-	&.br-button--danger:not(:disabled) {
-		&:hover:not(:disabled) {
-			background: var(--br-color-danger-600) 
-				  radial-gradient(circle, transparent 1%, var(--br-color-danger-600) 1%) 
+	&.br-button--success:not(:disabled):not(.disabled):not(.text):not(.outline) {
+		&:hover:not(:disabled):not(.disabled) {
+			background: var(--br-color-success-700) 
+				  radial-gradient(circle, transparent 1%, var(--br-color-success-700) 1%) 
 				center/15000%;
 		}
 
-		&:active:not(:disabled) {
-			background-color: var(--br-color-danger-700);
+		&:active:not(:disabled):not(.disabled) {
+			background-color: var(--br-color-success-800);
+			background-size: 100%;
+			transition: background 0s;
+		}
+  	}
+
+	&.br-button--success:not(:disabled):not(.disabled):not(.text).outline {
+		&:hover:not(:disabled):not(.disabled) {
+			background: var(--br-color-success-500) 
+				  radial-gradient(circle, transparent 1%, var(--br-color-success-500) 1%) 
+				center/15000%;
+		}
+
+		&:active:not(:disabled):not(.disabled) {
+			background-color: var(--br-color-success-600);
+			background-size: 100%;
+			transition: background 0s;
+		}
+  	}
+
+	&.br-button--warning:not(:disabled):not(.disabled):not(.text):not(.outline) {
+		&:hover:not(:disabled):not(.disabled) {
+			background: var(--br-color-warning-700) 
+				  radial-gradient(circle, transparent 1%, var(--br-color-warning-700) 1%) 
+				center/15000%;
+		}
+
+		&:active:not(:disabled):not(.disabled) {
+			background-color: var(--br-color-warning-800);
+			background-size: 100%;
+			transition: background 0s;
+		}
+  	}
+
+	&.br-button--warning:not(:disabled):not(.disabled):not(.text).outline {
+		&:hover:not(:disabled):not(.disabled) {
+			background: var(--br-color-warning-500) 
+				  radial-gradient(circle, transparent 1%, var(--br-color-warning-500) 1%) 
+				center/15000%;
+		}
+
+		&:active:not(:disabled):not(.disabled) {
+			background-color: var(--br-color-warning-600);
+			background-size: 100%;
+			transition: background 0s;
+		}
+  	}
+
+	&.br-button--danger:not(:disabled):not(.disabled):not(.text):not(.outline) {
+		&:hover:not(:disabled):not(.disabled) {
+			background: var(--br-color-danger-700) 
+				  radial-gradient(circle, transparent 1%, var(--br-color-danger-700) 1%) 
+				center/15000%;
+		}
+
+		&:active:not(:disabled):not(.disabled) {
+			background-color: var(--br-color-danger-800);
+			background-size: 100%;
+			transition: background 0s;
+		}
+  	}
+
+	&.br-button--danger:not(:disabled):not(.disabled):not(.text).outline {
+		&:hover:not(:disabled):not(.disabled) {
+			background: var(--br-color-danger-500) 
+				  radial-gradient(circle, transparent 1%, var(--br-color-danger-500) 1%) 
+				center/15000%;
+		}
+
+		&:active:not(:disabled):not(.disabled) {
+			background-color: var(--br-color-danger-600);
 			background-size: 100%;
 			transition: background 0s;
 		}

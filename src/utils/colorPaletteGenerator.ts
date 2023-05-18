@@ -95,7 +95,9 @@ function toHexadecimal(H: number, S: number, L: number): string {
     return hex.length === 1 ? `0${hex}` : hex
   }
 
-  return `#${toHex(R).toUpperCase()}${toHex(G).toUpperCase()}${toHex(B).toUpperCase()}`
+  return `#${toHex(R).toUpperCase()}${toHex(G).toUpperCase()}${toHex(
+    B
+  ).toUpperCase()}`
 }
 
 function shadeColor(
