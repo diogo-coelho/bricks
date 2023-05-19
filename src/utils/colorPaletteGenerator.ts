@@ -95,7 +95,9 @@ function toHexadecimal(H: number, S: number, L: number): string {
     return hex.length === 1 ? `0${hex}` : hex
   }
 
-  return `#${toHex(R)}${toHex(G)}${toHex(B)}`
+  return `#${toHex(R).toUpperCase()}${toHex(G).toUpperCase()}${toHex(
+    B
+  ).toUpperCase()}`
 }
 
 function shadeColor(
@@ -119,7 +121,7 @@ export default function colorPaletteGenerator(
   const primaryColor200 = shadeColor(mainColorRGB, 30, 'lighten')
   const primaryColor300 = shadeColor(mainColorRGB, 20, 'lighten')
   const primaryColor400 = shadeColor(mainColorRGB, 10, 'lighten')
-  const primaryColor500 = mainColorRGB
+  const primaryColor500 = mainColorRGB.toUpperCase()
   const primaryColor600 = shadeColor(mainColorRGB, 10, 'darken')
   const primaryColor700 = shadeColor(mainColorRGB, 15, 'darken')
   const primaryColor800 = shadeColor(mainColorRGB, 20, 'darken')
