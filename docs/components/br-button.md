@@ -2,11 +2,11 @@
 import BrButton from '../../src/components/button/BrButton.vue'
 </script>
 
-# BrButton
+# BrButton <Badge type="warning" text="beta" />
 
 
 `Button` é um componente que representa um elemento clicável que retornará uma ação para o usuário.
-<BrButton>Button</BrButton>
+<BrButton @on-click="clicou">Button</BrButton>
 
 ```vue
 <BrButton> Button </BrButton>
@@ -38,7 +38,7 @@ Passe o atributo `variant` para configurar a variante do botão.
 
 ### Outline Buttons
 
-Passe o atributo `outline` para botões com fundo transparente
+Passe o atributo `outline` para botões com fundo transparente.
 
 <div class="inline-flex w-full">
 	<BrButton class="mr-x-small" outline>Default</BrButton>
@@ -82,7 +82,7 @@ Para desabilitar o componente `BrButton`, passe o atributo `disabled` como uma p
 
 ### Size
 
-É possível alterar o tamanho do botão através da variável `size`
+É possível alterar o tamanho do botão através da variável `size`.
 
 <div class="inline-flex align-center w-full">
 	<BrButton class="mr-x-small" size="small">Small</BrButton>
@@ -98,7 +98,7 @@ Para desabilitar o componente `BrButton`, passe o atributo `disabled` como uma p
 
 ### Pill Button
 
-Para criar botões com as bordas arredondadas, basta informar o atributo `pill`
+Para criar botões com as bordas arredondadas, basta informar o atributo `pill`.
 
 <BrButton pill>Pill Button</BrButton>
 
@@ -108,7 +108,7 @@ Para criar botões com as bordas arredondadas, basta informar o atributo `pill`
 
 ### Text Buttons
 
-Para criar botões sem bordas ou cores de background, passe o atributo `text`
+Para criar botões sem bordas ou cores de background, passe o atributo `text`.
 
 <div class="inline-flex align-center w-full">
 	<BrButton class="mr-x-small" size="small" text>Text Button</BrButton>
@@ -142,14 +142,104 @@ Caso queira usar um botão que funcione como um link, é necessário passar o at
 
 ### Preffix and Suffix Buttons
 
-É possível criar botões com ícones passando os slots `#preffix` e `#suffix` para o botão
+É possível criar botões com ícones passando os slots `#preffix` e `#suffix`.
 
-<div class="inline-flex align-center w-full">
-	<BrButton class="mr-x-small">
+<div class="inline-flex align-center w-full mb-medium">
+	<BrButton class="mr-x-small" size="small">
 		<template #preffix><i preffix class="material-icon-settings" /></template>
 		Settings
 	</BrButton>
+	<BrButton class="mr-x-small" size="small">
+		<template #suffix><i preffix class="material-icon-menu" /></template>
+		Menu
+	</BrButton>
+	<BrButton class="mr-x-small" size="small">
+		<template #preffix><i preffix class="material-icon-settings" /></template>
+		<template #suffix><i preffix class="material-icon-menu" /></template>
+		Options
+	</BrButton>
 </div>
+<div class="inline-flex align-center w-full mb-medium">
+	<BrButton class="mr-x-small" size="medium">
+		<template #preffix><i preffix class="material-icon-settings" /></template>
+		Settings
+	</BrButton>
+	<BrButton class="mr-x-small" size="medium">
+		<template #suffix><i preffix class="material-icon-menu" /></template>
+		Menu
+	</BrButton>
+	<BrButton class="mr-x-small" size="medium">
+		<template #preffix><i preffix class="material-icon-settings" /></template>
+		<template #suffix><i preffix class="material-icon-menu" /></template>
+		Options
+	</BrButton>
+</div>
+<div class="inline-flex align-center w-full">
+	<BrButton class="mr-x-small" size="large">
+		<template #preffix><i preffix class="material-icon-settings" /></template>
+		Settings
+	</BrButton>
+	<BrButton class="mr-x-small" size="large">
+		<template #suffix><i preffix class="material-icon-menu" /></template>
+		Menu
+	</BrButton>
+	<BrButton class="mr-x-small" size="large">
+		<template #preffix><i preffix class="material-icon-settings" /></template>
+		<template #suffix><i preffix class="material-icon-menu" /></template>
+		Options
+	</BrButton>
+</div>
+
+```vue
+<BrButton size="small">
+	<template #preffix><i preffix class="material-icon-settings" /></template>
+	Settings
+</BrButton>
+<BrButton size="small">
+	<template #suffix><i preffix class="material-icon-menu" /></template>
+	Menu
+</BrButton>
+<BrButton size="small">
+	<template #preffix><i preffix class="material-icon-settings" /></template>
+	<template #suffix><i preffix class="material-icon-menu" /></template>
+	Options
+</BrButton>
+<BrButton size="medium">
+	<template #preffix><i preffix class="material-icon-settings" /></template>
+	Settings
+</BrButton>
+<BrButton size="medium">
+	<template #suffix><i preffix class="material-icon-menu" /></template>
+	Menu
+</BrButton>
+<BrButton size="medium">
+	<template #preffix><i preffix class="material-icon-settings" /></template>
+	<template #suffix><i preffix class="material-icon-menu" /></template>
+	Options
+</BrButton>
+<BrButton size="large">
+	<template #preffix><i preffix class="material-icon-settings" /></template>
+	Settings
+</BrButton>
+<BrButton size="large">
+	<template #suffix><i preffix class="material-icon-menu" /></template>
+	Menu
+</BrButton>
+<BrButton size="large">
+	<template #preffix><i preffix class="material-icon-settings" /></template>
+	<template #suffix><i preffix class="material-icon-menu" /></template>
+	Options
+</BrButton>
+```
+## Eventos
+
+| Name          | Description                                                                            |
+| ------------- | :------------------------------------------------------------------------------------: |
+| on-click      | Evento emitido ao clicar no botão                                                      |
+| on-focus      | Evento emitido ao focar no botão                                                       |
+| on-blur       | Evento emitido ao remover o foco do botão                                              |
+
+
 
 <style lang="sass">
 @import '../../src/styles/index.scss'

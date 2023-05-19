@@ -1,56 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
 
 body {
-	font-family: var(--br-font-sans);
+  font-family: var(--br-font-sans);
 }
 
 a {
-	text-decoration: none;
-	color: var(--br-color-neutral-500);
+  text-decoration: none;
+  color: var(--br-color-neutral-500);
 }
 
 // Display inline
 .inline {
-	display: inline;	
-	&-flex {
-		display: inline-flex;
-	}
-	&-block {
-		display: inline-block;
-	}
+  display: inline;
+
+  &-flex {
+    display: inline-flex;
+  }
+
+  &-block {
+    display: inline-block;
+  }
 }
 
 // Align Items
 .align {
-	&-center {
-		align-items: center;
-	}
+  &-center {
+    align-items: center;
+  }
 }
 
 // Justify
 .justify {
-	&-start {
-		justify-content: flex-start;
-	}
+  &-start {
+    justify-content: flex-start;
+  }
 
-	&-end {
-		justify-content: flex-end;
-	}
+  &-end {
+    justify-content: flex-end;
+  }
 
-	&-center {
-		justify-content: center;
-	}
+  &-center {
+    justify-content: center;
+  }
 }
 
 // Width
 .w {
-	&-auto {
-		width: auto;
-	}
-	&-full {
-		width: 100%;
-	}
+  &-auto {
+    width: auto;
+  }
+
+  &-full {
+    width: 100%;
+  }
 }
