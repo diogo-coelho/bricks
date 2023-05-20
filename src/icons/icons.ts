@@ -1129,13 +1129,11 @@ import ShuffleIcon from './shuffleIcon.vue'
 import ShuffleOnIcon from './shuffleOnIcon.vue'
 import ShutterSpeedIcon from './shutterSpeedIcon.vue'
 import SickIcon from './sickIcon.vue'
-import SignalCellularZeroBarIcon from './SignalCellularZeroBarIcon.vue'
 import SignalCellularAltIcon from './signalCellularAltIcon.vue'
 import SignalCellularConnectedNoInternetFourBarIcon from './signalCellularConnectedNoInternetFourBarIcon.vue'
 import SignalCellularFourBarIcon from './signalCellularFourBarIcon.vue'
 import SignalCellularNullIcon from './signalCellularNullIcon.vue'
 import SignalCellularOffIcon from './signalCellularOffIcon.vue'
-import SignalWifiZeroBarIcon from './SignalWifiZeroBarIcon.vue'
 import SignalWifiFourBarIcon from './signalWifiFourBarIcon.vue'
 import SignalWifiFourBarLockIcon from './signalWifiFourBarLockIcon.vue'
 import SignalWifiOffIcon from './signalWifiOffIcon.vue'
@@ -2555,13 +2553,11 @@ export {
   ShuffleOnIcon,
   ShutterSpeedIcon,
   SickIcon,
-  SignalCellularZeroBarIcon,
   SignalCellularAltIcon,
   SignalCellularConnectedNoInternetFourBarIcon,
   SignalCellularFourBarIcon,
   SignalCellularNullIcon,
   SignalCellularOffIcon,
-  SignalWifiZeroBarIcon,
   SignalWifiFourBarIcon,
   SignalWifiFourBarLockIcon,
   SignalWifiOffIcon,
