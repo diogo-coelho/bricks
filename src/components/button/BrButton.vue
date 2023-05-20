@@ -36,7 +36,6 @@ import {
 } from 'vue'
 import { ButtonProps, ButtonLink } from '../../types/_button'
 import * as Icons from '../../icons/icons'
-import colorPaletteGenerator from '../../utils/colorPaletteGenerator'
 
 export default defineComponent({
   name: 'BrButton',
@@ -215,7 +214,6 @@ export default defineComponent({
     })
 
     const onClick = (event: MouseEvent): void => {
-      console.log(colorPaletteGenerator('#f50'))
       emit('on-click', event)
     }
 
