@@ -14,7 +14,7 @@ import BrButton from '../../src/components/button/BrButton.vue'
 
 ## Exemplos
 
-### Variants
+### Variante
 
 Passe o atributo `variant` para configurar a variante do botão.
 
@@ -36,7 +36,7 @@ Passe o atributo `variant` para configurar a variante do botão.
 <BrButton variant="danger">Danger</BrButton>
 ```
 
-### Outline Buttons
+### Botão com contorno
 
 Passe o atributo `outline` para botões com fundo transparente.
 
@@ -58,7 +58,7 @@ Passe o atributo `outline` para botões com fundo transparente.
 <BrButton variant="danger" outline>Danger</BrButton>
 ```
 
-### Disabled
+### Desabilitado
 
 Para desabilitar o componente `BrButton`, passe o atributo `disabled` como uma prop.
 
@@ -80,7 +80,7 @@ Para desabilitar o componente `BrButton`, passe o atributo `disabled` como uma p
 <BrButton variant="danger" disabled>Danger</BrButton>
 ```
 
-### Size
+### Tamanho
 
 É possível alterar o tamanho do botão através da variável `size`.
 
@@ -96,7 +96,7 @@ Para desabilitar o componente `BrButton`, passe o atributo `disabled` como uma p
 <BrButton size="large">Large</BrButton>	
 ```
 
-### Pill Button
+### Botão arredondado
 
 Para criar botões com as bordas arredondadas, basta informar o atributo `pill`.
 
@@ -106,7 +106,7 @@ Para criar botões com as bordas arredondadas, basta informar o atributo `pill`.
 <BrButton pill>Pill Button</BrButton>
 ```
 
-### Text Buttons
+### Botão de texto
 
 Para criar botões sem bordas ou cores de background, passe o atributo `text`.
 
@@ -122,7 +122,7 @@ Para criar botões sem bordas ou cores de background, passe o atributo `text`.
 <BrButton size="large" text>Text Button</BrButton>	
 ```
 
-### Link Buttons
+### Botão de link
 
 Caso queira usar um botão que funcione como um link, é necessário passar o atributo `link`, que possui as seguintes propriedades: `href`: `(obrigatório)` especifica a URL da página para onde o link vai; `target`: especifica onde abrir o documento vinculado; `download`: indica o nome do arquivo para download.
 
@@ -140,7 +140,7 @@ Caso queira usar um botão que funcione como um link, é necessário passar o at
 <BrButton :link="{'href':'https://www.google.com'}" disabled>Disabled</BrButton>
 ```
 
-### Prefix and Suffix Buttons
+### Botão com prefixo e sufixo
 
 É possível criar botões com ícones passando os atributos `prefix` e `suffix`, com a string do ícone que deverá ser renderizado dentro do botão. Você encontrará a lista completa de ícones através deste link.
 
@@ -194,7 +194,7 @@ Caso queira usar um botão que funcione como um link, é necessário passar o at
 ```
 ## Eventos
 
-| Name          | Description                                                                            |
+| Nome          | Descrição                                                                              |
 | ------------- | :------------------------------------------------------------------------------------: |
 | on-click      | Evento emitido ao clicar no botão                                                      |
 | on-focus      | Evento emitido ao focar no botão                                                       |
@@ -202,6 +202,6 @@ Caso queira usar um botão que funcione como um link, é necessário passar o at
 
 
 
-<style lang="sass">
+<style lang="sass" scoped>
 @import '../../src/styles/index.scss'
 </style>
