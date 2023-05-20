@@ -8,7 +8,7 @@
 	"readFileNames": "node index.js",
     "build:sass": "sass --no-charset ./src/styles/index.scss > dist/index.css && cleancss -o dist/index.min.css dist/index.css",
     "build:lib": "rimraf dist && vite build && vue-tsc --emitDeclarationOnly && npm run build:sass",
-    "publish:lib": "npm run build:lib && npm publish",
+    "publish:lib": "npm run build:lib && npm publish --access=public",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
