@@ -6,7 +6,7 @@ import BrButton from '../../src/components/button/BrButton.vue'
 
 
 `Button` é um componente que representa um elemento clicável que retornará uma ação para o usuário.
-<BrButton @on-click="clicou">Button</BrButton>
+<BrButton>Button</BrButton>
 
 ```vue
 <BrButton> Button </BrButton>
@@ -134,102 +134,63 @@ Caso queira usar um botão que funcione como um link, é necessário passar o at
 </div>
 
 ```vue
-<BrButton class="mr-x-small" :link="{'href':'https://www.google.com'}">Link</BrButton>
-<BrButton class="mr-x-small" :link="{'href':'https://www.google.com','target':'_blank'}">New Window</BrButton>
-<BrButton class="mr-x-small" :link="{'href':'./images/html-5-logo.png','download':'html-5-logo.png'}">Download</BrButton>
-<BrButton class="mr-x-small" :link="{'href':'https://www.google.com'}" disabled>Disabled</BrButton>
+<BrButton :link="{'href':'https://www.google.com'}">Link</BrButton>
+<BrButton :link="{'href':'https://www.google.com','target':'_blank'}">New Window</BrButton>
+<BrButton :link="{'href':'./images/html-5-logo.png','download':'html-5-logo.png'}">Download</BrButton>
+<BrButton :link="{'href':'https://www.google.com'}" disabled>Disabled</BrButton>
 ```
 
-### Preffix and Suffix Buttons
+### Prefix and Suffix Buttons
 
-É possível criar botões com ícones passando os slots `#preffix` e `#suffix`.
+É possível criar botões com ícones passando os atributos `prefix` e `suffix`, com a string do ícone que deverá ser renderizado dentro do botão. Você encontrará a lista completa de ícones através deste link.
 
 <div class="inline-flex align-center w-full mb-medium">
-	<BrButton class="mr-x-small" size="small">
-		<template #preffix><i preffix class="material-icon-settings" /></template>
+	<BrButton class="mr-x-small" size="small" prefix="settings-icon">
 		Settings
 	</BrButton>
-	<BrButton class="mr-x-small" size="small">
-		<template #suffix><i preffix class="material-icon-menu" /></template>
+	<BrButton class="mr-x-small" size="small" suffix="menu-icon">
 		Menu
 	</BrButton>
-	<BrButton class="mr-x-small" size="small">
-		<template #preffix><i preffix class="material-icon-settings" /></template>
-		<template #suffix><i preffix class="material-icon-menu" /></template>
+	<BrButton class="mr-x-small" size="small" prefix="settings-icon" suffix="menu-icon">
 		Options
 	</BrButton>
 </div>
 <div class="inline-flex align-center w-full mb-medium">
-	<BrButton class="mr-x-small" size="medium">
-		<template #preffix><i preffix class="material-icon-settings" /></template>
+	<BrButton class="mr-x-small" size="medium" prefix="settings-icon">
 		Settings
 	</BrButton>
-	<BrButton class="mr-x-small" size="medium">
-		<template #suffix><i preffix class="material-icon-menu" /></template>
+	<BrButton class="mr-x-small" size="medium" suffix="menu-icon">
 		Menu
 	</BrButton>
-	<BrButton class="mr-x-small" size="medium">
-		<template #preffix><i preffix class="material-icon-settings" /></template>
-		<template #suffix><i preffix class="material-icon-menu" /></template>
+	<BrButton class="mr-x-small" size="medium" prefix="settings-icon" suffix="menu-icon">
 		Options
 	</BrButton>
 </div>
 <div class="inline-flex align-center w-full">
-	<BrButton class="mr-x-small" size="large">
-		<template #preffix><i preffix class="material-icon-settings" /></template>
+	<BrButton class="mr-x-small" size="large" prefix="settings-icon">
 		Settings
 	</BrButton>
-	<BrButton class="mr-x-small" size="large">
-		<template #suffix><i preffix class="material-icon-menu" /></template>
+	<BrButton class="mr-x-small" size="large" suffix="menu-icon">
 		Menu
 	</BrButton>
-	<BrButton class="mr-x-small" size="large">
-		<template #preffix><i preffix class="material-icon-settings" /></template>
-		<template #suffix><i preffix class="material-icon-menu" /></template>
+	<BrButton class="mr-x-small" size="large" prefix="settings-icon" suffix="menu-icon">
 		Options
 	</BrButton>
 </div>
 
 ```vue
-<BrButton size="small">
-	<template #preffix><i preffix class="material-icon-settings" /></template>
-	Settings
-</BrButton>
-<BrButton size="small">
-	<template #suffix><i preffix class="material-icon-menu" /></template>
-	Menu
-</BrButton>
-<BrButton size="small">
-	<template #preffix><i preffix class="material-icon-settings" /></template>
-	<template #suffix><i preffix class="material-icon-menu" /></template>
-	Options
-</BrButton>
-<BrButton size="medium">
-	<template #preffix><i preffix class="material-icon-settings" /></template>
-	Settings
-</BrButton>
-<BrButton size="medium">
-	<template #suffix><i preffix class="material-icon-menu" /></template>
-	Menu
-</BrButton>
-<BrButton size="medium">
-	<template #preffix><i preffix class="material-icon-settings" /></template>
-	<template #suffix><i preffix class="material-icon-menu" /></template>
-	Options
-</BrButton>
-<BrButton size="large">
-	<template #preffix><i preffix class="material-icon-settings" /></template>
-	Settings
-</BrButton>
-<BrButton size="large">
-	<template #suffix><i preffix class="material-icon-menu" /></template>
-	Menu
-</BrButton>
-<BrButton size="large">
-	<template #preffix><i preffix class="material-icon-settings" /></template>
-	<template #suffix><i preffix class="material-icon-menu" /></template>
-	Options
-</BrButton>
+// small
+<BrButton size="small" prefix="icon-settings">Settings</BrButton>
+<BrButton size="small" suffix="icon-menu">Menu</BrButton>
+<BrButton size="small" prefix="icon-settings" suffix="icon-menu">Options</BrButton>]
+// medium
+<BrButton size="medium" prefix="icon-settings">Settings</BrButton>
+<BrButton size="medium" suffix="icon-menu">Menu</BrButton>
+<BrButton size="medium" prefix="icon-settings" suffix="icon-menu">Options</BrButton>
+// large
+<BrButton size="large" prefix="icon-settings">Settings</BrButton>
+<BrButton size="large" suffix="icon-menu">Menu</BrButton>
+<BrButton size="large" prefix="icon-settings" suffix="icon-menu">Options</BrButton>
 ```
 ## Eventos
 

@@ -9,6 +9,8 @@ export type ButtonProps = {
   outline?: boolean
   text?: boolean
   link?: ButtonLink
+  prefix?: string
+  suffix?: string
 }
 
 export type ButtonLink = {

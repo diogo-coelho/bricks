@@ -6,9 +6,10 @@
     :disabled="computedDisabled"
     @click="onClick"
   >
-    <div :class="slots.preffix ? preffixSlotSpacing : ''">
-      <slot name="preffix" />
+    <div v-if="prefix" :class="prefixSlotSpacing">
+      <component :is="prefix" />
     </div>
+
     <a
       v-if="computedLink"
       :href="computedDisabled ? 'javascript:void(0)' : computedLink.href"
@@ -19,8 +20,8 @@
     </a>
 
     <slot v-else />
-    <div :class="slots.suffix ? suffixSlotSpacing : ''">
-      <slot name="suffix" />
+    <div v-if="suffix" :class="suffixSlotSpacing">
+      <component :is="suffix" />
     </div>
   </button>
 </template>
@@ -32,14 +33,15 @@ import {
   ComputedRef,
   defineComponent,
   PropType,
-  useSlots,
-  defineEmits,
-  SetupContext,
 } from 'vue'
 import { ButtonProps, ButtonLink } from '../../types/_button'
+import * as Icons from '../../icons/icons'
 
 export default defineComponent({
   name: 'BrButton',
+  components: {
+    ...Icons,
+  },
   inheritAttrs: false,
   props: {
     /**
@@ -55,6 +57,7 @@ export default defineComponent({
      */
     variant: {
       type: String,
+      default: () => undefined,
       validator: (value: string) => {
         return (
           ['primary', 'neutral', 'success', 'warning', 'danger'].indexOf(
@@ -80,6 +83,7 @@ export default defineComponent({
      */
     size: {
       type: String,
+      default: () => undefined,
       validator: (value: string) => {
         return ['small', 'medium', 'large'].indexOf(value) >= 0
       },
@@ -107,15 +111,33 @@ export default defineComponent({
     },
     /**
      * Href link
-     * @values web string
+     * @values { href: string,
+     * target: '_blank' | '_self' | '_parent' | '_top' | 'framename' | undefined,
+     * download: string | undefined }
      */
     link: {
       type: Object as PropType<ButtonLink>,
+      default: () => undefined,
+    },
+    /**
+     * Set a prefix icon
+     * @values icon name
+     */
+    prefix: {
+      type: String,
+      default: () => undefined,
+    },
+    /**
+     * Set a suffix icon
+     * @values icon name
+     */
+    suffix: {
+      type: String,
+      default: () => undefined,
     },
   },
-  setup(props: ButtonProps, {emit}: SetupContext) {
-    const slots = useSlots()
-
+  emits: ['on-click', 'on-focus', 'on-blur'],
+  setup(props: ButtonProps, { emit }) {
     const computedDisabled: ComputedRef<boolean | undefined> = computed(() => {
       if (props.disabled) return true
       return undefined
@@ -165,43 +187,43 @@ export default defineComponent({
       ]
     })
 
-    const preffixSlotSpacing: ComputedRef<string> = computed(() => {
+    const prefixSlotSpacing: ComputedRef<string> = computed(() => {
       switch (props.size) {
         case 'small':
-          return 'mr-2x-small'
+          return 'pr-2x-small'
         case 'medium':
-          return 'mr-medium'
+          return 'pr-small'
         case 'large':
-          return 'mr-large'
+          return 'pr-medium'
         default:
-          return 'mr-small'
+          return 'pr-x-small'
       }
     })
 
     const suffixSlotSpacing: ComputedRef<string> = computed(() => {
       switch (props.size) {
         case 'small':
-          return 'ml-2x-small'
+          return 'pl-2x-small'
         case 'medium':
-          return 'ml-medium'
+          return 'pl-small'
         case 'large':
-          return 'ml-large'
+          return 'pl-medium'
         default:
-          return 'ml-small'
+          return 'pl-x-small'
       }
     })
 
-	const onClick = (event: MouseEvent): void => {
-	  emit('on-click', event)
-	}
+    const onClick = (event: MouseEvent): void => {
+      emit('on-click', event)
+    }
 
-	const onFocus = (event: KeyboardEvent): void => {
-	  emit('on-focus', event)
-	}
+    const onFocus = (event: KeyboardEvent): void => {
+      emit('on-focus', event)
+    }
 
-	const onBlur = (event: KeyboardEvent): void => {
-	  emit('on-blur', event)
-	}
+    const onBlur = (event: KeyboardEvent): void => {
+      emit('on-blur', event)
+    }
 
     return {
       computedDisabled,
@@ -210,13 +232,12 @@ export default defineComponent({
       computedTextButton,
       computedLink,
       rootClasses,
-      preffixSlotSpacing,
+      prefixSlotSpacing,
       suffixSlotSpacing,
-      slots,
       onClick,
-	  onFocus,
-	  onBlur,
-	  emit,
+      onFocus,
+      onBlur,
+      emit,
     }
   },
 })
