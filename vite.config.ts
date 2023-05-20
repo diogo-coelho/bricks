@@ -17,7 +17,7 @@ export default defineConfig({
       fileName: (format) => `bricks-ui-lib.${format}.js`,
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue','js'],
       output: {
         globals: {
           vue: 'Vue',
