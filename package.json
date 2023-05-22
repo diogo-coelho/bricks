@@ -5,7 +5,7 @@
   "main": "./dist/bricks-ui-lib.umd.js",
   "type": "module",
   "scripts": {
-	"readFileNames": "node index.js",
+    "readFileNames": "node index.js",
     "build:sass": "sass --no-charset ./src/styles/index.scss > dist/index.css && cleancss -o dist/index.min.css dist/index.css",
     "build:lib": "rimraf dist && vite build && vue-tsc --emitDeclarationOnly && npm run build:sass",
     "publish:lib": "npm run build:lib && npm publish --access=public",
@@ -42,6 +42,7 @@
     "@typescript-eslint/eslint-plugin": "^5.59.5",
     "@typescript-eslint/parser": "^5.59.5",
     "@vitejs/plugin-vue": "^4.2.1",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
     "@vue/tsconfig": "^0.3.2",
     "clean-css-cli": "^5.6.2",
     "eslint": "^8.40.0",
