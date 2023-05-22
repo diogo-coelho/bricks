@@ -761,8 +761,8 @@
 
   // Sizes
   &--small {
-    padding: var(--br-spacing-2x-small) var(--br-spacing-x-small);
-    font-size: var(--br-font-size-x-small);
+    padding: var(--br-spacing-x-small) var(--br-spacing-small);
+    font-size: var(--br-font-size-small);
 
     svg {
       width: var(--br-font-size-x-small);
@@ -771,7 +771,7 @@
   }
 
   &--medium {
-    padding: var(--br-spacing-x-small) var(--br-spacing-small);
+    padding: var(--br-spacing-small) var(--br-spacing-medium);
     font-size: var(--br-font-size-medium);
 
     svg {
