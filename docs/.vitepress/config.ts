@@ -5,7 +5,7 @@ export default defineConfig({
   lang: 'pt-BR',
   title: "Bricks",
   description: "A UI components library for Vue.js",
-  base: 'https://github.com/diogo-coelho/bricks/',
+  base: 'https://diogo-coelho.github.io/bricks/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
