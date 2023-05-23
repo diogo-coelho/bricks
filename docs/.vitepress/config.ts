@@ -5,7 +5,6 @@ export default defineConfig({
   lang: 'pt-BR',
   title: "Bricks",
   description: "A UI components library for Vue.js",
-  base: 'https://diogo-coelho.github.io/bricks/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -17,7 +16,8 @@ export default defineConfig({
         text: 'Components',
         items: [
           { text: 'Botão', link: '/components/br-button' },
-          { text: 'Input', link: '/components/br-input' }
+          { text: 'Input', link: '/components/br-input' },
+		  { text: 'Select', link: '/components/br-select' }
         ]
       },
 	  {
