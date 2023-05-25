@@ -5,7 +5,7 @@ import BrButton from '../../src/components/button/BrButton.vue'
 # BrButton <Badge type="warning" text="beta" />
 
 
-`Button` é um componente que representa um elemento clicável que retornará uma ação para o usuário.
+`BrButton` é um componente que representa um elemento clicável que retornará uma ação para o usuário.
 <BrButton>Button</BrButton>
 
 ```vue
@@ -145,52 +145,52 @@ Caso queira usar um botão que funcione como um link, é necessário passar o at
 É possível criar botões com ícones passando os atributos `prefix` e `suffix`, com a string do ícone que deverá ser renderizado dentro do botão. Você encontrará a lista completa de ícones através deste link.
 
 <div class="inline-flex align-center w-full mb-medium">
-	<BrButton class="mr-x-small" size="small" prefix="settings-icon">
+	<BrButton class="mr-x-small" size="small" prefix="br-icon-settings">
 		Settings
 	</BrButton>
-	<BrButton class="mr-x-small" size="small" suffix="menu-icon">
+	<BrButton class="mr-x-small" size="small" suffix="br-icon-menu">
 		Menu
 	</BrButton>
-	<BrButton class="mr-x-small" size="small" prefix="settings-icon" suffix="menu-icon">
+	<BrButton class="mr-x-small" size="small" prefix="br-icon-settings" suffix="br-icon-menu">
 		Options
 	</BrButton>
 </div>
 <div class="inline-flex align-center w-full mb-medium">
-	<BrButton class="mr-x-small" size="medium" prefix="settings-icon">
+	<BrButton class="mr-x-small" size="medium" prefix="br-icon-settings">
 		Settings
 	</BrButton>
-	<BrButton class="mr-x-small" size="medium" suffix="menu-icon">
+	<BrButton class="mr-x-small" size="medium" suffix="br-icon-menu">
 		Menu
 	</BrButton>
-	<BrButton class="mr-x-small" size="medium" prefix="settings-icon" suffix="menu-icon">
+	<BrButton class="mr-x-small" size="medium" prefix="br-icon-settings" suffix="br-icon-menu">
 		Options
 	</BrButton>
 </div>
 <div class="inline-flex align-center w-full">
-	<BrButton class="mr-x-small" size="large" prefix="settings-icon">
+	<BrButton class="mr-x-small" size="large" prefix="br-icon-settings">
 		Settings
 	</BrButton>
-	<BrButton class="mr-x-small" size="large" suffix="menu-icon">
+	<BrButton class="mr-x-small" size="large" suffix="br-icon-menu">
 		Menu
 	</BrButton>
-	<BrButton class="mr-x-small" size="large" prefix="settings-icon" suffix="menu-icon">
+	<BrButton class="mr-x-small" size="large" prefix="br-icon-settings" suffix="br-icon-menu">
 		Options
 	</BrButton>
 </div>
 
 ```vue
 // small
-<BrButton size="small" prefix="icon-settings">Settings</BrButton>
-<BrButton size="small" suffix="icon-menu">Menu</BrButton>
-<BrButton size="small" prefix="icon-settings" suffix="icon-menu">Options</BrButton>]
+<BrButton size="small" prefix="br-icon-settings">Settings</BrButton>
+<BrButton size="small" suffix="br-icon-menu">Menu</BrButton>
+<BrButton size="small" prefix="br-icon-settings" suffix="br-icon-menu">Options</BrButton>
 // medium
-<BrButton size="medium" prefix="icon-settings">Settings</BrButton>
-<BrButton size="medium" suffix="icon-menu">Menu</BrButton>
-<BrButton size="medium" prefix="icon-settings" suffix="icon-menu">Options</BrButton>
+<BrButton size="medium" prefix="br-icon-settings">Settings</BrButton>
+<BrButton size="medium" suffix="br-icon-menu">Menu</BrButton>
+<BrButton size="medium" prefix="br-icon-settings" suffix="br-icon-menu">Options</BrButton>
 // large
-<BrButton size="large" prefix="icon-settings">Settings</BrButton>
-<BrButton size="large" suffix="icon-menu">Menu</BrButton>
-<BrButton size="large" prefix="icon-settings" suffix="icon-menu">Options</BrButton>
+<BrButton size="large" prefix="br-icon-settings">Settings</BrButton>
+<BrButton size="large" suffix="br-icon-menu">Menu</BrButton>
+<BrButton size="large" prefix="br-icon-settings" suffix="br-icon-menu">Options</BrButton>
 ```
 ## Eventos
 

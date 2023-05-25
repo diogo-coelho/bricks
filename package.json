@@ -5,7 +5,6 @@
   "main": "./dist/bricks-ui-lib.umd.js",
   "type": "module",
   "scripts": {
-    "readFileNames": "node index.js",
     "build:sass": "sass --no-charset ./src/styles/index.scss > dist/index.css && cleancss -o dist/index.min.css dist/index.css",
     "build:lib": "rimraf dist && vite build && vue-tsc --emitDeclarationOnly && npm run build:sass",
     "publish:lib": "npm run build:lib && npm publish --access=public",
@@ -16,6 +15,7 @@
     "lint": "eslint --ext .ts,.vue src && npm run styles",
     "styles:fix": "npx stylelint --fix \"src/**/*.{scss,css}\"",
     "lint:fix": "eslint --fix --ext .ts,.vue src && npm run styles:fix",
+    "serve": "node demo/develop-server.cjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -49,6 +49,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.12.0",
+    "express": "^4.18.2",
     "prettier": "^2.8.8",
     "rimraf": "^5.0.0",
     "sass": "^1.62.1",

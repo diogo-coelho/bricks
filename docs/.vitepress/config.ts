@@ -5,7 +5,6 @@ export default defineConfig({
   lang: 'pt-BR',
   title: "Bricks",
   description: "A UI components library for Vue.js",
-  base: 'https://diogo-coelho.github.io/bricks/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -16,17 +15,14 @@ export default defineConfig({
       {
         text: 'Components',
         items: [
-          { text: 'Botão', link: '/components/br-button' },
-          { text: 'Input', link: '/components/br-input' }
+		  { text: 'Botão', link: '/components/br-button' },
+		  { text: 'Select', link: '/components/br-select' }
         ]
       },
 	  {
 		text: 'Design Tokens',
 		items: [
-		  { text: 'Border radius', link: '/design-tokens/border-radius.md' },
 		  { text: 'Cores', link: '/design-tokens/colors.md' },
-		  { text: 'Espaçamento', link: '/design-tokens/spacing.md' },
-		  { text: 'Tipografia', link: '/design-tokens/typography.md'}
 		]
 	  }
     ],
