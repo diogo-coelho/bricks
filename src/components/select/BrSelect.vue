@@ -3,7 +3,7 @@
     <input />
     <p>{{ label }}</p>
     <button>
-      <KeyboardArrowDownIcon />
+      <BrIconKeyboardArrowDown />
     </button>
 
     <teleport to="body">
@@ -23,14 +23,15 @@
 
 <script lang="ts">
 import { defineComponent, PropType, ref } from 'vue'
-import BrSelectItem from './BrSelectItem.vue'
-import KeyboardArrowDownIcon from '../../icons/keyboardArrowDownIcon.vue'
+import BrSelectItem from '../select-item/BrSelectItem.vue'
+import BrIconKeyboardArrowDown from '../../icons/icon-keyboard-arrow-down/BrIconKeyboardArrowDown.vue'
 import { SelectProps, SelectOption } from '../../types/_select'
 
 export default defineComponent({
+  name: 'BrSelect',
   components: {
     BrSelectItem,
-    KeyboardArrowDownIcon,
+    BrIconKeyboardArrowDown,
   },
   props: {
     /**
