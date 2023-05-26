@@ -8,6 +8,7 @@ export type SelectOption = {
   button?: {
     label?: string
     icon?: string
+    // eslint-disable-next-line  @typescript-eslint/no-explicit-any
     callback: (data?: T) => any
   }
 }

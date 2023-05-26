@@ -12,6 +12,6 @@ import BrInput from '../../src/components/input/BrInput.vue'
 	<BrInput />
 ```
 
-<style lang="sass">
+<style lang="scss">
 @import '../../src/styles/index.scss'
 </style>

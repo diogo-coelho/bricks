@@ -15,9 +15,13 @@ import BrSelect from '../../src/components/select/BrSelect.vue'
 />
 
 ```vue
-<BrSelect :items="[{ value: '1', label: 'Item 1'}, { value: '2', label: 'Item 2'}, { value: '3', label: 'Item 3'},]" />
+<BrSelect :items="[
+	{ value: '1', label: 'Item 1'}, 
+	{ value: '2', label: 'Item 2'}, 
+	{ value: '3', label: 'Item 3'},
+]"/>
 ```
 
-<style lang="sass" scoped>
+<style lang="scss">
 @import '../../src/styles/index.scss'
 </style>
