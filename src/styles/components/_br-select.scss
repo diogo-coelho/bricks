@@ -122,19 +122,20 @@
       outline: none;
       -webkit-appearance: none;
     }
+  }
 
-    input.active ~ button > svg {
-      transform: scale(1) rotate(180deg);
-      transition: transform 0.3s;
-    }
+  input.active ~ button > svg {
+    transform: scale(1) rotate(180deg);
+    transition: transform 0.3s;
   }
 }
 
 .select-dropdown {
-  filter: drop-dhadow(0px 1px 10px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 1px 10px rgba(0, 0, 0, 0.15));
   border-radius: var(--br-border-radius-small);
   position: absolute;
   z-index: 50;
+  background-color: var(--br-color-white);
 
   ul {
     height: auto;
