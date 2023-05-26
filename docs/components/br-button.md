@@ -202,6 +202,6 @@ Caso queira usar um botão que funcione como um link, é necessário passar o at
 
 
 
-<style lang="sass" scoped>
+<style lang="scss">
 @import '../../src/styles/index.scss'
 </style>

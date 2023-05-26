@@ -307,7 +307,7 @@ passando como parâmetro uma cor em formato de hexadecimal.
 
 <b>Atenção: </b> a cor informada é considerada a cor em sua saturação ideal, e a partir dela serão geradas cores com maior ou menor luminosidade. Por isso, evite cores com saturação muito baixa, e a luminosidade deve estar em torno de 50%, para que as cores criadas não esbarrem nos extremos de branco e preto.
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../../src/styles/index.scss';
 
 .color-square {

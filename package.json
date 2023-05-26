@@ -15,7 +15,6 @@
     "lint": "eslint --ext .ts,.vue src && npm run styles",
     "styles:fix": "npx stylelint --fix \"src/**/*.{scss,css}\"",
     "lint:fix": "eslint --fix --ext .ts,.vue src && npm run styles:fix",
-    "serve": "node demo/develop-server.cjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -44,6 +43,7 @@
     "@vitejs/plugin-vue": "^4.2.1",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "@vue/tsconfig": "^0.3.2",
+    "babel-loader": "^9.1.2",
     "clean-css-cli": "^5.6.2",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
