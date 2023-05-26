@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
-import { SelectOption } from '../../types/_select'
+import { SelectItemProps, SelectOption } from '../../types/_select'
 import * as Icons from '../../icons/icons'
 
 export default defineComponent({
@@ -28,9 +28,10 @@ export default defineComponent({
       default: () => ({ value: '', label: '' }),
     },
   },
-  setup() {
+  emits: ['selected-option'],
+  setup(props: SelectItemProps, { emit }) {
     const selectValue = () => {
-      console.log('selectValue')
+      emit('selected-option', props.item)
     }
 
     return {

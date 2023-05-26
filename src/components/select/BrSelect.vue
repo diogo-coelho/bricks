@@ -3,13 +3,16 @@
     ref="BrSelectRef"
     v-bind="$attrs"
     class="select"
-    :class="{ disabled: computedDisabled }"
+    :class="{ disabled: computedDisabled, 'on-focus': onFocus }"
   >
     <input
       ref="InputRef"
       name="select"
       type="text"
       readonly
+	  :value="selectedOption?.label"
+	  @focusin="setOnFocus(true)"
+	  @focusout="setOnFocus(false)"
       :class="{ active: active, 'label-less': !computedLabel }"
       @click="toggleSelectDropdown(!active)"
     />
@@ -37,7 +40,8 @@
             v-for="(item, i) in items"
             :key="`br-select-item-${i}`"
             :item="item"
-            @selected-value="setSelectValue"
+			:selected="item.value === selectedOption?.value"
+            @selected-option="setSelectValue"
           />
         </ul>
       </div>
@@ -54,6 +58,7 @@ import {
   PropType,
   Ref,
   ref,
+  watch,
 } from 'vue'
 import BrSelectItem from '../select-item/BrSelectItem.vue'
 import BrIconKeyboardArrowDown from '../../icons/icon-keyboard-arrow-down/BrIconKeyboardArrowDown.vue'
@@ -109,8 +114,17 @@ export default defineComponent({
         return ['small', 'medium', 'large'].indexOf(value) >= 0
       },
     },
+	/**
+	 * set selected value
+	 * @values string
+	 */
+	selected: {
+		type: String,
+		default: () => undefined
+	}
   },
-  setup(props: SelectProps) {
+  emits: ['on-change'],
+  setup(props: SelectProps, { emit }) {
     const BrSelectRef = ref(null)
     const InputRef = ref(null)
     const dropdownWidth: Ref<number> = ref(0)
@@ -119,6 +133,13 @@ export default defineComponent({
       top: undefined,
       left: undefined,
     })
+	const selectedOption: Ref<SelectOption | undefined> = ref()
+	const onFocus: Ref<boolean> = ref(false)
+
+	watch(() => props.selected, () => {
+		if (!props.selected) return
+		selectedOption.value = props.items.find(item => item.label === props.selected)
+	})
 
     const computedLabel: ComputedRef<boolean | undefined> = computed(() => {
       if (props.label !== '') return true
@@ -150,7 +171,6 @@ export default defineComponent({
 
     const setSelectDropdownPosition = (): void => {
       const inputElement = InputRef.value as unknown as HTMLInputElement
-      console.log(inputElement)
       if (!inputElement) return
       const elementOffsets = inputElement.getBoundingClientRect()
 
@@ -176,8 +196,14 @@ export default defineComponent({
     }
 
     const setSelectValue = (item: SelectOption): void => {
-      console.log('função setSelectVaue')
+	  selectedOption.value = item
+	  toggleSelectDropdown(!active.value)
+	  emit('on-change', selectedOption.value)
     }
+
+	const setOnFocus = (value: boolean): void => {
+	  onFocus.value = value
+	}
 
     onMounted(() => {
       setDropdownWidth()
@@ -191,9 +217,12 @@ export default defineComponent({
       computedLabel,
       computedDisabled,
       dropdownElementPosition,
+	  selectedOption,
+	  onFocus,
       setSelectValue,
       setDropdownWidth,
       toggleSelectDropdown,
+	  setOnFocus,
     }
   },
 })

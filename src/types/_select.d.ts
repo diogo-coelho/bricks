@@ -1,7 +1,13 @@
 export type SelectProps = {
+  items: SelectOption[]
   label?: string
   disabled?: boolean
   size?: string
+  selected?: string
+}
+
+export type SelectItemProps = {
+  item: SelectOption
 }
 
 export type DropdownElementPosition = {
@@ -21,3 +27,4 @@ export type SelectOption = {
     callback: (data?: T) => any
   }
 }
+

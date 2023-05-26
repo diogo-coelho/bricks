@@ -24,10 +24,12 @@
   }
 
   &.on-focus {
-    box-shadow: 0 0 0 2px var(--br-color-primary-500);
+    box-shadow: 0 0 0 2px var(--br-color-primary-50);
+	border-radius: var(--br-border-radius-small);;
   }
 
   p {
+	font-family: var(--br-font-sans);
     font-size: var(--br-font-size-small);
     font-weight: var(--br-font-weight-normal);
     color: var(--br-color-primary-500);
@@ -44,6 +46,7 @@
   }
 
   input {
+	font-family: var(--br-font-sans);
     border-radius: var(--br-border-radius-small);
     font-size: var(--br-font-size-small);
     font-weight: var(--br-font-weight-normal);
@@ -183,7 +186,7 @@
       }
 
       &:hover {
-        background-color: var(--br-color-primary-100);
+        background-color: var(--br-color-primary-50);
       }
 
       &:hover p,
