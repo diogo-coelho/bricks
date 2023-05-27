@@ -22,6 +22,31 @@ import BrSelect from '../../src/components/select/BrSelect.vue'
 ]"/>
 ```
 
+## Exemplos
+
+### Label
+
+Passe o atributo `label` para adicionar uma label no select.
+
+<BrSelect 
+	label="Modelo de carro"
+	:items="[
+		{ value: '1', label: 'Audi'},
+		{ value: '2', label: 'Volkswagen'},
+		{ value: '3', label: 'Merdedes-Benz'},
+	]"
+/>
+
+```vue
+<BrSelect 
+	label="Modelo de carro"
+	:items="[
+		{ value: '1', label: 'Audi'},
+		{ value: '2', label: 'Volkswagen'},
+		{ value: '3', label: 'Merdedes-Benz'},
+	]"/>
+```
+
 <style lang="scss">
 @import '../../src/styles/index.scss'
 </style>

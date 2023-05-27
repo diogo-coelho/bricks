@@ -4,6 +4,7 @@ export type SelectProps = {
   disabled?: boolean
   size?: string
   selected?: string
+  pill?: boolean
 }
 
 export type SelectItemProps = {

@@ -5,7 +5,7 @@
   position: relative;
   align-items: center;
   width: 100%;
-  height: auto;
+  height: 42px;
 
   &:not(.disabled):hover {
     input {
@@ -21,6 +21,11 @@
       border: 1px solid var(--br-color-primary-500);
       border-right: none;
     }
+
+	input.label, p.label {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
   }
 
   &.on-focus {
@@ -29,9 +34,11 @@
   }
 
   p {
+	display: flex;
+	align-items: center;
 	font-family: var(--br-font-sans);
     font-size: var(--br-font-size-small);
-    font-weight: var(--br-font-weight-normal);
+    font-weight: var(--br-font-weight-bold);
     color: var(--br-color-primary-500);
     border: 1px solid var(--br-color-neutral-300);
     border-right: none;
@@ -41,8 +48,12 @@
     transition: border 0.3s ease;
     padding: var(--br-spacing-x-small) var(--br-spacing-small);
     padding-right: 0px;
-    width: 25%;
+    width: 45%;
     margin: 0;
+	height: inherit;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   input {
@@ -57,6 +68,7 @@
     padding: var(--br-spacing-x-small) var(--br-spacing-small);
     transition: border 0.3s ease;
     cursor: pointer;
+	height: inherit;
   }
 
   input:focus,
@@ -136,7 +148,7 @@
 .select-dropdown {
   filter: drop-shadow(0px 1px 10px rgba(0, 0, 0, 0.15));
   border-radius: var(--br-border-radius-small);
-  position: absolute;
+  position: fixed;
   z-index: 50;
   background-color: var(--br-color-white);
 
@@ -217,4 +229,48 @@
 
 .select.disabled > button > svg {
   fill: var(--br-color-neutral-200);
+}
+
+.select.small {
+  height: 42px;
+
+  p {
+    font-size: var(--br-font-size-small);
+    padding: var(--br-spacing-x-small) var(--br-spacing-small);
+  }
+
+  input {
+    font-size: var(--br-font-size-small);
+    padding: var(--br-spacing-x-small) var(--br-spacing-small);
+  }
+}
+
+.select.medium {
+	height: 50px;
+  
+	p {
+	  font-size: var(--br-font-size-medium);
+	  padding: var(--br-spacing-small) var(--br-spacing-medium);
+	  width: 50%;
+	}
+  
+	input {
+	  font-size: var(--br-font-size-medium);
+	  padding: var(--br-spacing-small) var(--br-spacing-medium);
+	}
+}
+
+.select.large {
+	height: 58px;
+  
+	p {
+	  font-size: var(--br-font-size-large);
+	  padding: var(--br-spacing-medium) var(--br-spacing-large);
+	  width: 50%;
+	}
+  
+	input {
+	  font-size: var(--br-font-size-small);
+	  padding: var(--br-spacing-medium) var(--br-spacing-large);
+	}
 }

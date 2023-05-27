@@ -1,9 +1,10 @@
 <template>
   <div
     ref="BrSelectRef"
+	v-click-outside="handleOutsideClick"
     v-bind="$attrs"
     class="select"
-    :class="{ disabled: computedDisabled, 'on-focus': onFocus }"
+    :class="[ ...rootClasses, { 'on-focus': onFocus }]"
   >
     <input
       ref="InputRef"
@@ -13,10 +14,13 @@
 	  :value="selectedOption?.label"
 	  @focusin="setOnFocus(true)"
 	  @focusout="setOnFocus(false)"
-      :class="{ active: active, 'label-less': !computedLabel }"
+      :class="[{ active: active, 'label-less': !computedLabel, 'label': computedLabel }, ...rootClasses ]"
       @click="toggleSelectDropdown(!active)"
     />
-    <p v-if="computedLabel">{{ label }}</p>
+    <p 
+	  v-if="computedLabel"
+	  ref="paragraphRef"
+	  :class="[ ...rootClasses , { 'label': computedLabel }]" >{{ label }}</p>
     <button name="select" @click="toggleSelectDropdown(!active)">
       <BrIconKeyboardArrowDown />
     </button>
@@ -67,14 +71,18 @@ import {
   SelectOption,
   DropdownElementPosition,
 } from '../../types/_select'
+import BrClickOutsideDirective from '../../directives/BrClickOutside/BrClickOutsideDirective'
 
-const ELEMENT_SIZE_DEFAULT = 39
-const ELEMENT_SIZE_SMALL = 39
-const ELEMENT_SIZE_MEDIUM = 39
-const ELEMENT_SIZE_LARGE = 39
+const ELEMENT_SIZE_DEFAULT = 42
+const ELEMENT_SIZE_SMALL = 42
+const ELEMENT_SIZE_MEDIUM = 50
+const ELEMENT_SIZE_LARGE = 58
 
 export default defineComponent({
   name: 'BrSelect',
+  directives: {
+	ClickOutside: BrClickOutsideDirective,
+  },
   components: {
     BrSelectItem,
     BrIconKeyboardArrowDown,
@@ -121,12 +129,20 @@ export default defineComponent({
 	selected: {
 		type: String,
 		default: () => undefined
+	},
+	/**
+	 * Set pill border-radius
+	 * @values true, false
+	 */
+	pill: {
+	  type: Boolean,
 	}
   },
   emits: ['on-change'],
   setup(props: SelectProps, { emit }) {
     const BrSelectRef = ref(null)
     const InputRef = ref(null)
+	const paragraphRef = ref(null)
     const dropdownWidth: Ref<number> = ref(0)
     const active: Ref<boolean> = ref(false)
     const dropdownElementPosition: Ref<DropdownElementPosition> = ref({
@@ -151,6 +167,19 @@ export default defineComponent({
       return undefined
     })
 
+	const computedPill: ComputedRef<boolean | undefined> = computed(() => {
+	  if (props.pill) return true
+      return undefined
+	})
+
+	const rootClasses: ComputedRef<string[]> = computed(() => {
+      return [
+        props.size ? `${props.size}` : ``,
+        computedDisabled.value ? `disabled` : '',
+        computedPill.value ? `pill` : '',
+      ]
+    })
+
     const toggleSelectDropdown = (value: boolean): void => {
       setSelectDropdownPosition()
       active.value = value
@@ -171,6 +200,7 @@ export default defineComponent({
 
     const setSelectDropdownPosition = (): void => {
       const inputElement = InputRef.value as unknown as HTMLInputElement
+	  const paragraphElement = paragraphRef.value as unknown as HTMLParagraphElement
       if (!inputElement) return
       const elementOffsets = inputElement.getBoundingClientRect()
 
@@ -180,12 +210,12 @@ export default defineComponent({
       ) {
         dropdownElementPosition.value = {
           top: elementOffsets.top - getHeightFromInputDropdown() - 2,
-          left: elementOffsets.left,
+          left: elementOffsets.left - (paragraphElement ? paragraphElement?.clientWidth : 0),
         }
       } else {
         dropdownElementPosition.value = {
           top: elementOffsets.top + getHeightFromInputDropdown() + 2,
-          left: elementOffsets.left,
+          left: elementOffsets.left - (paragraphElement ? paragraphElement?.clientWidth : 0),
         }
       }
     }
@@ -197,7 +227,7 @@ export default defineComponent({
 
     const setSelectValue = (item: SelectOption): void => {
 	  selectedOption.value = item
-	  toggleSelectDropdown(!active.value)
+	  toggleSelectDropdown(false)
 	  emit('on-change', selectedOption.value)
     }
 
@@ -205,24 +235,48 @@ export default defineComponent({
 	  onFocus.value = value
 	}
 
+	const handleOutsideClick = (event: Event): void => {
+		const elem = document.querySelector('.select-dropdown') as HTMLDivElement
+		if (!(elem.contains(event.target as HTMLElement))) toggleSelectDropdown(!active.value)
+	}
+
+	const onWindowResize = (): void => {
+		window.addEventListener('resize', () => {
+			setSelectDropdownPosition()
+			setDropdownWidth()
+		}, { passive: true })
+	}
+
+	const onScroll = () => {
+		window.addEventListener('scroll', () => {
+			setSelectDropdownPosition()
+		}, { passive: true })
+	}
+
     onMounted(() => {
       setDropdownWidth()
+	  onWindowResize()
+	  onScroll()
     })
 
     return {
       active,
       BrSelectRef,
       InputRef,
+	  paragraphRef,
       dropdownWidth,
       computedLabel,
       computedDisabled,
       dropdownElementPosition,
 	  selectedOption,
 	  onFocus,
+	  rootClasses,
       setSelectValue,
       setDropdownWidth,
       toggleSelectDropdown,
 	  setOnFocus,
+	  handleOutsideClick,
+	  getHeightFromInputDropdown,	  
     }
   },
 })

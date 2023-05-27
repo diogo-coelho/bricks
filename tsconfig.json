@@ -121,6 +121,6 @@
     "tests/**/*.tsx",
     "vite.config.*",
     "env.d.ts"
-  ],
+, "src/directives/BrScrollOutsideDirective"  ],
   "exclude": ["node_modules"]
 }
