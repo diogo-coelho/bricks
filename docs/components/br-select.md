@@ -8,8 +8,8 @@ import BrSelect from '../../src/components/select/BrSelect.vue'
 
 <BrSelect 
 	:items="[
-		{ value: '1', label: 'Item 1'},
-		{ value: '2', label: 'Item 2'},
+		{ value: '1', label: 'Item 1'}, 
+		{ value: '2', label: 'Item 2'}, 
 		{ value: '3', label: 'Item 3'},
 	]"
 />
@@ -28,7 +28,7 @@ import BrSelect from '../../src/components/select/BrSelect.vue'
 
 Passe o atributo `label` para adicionar uma label no select.
 
-<BrSelect 
+<BrSelect
 	label="Modelo de carro"
 	:items="[
 		{ value: '1', label: 'Audi'},
@@ -45,6 +45,30 @@ Passe o atributo `label` para adicionar uma label no select.
 		{ value: '2', label: 'Volkswagen'},
 		{ value: '3', label: 'Merdedes-Benz'},
 	]"/>
+```
+
+### Desabilitado
+
+Passe o atributo `disabled` para desabilitar o elemento.
+
+<BrSelect
+	disabled
+	:items="[
+		{ value: '1', label: 'Item 1'},
+		{ value: '2', label: 'Item 2'},
+		{ value: '3', label: 'Item 3'},
+	]"
+/>
+
+```vue
+<BrSelect 
+	disabled
+	:items="[
+		{ value: '1', label: 'Item 1'},
+		{ value: '2', label: 'Item 2'},
+		{ value: '3', label: 'Item 3'},
+	]"
+/>
 ```
 
 <style lang="scss">

@@ -11,10 +11,10 @@ const BricksLibrary: Plugin = {
       app.use((components as any)[componentKey])
     }
 
-	for (const directiveKey in directives) {
-	  // eslint-disable-next-line  @typescript-eslint/no-explicit-any
-	  app.use((directives as any)[directiveKey])
-	}
+    for (const directiveKey in directives) {
+      // eslint-disable-next-line  @typescript-eslint/no-explicit-any
+      app.use((directives as any)[directiveKey])
+    }
   },
 }
 

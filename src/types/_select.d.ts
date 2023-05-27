@@ -28,4 +28,3 @@ export type SelectOption = {
     callback: (data?: T) => any
   }
 }
-
