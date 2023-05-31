@@ -13,7 +13,12 @@
       readonly
       :value="selectedOption?.label"
       :class="[
-        { active: active, 'label-less': !computedLabel, label: computedLabel },
+        {
+          active: active,
+          'label-less': !computedLabel,
+          label: computedLabel,
+          'on-focus': onFocus,
+        },
         ...rootClasses,
       ]"
       @focusin="setOnFocus(true)"
@@ -39,6 +44,7 @@
     <teleport to="body">
       <div
         class="select-dropdown"
+        :class="rootClasses"
         :style="{
           display: active && !computedDisabled ? 'block' : 'none',
           width: dropdownWidth + 'px',
@@ -55,7 +61,7 @@
             v-for="(item, i) in items"
             :key="`br-select-item-${i}`"
             :item="item"
-            :selected="item.value === selectedOption?.value"
+            :active="item.value === selectedOption?.value"
             @selected-option="setSelectValue"
           />
         </ul>
@@ -73,7 +79,6 @@ import {
   PropType,
   Ref,
   ref,
-  watch,
 } from 'vue'
 import BrSelectItem from '../select-item/BrSelectItem.vue'
 import BrIconKeyboardArrowDown from '../../icons/icon-keyboard-arrow-down/BrIconKeyboardArrowDown.vue'
@@ -163,15 +168,10 @@ export default defineComponent({
     const selectedOption: Ref<SelectOption | undefined> = ref()
     const onFocus: Ref<boolean> = ref(false)
 
-    watch(
-      () => props.selected,
-      () => {
-        if (!props.selected) return
-        selectedOption.value = props.items.find(
-          (item) => item.label === props.selected
-        )
-      }
-    )
+    const computedSelected: ComputedRef<string | undefined> = computed(() => {
+      if (!props.selected) return undefined
+      return props.selected
+    })
 
     const computedLabel: ComputedRef<boolean | undefined> = computed(() => {
       if (props.label !== '') return true
@@ -203,11 +203,14 @@ export default defineComponent({
             event.target as HTMLElement
           )
         ) {
+          setOnFocus(value)
           setSelectDropdownPosition()
           active.value = value
           return
         }
       }
+
+      setOnFocus(value)
       active.value = value
     }
 
@@ -272,6 +275,13 @@ export default defineComponent({
         toggleSelectDropdown(false)
     }
 
+    const setSelectedOptionWithPropsValue = (): void => {
+      if (!computedSelected.value) return
+      selectedOption.value = props.items.find(
+        (item) => item.label === computedSelected.value
+      )
+    }
+
     const onWindowResize = (): void => {
       window.addEventListener(
         'resize',
@@ -287,6 +297,7 @@ export default defineComponent({
       window.addEventListener(
         'scroll',
         () => {
+          setOnFocus(false)
           toggleSelectDropdown(false)
           setSelectDropdownPosition()
         },
@@ -298,6 +309,7 @@ export default defineComponent({
       setDropdownWidth()
       onWindowResize()
       onScroll()
+      setSelectedOptionWithPropsValue()
     })
 
     return {

@@ -1,9 +1,9 @@
 <template>
-  <li>
+  <li :class="{ 'active': active }">
     <p class="option" @click="selectValue()">{{ item.label }}</p>
 
     <button v-if="item.button">
-      <!-- <component :is="item.button?.icon!.toString()" /> -->
+      <component :is="item.button?.icon?.toString() || ''" />
     </button>
   </li>
 </template>
@@ -27,6 +27,14 @@ export default defineComponent({
       type: Object as PropType<SelectOption>,
       default: () => ({ value: '', label: '' }),
     },
+	/**
+	 * set active when choose
+	 * @values true, false
+	 */
+	active: {
+		type: Boolean,
+		default: () => false
+	}
   },
   emits: ['selected-option'],
   setup(props: SelectItemProps, { emit }) {
