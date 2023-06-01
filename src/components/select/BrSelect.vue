@@ -44,9 +44,8 @@
     <teleport to="body">
       <div
         class="select-dropdown"
-        :class="rootClasses"
+        :class="[...rootClasses, { active: active && !computedDisabled }]"
         :style="{
-          display: active && !computedDisabled ? 'block' : 'none',
           width: dropdownWidth + 'px',
           top: dropdownElementPosition.top
             ? dropdownElementPosition.top + 2 + 'px'

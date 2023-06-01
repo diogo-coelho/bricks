@@ -154,6 +154,16 @@
   position: fixed;
   z-index: 50;
   background-color: var(--br-color-white);
+  display: block;
+  visibility: hidden;
+  transform: scale(0.75, 0.75);
+  transition: transform 0.1s ease-in-out;
+
+  &.active {
+    visibility: visible;
+    transform: scale(1, 1);
+    transition: transform 0.1s ease-in-out;
+  }
 
   ul {
     height: auto;

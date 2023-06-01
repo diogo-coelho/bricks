@@ -276,7 +276,11 @@ Passe através do atributo `size` o tamanho que o select deve ter.
 	]"
 ></BrSelect>
 ```
+## Eventos
 
+| Nome          | Descrição                                                                              |
+| ------------- | :------------------------------------------------------------------------------------: |
+| on-change     | Evento emitido ao trocar a opção do select                                             |
 
 
 <style lang="scss">
