@@ -1,5 +1,21 @@
 export type SelectProps = {
+  items: SelectOption[]
   label?: string
+  disabled?: boolean
+  size?: string
+  selected?: string
+  pill?: boolean
+}
+
+export type SelectItemProps = {
+  item: SelectOption
+}
+
+export type DropdownElementPosition = {
+  top?: number
+  left?: number
+  bottom?: number
+  right?: number
 }
 
 export type SelectOption = {

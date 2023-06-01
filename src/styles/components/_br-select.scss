@@ -5,7 +5,7 @@
   position: relative;
   align-items: center;
   width: 100%;
-  height: auto;
+  height: 42px;
 
   &:not(.disabled):hover {
     input {
@@ -23,13 +23,16 @@
     }
   }
 
-  &.on-focus {
-    box-shadow: 0 0 0 2px var(--br-color-primary-500);
+  &.on-focus:not(.disabled) {
+    box-shadow: 0 0 0 2px var(--br-color-primary-50);
+    border-radius: var(--br-border-radius-small);
   }
 
   p {
+    display: inline-block;
+    font-family: var(--br-font-sans);
     font-size: var(--br-font-size-small);
-    font-weight: var(--br-font-weight-normal);
+    font-weight: var(--br-font-weight-bold);
     color: var(--br-color-primary-500);
     border: 1px solid var(--br-color-neutral-300);
     border-right: none;
@@ -41,23 +44,36 @@
     padding-right: 0px;
     width: 25%;
     margin: 0;
+    height: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
   }
 
   input {
+    font-family: var(--br-font-sans);
     border-radius: var(--br-border-radius-small);
     font-size: var(--br-font-size-small);
     font-weight: var(--br-font-weight-normal);
     color: var(--br-color-neutral-600);
     border: 1px solid var(--br-color-neutral-300);
     border-left: transparent;
-    width: 100%;
+    width: 75%;
     padding: var(--br-spacing-x-small) var(--br-spacing-small);
     transition: border 0.3s ease;
     cursor: pointer;
+    height: inherit;
+  }
+
+  input.label {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
   }
 
   input:focus,
-  input:focus-visible {
+  input:focus-visible,
+  input.on-focus {
     border: 1px solid var(--br-color-primary-500);
     border-left: transparent;
     outline: none;
@@ -65,7 +81,8 @@
   }
 
   input:focus ~ p,
-  input:focus-visible ~ p {
+  input:focus-visible ~ p,
+  input.on-focus ~ p {
     border: 1px solid var(--br-color-primary-500);
     border-right: transparent;
     transition: border 0.3s ease;
@@ -73,6 +90,7 @@
 
   input.label-less {
     border-left: 1px solid var(--br-color-neutral-300);
+    width: 100%;
   }
 
   &:not(.disabled) input.label-less:focus,
@@ -122,19 +140,30 @@
       outline: none;
       -webkit-appearance: none;
     }
+  }
 
-    input.active ~ button > svg {
-      transform: scale(1) rotate(180deg);
-      transition: transform 0.3s;
-    }
+  input.active ~ button:not(.disabled) > svg {
+    transform: scale(1) rotate(180deg);
+    transition: transform 0.3s;
   }
 }
 
 .select-dropdown {
-  filter: drop-dhadow(0px 1px 10px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 1px 10px rgba(0, 0, 0, 0.15));
   border-radius: var(--br-border-radius-small);
-  position: absolute;
+  position: fixed;
   z-index: 50;
+  background-color: var(--br-color-white);
+  display: block;
+  visibility: hidden;
+  transform: scale(0.75, 0.75);
+  transition: transform 0.1s ease-in-out;
+
+  &.active {
+    visibility: visible;
+    transform: scale(1, 1);
+    transition: transform 0.1s ease-in-out;
+  }
 
   ul {
     height: auto;
@@ -182,13 +211,13 @@
       }
 
       &:hover {
-        background-color: var(--br-color-primary-100);
+        background-color: var(--br-color-primary-50);
       }
 
       &:hover p,
       &.active p {
         color: var(--br-color-primary-500);
-        font-weight: var(--br-font-weight-normal);
+        font-weight: var(--br-font-weight-bold);
       }
 
       &:first-child {
@@ -213,4 +242,115 @@
 
 .select.disabled > button > svg {
   fill: var(--br-color-neutral-200);
+  cursor: not-allowed;
+}
+
+.select.small {
+  height: 42px;
+
+  p {
+    font-size: var(--br-font-size-small);
+    padding: var(--br-spacing-x-small) var(--br-spacing-small);
+  }
+
+  input {
+    font-size: var(--br-font-size-small);
+    padding: var(--br-spacing-x-small) var(--br-spacing-small);
+  }
+}
+
+.select-dropdown.small {
+  li {
+    font-size: var(--br-font-size-small);
+  }
+
+  p {
+    font-size: var(--br-font-size-small);
+  }
+}
+
+.select.medium {
+  height: 50px;
+
+  p {
+    font-size: var(--br-font-size-medium);
+    padding: var(--br-spacing-small) var(--br-spacing-medium);
+    width: 30%;
+  }
+
+  input {
+    font-size: var(--br-font-size-medium);
+    padding: var(--br-spacing-small) var(--br-spacing-medium);
+    width: 70%;
+  }
+
+  input.label-less {
+    width: 100%;
+  }
+}
+
+.select-dropdown.medium {
+  li {
+    font-size: var(--br-font-size-medium);
+  }
+
+  p {
+    font-size: var(--br-font-size-medium);
+  }
+}
+
+.select.large {
+  height: 58px;
+
+  p {
+    font-size: var(--br-font-size-large);
+    padding: var(--br-spacing-medium) var(--br-spacing-large);
+    width: 35%;
+  }
+
+  input {
+    font-size: var(--br-font-size-large);
+    padding: var(--br-spacing-medium) var(--br-spacing-large);
+    width: 65%;
+  }
+
+  input.label-less {
+    width: 100%;
+  }
+}
+
+.select-dropdown.large {
+  li {
+    font-size: var(--br-font-size-large);
+  }
+
+  p {
+    font-size: var(--br-font-size-large);
+  }
+}
+
+.select.pill {
+  border-radius: var(--br-border-radius-pill);
+
+  &.on-focus:not(.disabled) {
+    border-radius: var(--br-border-radius-pill);
+  }
+
+  p {
+    border-radius: var(--br-border-radius-pill);
+  }
+
+  input {
+    border-radius: var(--br-border-radius-pill);
+  }
+
+  input.label {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+
+  p.label {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
 }

@@ -200,8 +200,6 @@ Caso queira usar um botão que funcione como um link, é necessário passar o at
 | on-focus      | Evento emitido ao focar no botão                                                       |
 | on-blur       | Evento emitido ao remover o foco do botão                                              |
 
-
-
 <style lang="scss">
 @import '../../src/styles/index.scss'
 </style>
