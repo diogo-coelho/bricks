@@ -3,7 +3,7 @@
     ref="BrSelectRef"
     v-click-outside="handleOutsideClick"
     v-bind="$attrs"
-    class="select"
+    class="br-select"
     :class="[...rootClasses, { 'on-focus': onFocus }]"
   >
     <input
@@ -43,7 +43,7 @@
 
     <teleport to="body">
       <div
-        class="select-dropdown"
+        class="br-select-dropdown"
         :class="[...rootClasses, { active: active && !computedDisabled }]"
         :style="{
           width: dropdownWidth + 'px',
@@ -269,7 +269,9 @@ export default defineComponent({
     }
 
     const handleOutsideClick = (event: Event): void => {
-      const elem = document.querySelector('.select-dropdown') as HTMLDivElement
+      const elem = document.querySelector(
+        '.br-select-dropdown'
+      ) as HTMLDivElement
       if (!elem.contains(event.target as HTMLElement))
         toggleSelectDropdown(false)
     }

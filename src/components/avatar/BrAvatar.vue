@@ -1,5 +1,5 @@
 <template>
-  <div class="avatar" :style="computedImage">
+  <div class="br-avatar" :class="computedShape || ''" :style="computedImage">
     <div v-if="computedInitials">
       <span>{{ computedInitials }}</span>
     </div>
@@ -38,12 +38,23 @@ export default defineComponent({
       default: () => undefined,
     },
     /**
-     * Set a image
+     * Set an image
      * @values string
      */
     image: {
       type: String,
       default: () => undefined,
+    },
+    /**
+     * Set the shape of avatar
+     * @values square, rounded, circle
+     */
+    shape: {
+      type: String,
+      default: () => undefined,
+      validator: (value: string) => {
+        return ['shape', 'rounded', 'circle'].indexOf(value) >= 0
+      },
     },
   },
   setup(props: AvatarProps) {
@@ -66,10 +77,16 @@ export default defineComponent({
       }
     )
 
+    const computedShape: ComputedRef<string | undefined> = computed(() => {
+      if (!props.shape) return undefined
+      return props.shape
+    })
+
     return {
       computedAvatar,
       computedInitials,
       computedImage,
+      computedShape,
     }
   },
 })
