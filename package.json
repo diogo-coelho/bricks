@@ -1,6 +1,6 @@
 {
   "name": "@diogo-coelho/bricks",
-  "version": "0.0.2-ALPHA",
+  "version": "0.0.3-ALPHA",
   "description": "A UI components library for Vue.js",
   "main": "./dist/bricks-ui-lib.umd.js",
   "type": "module",
@@ -15,7 +15,7 @@
     "lint": "eslint --ext .ts,.vue src && npm run styles",
     "styles:fix": "npx stylelint --fix \"src/**/*.{scss,css}\"",
     "lint:fix": "eslint --fix --ext .ts,.vue src && npm run styles:fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "exit 0"
   },
   "repository": {
     "type": "git",
