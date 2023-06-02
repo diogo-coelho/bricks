@@ -1,0 +1,18 @@
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--br-color-neutral-200);
+  color: var(--br-color-white);
+  border-radius: var(--br-border-radius-circle);
+  width: 48px;
+  height: 48px;
+
+  * {
+    fill: var(--br-color-white);
+    color: var(--br-color-white);
+    font-family: var(--br-font-sans);
+    font-size: var(--br-font-size-large);
+    font-weight: var(--br-font-weight-normal);
+  }
+}
