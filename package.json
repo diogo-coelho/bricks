@@ -1,6 +1,6 @@
 {
   "name": "@diogo-coelho/bricks",
-  "version": "0.0.1-ALPHA",
+  "version": "0.0.2-ALPHA",
   "description": "A UI components library for Vue.js",
   "main": "./dist/bricks-ui-lib.umd.js",
   "type": "module",
@@ -75,5 +75,8 @@
     },
     "./index.min.css": "./dist/index.min.css"
   },
-  "types": "./dist/types/index.d.ts"
+  "types": "./dist/types/index.d.ts",
+  "publishConfig": {
+	"@diogo-coelho:registry": "https://npm.pkg.github.com"
+  }
 }
