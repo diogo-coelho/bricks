@@ -129,7 +129,7 @@ Caso queira usar um botão que funcione como um link, é necessário passar o at
 <div class="inline-flex w-full">
 	<BrButton class="mr-x-small" :link="{'href':'https://www.google.com'}">Link</BrButton>
 	<BrButton class="mr-x-small" :link="{'href':'https://www.google.com','target':'_blank'}">New Window</BrButton>
-	<BrButton class="mr-x-small" :link="{'href':'./images/html-5-logo.png','download':'html-5-logo.png'}">Download</BrButton>
+	<BrButton class="mr-x-small" :link="{'href':'../images/html-5-logo.png','download':'html-5-logo.png'}">Download</BrButton>
 	<BrButton class="mr-x-small" :link="{'href':'https://www.google.com'}" disabled>Disabled</BrButton>
 </div>
 
