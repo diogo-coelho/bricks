@@ -1,9 +1,9 @@
 export type BreadcrumbItem = {
-	text: string
-	href?: string
+  text: string
+  href?: string
 }
 
 export type BreadcrumbProps = {
-	items: BreadcrumbItem[]
-	customSeparator?: string
+  items: BreadcrumbItem[]
+  customSeparator?: string
 }
