@@ -1,0 +1,45 @@
+.br-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--br-color-neutral-200);
+  color: var(--br-color-white);
+  border-radius: var(--br-border-radius-circle);
+  width: 48px;
+  height: 48px;
+
+  * {
+    fill: var(--br-color-white);
+    color: var(--br-color-white);
+    font-family: var(--br-font-sans);
+    font-size: var(--br-font-size-large);
+    font-weight: var(--br-font-weight-normal);
+  }
+
+  &.square {
+    border-radius: 0px;
+  }
+
+  &.rounded {
+    border-radius: var(--br-border-radius-medium);
+  }
+
+  &.circle {
+    border-radius: var(--br-border-radius-circle);
+  }
+}
+
+.br-group-avatar {
+  position: inherit;
+  display: inline-flex;
+
+  .br-avatar {
+    position: relative;
+    margin-left: -1rem;
+    outline: 3px solid var(--br-color-white);
+
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+}

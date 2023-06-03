@@ -1,6 +1,7 @@
 import { App, Plugin } from 'vue'
 import * as components from './components'
 import * as directives from './directives'
+import * as utils from './utils'
 
 // Create module definition for Vue.use()
 const BricksLibrary: Plugin = {
@@ -15,6 +16,8 @@ const BricksLibrary: Plugin = {
       // eslint-disable-next-line  @typescript-eslint/no-explicit-any
       app.use((directives as any)[directiveKey])
     }
+
+    app.config.globalProperties.$utils = utils
   },
 }
 

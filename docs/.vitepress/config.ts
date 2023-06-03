@@ -16,6 +16,8 @@ export default defineConfig({
       {
         text: 'Components',
         items: [
+		  { text: 'Avatar', link: '/components/br-avatar' },
+		  { text: 'Breadcrumb', link: '/components/br-breadcrumb'},
 		  { text: 'Botão', link: '/components/br-button' },
 		  { text: 'Select', link: '/components/br-select' }
         ]

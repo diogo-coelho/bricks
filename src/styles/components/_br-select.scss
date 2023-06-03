@@ -1,4 +1,4 @@
-.select {
+.br-select {
   display: flex;
   font-family: var(--br-font-sans);
   flex-direction: row-reverse;
@@ -25,7 +25,7 @@
 
   &.on-focus:not(.disabled) {
     box-shadow: 0 0 0 2px var(--br-color-primary-50);
-    border-radius: var(--br-border-radius-small);
+    border-radius: var(--br-border-radius-medium);
   }
 
   p {
@@ -36,7 +36,7 @@
     color: var(--br-color-primary-500);
     border: 1px solid var(--br-color-neutral-300);
     border-right: none;
-    border-radius: var(--br-border-radius-small);
+    border-radius: var(--br-border-radius-medium);
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     transition: border 0.3s ease;
@@ -53,7 +53,7 @@
 
   input {
     font-family: var(--br-font-sans);
-    border-radius: var(--br-border-radius-small);
+    border-radius: var(--br-border-radius-medium);
     font-size: var(--br-font-size-small);
     font-weight: var(--br-font-weight-normal);
     color: var(--br-color-neutral-600);
@@ -148,9 +148,9 @@
   }
 }
 
-.select-dropdown {
+.br-select-dropdown {
   filter: drop-shadow(0px 1px 10px rgba(0, 0, 0, 0.15));
-  border-radius: var(--br-border-radius-small);
+  border-radius: var(--br-border-radius-medium);
   position: fixed;
   z-index: 50;
   background-color: var(--br-color-white);
@@ -203,7 +203,7 @@
 
       button:hover {
         background-color: var(--br-color-primary-500);
-        border-radius: var(--br-border-radius-small);
+        border-radius: var(--br-border-radius-medium);
 
         svg {
           fill: var(--br-color-primary-600);
@@ -221,31 +221,31 @@
       }
 
       &:first-child {
-        border-top-left-radius: var(--br-border-radius-small);
-        border-top-right-radius: var(--br-border-radius-small);
+        border-top-left-radius: var(--br-border-radius-medium);
+        border-top-right-radius: var(--br-border-radius-medium);
       }
 
       &:last-child {
-        border-bottom-left-radius: var(--br-border-radius-small);
-        border-bottom-right-radius: var(--br-border-radius-small);
+        border-bottom-left-radius: var(--br-border-radius-medium);
+        border-bottom-right-radius: var(--br-border-radius-medium);
       }
     }
   }
 }
 
-.select.disabled > input {
+.br-select.disabled > input {
   background-color: var(--br-color-neutral-50);
   color: var(--br-color-neutral-200);
   border: 1px solid var(--br-color-neutral-200);
   cursor: not-allowed;
 }
 
-.select.disabled > button > svg {
+.br-select.disabled > button > svg {
   fill: var(--br-color-neutral-200);
   cursor: not-allowed;
 }
 
-.select.small {
+.br-select.small {
   height: 42px;
 
   p {
@@ -259,7 +259,7 @@
   }
 }
 
-.select-dropdown.small {
+.br-select-dropdown.small {
   li {
     font-size: var(--br-font-size-small);
   }
@@ -269,7 +269,7 @@
   }
 }
 
-.select.medium {
+.br-select.medium {
   height: 50px;
 
   p {
@@ -289,7 +289,7 @@
   }
 }
 
-.select-dropdown.medium {
+.br-select-dropdown.medium {
   li {
     font-size: var(--br-font-size-medium);
   }
@@ -299,7 +299,7 @@
   }
 }
 
-.select.large {
+.br-select.large {
   height: 58px;
 
   p {
@@ -319,7 +319,7 @@
   }
 }
 
-.select-dropdown.large {
+.br-select-dropdown.large {
   li {
     font-size: var(--br-font-size-large);
   }
@@ -329,7 +329,7 @@
   }
 }
 
-.select.pill {
+.br-select.pill {
   border-radius: var(--br-border-radius-pill);
 
   &.on-focus:not(.disabled) {
