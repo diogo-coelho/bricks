@@ -1,5 +1,13 @@
 <script setup>
+import { ref, onMounted } from 'vue'
 import BrAlert from '../../src/components/alert/BrAlert.vue'
+import BrButton from '../../src/components/button/BrButton.vue'
+
+const alert = ref(null)
+
+function showAlert() {
+	alert.value.showAlert()
+}
 </script>
 
 # BrAlert <Badge type="warning" text="beta" />
@@ -70,6 +78,46 @@ Através do atributo `closable` é exibido um botão que permite que o alerta se
 <BrAlert class="mb-small" closable>
 	<p>Ao clicar no botão X, o alerta deve se fechar</p>
 </BrAlert>
+
+```vue
+<BrAlert class="mb-small" closable>
+	<p>Ao clicar no botão X, o alerta deve se fechar</p>
+</BrAlert>
+```
+
+### Sem ícone
+
+Passe o atributo `no-icons` para desabilitar a exibição do ícone dentro do alerta
+
+<BrAlert class="mb-small" no-icons>
+	<p>Esse alerta não tem nenhum ícone</p>
+</BrAlert>
+
+```jsx
+<BrAlert class="mb-small" no-icons>
+	<p>Esse alerta não tem nenhum ícone</p>
+</BrAlert>
+```
+
+### Duração
+
+Ao passar o atributo `duration`, o alerta será escondido depois do período de tempo determinado.
+
+<BrButton id="button" @click="showAlert">Abrir Alert</BrButton>
+<BrAlert class="mt-medium mb-medium" ref="alert" duration="3000" closable>Esse alerta deve fechar em 3 segundos</BrAlert>
+
+```vue
+<BrButton id="button" @click="showAlert">Abrir Alert</BrButton>
+<BrAlert ref="alert" duration="3000" closable>Esse alerta deve fechar em 3 segundos</BrAlert>
+
+<script setup>
+const alert = ref(null)
+
+function showAlert() {
+	alert.value.showAlert()
+}
+</script>
+```
 
 <style lang="scss">
 @import '../../src/styles/index.scss'

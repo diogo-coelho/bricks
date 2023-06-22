@@ -4,7 +4,7 @@
     :style="{ display: hidden ? 'none' : 'flex' }"
   >
     <div class="message">
-      <div v-if="computedIcon">
+      <div v-if="computedIcon && !computedDisableIconsVisibility">
         <component :is="computedIcon" />
       </div>
 
@@ -20,7 +20,14 @@
 </template>
 
 <script lang="ts">
-import { computed, ComputedRef, defineComponent, Ref, ref } from 'vue'
+import {
+  computed,
+  ComputedRef,
+  defineComponent,
+  onMounted,
+  Ref,
+  ref,
+} from 'vue'
 import { AlertProps } from '../../types/_alert'
 import * as Icons from '../../icons/icons'
 
@@ -51,6 +58,21 @@ export default defineComponent({
      */
     closable: {
       type: Boolean,
+    },
+    /**
+     * Define if alert shows icons
+     */
+    noIcons: {
+      type: Boolean,
+      default: () => false,
+    },
+    /**
+     * Set a duration to show alert
+     * @values number
+     */
+    duration: {
+      type: Number,
+      default: () => undefined,
     },
   },
   setup(props: AlertProps) {
@@ -85,10 +107,31 @@ export default defineComponent({
       return undefined
     })
 
+    const computedDisableIconsVisibility: ComputedRef<boolean | undefined> =
+      computed(() => {
+        if (props.noIcons) return true
+        return undefined
+      })
+
+    const showAlert = (): void => {
+      fadeOut.value = false
+      setTimeout(() => (hidden.value = false), 300)
+
+      closeAfterDuration()
+    }
+
     const closeAlert = (): void => {
       fadeOut.value = true
       setTimeout(() => (hidden.value = true), 300)
     }
+
+    const closeAfterDuration = (): void => {
+      setTimeout(() => closeAlert(), props.duration)
+    }
+
+    onMounted(() => {
+      if (props.duration) hidden.value = true
+    })
 
     return {
       hidden,
@@ -96,7 +139,9 @@ export default defineComponent({
       rootClasses,
       computedIcon,
       computedClosable,
+      computedDisableIconsVisibility,
       closeAlert,
+      showAlert,
     }
   },
 })
