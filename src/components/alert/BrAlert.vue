@@ -1,7 +1,14 @@
 <template>
   <div
-    :class="[...rootClasses, { 'fade-out': computedFadeOut }]"
-    :style="{ display: hidden ? 'none' : 'flex' }"
+    :class="[
+      ...rootClasses,
+      {
+        'fade-out': computedFadeOut,
+        'fade-in': computedFadeIn,
+        visibility: hidden,
+      },
+    ]"
+    :style="computedStyles"
   >
     <div class="message">
       <div v-if="computedIcon && !computedDisableIconsVisibility">
@@ -27,8 +34,9 @@ import {
   onMounted,
   Ref,
   ref,
+  StyleValue,
 } from 'vue'
-import { AlertProps } from '../../types/_alert'
+import { AlertProps, ToastStyles, ToastPositions } from '../../types/_alert'
 import * as Icons from '../../icons/icons'
 
 export default defineComponent({
@@ -76,13 +84,38 @@ export default defineComponent({
     },
   },
   setup(props: AlertProps) {
+    const timeout: Ref<NodeJS.Timeout | null> = ref(null)
     const fadeOut: Ref<boolean> = ref(false)
     const hidden: Ref<boolean> = ref(false)
+    const isToast: Ref<boolean> = ref(false)
+    const toastStyles: Ref<ToastStyles> = ref({
+      position: 'fixed',
+      boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.12)',
+      top: '20px',
+      right: '20px',
+      left: undefined,
+      bottom: undefined,
+      width: '400px',
+      zIndex: 50,
+    })
 
     const computedFadeOut: ComputedRef<boolean> = computed(() => fadeOut.value)
+    const computedFadeIn: ComputedRef<boolean | undefined> = computed(() => {
+      if (props.duration) return !fadeOut.value
+      return undefined
+    })
 
     const rootClasses: ComputedRef<string[]> = computed(() => {
       return [`br-alert`, props.variant ? `br-alert--${props.variant}` : ``]
+    })
+
+    const computedStyles: ComputedRef<StyleValue | undefined> = computed(() => {
+      if (isToast.value)
+        return {
+          display: hidden.value ? 'none' : 'flex',
+          ...toastStyles.value,
+        }
+      return { display: hidden.value ? 'none' : 'flex' }
     })
 
     const computedIcon: ComputedRef<string | undefined> = computed(() => {
@@ -115,18 +148,61 @@ export default defineComponent({
 
     const showAlert = (): void => {
       fadeOut.value = false
-      setTimeout(() => (hidden.value = false), 300)
-
+      hidden.value = false
       closeAfterDuration()
     }
 
     const closeAlert = (): void => {
       fadeOut.value = true
       setTimeout(() => (hidden.value = true), 300)
+      clearTimeout(timeout.value as NodeJS.Timeout)
+    }
+
+    const toast = (): void => {
+      isToast.value = true
+      showAlert()
+    }
+
+    const setToastPosition = (value: ToastPositions): void => {
+      switch (value) {
+        case 'top-right':
+          toastStyles.value.top = '20px'
+          toastStyles.value.right = '20px'
+          toastStyles.value.left = undefined
+          toastStyles.value.bottom = undefined
+          break
+
+        case 'bottom-right':
+          toastStyles.value.top = undefined
+          toastStyles.value.right = '20px'
+          toastStyles.value.left = undefined
+          toastStyles.value.bottom = '20px'
+          break
+
+        case 'top-left':
+          toastStyles.value.top = '20px'
+          toastStyles.value.right = undefined
+          toastStyles.value.left = '20px'
+          toastStyles.value.bottom = undefined
+          break
+
+        case 'bottom-left':
+          toastStyles.value.top = undefined
+          toastStyles.value.right = undefined
+          toastStyles.value.left = '20px'
+          toastStyles.value.bottom = '20px'
+          break
+
+        default:
+          toastStyles.value.top = '20px'
+          toastStyles.value.right = '20px'
+          toastStyles.value.left = undefined
+          toastStyles.value.bottom = undefined
+      }
     }
 
     const closeAfterDuration = (): void => {
-      setTimeout(() => closeAlert(), props.duration)
+      timeout.value = setTimeout(() => closeAlert(), props.duration)
     }
 
     onMounted(() => {
@@ -136,12 +212,16 @@ export default defineComponent({
     return {
       hidden,
       computedFadeOut,
+      computedFadeIn,
       rootClasses,
       computedIcon,
       computedClosable,
       computedDisableIconsVisibility,
+      computedStyles,
       closeAlert,
       showAlert,
+      toast,
+      setToastPosition,
     }
   },
 })

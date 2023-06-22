@@ -17,4 +17,7 @@ module.exports = {
 	'plugin:prettier/recommended'
   ],
   rules: {},
+  globals: {
+	"NodeJS": true
+  },
 }

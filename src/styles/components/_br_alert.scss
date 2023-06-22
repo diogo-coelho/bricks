@@ -4,11 +4,13 @@
   font-family: var(--br-font-sans);
   font-size: var(--br-font-size-small);
   padding: var(--br-spacing-medium);
+  background-color: var(--br-color-white);
   border: 1px solid var(--br-color-neutral-100);
   border-radius: var(--br-border-radius-medium);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  visibility: visible;
 
   .message {
     display: flex;
@@ -31,14 +33,20 @@
     }
   }
 
+  &.fade-in {
+    animation-name: fadeIn;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+  }
+
   &.fade-out {
-    visibility: hidden;
-    transform: scale(0.5, 0.5);
-    transition: transform 0.2s ease-in-out, visibility 0.1s ease-in-out;
+    animation-name: fadeOut;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
   }
 
   &.hidden {
-    display: none;
+    visibility: hidden;
   }
 
   &--primary {
@@ -83,6 +91,28 @@
     svg {
       margin-right: var(--br-spacing-medium);
       fill: var(--br-color-danger-500);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      visibility: hidden;
+      transform: scale(0, 0);
+    }
+    100% {
+      visibility: visible;
+      transform: scale(1, 1);
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      visibility: visible;
+      transform: scale(1, 1);
+    }
+    100% {
+      visibility: hidden !important;
+      transform: scale(0, 0);
     }
   }
 }
