@@ -1,6 +1,6 @@
 {
   "name": "@diogo-coelho/bricks",
-  "version": "0.0.3-ALPHA",
+  "version": "0.0.4-ALPHA",
   "description": "A UI components library for Vue.js",
   "main": "./dist/bricks-ui-lib.umd.js",
   "type": "module",

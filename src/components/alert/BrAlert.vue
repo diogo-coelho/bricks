@@ -1,5 +1,6 @@
 <template>
   <div
+    ref="alert"
     :class="[
       ...rootClasses,
       {
@@ -36,7 +37,8 @@ import {
   ref,
   StyleValue,
 } from 'vue'
-import { AlertProps, ToastStyles, ToastPositions } from '../../types/_alert'
+import { AlertProps, ToastStyles } from '../../types/_alert'
+import useToastStyle from '../../utils/useToastStyle'
 import * as Icons from '../../icons/icons'
 
 export default defineComponent({
@@ -79,24 +81,25 @@ export default defineComponent({
      * @values number
      */
     duration: {
-      type: Number,
+      type: String,
       default: () => undefined,
+      validator: (value: string) => {
+        return !isNaN(parseInt(value))
+      },
     },
   },
   setup(props: AlertProps) {
+    const alert: Ref<HTMLDivElement | null> = ref(null)
     const timeout: Ref<NodeJS.Timeout | null> = ref(null)
     const fadeOut: Ref<boolean> = ref(false)
     const hidden: Ref<boolean> = ref(false)
     const isToast: Ref<boolean> = ref(false)
+    const toastQueueStyles: ToastStyles = useToastStyle()
+
     const toastStyles: Ref<ToastStyles> = ref({
-      position: 'fixed',
       boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.12)',
-      top: '20px',
-      right: '20px',
-      left: undefined,
-      bottom: undefined,
       width: '400px',
-      zIndex: 50,
+      marginBottom: '20px',
     })
 
     const computedFadeOut: ComputedRef<boolean> = computed(() => fadeOut.value)
@@ -152,57 +155,70 @@ export default defineComponent({
       closeAfterDuration()
     }
 
+    const closeAfterDuration = (): void => {
+      timeout.value = setTimeout(
+        () => closeAlert(),
+        props.duration ? parseInt(props.duration) : 0
+      )
+    }
+
     const closeAlert = (): void => {
       fadeOut.value = true
-      setTimeout(() => (hidden.value = true), 300)
+      setTimeout(() => {
+        hidden.value = true
+        removeToast()
+      }, 300)
       clearTimeout(timeout.value as NodeJS.Timeout)
+    }
+
+    const removeToast = (): void => {
+      if (isToast.value) {
+        isToast.value = false
+        alert.value?.remove()
+      }
+    }
+
+    const createToastQueueElement = (): void => {
+      let container = document.querySelector(
+        '.alert-toast-wrapper > .direction'
+      )
+      if (!container) {
+        container = document.createElement('div')
+        container.classList.add('alert-toast-wrapper')
+        document.body.appendChild(container)
+
+        let div = document.createElement('div')
+        div.classList.add('direction')
+        container.appendChild(div)
+      }
+
+      container.appendChild(alert.value as HTMLDivElement)
+    }
+
+    const setToastQueueStyles = (): void => {
+      const container = document.querySelector(
+        '.alert-toast-wrapper'
+      ) as HTMLElement
+      if (!container)
+        throw new Error('Elemento container de toast não foi encontrado')
+      container?.style.setProperty('top', toastQueueStyles.top || '')
+      container?.style.setProperty('right', toastQueueStyles.right || '')
+      container?.style.setProperty('bottom', toastQueueStyles.bottom || '')
+      container?.style.setProperty('left', toastQueueStyles.left || '')
+
+      const direction = container?.querySelector('.direction') as HTMLElement
+      const isPositionedOnTop = typeof toastQueueStyles.top === 'string'
+      direction?.style.setProperty(
+        'flex-direction',
+        isPositionedOnTop ? 'column-reverse' : 'column'
+      )
     }
 
     const toast = (): void => {
       isToast.value = true
+      createToastQueueElement()
+      setToastQueueStyles()
       showAlert()
-    }
-
-    const setToastPosition = (value: ToastPositions): void => {
-      switch (value) {
-        case 'top-right':
-          toastStyles.value.top = '20px'
-          toastStyles.value.right = '20px'
-          toastStyles.value.left = undefined
-          toastStyles.value.bottom = undefined
-          break
-
-        case 'bottom-right':
-          toastStyles.value.top = undefined
-          toastStyles.value.right = '20px'
-          toastStyles.value.left = undefined
-          toastStyles.value.bottom = '20px'
-          break
-
-        case 'top-left':
-          toastStyles.value.top = '20px'
-          toastStyles.value.right = undefined
-          toastStyles.value.left = '20px'
-          toastStyles.value.bottom = undefined
-          break
-
-        case 'bottom-left':
-          toastStyles.value.top = undefined
-          toastStyles.value.right = undefined
-          toastStyles.value.left = '20px'
-          toastStyles.value.bottom = '20px'
-          break
-
-        default:
-          toastStyles.value.top = '20px'
-          toastStyles.value.right = '20px'
-          toastStyles.value.left = undefined
-          toastStyles.value.bottom = undefined
-      }
-    }
-
-    const closeAfterDuration = (): void => {
-      timeout.value = setTimeout(() => closeAlert(), props.duration)
     }
 
     onMounted(() => {
@@ -210,7 +226,9 @@ export default defineComponent({
     })
 
     return {
+      alert,
       hidden,
+      isToast,
       computedFadeOut,
       computedFadeIn,
       rootClasses,
@@ -221,7 +239,6 @@ export default defineComponent({
       closeAlert,
       showAlert,
       toast,
-      setToastPosition,
     }
   },
 })

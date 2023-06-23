@@ -1,19 +1,23 @@
+import { PositionProperty } from 'vue'
+
 export type AlertProps = {
   variant?: string
   closable?: boolean
   noIcons?: boolean
-  duration?: number
+  duration?: string
 }
 
 export type ToastStyles = {
-  position?: string
+  position?: PositionProperty
   top?: string
   left?: string
   right?: string
   bottom?: string
   boxShadow?: string
   width?: string
+  minWidth?: string
   zIndex?: number
+  marginBottom?: string
 }
 
 export type ToastPositions =
