@@ -22,7 +22,10 @@ function showToast() {
 
 function showToastDynamically(variant) {
 	let toastName = `toast${variant.charAt(0).toUpperCase() + variant.slice(1)}`
-	this[toastName].toast()
+	console.log(this)
+	console.log(this[toastName])
+	console.log([toastName])
+	[toastName].toast()
 }
 
 function notification (message, variant = "primary", duration = "3000") {
@@ -189,7 +192,7 @@ Caso queira apresentar um alerta como uma notificação de toast, você pode cri
 <BrButton class="mr-x-small" @click="showToastDynamically('warning')" variant="warning">Warning</BrButton>
 <BrButton @click="showToastDynamically('danger')" variant="danger">Danger</BrButton>
 
-<BrAlert ref="toastPrimary" duration="5000" closable>
+<BrAlert ref="toastPrimary" duration="5000" variant="primary" closable>
 	<strong>Info</strong>
 	<p>Esta é uma mensagem de informação</p>
 </BrAlert>
@@ -221,7 +224,7 @@ Caso queira apresentar um alerta como uma notificação de toast, você pode cri
 <BrButton @click="showToastDynamically('warning')" variant="warning">Warning</BrButton>
 <BrButton @click="showToastDynamically('danger')" variant="danger">Danger</BrButton>
 
-<BrAlert ref="toastPrimary" duration="5000" closable>
+<BrAlert ref="toastPrimary" duration="5000" variant="primary" closable>
 	<strong>Info</strong>
 	<p>Esta é uma mensagem de informação</p>
 </BrAlert>
@@ -255,7 +258,7 @@ const toastDanger = ref(null)
 
 function showToastDynamically(variant) {
 	let toastName = `toast${variant.charAt(0).toUpperCase() + variant.slice(1)}`
-	this[toastName].toast()
+	[toastName].toast()
 }
 </script>
 ```
