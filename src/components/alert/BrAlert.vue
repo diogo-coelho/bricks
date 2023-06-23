@@ -4,9 +4,9 @@
     :class="[
       ...rootClasses,
       {
-        'fade-out': computedFadeOut,
+        'fade-out': computedFadeOut && !hidden,
         'fade-in': computedFadeIn,
-        visibility: hidden,
+        'hidden': hidden,
       },
     ]"
     :style="computedStyles"
@@ -174,7 +174,7 @@ export default defineComponent({
     const removeToast = (): void => {
       if (isToast.value) {
         isToast.value = false
-        alert.value?.remove()
+        setTimeout(() => alert.value?.remove(), 200)
       }
     }
 
