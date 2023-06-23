@@ -21,11 +21,23 @@ function showToast() {
 }
 
 function showToastDynamically(variant) {
-	let toastName = `toast${variant.charAt(0).toUpperCase() + variant.slice(1)}`
-	console.log(this)
-	console.log(this[toastName])
-	console.log([toastName])
-	[toastName].toast()
+	switch(variant){
+		case 'primary':
+			toastPrimary.value.toast()
+			break
+		case 'success':
+			toastSuccess.value.toast()
+			break
+		case 'neutral':
+			toastNeutral.value.toast()
+			break
+		case 'warning':
+			toastWarning.value.toast()
+			break
+		case 'danger':
+			toastDanger.value.toast()
+			break
+	}
 }
 
 function notification (message, variant = "primary", duration = "3000") {
@@ -257,8 +269,23 @@ const toastWarning = ref(null)
 const toastDanger = ref(null)
 
 function showToastDynamically(variant) {
-	let toastName = `toast${variant.charAt(0).toUpperCase() + variant.slice(1)}`
-	[toastName].toast()
+	switch(variant){
+		case 'primary':
+			toastPrimary.value.toast()
+			break
+		case 'success':
+			toastSuccess.value.toast()
+			break
+		case 'neutral':
+			toastNeutral.value.toast()
+			break
+		case 'warning':
+			toastWarning.value.toast()
+			break
+		case 'danger':
+			toastDanger.value.toast()
+			break
+	}
 }
 </script>
 ```
