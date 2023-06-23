@@ -5,8 +5,9 @@
 @import './utils/paddings';
 @import './app';
 @import './_design-tokens';
+@import './components/br_alert';
+@import './components/_br-avatar';
+@import './components/br-breadcrumb';
 @import './components/_br-button';
 @import './components/_br-input';
 @import './components/_br-select';
-@import './components/_br-avatar';
-@import './components/br-breadcrumb';
