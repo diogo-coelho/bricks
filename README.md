@@ -1,4 +1,4 @@
-# bricks
+# bricks <Badge type="warning" text="beta" />
 
 A UI components library for Vue.js
 
