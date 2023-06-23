@@ -1,5 +1,5 @@
 import { App, Plugin } from 'vue'
-import BrIconInfoOutline from './BrIconMenu.vue'
+import BrIconInfoOutline from './BrIconInfoOutline.vue'
 
 export default {
   install(app: App) {
