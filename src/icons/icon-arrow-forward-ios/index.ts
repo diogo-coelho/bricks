@@ -1,10 +1,10 @@
 import { App, Plugin } from 'vue'
-import BrIconArrowFowardIos from './BrIconArrowFowardIos.vue'
+import BrIconArrowForwardIos from './BrIconArrowForwardIos.vue'
 
 export default {
   install(app: App) {
-    app.component(BrIconArrowFowardIos.name, BrIconArrowFowardIos)
+    app.component(BrIconArrowForwardIos.name, BrIconArrowForwardIos)
   },
 } as Plugin
 
-export { BrIconArrowFowardIos }
+export { BrIconArrowForwardIos }

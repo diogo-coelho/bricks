@@ -1,4 +1,5 @@
 // Components
+import BrAlert from './components/alert'
 import BrAvatar from './components/avatar'
 import BrBreadcrumb from './components/breadcrumb'
 import BrButton from './components/button'
@@ -7,20 +8,26 @@ import BrSelect from './components/select'
 import BrSelectItem from './components/select-item'
 
 // Icons
-import BrIconArrowForward from './icon-arrow-forward/BrIconArrowForward.vue'
-import BrIconArrowForwardIos from './icon-arrow-forward-ios/BrIconArrowForwardIos.vue'
-import BrIconCircle from './icon-circle/BrIconCircle.vue'
-import BrIconDirectionsBike from './icon-directions-bike/BrIconDirectionsBike.vue'
-import BrIconInsertEmoticon from './icon-insert-emoticon/BrIconInsertEmoticon.vue'
-import BrIconInsertPhoto from './icon-insert-photo/BrIconInsertPhoto.vue'
-import BrIconKeyboardArrowDown from './icon-keyboard-arrow-down/BrIconKeyboardArrowDown.vue'
-import BrIconKeyboardArrowRight from './icon-keyboard-arrow-right/BrIconKeyboardArrowRight.vue'
-import BrIconMenu from './icon-menu/BrIconMenu.vue'
-import BrIconPerson from './icon-person/BrIconPerson.vue'
-import BrIconSettings from './icon-settings/BrIconSettings.vue'
+import BrIconArrowForward from './icons/icon-arrow-forward'
+import BrIconArrowForwardIos from './icons/icon-arrow-forward-ios'
+import BrIconCheckCircleOutline from './icons/icon-check-circle-outline'
+import BrIconCircle from './icons/icon-circle'
+import BrIconClear from './icons/icon-clear'
+import BrIconDirectionsBike from './icons/icon-directions-bike'
+import BrIconErrorOutline from './icons/icon-error-outline'
+import BrIconInfoOutline from './icons/icon-info-outline'
+import BrIconInsertEmoticon from './icons/icon-insert-emoticon'
+import BrIconInsertPhoto from './icons/icon-insert-photo'
+import BrIconKeyboardArrowDown from './icons/icon-keyboard-arrow-down'
+import BrIconKeyboardArrowRight from './icons/icon-keyboard-arrow-right'
+import BrIconMenu from './icons/icon-menu'
+import BrIconPerson from './icons/icon-person'
+import BrIconSettings from './icons/icon-settings'
+import BrIconWarning from './icons/icon-warning'
 
 export {
   // components
+  BrAlert,
   BrAvatar,
   BrBreadcrumb,
   BrButton,
@@ -30,8 +37,12 @@ export {
   // icons
   BrIconArrowForward,
   BrIconArrowForwardIos,
+  BrIconCheckCircleOutline,
   BrIconCircle,
+  BrIconClear,
   BrIconDirectionsBike,
+  BrIconErrorOutline,
+  BrIconInfoOutline,
   BrIconInsertEmoticon,
   BrIconInsertPhoto,
   BrIconKeyboardArrowDown,
@@ -39,4 +50,5 @@ export {
   BrIconMenu,
   BrIconPerson,
   BrIconSettings,
+  BrIconWarning,
 }
