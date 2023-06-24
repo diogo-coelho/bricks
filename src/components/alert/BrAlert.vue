@@ -6,7 +6,7 @@
       {
         'fade-out': computedFadeOut && !hidden,
         'fade-in': computedFadeIn,
-        'hidden': hidden,
+        hidden: hidden,
       },
     ]"
     :style="computedStyles"
