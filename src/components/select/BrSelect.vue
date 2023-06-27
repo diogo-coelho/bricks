@@ -6,6 +6,16 @@
     class="br-select"
     :class="[...rootClasses, { 'on-focus': onFocus }]"
   >
+  	<p
+      v-if="computedLabel"
+      ref="paragraphRef"
+      :class="[...rootClasses, { 'on-focus': onFocus, label: computedLabel }]"
+      @click="toggleSelectDropdown(!active, $event)"
+    >
+		<span :class="{ label: computedLabel }">
+			{{ label }}
+		</span>
+    </p>
     <input
       ref="InputRef"
       name="select"
@@ -21,18 +31,11 @@
         },
         ...rootClasses,
       ]"
+	  :style="{'width': inputWidthComputed + 'px'}"
       @focusin="setOnFocus(true)"
       @focusout="setOnFocus(false)"
       @click="toggleSelectDropdown(!active, $event)"
     />
-    <p
-      v-if="computedLabel"
-      ref="paragraphRef"
-      :class="[...rootClasses, { label: computedLabel }]"
-      @click="toggleSelectDropdown(!active, $event)"
-    >
-      {{ label }}
-    </p>
     <button
       name="select"
       :class="rootClasses"
@@ -195,6 +198,12 @@ export default defineComponent({
       ]
     })
 
+	const inputWidthComputed: ComputedRef<number> = computed(() => {
+		const selectElement = BrSelectRef.value as unknown as HTMLElement
+		const paragraphElement = paragraphRef.value as unknown as HTMLElement
+		return selectElement?.clientWidth - paragraphElement?.offsetWidth
+	})
+
     const toggleSelectDropdown = (value: boolean, event?: MouseEvent): void => {
       if (event) {
         if (
@@ -325,6 +334,7 @@ export default defineComponent({
       selectedOption,
       onFocus,
       rootClasses,
+	  inputWidthComputed,
       setSelectValue,
       setDropdownWidth,
       toggleSelectDropdown,
