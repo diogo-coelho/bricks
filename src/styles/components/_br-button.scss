@@ -506,7 +506,7 @@
     }
 
     &:focus:not(:disabled, .disabled),
-     &:focus-visible:not(:disabled, .disabled) {
+    &:focus-visible:not(:disabled, .disabled) {
       outline: var(--br-spacing-3x-small) solid var(--br-color-warning-100);
     }
 

@@ -2,7 +2,7 @@
 import BrSelect from '../../src/components/select/BrSelect.vue'
 </script>
 
-# BrSelect <Badge type="warning" text="beta" />
+# BrSelect <Badge type="warning" text="alpha" />
 
 `BrSelect` é um componente que permite a seleção de um item para dentro de uma lista pré-determinada.
 

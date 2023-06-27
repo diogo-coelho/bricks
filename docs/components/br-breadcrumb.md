@@ -2,7 +2,7 @@
 import BrBreadcrumb from '../../src/components/breadcrumb/BrBreadcrumb.vue'
 </script>
 
-# BrBreadcrumb <Badge type="warning" text="beta" />
+# BrBreadcrumb <Badge type="warning" text="alpha" />
 
 `BrBreadcrumb` proporciona links que auxiliam com que o usuário navegue com mais facilidade pela hierarquia do site.
 

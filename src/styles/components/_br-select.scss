@@ -30,8 +30,8 @@
 
   p {
     display: flex;
-	justify-content: flex-start;
-	align-items: center;
+    justify-content: flex-start;
+    align-items: center;
     font-family: var(--br-font-sans);
     font-size: var(--br-font-size-small);
     font-weight: var(--br-font-weight-bold);
@@ -43,19 +43,19 @@
     border-bottom-right-radius: 0px;
     transition: border 0.3s ease;
     padding: var(--br-spacing-x-small) var(--br-spacing-small);
-	padding-right: 0px;
-	width: auto;
+    padding-right: 0px;
+    width: auto;
     max-width: 40%;
     margin: 0;
     height: inherit;
     cursor: pointer;
 
-	span {
-		display: block;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
+    span {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   input {
@@ -66,7 +66,7 @@
     color: var(--br-color-neutral-600);
     border: 1px solid var(--br-color-neutral-300);
     border-left: transparent;
-	width: auto;
+    width: auto;
     min-width: 60%;
     padding: var(--br-spacing-x-small) var(--br-spacing-small);
     transition: border 0.3s ease;
@@ -240,11 +240,26 @@
   }
 }
 
-.br-select.disabled > input {
-  background-color: var(--br-color-neutral-50);
-  color: var(--br-color-neutral-200);
-  border: 1px solid var(--br-color-neutral-200);
-  cursor: not-allowed;
+.br-select.disabled {
+  & input {
+    background-color: var(--br-color-neutral-50);
+    color: var(--br-color-neutral-200);
+    border: 1px solid var(--br-color-neutral-200);
+    border-left: 0px;
+    cursor: not-allowed;
+  }
+
+  & p {
+    background-color: var(--br-color-neutral-50);
+    color: var(--br-color-neutral-200);
+    border: 1px solid var(--br-color-neutral-200);
+    border-right: 0px;
+    cursor: not-allowed;
+  }
+
+  & input.label-less {
+    border-left: 1px solid var(--br-color-neutral-200) !important;
+  }
 }
 
 .br-select.disabled > button > svg {

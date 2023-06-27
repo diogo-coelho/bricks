@@ -2,7 +2,7 @@
 import BrButton from '../../src/components/button/BrButton.vue'
 </script>
 
-# BrButton <Badge type="warning" text="beta" />
+# BrButton <Badge type="warning" text="alpha" />
 
 
 `BrButton` é um componente que representa um elemento clicável que retornará uma ação para o usuário.
