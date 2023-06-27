@@ -24,6 +24,7 @@
           'label-less': !computedLabel,
           label: computedLabel,
           'on-focus': onFocus,
+		  'has-suffix': suffix
         },
         ...rootClasses,
       ]"
@@ -32,16 +33,25 @@
       @focusin="setOnFocus(true)"
       @focusout="setOnFocus(false)"
     />
-    <button name="input"></button>
+    <button name="input"
+	  v-if="suffix"
+	  :class="rootClasses"
+	>
+		<component :is="suffix" />
+	</button>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, ComputedRef, defineComponent, InputHTMLAttributes, PropType, Ref, ref } from 'vue'
+import { computed, ComputedRef, defineComponent, Ref, ref } from 'vue'
 import { InputProps } from '../../types/_input'
+import * as Icons from '../../icons/icons'
 
 export default defineComponent({
   name: 'BrInput',
+  components: {
+	...Icons
+  },
   props: {
     /**
      * Type of input
@@ -105,6 +115,14 @@ export default defineComponent({
      * Set a placeholder
      */
     placeholder: {
+      type: String,
+      default: () => undefined,
+    },
+	/**
+     * Set a suffix icon
+     * @values icon name
+     */
+	 suffix: {
       type: String,
       default: () => undefined,
     },

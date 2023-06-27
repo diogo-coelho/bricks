@@ -92,10 +92,10 @@ Determine o tipo do input através do atributo `type`.
 
 É possível criar um botão de ícone como sufixo no elemento input, que acionará a chamada de ação do elemento, através do atributo `suffix`.
 
-<BrInput class="mb-small" label="Buscar" type="search" suffix=""/>
+<BrInput class="mb-small" label="Buscar" type="text" suffix="br-icon-search"/>
 
 ```vue
-<BrInput class="mb-small" label="Buscar" type="search" suffix=""/>
+<BrInput class="mb-small" label="Buscar" type="text" suffix="br-icon-search"/>
 ```
 
 

@@ -22,6 +22,7 @@ import BrIconKeyboardArrowDown from './icons/icon-keyboard-arrow-down'
 import BrIconKeyboardArrowRight from './icons/icon-keyboard-arrow-right'
 import BrIconMenu from './icons/icon-menu'
 import BrIconPerson from './icons/icon-person'
+import BrIconSearch from './icons/icon-search'
 import BrIconSettings from './icons/icon-settings'
 import BrIconWarning from './icons/icon-warning'
 
@@ -49,6 +50,7 @@ export {
   BrIconKeyboardArrowRight,
   BrIconMenu,
   BrIconPerson,
+  BrIconSearch,
   BrIconSettings,
   BrIconWarning,
 }

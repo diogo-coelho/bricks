@@ -12,6 +12,7 @@ import BrIconKeyboardArrowDown from './icon-keyboard-arrow-down/BrIconKeyboardAr
 import BrIconKeyboardArrowRight from './icon-keyboard-arrow-right/BrIconKeyboardArrowRight.vue'
 import BrIconMenu from './icon-menu/BrIconMenu.vue'
 import BrIconPerson from './icon-person/BrIconPerson.vue'
+import BrIconSearch from './icon-search/BrIconSearch.vue'
 import BrIconSettings from './icon-settings/BrIconSettings.vue'
 import BrIconWarning from './icon-warning/BrIconWarning.vue'
 
@@ -30,6 +31,7 @@ export {
   BrIconKeyboardArrowRight,
   BrIconMenu,
   BrIconPerson,
+  BrIconSearch,
   BrIconSettings,
   BrIconWarning,
 }
