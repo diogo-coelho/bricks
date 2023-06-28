@@ -5,41 +5,18 @@
     v-bind="$attrs"
     class="br-select"
     :class="[...rootClasses, { 'on-focus': onFocus }]"
+    @click="toggleSelectDropdown(!active, $event)"
   >
-    <input
+    <br-input
       ref="InputRef"
-      name="select"
-      type="text"
       readonly
-      :value="selectedOption?.label"
-      :class="[
-        {
-          active: active,
-          'label-less': !computedLabel,
-          label: computedLabel,
-          'on-focus': onFocus,
-        },
-        ...rootClasses,
-      ]"
-      @focusin="setOnFocus(true)"
-      @focusout="setOnFocus(false)"
-      @click="toggleSelectDropdown(!active, $event)"
-    />
-    <p
-      v-if="computedLabel"
-      ref="paragraphRef"
-      :class="[...rootClasses, { label: computedLabel }]"
-      @click="toggleSelectDropdown(!active, $event)"
-    >
-      {{ label }}
-    </p>
-    <button
-      name="select"
-      :class="rootClasses"
-      @click="toggleSelectDropdown(!active, $event)"
-    >
-      <BrIconKeyboardArrowDown />
-    </button>
+      :currentValue="selectedOption?.label"
+      :label="label"
+      :pill="pill"
+      :size="size"
+      :disabled="disabled"
+      :suffix="'br-icon-keyboard-arrow-down'"
+    ></br-input>
 
     <teleport to="body">
       <div
@@ -79,8 +56,8 @@ import {
   Ref,
   ref,
 } from 'vue'
+import BrInput from '../input/BrInput.vue'
 import BrSelectItem from '../select-item/BrSelectItem.vue'
-import BrIconKeyboardArrowDown from '../../icons/icon-keyboard-arrow-down/BrIconKeyboardArrowDown.vue'
 import {
   SelectProps,
   SelectOption,
@@ -99,8 +76,8 @@ export default defineComponent({
     ClickOutside: BrClickOutsideDirective,
   },
   components: {
+    BrInput,
     BrSelectItem,
-    BrIconKeyboardArrowDown,
   },
   props: {
     /**
@@ -157,7 +134,6 @@ export default defineComponent({
   setup(props: SelectProps, { emit }) {
     const BrSelectRef = ref(null)
     const InputRef = ref(null)
-    const paragraphRef = ref(null)
     const dropdownWidth: Ref<number> = ref(0)
     const active: Ref<boolean> = ref(false)
     const dropdownElementPosition: Ref<DropdownElementPosition> = ref({
@@ -227,11 +203,18 @@ export default defineComponent({
     }
 
     const setSelectDropdownPosition = (): void => {
-      const inputElement = InputRef.value as unknown as HTMLInputElement
-      const paragraphElement =
-        paragraphRef.value as unknown as HTMLParagraphElement
+      const inputElement = InputRef.value as unknown as InstanceType<
+        typeof BrInput
+      >
       if (!inputElement) return
-      const elementOffsets = inputElement.getBoundingClientRect()
+      const elementOffsets =
+        (inputElement?.paragraphRef as unknown as HTMLInputElement)
+          ? (
+              inputElement?.paragraphRef as unknown as HTMLInputElement
+            )?.getBoundingClientRect()
+          : (
+              inputElement?.InputRef as unknown as HTMLInputElement
+            )?.getBoundingClientRect()
 
       if (
         elementOffsets.top + (getHeightFromInputDropdown() + 150) >
@@ -239,16 +222,12 @@ export default defineComponent({
       ) {
         dropdownElementPosition.value = {
           top: elementOffsets.top - getHeightFromInputDropdown() - 2,
-          left:
-            elementOffsets.left -
-            (paragraphElement ? paragraphElement?.clientWidth : 0),
+          left: elementOffsets.left,
         }
       } else {
         dropdownElementPosition.value = {
           top: elementOffsets.top + getHeightFromInputDropdown() + 2,
-          left:
-            elementOffsets.left -
-            (paragraphElement ? paragraphElement?.clientWidth : 0),
+          left: elementOffsets.left,
         }
       }
     }
@@ -269,9 +248,7 @@ export default defineComponent({
     }
 
     const handleOutsideClick = (event: Event): void => {
-      const elem = document.querySelector(
-        '.br-select-dropdown'
-      ) as HTMLDivElement
+      const elem = document.querySelector('.br-select') as HTMLDivElement
       if (!elem.contains(event.target as HTMLElement))
         toggleSelectDropdown(false)
     }
@@ -317,7 +294,6 @@ export default defineComponent({
       active,
       BrSelectRef,
       InputRef,
-      paragraphRef,
       dropdownWidth,
       computedLabel,
       computedDisabled,

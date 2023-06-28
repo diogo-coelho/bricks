@@ -61,7 +61,7 @@ function createNewToast () {
 
 </script>
 
-# BrAlert <Badge type="warning" text="beta" />
+# BrAlert <Badge type="warning" text="alpha" />
 
 `BrAlert` providencia mensagens de contexto para o usuário do sistema.
 <BrAlert>Este é um alerta padrão</BrAlert>

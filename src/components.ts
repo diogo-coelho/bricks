@@ -4,6 +4,7 @@ import BrAvatar from './components/avatar'
 import BrBreadcrumb from './components/breadcrumb'
 import BrButton from './components/button'
 import BrInput from './components/input'
+import BrModal from './components/modal'
 import BrSelect from './components/select'
 import BrSelectItem from './components/select-item'
 
@@ -22,6 +23,7 @@ import BrIconKeyboardArrowDown from './icons/icon-keyboard-arrow-down'
 import BrIconKeyboardArrowRight from './icons/icon-keyboard-arrow-right'
 import BrIconMenu from './icons/icon-menu'
 import BrIconPerson from './icons/icon-person'
+import BrIconSearch from './icons/icon-search'
 import BrIconSettings from './icons/icon-settings'
 import BrIconWarning from './icons/icon-warning'
 
@@ -32,6 +34,7 @@ export {
   BrBreadcrumb,
   BrButton,
   BrInput,
+  BrModal,
   BrSelect,
   BrSelectItem,
   // icons
@@ -49,6 +52,7 @@ export {
   BrIconKeyboardArrowRight,
   BrIconMenu,
   BrIconPerson,
+  BrIconSearch,
   BrIconSettings,
   BrIconWarning,
 }

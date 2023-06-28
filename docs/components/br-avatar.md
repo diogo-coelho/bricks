@@ -2,7 +2,7 @@
 import BrAvatar from '../../src/components/avatar/BrAvatar.vue'
 </script>
 
-# BrAvatar <Badge type="warning" text="beta" />
+# BrAvatar <Badge type="warning" text="alpha" />
 
 `BrAvatar` é um componente para representar pessoas ou entidades.
 <BrAvatar></BrAvatar>

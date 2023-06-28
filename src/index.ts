@@ -17,7 +17,7 @@ const BricksLibrary: Plugin = {
       app.use((directives as any)[directiveKey])
     }
 
-    app.config.globalProperties.$utils = utils
+    app.config.globalProperties.$bricks = utils
   },
 }
 

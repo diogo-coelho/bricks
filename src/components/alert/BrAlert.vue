@@ -6,7 +6,7 @@
       {
         'fade-out': computedFadeOut && !hidden,
         'fade-in': computedFadeIn,
-        'hidden': hidden,
+        hidden: hidden,
       },
     ]"
     :style="computedStyles"
@@ -97,7 +97,7 @@ export default defineComponent({
     const toastQueueStyles: ToastStyles = useToastStyle()
 
     const toastStyles: Ref<ToastStyles> = ref({
-      boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.12)',
+	  filter: 'drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.15))',
       width: '400px',
       marginBottom: '20px',
     })
