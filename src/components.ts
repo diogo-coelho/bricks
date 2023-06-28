@@ -4,6 +4,7 @@ import BrAvatar from './components/avatar'
 import BrBreadcrumb from './components/breadcrumb'
 import BrButton from './components/button'
 import BrInput from './components/input'
+import BrModal from './components/modal'
 import BrSelect from './components/select'
 import BrSelectItem from './components/select-item'
 
@@ -33,6 +34,7 @@ export {
   BrBreadcrumb,
   BrButton,
   BrInput,
+  BrModal,
   BrSelect,
   BrSelectItem,
   // icons

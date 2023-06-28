@@ -98,6 +98,13 @@ Determine o tipo do input através do atributo `type`.
 <BrInput class="mb-small" label="Buscar" type="text" suffix="br-icon-search"/>
 ```
 
+## Eventos
+
+| Nome          | Descrição                                                                              |
+| ------------- | :------------------------------------------------------------------------------------: |
+| on-click      | Evento emitido ao clicar no botão de sufixo                                            |
+| on-enter      | Evento emitido ao pressionar a tecla ENTER do teclado                                  |
+| on-blur       | Evento emitido ao tirar o foco do elemento input                                       |
 
 <style lang="scss">
 @import '../../src/styles/index.scss'

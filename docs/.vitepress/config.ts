@@ -21,6 +21,7 @@ export default defineConfig({
 		  { text: 'Breadcrumb', link: '/components/br-breadcrumb'},
 		  { text: 'Botão', link: '/components/br-button' },
 		  { text: 'Input', link: '/components/br-input'},
+		  { text: 'Modal', link: '/components/br-modal'},
 		  { text: 'Select', link: '/components/br-select' }
         ]
       },
