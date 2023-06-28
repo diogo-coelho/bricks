@@ -5,4 +5,6 @@ export type InputProps = {
   pill?: boolean
   type: string
   placeholder?: string
+  currentValue?: string
+  readOnly?: boolean
 }
