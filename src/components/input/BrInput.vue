@@ -1,7 +1,6 @@
 <template>
   <div
     ref="BrInputRef"
-    v-bind="$attrs"
     class="br-input"
     :class="[...rootClasses, { 'on-focus': onFocus }]"
   >
@@ -15,6 +14,7 @@
       </span>
     </p>
     <input
+      v-bind="$attrs"
       ref="InputRef"
       name="input"
       :type="type"
@@ -24,7 +24,7 @@
           'label-less': !computedLabel,
           label: computedLabel,
           'on-focus': onFocus,
-		  'has-suffix': suffix
+          'has-suffix': suffix,
         },
         ...rootClasses,
       ]"
@@ -32,13 +32,11 @@
       :disabled="disabled"
       @focusin="setOnFocus(true)"
       @focusout="setOnFocus(false)"
+      @enter="onEnter"
     />
-    <button name="input"
-	  v-if="suffix"
-	  :class="rootClasses"
-	>
-		<component :is="suffix" />
-	</button>
+    <button v-if="suffix" name="input" :class="rootClasses" @click="onClick">
+      <component :is="suffix" />
+    </button>
   </div>
 </template>
 
@@ -50,7 +48,7 @@ import * as Icons from '../../icons/icons'
 export default defineComponent({
   name: 'BrInput',
   components: {
-	...Icons
+    ...Icons,
   },
   props: {
     /**
@@ -118,16 +116,17 @@ export default defineComponent({
       type: String,
       default: () => undefined,
     },
-	/**
+    /**
      * Set a suffix icon
      * @values icon name
      */
-	 suffix: {
+    suffix: {
       type: String,
       default: () => undefined,
     },
   },
-  setup(props: InputProps) {
+  emits: ['on-click', 'on-enter', 'on-blur'],
+  setup(props: InputProps, { emit }) {
     const BrInputRef = ref(null)
     const InputRef = ref(null)
     const paragraphRef = ref(null)
@@ -162,9 +161,16 @@ export default defineComponent({
       return inputContainer?.clientWidth - paragraphElement?.offsetWidth
     })
 
-    const onClick = (event: MouseEvent) => {
-      console.log('clicou no input')
-      console.log(event.target)
+    const onClick = () => {
+      emit('on-click', (InputRef.value as unknown as HTMLInputElement).value)
+    }
+
+    const onEnter = () => {
+      emit('on-enter', (InputRef.value as unknown as HTMLInputElement).value)
+    }
+
+    const onBlur = () => {
+      emit('on-blur', (InputRef.value as unknown as HTMLInputElement).value)
     }
 
     const setOnFocus = (value: boolean): void => {
@@ -182,6 +188,8 @@ export default defineComponent({
       computedDisabled,
       onClick,
       setOnFocus,
+      onEnter,
+      onBlur,
     }
   },
 })

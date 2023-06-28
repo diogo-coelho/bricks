@@ -5,117 +5,12 @@
   position: relative;
   align-items: center;
   width: 100%;
-  height: 42px;
-
-  &:not(.disabled):hover {
-    input {
-      border: 1px solid var(--br-color-primary-500);
-      border-left: transparent;
-    }
-
-    input.label-less {
-      border-left: 1px solid var(--br-color-primary-500);
-    }
-
-    p {
-      border: 1px solid var(--br-color-primary-500);
-      border-right: none;
-    }
-  }
 
   &.on-focus:not(.disabled) {
-    box-shadow: 0 0 0 2px var(--br-color-primary-50);
-    border-radius: var(--br-border-radius-medium);
-  }
-
-  p {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: var(--br-font-sans);
-    font-size: var(--br-font-size-small);
-    font-weight: var(--br-font-weight-bold);
-    color: var(--br-color-primary-500);
-    border: 1px solid var(--br-color-neutral-300);
-    border-right: none;
-    border-radius: var(--br-border-radius-medium);
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    transition: border 0.3s ease;
-    padding: var(--br-spacing-x-small) var(--br-spacing-small);
-    padding-right: 0px;
-    width: auto;
-    max-width: 40%;
-    margin: 0;
-    height: inherit;
-    cursor: pointer;
-
-    span {
-      display: block;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    button:not(.disabled) > svg {
+      transform: scale(1) rotate(180deg);
+      transition: transform 0.3s;
     }
-  }
-
-  input {
-    font-family: var(--br-font-sans);
-    border-radius: var(--br-border-radius-medium);
-    font-size: var(--br-font-size-small);
-    font-weight: var(--br-font-weight-normal);
-    color: var(--br-color-neutral-600);
-    border: 1px solid var(--br-color-neutral-300);
-    border-left: transparent;
-    width: auto;
-    min-width: 60%;
-    padding: var(--br-spacing-x-small) var(--br-spacing-small);
-    transition: border 0.3s ease;
-    cursor: pointer;
-    height: inherit;
-  }
-
-  input.label {
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-  }
-
-  input:focus,
-  input:focus-visible,
-  input.on-focus {
-    border: 1px solid var(--br-color-primary-500);
-    border-left: transparent;
-    outline: none;
-    transition: border 0.3s ease;
-  }
-
-  input:focus ~ p,
-  input:focus-visible ~ p,
-  p.on-focus {
-    border: 1px solid var(--br-color-primary-500);
-    border-right: transparent;
-    transition: border 0.3s ease;
-  }
-
-  input.label-less {
-    border-left: 1px solid var(--br-color-neutral-300);
-    width: 100%;
-  }
-
-  &:not(.disabled) input.label-less:focus,
-  &:not(.disabled) input.label-less:focus-visible {
-    border-left: 1px solid var(--br-color-primary-500);
-  }
-
-  /** Chrome, Safari, Edge, Opera*/
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  /** Firefox */
-  input[type='number'] {
-    -moz-appearance: textfield;
   }
 
   button {
@@ -147,11 +42,10 @@
       outline: none;
       -webkit-appearance: none;
     }
-  }
 
-  input.active ~ button:not(.disabled) > svg {
-    transform: scale(1) rotate(180deg);
-    transition: transform 0.3s;
+    &:hover > svg {
+      fill: var(--br-color-neutral-600);
+    }
   }
 }
 
@@ -182,7 +76,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: var(--br-spacing-small);
       font-weight: var(--br-font-weight-normal);
       font-size: var(--br-font-size-small);
       border-bottom: transparent;
@@ -190,6 +83,7 @@
       cursor: pointer;
 
       p {
+        padding: var(--br-spacing-small);
         color: var(--br-color-neutral-600);
         font-size: var(--br-font-size-small);
         font-weight: var(--br-font-weight-normal);
@@ -240,45 +134,9 @@
   }
 }
 
-.br-select.disabled {
-  & input {
-    background-color: var(--br-color-neutral-50);
-    color: var(--br-color-neutral-200);
-    border: 1px solid var(--br-color-neutral-200);
-    border-left: 0px;
-    cursor: not-allowed;
-  }
-
-  & p {
-    background-color: var(--br-color-neutral-50);
-    color: var(--br-color-neutral-200);
-    border: 1px solid var(--br-color-neutral-200);
-    border-right: 0px;
-    cursor: not-allowed;
-  }
-
-  & input.label-less {
-    border-left: 1px solid var(--br-color-neutral-200) !important;
-  }
-}
-
 .br-select.disabled > button > svg {
   fill: var(--br-color-neutral-200);
   cursor: not-allowed;
-}
-
-.br-select.small {
-  height: 42px;
-
-  p {
-    font-size: var(--br-font-size-small);
-    padding: var(--br-spacing-x-small) var(--br-spacing-small);
-  }
-
-  input {
-    font-size: var(--br-font-size-small);
-    padding: var(--br-spacing-x-small) var(--br-spacing-small);
-  }
 }
 
 .br-select-dropdown.small {
@@ -288,26 +146,6 @@
 
   p {
     font-size: var(--br-font-size-small);
-  }
-}
-
-.br-select.medium {
-  height: 50px;
-
-  p {
-    font-size: var(--br-font-size-medium);
-    padding: var(--br-spacing-small) var(--br-spacing-medium);
-    max-width: 30%;
-  }
-
-  input {
-    font-size: var(--br-font-size-medium);
-    padding: var(--br-spacing-small) var(--br-spacing-medium);
-    min-width: 70%;
-  }
-
-  input.label-less {
-    width: 100%;
   }
 }
 
@@ -321,26 +159,6 @@
   }
 }
 
-.br-select.large {
-  height: 58px;
-
-  p {
-    font-size: var(--br-font-size-large);
-    padding: var(--br-spacing-medium) var(--br-spacing-large);
-    max-width: 35%;
-  }
-
-  input {
-    font-size: var(--br-font-size-large);
-    padding: var(--br-spacing-medium) var(--br-spacing-large);
-    min-width: 65%;
-  }
-
-  input.label-less {
-    width: 100%;
-  }
-}
-
 .br-select-dropdown.large {
   li {
     font-size: var(--br-font-size-large);
@@ -348,31 +166,5 @@
 
   p {
     font-size: var(--br-font-size-large);
-  }
-}
-
-.br-select.pill {
-  border-radius: var(--br-border-radius-pill);
-
-  &.on-focus:not(.disabled) {
-    border-radius: var(--br-border-radius-pill);
-  }
-
-  p {
-    border-radius: var(--br-border-radius-pill);
-  }
-
-  input {
-    border-radius: var(--br-border-radius-pill);
-  }
-
-  input.label {
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-  }
-
-  p.label {
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
   }
 }

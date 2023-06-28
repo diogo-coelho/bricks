@@ -204,8 +204,8 @@
 }
 
 .br-input.disabled > button > svg {
-	fill: var(--br-color-neutral-200);
-	cursor: not-allowed;
+  fill: var(--br-color-neutral-200);
+  cursor: not-allowed;
 }
 
 .br-input.small {
@@ -263,11 +263,11 @@
 }
 
 .br-input {
-	input.has-suffix {
-		padding-right: 48px;
-	}
+  input.has-suffix {
+    padding-right: 48px;
+  }
 
-	button:hover > svg {
-		fill: var(--br-color-primary-500);
-	}
+  button:hover > svg {
+    fill: var(--br-color-primary-500);
+  }
 }
