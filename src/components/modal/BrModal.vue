@@ -14,7 +14,7 @@
         :style="{ width: computedCustomWidth ? customWidth : undefined }"
         @keyup.esc="closeModal"
       >
-        <button class="btn-close" @click="closeModal">
+        <button v-if="!hideCloseButton" class="btn-close" @click="closeModal">
           <br-icon-clear></br-icon-clear>
         </button>
         <div v-if="computedFooterSlot" class="modal-header">
@@ -46,12 +46,34 @@ export default defineComponent({
     ...Icons,
   },
   props: {
+    /**
+     * Set a custom width to modal container
+     * @values string
+     */
     customWidth: {
       type: String,
       default: () => undefined,
     },
+    /**
+     * Avoid closure of the when
+     * user clicks on the overlay area
+     * @values true, false
+     */
+    avoidCloseWhenOverlayIsClicked: {
+      type: Boolean,
+      default: () => false,
+    },
+    hideCloseButton: {
+      /**
+       * Hide default modal's close button
+       * @values true, false
+       */
+      type: Boolean,
+      default: () => false,
+    },
   },
-  setup(props: ModalProps) {
+  emits: ['on-closed'],
+  setup(props: ModalProps, { emit }) {
     const modalRef: Ref<HTMLDivElement | null> = ref(null)
     const active: Ref<boolean> = ref(false)
     const fadeOut: Ref<boolean> = ref(false)
@@ -93,9 +115,23 @@ export default defineComponent({
       clearTimeout(timeout.value as NodeJS.Timeout)
     }
 
+    const setModalClosureLockedAnimation = (): void => {
+      modalRef.value?.classList.add('overlay-closure-locked')
+      setTimeout(
+        () => modalRef.value?.classList.remove('overlay-closure-locked'),
+        300
+      )
+    }
+
     const handleClickOutside = (event: MouseEvent): void => {
       const element = document.querySelector('.br-modal') as HTMLDivElement
-      if (element === event.target) closeModal()
+      if (element !== event.target) return
+      if (props.avoidCloseWhenOverlayIsClicked) {
+        console.log('entrou aqui')
+        setModalClosureLockedAnimation()
+        return
+      }
+      closeModal()
     }
 
     const openModal = async (): Promise<void> => {
@@ -111,6 +147,7 @@ export default defineComponent({
         active.value = false
         computedOverflowDisabled()
         await toggleFocusOnModal(false)
+        emit('on-closed')
       }, 300)
       clearTimeout(timeout.value as NodeJS.Timeout)
     }
