@@ -18,9 +18,9 @@
       ref="InputRef"
       name="input"
       :type="type"
-	  :readonly="computedReadonly"
-	  :value="computedValue"
-	  :disabled="disabled"
+      :readonly="computedReadonly"
+      :value="computedValue"
+      :disabled="disabled"
       :placeholder="placeholder"
       :class="[
         {
@@ -126,22 +126,22 @@ export default defineComponent({
       type: String,
       default: () => undefined,
     },
-	/**
-	 * Set current value
-	 * @values string
-	 */
-	currentValue: {
-		type: String,
-		default: () => undefined
-	},
-	/**
-	 * Set readonly attribute
-	 * @values true, false
-	 */
-	readOnly: {
-		type: Boolean,
-		default: () => undefined
-	}
+    /**
+     * Set current value
+     * @values string
+     */
+    currentValue: {
+      type: String,
+      default: () => undefined,
+    },
+    /**
+     * Set readonly attribute
+     * @values true, false
+     */
+    readOnly: {
+      type: Boolean,
+      default: () => undefined,
+    },
   },
   emits: ['on-click', 'on-enter', 'on-blur'],
   setup(props: InputProps, { emit }) {
@@ -173,15 +173,15 @@ export default defineComponent({
       return undefined
     })
 
-	const computedValue: ComputedRef<string | undefined> = computed(() => {
-		if (props.currentValue) return props.currentValue
-		return undefined
-	})
+    const computedValue: ComputedRef<string | undefined> = computed(() => {
+      if (props.currentValue) return props.currentValue
+      return undefined
+    })
 
-	const computedReadonly: ComputedRef<boolean | undefined> = computed(() => {
-		if (props.readOnly) return true
-		return undefined
-	})
+    const computedReadonly: ComputedRef<boolean | undefined> = computed(() => {
+      if (props.readOnly) return true
+      return undefined
+    })
 
     const inputWidthComputed: ComputedRef<number> = computed(() => {
       const inputContainer = BrInputRef.value as unknown as HTMLElement
@@ -214,8 +214,8 @@ export default defineComponent({
       computedLabel,
       inputWidthComputed,
       computedDisabled,
-	  computedValue,
-	  computedReadonly,
+      computedValue,
+      computedReadonly,
       onClick,
       setOnFocus,
       onEnter,

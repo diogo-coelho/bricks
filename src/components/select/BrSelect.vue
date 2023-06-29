@@ -10,7 +10,7 @@
     <br-input
       ref="InputRef"
       readonly
-      :currentValue="selectedOption?.label"
+      :current-value="selectedOption?.label"
       :label="label"
       :pill="pill"
       :size="size"
