@@ -97,7 +97,7 @@ export default defineComponent({
     const toastQueueStyles: ToastStyles = useToastStyle()
 
     const toastStyles: Ref<ToastStyles> = ref({
-	  filter: 'drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.15))',
+      filter: 'drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.15))',
       width: '400px',
       marginBottom: '20px',
     })
