@@ -1,15 +1,33 @@
 <template>
   <svg
-    version="1.1"
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
+    width="512"
+    height="512"
+    viewBox="0 0 512 512"
   >
-    <title>arrow_forward</title>
-    <path
-      d="M12 3.984l8.016 8.016-8.016 8.016-1.406-1.406 5.578-5.625h-12.188v-1.969h12.188l-5.578-5.625z"
-    ></path>
+    <polyline
+      points="268 112 412 256 268 400"
+      style="
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 48px;
+      "
+    />
+    <line
+      x1="392"
+      y1="256"
+      x2="100"
+      y2="256"
+      style="
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 48px;
+      "
+    />
   </svg>
 </template>
 
@@ -20,5 +38,3 @@ export default defineComponent({
   name: 'BrIconArrowForward',
 })
 </script>
-
-<style></style>
