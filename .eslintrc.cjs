@@ -16,7 +16,7 @@ module.exports = {
     'plugin:vue/vue3-recommended',
 	'plugin:prettier/recommended'
   ],
-  rules: {},
+  rules: { },
   globals: {
 	"NodeJS": true
   },
