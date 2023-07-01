@@ -1,0 +1,18 @@
+<template>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="512"
+    height="512"
+    viewBox="0 0 512 512"
+  >
+    <rect x="80" y="80" width="352" height="352" />
+  </svg>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'BrIconStopSharp',
+})
+</script>

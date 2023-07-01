@@ -15,7 +15,8 @@
     "lint": "eslint --ext .ts,.vue src && npm run styles",
     "styles:fix": "npx stylelint --fix \"src/**/*.{scss,css}\"",
     "lint:fix": "eslint --fix --ext .ts,.vue src && npm run styles:fix",
-    "test": "exit 0"
+    "test": "exit 0",
+	"script": "node ./src/script.js"
   },
   "repository": {
     "type": "git",
