@@ -172,7 +172,7 @@ Caso não queria exibir o botão de fechamento padrão `X` basta passar o atribu
 
 ```vue
 <BrButton @on-click="modal">Open Modal</BrButton>
-<BrModal ref="modalRef4" avoid-close-when-overlay-is-clicked hide-close-button>
+<BrModal ref="modalRef" avoid-close-when-overlay-is-clicked hide-close-button>
 	<template v-slot:header>
 		<h1>Modal</h1>
 	</template>

@@ -13,7 +13,7 @@
   >
     <div class="message">
       <div v-if="computedIcon && !computedDisableIconsVisibility">
-        <component :is="computedIcon" />
+        <br-icon :name="computedIcon"></br-icon>
       </div>
 
       <div>
@@ -21,8 +21,8 @@
       </div>
     </div>
 
-    <button v-if="computedClosable">
-      <br-icon-clear @click="closeAlert()"></br-icon-clear>
+    <button v-if="computedClosable" @click="closeAlert()">
+      <br-icon name="br-icon-close"></br-icon>
     </button>
   </div>
 </template>
@@ -39,12 +39,12 @@ import {
 } from 'vue'
 import { AlertProps, ToastStyles } from '../../types/_alert'
 import useToastStyle from '../../utils/useToastStyle'
-import * as Icons from '../../icons/icons'
+import BrIcon from '../icon/BrIcon.vue'
 
 export default defineComponent({
   name: 'BrAlert',
   components: {
-    ...Icons,
+    BrIcon,
   },
   props: {
     /**
@@ -124,15 +124,15 @@ export default defineComponent({
     const computedIcon: ComputedRef<string | undefined> = computed(() => {
       switch (props.variant) {
         case 'primary':
-          return `br-icon-info-outline`
+          return `br-icon-information-circle-outline`
         case 'neutral':
-          return 'br-icon-settings'
+          return 'br-icon-settings-outline'
         case 'success':
-          return 'br-icon-check-circle-outline'
+          return 'br-icon-checkmark-circle-outline'
         case 'warning':
-          return 'br-icon-warning'
+          return 'br-icon-warning-outline'
         case 'danger':
-          return 'br-icon-error-outline'
+          return 'br-icon-alert-circle-outline'
         default:
           return undefined
       }

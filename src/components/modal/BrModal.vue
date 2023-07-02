@@ -15,7 +15,7 @@
         @keyup.esc="closeModal"
       >
         <button v-if="!hideCloseButton" class="btn-close" @click="closeModal">
-          <br-icon-clear></br-icon-clear>
+          <br-icon name="br-icon-close"/>
         </button>
         <div v-if="computedFooterSlot" class="modal-header">
           <slot name="header"></slot>
@@ -34,7 +34,7 @@
 <script lang="ts">
 import { computed, ComputedRef, defineComponent, ref, Ref, useSlots } from 'vue'
 import { ModalProps } from '../../types/_modal'
-import * as Icons from '../../icons/icons'
+import BrIcon from '../icon/BrIcon.vue'
 import BrClickOutsideDirective from '../../directives/BrClickOutside/BrClickOutsideDirective'
 
 export default defineComponent({
@@ -43,7 +43,7 @@ export default defineComponent({
     ClickOutside: BrClickOutsideDirective,
   },
   components: {
-    ...Icons,
+    BrIcon,
   },
   props: {
     /**

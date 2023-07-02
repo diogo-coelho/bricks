@@ -126,11 +126,13 @@
     right: var(--br-spacing-small);
 
     svg {
-      width: inherit;
+      width: var(--br-font-size-medium);
+	  height: var(--br-font-size-medium);
       display: inline-block;
       vertical-align: middle;
       transition: transform 0.3s ease;
       fill: var(--br-color-neutral-600);
+	  stroke: (--br-color-neutral-600)!important;
       cursor: pointer;
 
       &.disabled {
@@ -203,8 +205,9 @@
   }
 }
 
-.br-input.disabled > button > svg {
+.br-input.disabled > button .br-icon * {
   fill: var(--br-color-neutral-200);
+  stroke: var(--br-color-neutral-200)!important;
   cursor: not-allowed;
 }
 
@@ -267,7 +270,8 @@
     padding-right: 48px;
   }
 
-  button:hover > svg {
+  button:hover .br-icon * {
     fill: var(--br-color-primary-500);
+	stroke: var(--br-color-primary-500)!important;
   }
 }

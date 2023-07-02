@@ -7,7 +7,7 @@
     @click="onClick"
   >
     <div v-if="prefix" :class="prefixSlotSpacing">
-      <component :is="prefix" />
+      <br-icon :name="prefix" />
     </div>
 
     <a
@@ -21,7 +21,7 @@
 
     <slot v-else />
     <div v-if="suffix" :class="suffixSlotSpacing">
-      <component :is="suffix" />
+      <br-icon :name="suffix" />
     </div>
   </button>
 </template>
@@ -35,12 +35,12 @@ import {
   PropType,
 } from 'vue'
 import { ButtonProps, ButtonLink } from '../../types/_button'
-import * as Icons from '../../icons/icons'
+import BrIcon from '../icon/BrIcon.vue'
 
 export default defineComponent({
   name: 'BrButton',
   components: {
-    ...Icons,
+    BrIcon,
   },
   inheritAttrs: false,
   props: {

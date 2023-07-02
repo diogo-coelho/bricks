@@ -37,7 +37,7 @@
       @enter="onEnter"
     />
     <button v-if="suffix" name="input" :class="rootClasses" @click="onClick">
-      <component :is="suffix" />
+      <br-icon :name="suffix" />
     </button>
   </div>
 </template>
@@ -45,12 +45,12 @@
 <script lang="ts">
 import { computed, ComputedRef, defineComponent, Ref, ref } from 'vue'
 import { InputProps } from '../../types/_input'
-import * as Icons from '../../icons/icons'
+import BrIcon from '../icon/BrIcon.vue'
 
 export default defineComponent({
   name: 'BrInput',
   components: {
-    ...Icons,
+    BrIcon,
   },
   props: {
     /**

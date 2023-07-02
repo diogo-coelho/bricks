@@ -15,7 +15,7 @@
       :pill="pill"
       :size="size"
       :disabled="disabled"
-      :suffix="'br-icon-keyboard-arrow-down'"
+      :suffix="'br-icon-chevron-down'"
     ></br-input>
 
     <teleport to="body">

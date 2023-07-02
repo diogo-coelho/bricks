@@ -3,9 +3,9 @@
     <div v-if="computedInitials">
       <span>{{ computedInitials }}</span>
     </div>
-    <component
-      :is="computedAvatar"
-      v-if="!computedInitials && !computedImage"
+    <br-icon
+	  v-if="!computedInitials && !computedImage"
+      :name="computedAvatar"
     />
   </div>
 </template>
@@ -13,12 +13,12 @@
 <script lang="ts">
 import { computed, ComputedRef, defineComponent } from 'vue'
 import { AvatarProps, AvatarImageStyle } from '../../types/_avatar'
-import * as Icons from '../../icons/icons'
+import BrIcon from '../icon/BrIcon.vue'
 
 export default defineComponent({
   name: 'BrAvatar',
   components: {
-    ...Icons,
+    BrIcon,
   },
   props: {
     /**
@@ -53,7 +53,7 @@ export default defineComponent({
       type: String,
       default: () => undefined,
       validator: (value: string) => {
-        return ['shape', 'rounded', 'circle'].indexOf(value) >= 0
+        return ['square', 'rounded', 'circle'].indexOf(value) >= 0
       },
     },
   },
