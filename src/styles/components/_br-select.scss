@@ -7,7 +7,7 @@
   width: 100%;
 
   &.on-focus:not(.disabled) {
-    button:not(.disabled) > svg {
+    button:not(.disabled) .br-icon svg {
       transform: scale(1) rotate(180deg);
       transition: transform 0.3s;
     }
@@ -20,18 +20,26 @@
     position: absolute;
     right: var(--br-spacing-small);
 
-    svg {
-      width: inherit;
+    .br-icon * {
+      width: var(--br-font-size-medium);
+	  height: var(--br-font-size-medium);
       display: inline-block;
       vertical-align: middle;
       transition: transform 0.3s ease;
       fill: var(--br-color-neutral-600);
+	  stroke: var(--br-color-neutral-600)!important;
       cursor: pointer;
+	  
+	  &:hover * {
+		fill: var(--br-color-neutral-600);
+		stroke: var(--br-color-neutral-600)!important;
+	  }
 
       &.disabled {
         visibility: hidden;
       }
     }
+	
 
     &:focus-visible,
     &:active,
@@ -43,7 +51,7 @@
       -webkit-appearance: none;
     }
 
-    &:hover > svg {
+    &:hover .br-icon *  {
       fill: var(--br-color-neutral-600);
     }
   }
@@ -97,8 +105,9 @@
       button {
         padding: var(--br-spacing-x-small);
 
-        svg {
+        .br-icon * {
           fill: var(--br-color-neutral-600);
+		  stroke: var(--br-color-neutral-600)!important;
         }
       }
 
@@ -106,8 +115,9 @@
         background-color: var(--br-color-primary-500);
         border-radius: var(--br-border-radius-medium);
 
-        svg {
+        .br-icon * {
           fill: var(--br-color-primary-600);
+		  stroke: var(--br-color-neutral-600)!important;
         }
       }
 
@@ -134,8 +144,10 @@
   }
 }
 
-.br-select.disabled > button > svg {
+.br-select.disabled button .br-icon *,
+.br-select.disabled button .br-icon:hover * {
   fill: var(--br-color-neutral-200);
+  stroke: var(--br-color-neutral-200)!important;
   cursor: not-allowed;
 }
 

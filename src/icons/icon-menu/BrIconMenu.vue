@@ -1,15 +1,49 @@
 <template>
   <svg
-    version="1.1"
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
+    width="512"
+    height="512"
+    viewBox="0 0 512 512"
   >
-    <title>menu</title>
-    <path
-      d="M3 6h18v2.016h-18v-2.016zM3 12.984v-1.969h18v1.969h-18zM3 18v-2.016h18v2.016h-18z"
-    ></path>
+    <line
+      x1="88"
+      y1="152"
+      x2="424"
+      y2="152"
+      style="
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 48px;
+      "
+    />
+    <line
+      x1="88"
+      y1="256"
+      x2="424"
+      y2="256"
+      style="
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 48px;
+      "
+    />
+    <line
+      x1="88"
+      y1="360"
+      x2="424"
+      y2="360"
+      style="
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 48px;
+      "
+    />
   </svg>
 </template>
 
@@ -18,8 +52,5 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconMenu',
-  setup() {
-    return {}
-  },
 })
 </script>

@@ -1,0 +1,17 @@
+.br-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 24px;
+	height: 24px;
+
+	svg {
+		width: 24px;
+		height: 24px;
+
+		* {
+			fill: var(--br-color-neutral-950);
+			stroke: var(--br-color-neutral-950)!important;
+		}
+	}
+}

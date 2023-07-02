@@ -12,6 +12,15 @@ a {
   color: var(--br-color-neutral-500);
 }
 
+// display flex
+.flex {
+	display: flex;
+
+	&-wrap {
+		flex-wrap: wrap;
+	}
+}
+
 // Display inline
 .inline {
   display: inline;

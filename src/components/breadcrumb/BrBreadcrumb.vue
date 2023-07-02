@@ -10,8 +10,8 @@
         <a :href="item.href ? item.href : 'javascript:void(0)'">
           {{ item.text }}
         </a>
-        <component
-          :is="computedSeparator"
+        <br-icon
+          :name="computedSeparator"
           v-if="isNotLastBreadcrumb(items.length, i)"
         />
       </li>
@@ -22,12 +22,12 @@
 <script lang="ts">
 import { computed, ComputedRef, defineComponent, PropType } from 'vue'
 import { BreadcrumbItem, BreadcrumbProps } from '../../types/_breadcrumb'
-import * as Icons from '../../icons/icons'
+import BrIcon from '../icon/BrIcon.vue'
 
 export default defineComponent({
   name: 'BrBreadcrumb',
   components: {
-    ...Icons,
+    BrIcon,
   },
   props: {
     /**
@@ -51,7 +51,7 @@ export default defineComponent({
     const computedSeparator: ComputedRef<string> = computed(() => {
       return props.customSeparator
         ? props.customSeparator
-        : 'br-icon-keyboard-arrow-right'
+        : 'br-icon-chevron-forward'
     })
 
     const isNotLastBreadcrumb = (

@@ -18,11 +18,16 @@ export default defineConfig({
         items: [
 		  { text: 'Alert', link: '/components/br-alert' },
 		  { text: 'Avatar', link: '/components/br-avatar' },
+		  { text: 'Badge', link: '/components/br-badge'},
 		  { text: 'Breadcrumb', link: '/components/br-breadcrumb'},
 		  { text: 'Botão', link: '/components/br-button' },
+		  { text: 'Checkbox', link: '/components/br-checkbox'},
+		  { text: 'Icon', link: '/components/br-icon'},
 		  { text: 'Input', link: '/components/br-input'},
 		  { text: 'Modal', link: '/components/br-modal'},
-		  { text: 'Select', link: '/components/br-select' }
+		  { text: 'Radio', link: '/components/br-radio'},
+		  { text: 'Select', link: '/components/br-select' },
+		  { text: 'Switch', link: '/components/br-switch'},
         ]
       },
 	  {

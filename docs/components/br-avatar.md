@@ -59,15 +59,15 @@ Para alterar o formato do avatar, passe uma das opções abaixo através do atri
 Confira a lista de ícones disponíveis aqui.
 
 <div class="inline-flex">
-	<BrAvatar class="mr-small" custom-icon="br-icon-insert-photo"></BrAvatar>
-	<BrAvatar class="mr-small" custom-icon="br-icon-insert-emoticon"></BrAvatar>
-	<BrAvatar custom-icon="br-icon-directions-bike"></BrAvatar>
+	<BrAvatar class="mr-small" custom-icon="br-icon-image"></BrAvatar>
+	<BrAvatar class="mr-small" custom-icon="br-icon-happy-outline"></BrAvatar>
+	<BrAvatar custom-icon="br-icon-bicycle"></BrAvatar>
 </div>
 
 ```vue
-<BrAvatar custom-icon="br-icon-insert-photo"></BrAvatar>
-<BrAvatar custom-icon="br-icon-insert-emoticon"></BrAvatar>
-<BrAvatar custom-icon="br-icon-directions-bike"></BrAvatar>
+<BrAvatar custom-icon="br-icon-image"></BrAvatar>
+<BrAvatar custom-icon="br-icon-happy-outline"></BrAvatar>
+<BrAvatar custom-icon="br-icon-bicycle"></BrAvatar>
 ```
 
 ### Agrupamento de avatares

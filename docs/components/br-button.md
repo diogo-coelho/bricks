@@ -145,52 +145,52 @@ Caso queira usar um botão que funcione como um link, é necessário passar o at
 É possível criar botões com ícones passando os atributos `prefix` e `suffix`, com a string do ícone que deverá ser renderizado dentro do botão. Você encontrará a lista completa de ícones através deste link.
 
 <div class="inline-flex align-center w-full mb-medium">
-	<BrButton class="mr-x-small" size="small" prefix="br-icon-settings">
+	<BrButton class="mr-x-small" size="small" prefix="br-icon-settings-sharp">
 		Settings
 	</BrButton>
 	<BrButton class="mr-x-small" size="small" suffix="br-icon-menu">
 		Menu
 	</BrButton>
-	<BrButton class="mr-x-small" size="small" prefix="br-icon-settings" suffix="br-icon-menu">
+	<BrButton class="mr-x-small" size="small" prefix="br-icon-settings-sharp" suffix="br-icon-menu">
 		Options
 	</BrButton>
 </div>
 <div class="inline-flex align-center w-full mb-medium">
-	<BrButton class="mr-x-small" size="medium" prefix="br-icon-settings">
+	<BrButton class="mr-x-small" size="medium" prefix="br-icon-settings-sharp">
 		Settings
 	</BrButton>
 	<BrButton class="mr-x-small" size="medium" suffix="br-icon-menu">
 		Menu
 	</BrButton>
-	<BrButton class="mr-x-small" size="medium" prefix="br-icon-settings" suffix="br-icon-menu">
+	<BrButton class="mr-x-small" size="medium" prefix="br-icon-settings-sharp" suffix="br-icon-menu">
 		Options
 	</BrButton>
 </div>
 <div class="inline-flex align-center w-full">
-	<BrButton class="mr-x-small" size="large" prefix="br-icon-settings">
+	<BrButton class="mr-x-small" size="large" prefix="br-icon-settings-sharp">
 		Settings
 	</BrButton>
 	<BrButton class="mr-x-small" size="large" suffix="br-icon-menu">
 		Menu
 	</BrButton>
-	<BrButton class="mr-x-small" size="large" prefix="br-icon-settings" suffix="br-icon-menu">
+	<BrButton class="mr-x-small" size="large" prefix="br-icon-settings-sharp" suffix="br-icon-menu">
 		Options
 	</BrButton>
 </div>
 
 ```vue
 // small
-<BrButton size="small" prefix="br-icon-settings">Settings</BrButton>
+<BrButton size="small" prefix="br-icon-settings-sharp">Settings</BrButton>
 <BrButton size="small" suffix="br-icon-menu">Menu</BrButton>
-<BrButton size="small" prefix="br-icon-settings" suffix="br-icon-menu">Options</BrButton>
+<BrButton size="small" prefix="br-icon-settings-sharp" suffix="br-icon-menu">Options</BrButton>
 // medium
-<BrButton size="medium" prefix="br-icon-settings">Settings</BrButton>
+<BrButton size="medium" prefix="br-icon-settings-sharp">Settings</BrButton>
 <BrButton size="medium" suffix="br-icon-menu">Menu</BrButton>
-<BrButton size="medium" prefix="br-icon-settings" suffix="br-icon-menu">Options</BrButton>
+<BrButton size="medium" prefix="br-icon-settings-sharp" suffix="br-icon-menu">Options</BrButton>
 // large
-<BrButton size="large" prefix="br-icon-settings">Settings</BrButton>
+<BrButton size="large" prefix="br-icon-settings-sharp">Settings</BrButton>
 <BrButton size="large" suffix="br-icon-menu">Menu</BrButton>
-<BrButton size="large" prefix="br-icon-settings" suffix="br-icon-menu">Options</BrButton>
+<BrButton size="large" prefix="br-icon-settings-sharp" suffix="br-icon-menu">Options</BrButton>
 ```
 ## Eventos
 

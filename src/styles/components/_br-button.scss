@@ -22,6 +22,7 @@
   * {
     color: var(--br-color-neutral-500);
     fill: var(--br-color-neutral-500);
+	stroke: var(--br-color-neutral-500)!important;
     font-weight: var(--br-font-weight-bold);
     text-decoration: none;
   }
@@ -35,6 +36,7 @@
     * {
       color: var(--br-color-primary-600);
       fill: var(--br-color-primary-600);
+	  stroke: var(--br-color-primary-600)!important;
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
     }
@@ -57,6 +59,7 @@
     * {
       color: var(--br-color-neutral-200);
       fill: var(--br-color-neutral-200);
+	  stroke: var(--br-color-neutral-200)!important;
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
       cursor: not-allowed;
@@ -73,6 +76,7 @@
     * {
       color: var(--br-color-white);
       fill: var(--br-color-white);
+	  stroke: var(--br-color-white)!important;
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
     }
@@ -86,6 +90,7 @@
       * {
         color: var(--br-color-white);
         fill: var(--br-color-white);
+		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
       }
@@ -107,6 +112,7 @@
       * {
         color: var(--br-color-white);
         fill: var(--br-color-white);
+		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
         cursor: not-allowed;
@@ -122,6 +128,7 @@
       * {
         color: var(--br-color-primary-500);
         fill: var(--br-color-primary-500);
+		stroke: var(--br-color-primary-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
       }
@@ -135,6 +142,7 @@
         * {
           color: var(--br-color-white);
           fill: var(--br-color-white);
+		  stroke: var(--br-color-white)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
         }
@@ -150,6 +158,7 @@
         * {
           color: var(--br-color-primary-200);
           fill: var(--br-color-primary-200);
+		  stroke: var(--br-color-primary-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
@@ -166,6 +175,7 @@
       * {
         color: var(--br-color-primary-500);
         fill: var(--br-color-primary-500);
+		stroke: var(--br-color-primary-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
       }
@@ -179,6 +189,7 @@
         * {
           color: var(--br-color-primary-600);
           fill: var(--br-color-primary-600);
+		  stroke: var(--br-color-primary-600)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
         }
@@ -194,6 +205,7 @@
         * {
           color: var(--br-color-primary-200);
           fill: var(--br-color-primary-200);
+		  stroke: var(--br-color-primary-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
@@ -211,6 +223,7 @@
     * {
       color: var(--br-color-white);
       fill: var(--br-color-white);
+	  stroke: var(--br-color-white)!important;
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
     }
@@ -224,6 +237,7 @@
       * {
         color: var(--br-color-white);
         fill: var(--br-color-white);
+		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
       }
@@ -245,6 +259,7 @@
       * {
         color: var(--br-color-white);
         fill: var(--br-color-white);
+		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
         cursor: not-allowed;
@@ -260,6 +275,7 @@
       * {
         color: var(--br-color-neutral-500);
         fill: var(--br-color-neutral-500);
+		stroke: var(--br-color-neutral-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
       }
@@ -273,6 +289,7 @@
         * {
           color: var(--br-color-white);
           fill: var(--br-color-white);
+		  stroke: var(--br-color-white)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
         }
@@ -288,6 +305,7 @@
         * {
           color: var(--br-color-neutral-200);
           fill: var(--br-color-neutral-200);
+		  stroke: var(--br-color-neutral-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
@@ -304,6 +322,7 @@
       * {
         color: var(--br-color-neutral-500);
         fill: var(--br-color-neutral-500);
+		stroke: var(--br-color-neutral-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
       }
@@ -317,6 +336,7 @@
         * {
           color: var(--br-color-neutral-600);
           fill: var(--br-color-neutral-600);
+		  stroke: var(--br-color-neutral-600)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
         }
@@ -332,6 +352,7 @@
         * {
           color: var(--br-color-neutral-200);
           fill: var(--br-color-neutral-200);
+		  stroke: var(--br-color-neutral-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
@@ -349,6 +370,7 @@
     * {
       color: var(--br-color-white);
       fill: var(--br-color-white);
+	  stroke: var(--br-color-white)!important;
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
     }
@@ -362,6 +384,7 @@
       * {
         color: var(--br-color-white);
         fill: var(--br-color-white);
+		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
       }
@@ -383,6 +406,7 @@
       * {
         color: var(--br-color-white);
         fill: var(--br-color-white);
+		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
         cursor: not-allowed;
@@ -398,6 +422,7 @@
       * {
         color: var(--br-color-success-500);
         fill: var(--br-color-success-500);
+		stroke: var(--br-color-success-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
       }
@@ -411,6 +436,7 @@
         * {
           color: var(--br-color-white);
           fill: var(--br-color-white);
+		  stroke: var(--br-color-white)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
         }
@@ -426,6 +452,7 @@
         * {
           color: var(--br-color-success-200);
           fill: var(--br-color-success-200);
+		  stroke: var(--br-color-success-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
@@ -442,6 +469,7 @@
       * {
         color: var(--br-color-success-500);
         fill: var(--br-color-success-500);
+		stroke: var(--br-color-success-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
       }
@@ -455,6 +483,7 @@
         * {
           color: var(--br-color-success-600);
           fill: var(--br-color-success-600);
+		  stroke: var(--br-color-success-600)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
         }
@@ -470,6 +499,7 @@
         * {
           color: var(--br-color-success-200);
           fill: var(--br-color-success-200);
+		  stroke: var(--br-color-success-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
@@ -487,6 +517,7 @@
     * {
       color: var(--br-color-white);
       fill: var(--br-color-white);
+	  stroke: var(--br-color-white)!important;
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
     }
@@ -500,6 +531,7 @@
       * {
         color: var(--br-color-white);
         fill: var(--br-color-white);
+		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
       }
@@ -521,6 +553,7 @@
       * {
         color: var(--br-color-white);
         fill: var(--br-color-white);
+		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
         cursor: not-allowed;
@@ -536,6 +569,7 @@
       * {
         color: var(--br-color-warning-500);
         fill: var(--br-color-warning-500);
+		stroke: var(--br-color-warning-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
       }
@@ -549,6 +583,7 @@
         * {
           color: var(--br-color-white);
           fill: var(--br-color-white);
+		  stroke: var(--br-color-white)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
         }
@@ -564,6 +599,7 @@
         * {
           color: var(--br-color-warning-200);
           fill: var(--br-color-warning-200);
+		  stroke: var(--br-color-warning-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
@@ -580,6 +616,7 @@
       * {
         color: var(--br-color-warning-500);
         fill: var(--br-color-warning-500);
+		stroke: var(--br-color-warning-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
       }
@@ -593,6 +630,7 @@
         * {
           color: var(--br-color-warning-600);
           fill: var(--br-color-warning-600);
+		  stroke: var(--br-color-warning-600)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
         }
@@ -608,6 +646,7 @@
         * {
           color: var(--br-color-warning-200);
           fill: var(--br-color-warning-200);
+		  stroke: var(--br-color-warning-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
@@ -625,6 +664,7 @@
     * {
       color: var(--br-color-white);
       fill: var(--br-color-white);
+	  stroke: var(--br-color-white)!important;
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
     }
@@ -638,6 +678,7 @@
       * {
         color: var(--br-color-white);
         fill: var(--br-color-white);
+		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
       }
@@ -659,6 +700,7 @@
       * {
         color: var(--br-color-white);
         fill: var(--br-color-white);
+		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
         cursor: not-allowed;
@@ -674,6 +716,7 @@
       * {
         color: var(--br-color-danger-500);
         fill: var(--br-color-danger-500);
+		stroke: var(--br-color-danger-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
       }
@@ -687,6 +730,7 @@
         * {
           color: var(--br-color-white);
           fill: var(--br-color-white);
+		  stroke: var(--br-color-white)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
         }
@@ -702,6 +746,7 @@
         * {
           color: var(--br-color-danger-200);
           fill: var(--br-color-danger-200);
+		  stroke: var(--br-color-danger-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
@@ -718,6 +763,7 @@
       * {
         color: var(--br-color-danger-500);
         fill: var(--br-color-danger-500);
+		stroke: var(--br-color-danger-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
       }
@@ -731,6 +777,7 @@
         * {
           color: var(--br-color-danger-600);
           fill: var(--br-color-danger-600);
+		  stroke: var(--br-color-danger-600)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
         }
@@ -746,6 +793,7 @@
         * {
           color: var(--br-color-danger-200);
           fill: var(--br-color-danger-200);
+		  stroke: var(--br-color-danger-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
@@ -760,8 +808,12 @@
     font-size: var(--br-font-size-small);
 
     svg {
-      width: var(--br-font-size-x-small);
-      height: var(--br-font-size-x-small);
+      width: var(--br-font-size-x-small)!important;
+      height: var(--br-font-size-x-small)!important;
+
+	  * {
+		fill: var()
+	  }
     }
   }
 
@@ -770,8 +822,8 @@
     font-size: var(--br-font-size-medium);
 
     svg {
-      width: var(--br-font-size-medium);
-      height: var(--br-font-size-medium);
+      width: var(--br-font-size-medium)!important;
+      height: var(--br-font-size-medium)!important;
     }
   }
 
@@ -780,8 +832,8 @@
     font-size: var(--br-font-size-large);
 
     svg {
-      width: var(--br-font-size-large);
-      height: var(--br-font-size-large);
+      width: var(--br-font-size-large)!important;
+      height: var(--br-font-size-large)!important;
     }
   }
 
