@@ -60,13 +60,13 @@ Confira a lista de ícones disponíveis aqui.
 
 <div class="inline-flex">
 	<BrAvatar class="mr-small" custom-icon="br-icon-image"></BrAvatar>
-	<BrAvatar class="mr-small" custom-icon="br-icon-happy-outline"></BrAvatar>
+	<BrAvatar class="mr-small" custom-icon="br-icon-happy"></BrAvatar>
 	<BrAvatar custom-icon="br-icon-bicycle"></BrAvatar>
 </div>
 
 ```vue
 <BrAvatar custom-icon="br-icon-image"></BrAvatar>
-<BrAvatar custom-icon="br-icon-happy-outline"></BrAvatar>
+<BrAvatar custom-icon="br-icon-happy"></BrAvatar>
 <BrAvatar custom-icon="br-icon-bicycle"></BrAvatar>
 ```
 

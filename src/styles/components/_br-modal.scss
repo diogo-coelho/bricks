@@ -83,13 +83,24 @@
         position: absolute;
         right: 27px;
 
-        * {
+        .br-icon:not(.outline) svg path {
           fill: var(--br-color-neutral-500);
         }
 
-        &:hover * {
-          fill: var(--br-color-neutral-600);
-        }
+		.br-icon.outline svg path, line, polyline {
+			fill: var(--br-color-neutral-500);
+		}
+
+        &:hover .br-icon{
+
+			&:not(.outline) svg path {
+				fill: var(--br-color-neutral-500);
+			}
+  
+			&.outline svg path, line, polyline {
+				fill: var(--br-color-neutral-500);
+			}
+		}
       }
 
       .modal-header {

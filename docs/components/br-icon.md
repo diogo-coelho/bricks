@@ -66,6 +66,9 @@ Para renderizar o componente é necessário passar o atributo `name`, correspond
 	padding: var(--br-spacing-small);
 	width: 100px;
 	margin-bottom: 10px;
+	margin-right: 10px;
+	background-color: var(--br-color-neutral-50);
+	border-radius: var(--br-border-radius-medium);
 
 	span {
 		text-align:center;

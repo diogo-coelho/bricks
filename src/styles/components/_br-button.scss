@@ -21,10 +21,16 @@
   a,
   * {
     color: var(--br-color-neutral-500);
-    fill: var(--br-color-neutral-500);
-	stroke: var(--br-color-neutral-500)!important;
     font-weight: var(--br-font-weight-bold);
     text-decoration: none;
+  }
+
+  .br-icon:not(.outline) svg path {
+	fill: var(--br-color-neutral-500)!important;
+  }
+
+  .br-icon:not(.outline) svg line, polyline {
+	stroke: var(--br-color-neutral-500)!important;
   }
 
   &:hover:not(:disabled, .disabled) {
@@ -35,11 +41,17 @@
     a,
     * {
       color: var(--br-color-primary-600);
-      fill: var(--br-color-primary-600);
-	  stroke: var(--br-color-primary-600)!important;
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
     }
+
+	.br-icon:not(.outline) svg path {
+		fill: var(--br-color-primary-600)!important;
+	}
+	
+	.br-icon:not(.outline) svg line, polyline {
+		stroke: var(--br-color-primary-600)!important;
+	}
   }
 
   &:focus:not(:disabled, .disabled),
@@ -58,11 +70,17 @@
     a,
     * {
       color: var(--br-color-neutral-200);
-      fill: var(--br-color-neutral-200);
-	  stroke: var(--br-color-neutral-200)!important;
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
       cursor: not-allowed;
+
+	  .br-icon:not(.outline) svg path {
+		fill: var(--br-color-neutral-200)!important;
+		}
+		
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-neutral-200)!important;
+		}
     }
   }
 
@@ -75,10 +93,16 @@
     a,
     * {
       color: var(--br-color-white);
-      fill: var(--br-color-white);
-	  stroke: var(--br-color-white)!important;
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
+
+	  .br-icon:not(.outline) svg path {
+		fill: var(--br-color-white)!important;
+	  }
+		
+	  .br-icon:not(.outline) svg line, polyline {
+		stroke: var(--br-color-white)!important;
+	  }
     }
 
     &:hover:not(:disabled, .disabled) {
@@ -89,10 +113,16 @@
       a,
       * {
         color: var(--br-color-white);
-        fill: var(--br-color-white);
-		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
+
+		.br-icon:not(.outline) svg path {
+		  fill: var(--br-color-white)!important;
+		}
+			
+		.br-icon:not(.outline) svg line, polyline {
+		  stroke: var(--br-color-white)!important;
+		}
       }
     }
 
@@ -111,11 +141,17 @@
       a,
       * {
         color: var(--br-color-white);
-        fill: var(--br-color-white);
-		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
         cursor: not-allowed;
+
+		.br-icon:not(.outline) svg path {
+		  fill: var(--br-color-white)!important;
+		}
+			
+		.br-icon:not(.outline) svg line, polyline {
+		  stroke: var(--br-color-white)!important;
+		}
       }
     }
 
@@ -127,10 +163,16 @@
       a,
       * {
         color: var(--br-color-primary-500);
-        fill: var(--br-color-primary-500);
-		stroke: var(--br-color-primary-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
+
+		.br-icon:not(.outline) svg path {
+		fill: var(--br-color-primary-500)!important;
+		}
+			
+		.br-icon:not(.outline) svg line, polyline {
+		stroke: var(--br-color-primary-500)!important;
+		}
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -141,10 +183,16 @@
         a,
         * {
           color: var(--br-color-white);
-          fill: var(--br-color-white);
-		  stroke: var(--br-color-white)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-white)!important;
+		  }
+				
+		  .br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-white)!important;
+		  }		  
         }
       }
 
@@ -157,11 +205,17 @@
         a,
         * {
           color: var(--br-color-primary-200);
-          fill: var(--br-color-primary-200);
-		  stroke: var(--br-color-primary-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-primary-200)!important;
+		  }
+				
+		  .br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-primary-500)!important;
+		  }
         }
       }
     }
@@ -174,10 +228,16 @@
       a,
       * {
         color: var(--br-color-primary-500);
-        fill: var(--br-color-primary-500);
-		stroke: var(--br-color-primary-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-primary-500)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-primary-500)!important;
+		}		
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -188,10 +248,16 @@
         a,
         * {
           color: var(--br-color-primary-600);
-          fill: var(--br-color-primary-600);
-		  stroke: var(--br-color-primary-600)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-primary-600)!important;
+			}
+					
+			.br-icon:not(.outline) svg line, polyline {
+				stroke: var(--br-color-primary-600)!important;
+			}
         }
       }
 
@@ -204,11 +270,17 @@
         a,
         * {
           color: var(--br-color-primary-200);
-          fill: var(--br-color-primary-200);
-		  stroke: var(--br-color-primary-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-primary-200)!important;
+			}
+					
+			.br-icon:not(.outline) svg line, polyline {
+				stroke: var(--br-color-primary-200)!important;
+			}
         }
       }
     }
@@ -222,10 +294,16 @@
     a,
     * {
       color: var(--br-color-white);
-      fill: var(--br-color-white);
-	  stroke: var(--br-color-white)!important;
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
+
+	  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-white)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-white)!important;
+		}
     }
 
     &:hover:not(:disabled, .disabled) {
@@ -236,10 +314,16 @@
       a,
       * {
         color: var(--br-color-white);
-        fill: var(--br-color-white);
-		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-white)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-white)!important;
+		}
       }
     }
 
@@ -258,11 +342,17 @@
       a,
       * {
         color: var(--br-color-white);
-        fill: var(--br-color-white);
-		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
         cursor: not-allowed;
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-white)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-white)!important;
+		}
       }
     }
 
@@ -274,10 +364,16 @@
       a,
       * {
         color: var(--br-color-neutral-500);
-        fill: var(--br-color-neutral-500);
-		stroke: var(--br-color-neutral-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-neutral-500)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-neutral-500)!important;
+		}
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -288,10 +384,16 @@
         a,
         * {
           color: var(--br-color-white);
-          fill: var(--br-color-white);
-		  stroke: var(--br-color-white)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-white)!important;
+			}
+					
+			.br-icon:not(.outline) svg line, polyline {
+				stroke: var(--br-color-white)!important;
+			}
         }
       }
 
@@ -304,11 +406,17 @@
         a,
         * {
           color: var(--br-color-neutral-200);
-          fill: var(--br-color-neutral-200);
-		  stroke: var(--br-color-neutral-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-neutral-200)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-neutral-200)!important;
+		}
         }
       }
     }
@@ -321,10 +429,16 @@
       a,
       * {
         color: var(--br-color-neutral-500);
-        fill: var(--br-color-neutral-500);
-		stroke: var(--br-color-neutral-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-neutral-500)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-neutral-500)!important;
+		}
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -335,10 +449,16 @@
         a,
         * {
           color: var(--br-color-neutral-600);
-          fill: var(--br-color-neutral-600);
-		  stroke: var(--br-color-neutral-600)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
+
+		  .br-icon:not(.outline) svg path {
+				fill: var(--br-color-neutral-600)!important;
+			}
+					
+			.br-icon:not(.outline) svg line, polyline {
+				stroke: var(--br-color-neutral-600)!important;
+			}
         }
       }
 
@@ -351,11 +471,17 @@
         a,
         * {
           color: var(--br-color-neutral-200);
-          fill: var(--br-color-neutral-200);
-		  stroke: var(--br-color-neutral-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-neutral-200)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-neutral-200)!important;
+		}
         }
       }
     }
@@ -369,10 +495,16 @@
     a,
     * {
       color: var(--br-color-white);
-      fill: var(--br-color-white);
-	  stroke: var(--br-color-white)!important;
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
+
+	  .br-icon:not(.outline) svg path {
+		fill: var(--br-color-white)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-white)!important;
+		}
     }
 
     &:hover:not(:disabled, .disabled) {
@@ -383,10 +515,16 @@
       a,
       * {
         color: var(--br-color-white);
-        fill: var(--br-color-white);
-		stroke: var(--br-color-white)!important;
-        font-weight: var(--br-font-weight-bold);
+		font-weight: var(--br-font-weight-bold);
         text-decoration: none;
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-white)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-white)!important;
+		}
       }
     }
 
@@ -405,11 +543,17 @@
       a,
       * {
         color: var(--br-color-white);
-        fill: var(--br-color-white);
-		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
         cursor: not-allowed;
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-white)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-white)!important;
+		}
       }
     }
 
@@ -421,11 +565,16 @@
       a,
       * {
         color: var(--br-color-success-500);
-        fill: var(--br-color-success-500);
-		stroke: var(--br-color-success-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
-      }
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-success-500)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-success-500)!important;
+		}      }
 
       &:hover:not(:disabled, .disabled) {
         background-color: var(--br-color-success-500);
@@ -435,10 +584,16 @@
         a,
         * {
           color: var(--br-color-white);
-          fill: var(--br-color-white);
-		  stroke: var(--br-color-white)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
+
+		  .br-icon:not(.outline) svg path {
+				fill: var(--br-color-white)!important;
+			}
+					
+			.br-icon:not(.outline) svg line, polyline {
+				stroke: var(--br-color-white)!important;
+			}
         }
       }
 
@@ -451,11 +606,17 @@
         a,
         * {
           color: var(--br-color-success-200);
-          fill: var(--br-color-success-200);
-		  stroke: var(--br-color-success-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-success-200)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-success-200)!important;
+		}
         }
       }
     }
@@ -468,10 +629,16 @@
       a,
       * {
         color: var(--br-color-success-500);
-        fill: var(--br-color-success-500);
-		stroke: var(--br-color-success-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-success-500)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-success-500)!important;
+		}
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -482,10 +649,16 @@
         a,
         * {
           color: var(--br-color-success-600);
-          fill: var(--br-color-success-600);
-		  stroke: var(--br-color-success-600)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-success-600)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-success-600)!important;
+		}
         }
       }
 
@@ -498,11 +671,17 @@
         a,
         * {
           color: var(--br-color-success-200);
-          fill: var(--br-color-success-200);
-		  stroke: var(--br-color-success-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-success-200)!important;
+			}
+					
+			.br-icon:not(.outline) svg line, polyline {
+				stroke: var(--br-color-success-200)!important;
+			}
         }
       }
     }
@@ -516,10 +695,16 @@
     a,
     * {
       color: var(--br-color-white);
-      fill: var(--br-color-white);
-	  stroke: var(--br-color-white)!important;
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
+
+	  .br-icon:not(.outline) svg path {
+		fill: var(--br-color-white)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-white)!important;
+		}
     }
 
     &:hover:not(:disabled, .disabled) {
@@ -530,10 +715,16 @@
       a,
       * {
         color: var(--br-color-white);
-        fill: var(--br-color-white);
-		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-white)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-white)!important;
+		}
       }
     }
 
@@ -552,11 +743,17 @@
       a,
       * {
         color: var(--br-color-white);
-        fill: var(--br-color-white);
-		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
         cursor: not-allowed;
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-white)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-white)!important;
+		}
       }
     }
 
@@ -568,10 +765,16 @@
       a,
       * {
         color: var(--br-color-warning-500);
-        fill: var(--br-color-warning-500);
-		stroke: var(--br-color-warning-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-warning-500)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-warning-500)!important;
+		}
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -582,10 +785,16 @@
         a,
         * {
           color: var(--br-color-white);
-          fill: var(--br-color-white);
-		  stroke: var(--br-color-white)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
+		  
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-white)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-white)!important;
+		}
         }
       }
 
@@ -598,11 +807,17 @@
         a,
         * {
           color: var(--br-color-warning-200);
-          fill: var(--br-color-warning-200);
-		  stroke: var(--br-color-warning-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-warning-200)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-warning-200)!important;
+		}
         }
       }
     }
@@ -615,10 +830,16 @@
       a,
       * {
         color: var(--br-color-warning-500);
-        fill: var(--br-color-warning-500);
-		stroke: var(--br-color-warning-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-warning-500)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-warning-500)!important;
+		}
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -629,10 +850,16 @@
         a,
         * {
           color: var(--br-color-warning-600);
-          fill: var(--br-color-warning-600);
-		  stroke: var(--br-color-warning-600)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-warning-600)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-warning-600)!important;
+		}
         }
       }
 
@@ -645,11 +872,17 @@
         a,
         * {
           color: var(--br-color-warning-200);
-          fill: var(--br-color-warning-200);
-		  stroke: var(--br-color-warning-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-warning-200)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-warning-200)!important;
+		}
         }
       }
     }
@@ -663,10 +896,16 @@
     a,
     * {
       color: var(--br-color-white);
-      fill: var(--br-color-white);
-	  stroke: var(--br-color-white)!important;
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
+
+	  .br-icon:not(.outline) svg path {
+		fill: var(--br-color-white)!important;
+	}
+			
+	.br-icon:not(.outline) svg line, polyline {
+		stroke: var(--br-color-white)!important;
+	}
     }
 
     &:hover:not(:disabled, .disabled) {
@@ -677,10 +916,16 @@
       a,
       * {
         color: var(--br-color-white);
-        fill: var(--br-color-white);
-		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-white)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-white)!important;
+		}
       }
     }
 
@@ -699,11 +944,17 @@
       a,
       * {
         color: var(--br-color-white);
-        fill: var(--br-color-white);
-		stroke: var(--br-color-white)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
         cursor: not-allowed;
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-white)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-white)!important;
+		}
       }
     }
 
@@ -715,10 +966,16 @@
       a,
       * {
         color: var(--br-color-danger-500);
-        fill: var(--br-color-danger-500);
-		stroke: var(--br-color-danger-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-danger-500)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-danger-500)!important;
+		}
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -729,10 +986,16 @@
         a,
         * {
           color: var(--br-color-white);
-          fill: var(--br-color-white);
-		  stroke: var(--br-color-white)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-white)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-white)!important;
+		}
         }
       }
 
@@ -745,11 +1008,17 @@
         a,
         * {
           color: var(--br-color-danger-200);
-          fill: var(--br-color-danger-200);
-		  stroke: var(--br-color-danger-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-danger-200)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-danger-200)!important;
+		}
         }
       }
     }
@@ -762,10 +1031,16 @@
       a,
       * {
         color: var(--br-color-danger-500);
-        fill: var(--br-color-danger-500);
-		stroke: var(--br-color-danger-500)!important;
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
+
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-danger-500)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-danger-500)!important;
+		}
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -776,10 +1051,16 @@
         a,
         * {
           color: var(--br-color-danger-600);
-          fill: var(--br-color-danger-600);
-		  stroke: var(--br-color-danger-600)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-danger-600)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-danger-600)!important;
+		}
         }
       }
 
@@ -792,11 +1073,17 @@
         a,
         * {
           color: var(--br-color-danger-200);
-          fill: var(--br-color-danger-200);
-		  stroke: var(--br-color-danger-200)!important;
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
           cursor: not-allowed;
+
+		  .br-icon:not(.outline) svg path {
+			fill: var(--br-color-danger-200)!important;
+		}
+				
+		.br-icon:not(.outline) svg line, polyline {
+			stroke: var(--br-color-danger-200)!important;
+		}
         }
       }
     }
