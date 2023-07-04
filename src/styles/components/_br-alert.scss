@@ -27,13 +27,26 @@
     width: 24px;
 	height: 24px;
 
-    .br-icon * {
+    .br-icon {
 		margin: 0px!important;
-      fill: var(--br-color-neutral-500);
+
+		&:not(.outline) svg path {
+      		fill: var(--br-color-neutral-500)!important;
+		}
+
+		&.outline svg line, polyline, path {
+			stroke: var(--br-color-neutral-500)!important;
+		}
     }
 
-    &:hover * {
-      fill: var(--br-color-neutral-600);
+    &:hover .br-icon {
+		&:not(.outline) svg path {
+			fill: var(--br-color-neutral-600)!important;
+		}
+
+		&.outline svg line, polyline, path {
+			stroke: var(--br-color-neutral-600)!important;
+		}
     }
   }
 
@@ -58,9 +71,18 @@
 
 	.br-icon {
 		margin-right: var(--br-spacing-medium);
-		* {
-			fill: var(--br-color-primary-500);
+
+		&:not(.outline) svg *  {
+			fill: var(--br-color-primary-500)!important;
 			stroke: var(--br-color-primary-500)!important;
+		}
+
+		&.outline svg line, polyline, path {
+			stroke: var(--br-color-primary-500)!important;
+		}
+
+		&.outline svg path:last-child {
+			fill: var(--br-color-primary-500)!important;
 		}
 	}
   }
@@ -70,8 +92,13 @@
 
 	.br-icon {
 		margin-right: var(--br-spacing-medium);
-		* {
-			fill: var(--br-color-success-500);
+
+		&:not(.outline) svg *  {
+			fill: var(--br-color-success-500)!important;
+			stroke: var(--br-color-success-500)!important;
+		}
+
+		&.outline svg line, polyline, path {
 			stroke: var(--br-color-success-500)!important;
 		}
 	}
@@ -82,8 +109,13 @@
 
     .br-icon {
 		margin-right: var(--br-spacing-medium);
-		* {
-			fill: var(--br-color-neutral-500);
+
+		&:not(.outline) svg *  {
+			fill: var(--br-color-neutral-500)!important;
+			stroke: var(--br-color-neutral-500)!important;
+		}
+
+		&.outline svg line, polyline, path {
 			stroke: var(--br-color-neutral-500)!important;
 		}
 	}
@@ -94,8 +126,13 @@
 
     .br-icon {
 		margin-right: var(--br-spacing-medium);
-		* {
-			fill: var(--br-color-warning-500);
+
+		&:not(.outline) svg *  {
+			fill: var(--br-color-warning-500)!important;
+			stroke: var(--br-color-warning-500)!important;
+		}
+
+		&.outline svg line, polyline, path {
 			stroke: var(--br-color-warning-500)!important;
 		}
 	}
@@ -106,8 +143,13 @@
 
     .br-icon {
 		margin-right: var(--br-spacing-medium);
-		* {
-			fill: var(--br-color-danger-500);
+		
+		&:not(.outline) svg *  {
+			fill: var(--br-color-danger-500)!important;
+			stroke: var(--br-color-danger-500)!important;
+		}
+
+		&.outline svg line, polyline, path {
 			stroke: var(--br-color-danger-500)!important;
 		}
 	}

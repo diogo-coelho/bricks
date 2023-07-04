@@ -43,7 +43,7 @@
 </template>
 
 <script lang="ts">
-import { computed, ComputedRef, defineComponent, Ref, ref } from 'vue'
+import { computed, ComputedRef, defineComponent, onMounted, Ref, ref } from 'vue'
 import { InputProps } from '../../types/_input'
 import BrIcon from '../icon/BrIcon.vue'
 
@@ -189,6 +189,12 @@ export default defineComponent({
       return inputContainer?.clientWidth - paragraphElement?.offsetWidth
     })
 
+	const inputWidth = (): number => {
+      const inputContainer = BrInputRef.value as unknown as HTMLElement
+      const paragraphElement = paragraphRef.value as unknown as HTMLElement
+      return inputContainer?.clientWidth - paragraphElement?.offsetWidth
+    }
+
     const onClick = () => {
       emit('on-click', (InputRef.value as unknown as HTMLInputElement).value)
     }
@@ -205,6 +211,18 @@ export default defineComponent({
       onFocus.value = value
     }
 
+	const onWindowResize = (): void => {
+      window.addEventListener(
+        'resize',
+        () => {
+		  inputWidth()
+        },
+        { passive: true }
+      )
+    }
+
+	onMounted(() => onWindowResize())
+
     return {
       BrInputRef,
       InputRef,
@@ -220,6 +238,7 @@ export default defineComponent({
       setOnFocus,
       onEnter,
       onBlur,
+	  inputWidth,
     }
   },
 })

@@ -1,5 +1,5 @@
 <template>
-  <div class="br-icon">
+  <div class="br-icon" :class="computedOutlineClass">
     <component v-if="computedName" :is="name" />
 	<img v-else :src="name" alt="ícone" />
   </div>
@@ -41,9 +41,15 @@ export default defineComponent({
 		const componentsArray = Object.keys(Icons).map(string => { return convertStringComponentName(string) })
 		return componentsArray.includes(props.name)
 	})
+
+	const computedOutlineClass: ComputedRef<string | undefined> = computed(() => {
+		if (computedName.value && props.name.includes('outline')) return 'outline'
+		return undefined
+	})
 	
 	return {
-		computedName
+		computedName,
+		computedOutlineClass
 	}
   }
 })

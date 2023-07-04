@@ -125,20 +125,26 @@
     position: absolute;
     right: var(--br-spacing-small);
 
-    svg {
-      width: var(--br-font-size-medium);
-	  height: var(--br-font-size-medium);
+	.br-icon svg {
+	  width: var(--br-font-size-medium)!important;
+	  height: var(--br-font-size-medium)!important;
       display: inline-block;
       vertical-align: middle;
       transition: transform 0.3s ease;
-      fill: var(--br-color-neutral-600);
-	  stroke: (--br-color-neutral-600)!important;
       cursor: pointer;
 
-      &.disabled {
+	  &.disabled {
         visibility: hidden;
       }
+	}
+
+    .br-icon:not(.outline) svg path {
+      fill: var(--br-color-neutral-600)!important;    
     }
+
+	.br-icon.outline svg line, polyline {
+	  stroke: var(--br-color-neutral-600)!important;
+	}
 
     &:focus-visible,
     &:active,
@@ -149,6 +155,16 @@
       outline: none;
       -webkit-appearance: none;
     }
+
+	&:hover {
+		.br-icon:not(.outline) svg path {
+			fill: var(--br-color-primary-500)!important;    
+		}
+	  
+		.br-icon.outline svg line, polyline {
+			stroke: var(--br-color-primary-500)!important;
+		}
+	}
   }
 
   input.active ~ button:not(.disabled) > svg {
