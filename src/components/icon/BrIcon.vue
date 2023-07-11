@@ -1,7 +1,7 @@
 <template>
   <div class="br-icon" :class="computedOutlineClass">
-    <component v-if="computedName" :is="name" />
-	<img v-else :src="name" alt="ícone" />
+    <component :is="name" v-if="computedName" />
+    <img v-else :src="name" alt="ícone" />
   </div>
 </template>
 
@@ -25,32 +25,37 @@ export default defineComponent({
       required: true,
     },
   },
-  setup (props: IconProps) {
-	const convertStringComponentName = (str: string): string => {
-		const chars = str.split('')
-		const newChars = chars.map((char, index) => {
-			if (/[A-Z]/.test(char)) {
-				return `${index !== 0 ? '-' : ''}${char.toLowerCase()}`
-			}
-			return char
-		})
-		return newChars.join().replace(/\,/g, '')
-	}
+  setup(props: IconProps) {
+    const convertStringComponentName = (str: string): string => {
+      const chars = str.split('')
+      const newChars = chars.map((char, index) => {
+        if (/[A-Z]/.test(char)) {
+          return `${index !== 0 ? '-' : ''}${char.toLowerCase()}`
+        }
+        return char
+      })
+      return newChars.join().replace(/,/g, '')
+    }
 
-	const computedName: ComputedRef<boolean> = computed(() => {
-		const componentsArray = Object.keys(Icons).map(string => { return convertStringComponentName(string) })
-		return componentsArray.includes(props.name)
-	})
+    const computedName: ComputedRef<boolean> = computed(() => {
+      const componentsArray = Object.keys(Icons).map((string) => {
+        return convertStringComponentName(string)
+      })
+      return componentsArray.includes(props.name)
+    })
 
-	const computedOutlineClass: ComputedRef<string | undefined> = computed(() => {
-		if (computedName.value && props.name.includes('outline')) return 'outline'
-		return undefined
-	})
-	
-	return {
-		computedName,
-		computedOutlineClass
-	}
-  }
+    const computedOutlineClass: ComputedRef<string | undefined> = computed(
+      () => {
+        if (computedName.value && props.name.includes('outline'))
+          return 'outline'
+        return undefined
+      }
+    )
+
+    return {
+      computedName,
+      computedOutlineClass,
+    }
+  },
 })
 </script>

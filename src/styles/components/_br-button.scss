@@ -26,11 +26,12 @@
   }
 
   .br-icon:not(.outline) svg path {
-	fill: var(--br-color-neutral-500)!important;
+    fill: var(--br-color-neutral-500) !important;
   }
 
-  .br-icon:not(.outline) svg line, polyline {
-	stroke: var(--br-color-neutral-500)!important;
+  .br-icon:not(.outline) svg line,
+  polyline {
+    stroke: var(--br-color-neutral-500) !important;
   }
 
   &:hover:not(:disabled, .disabled) {
@@ -45,13 +46,14 @@
       text-decoration: none;
     }
 
-	.br-icon:not(.outline) svg path {
-		fill: var(--br-color-primary-600)!important;
-	}
-	
-	.br-icon:not(.outline) svg line, polyline {
-		stroke: var(--br-color-primary-600)!important;
-	}
+    .br-icon:not(.outline) svg path {
+      fill: var(--br-color-primary-600) !important;
+    }
+
+    .br-icon:not(.outline) svg line,
+    polyline {
+      stroke: var(--br-color-primary-600) !important;
+    }
   }
 
   &:focus:not(:disabled, .disabled),
@@ -74,13 +76,14 @@
       text-decoration: none;
       cursor: not-allowed;
 
-	  .br-icon:not(.outline) svg path {
-		fill: var(--br-color-neutral-200)!important;
-		}
-		
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-neutral-200)!important;
-		}
+      .br-icon:not(.outline) svg path {
+        fill: var(--br-color-neutral-200) !important;
+      }
+
+      .br-icon:not(.outline) svg line,
+      polyline {
+        stroke: var(--br-color-neutral-200) !important;
+      }
     }
   }
 
@@ -96,13 +99,14 @@
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
 
-	  .br-icon:not(.outline) svg path {
-		fill: var(--br-color-white)!important;
-	  }
-		
-	  .br-icon:not(.outline) svg line, polyline {
-		stroke: var(--br-color-white)!important;
-	  }
+      .br-icon:not(.outline) svg path {
+        fill: var(--br-color-white) !important;
+      }
+
+      .br-icon:not(.outline) svg line,
+      polyline {
+        stroke: var(--br-color-white) !important;
+      }
     }
 
     &:hover:not(:disabled, .disabled) {
@@ -116,13 +120,14 @@
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
 
-		.br-icon:not(.outline) svg path {
-		  fill: var(--br-color-white)!important;
-		}
-			
-		.br-icon:not(.outline) svg line, polyline {
-		  stroke: var(--br-color-white)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-white) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-white) !important;
+        }
       }
     }
 
@@ -145,13 +150,14 @@
         text-decoration: none;
         cursor: not-allowed;
 
-		.br-icon:not(.outline) svg path {
-		  fill: var(--br-color-white)!important;
-		}
-			
-		.br-icon:not(.outline) svg line, polyline {
-		  stroke: var(--br-color-white)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-white) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-white) !important;
+        }
       }
     }
 
@@ -166,13 +172,14 @@
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
 
-		.br-icon:not(.outline) svg path {
-		fill: var(--br-color-primary-500)!important;
-		}
-			
-		.br-icon:not(.outline) svg line, polyline {
-		stroke: var(--br-color-primary-500)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-primary-500) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-primary-500) !important;
+        }
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -186,13 +193,14 @@
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-white)!important;
-		  }
-				
-		  .br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-white)!important;
-		  }		  
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-white) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-white) !important;
+          }
         }
       }
 
@@ -209,13 +217,14 @@
           text-decoration: none;
           cursor: not-allowed;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-primary-200)!important;
-		  }
-				
-		  .br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-primary-500)!important;
-		  }
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-primary-200) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-primary-500) !important;
+          }
         }
       }
     }
@@ -231,13 +240,14 @@
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-primary-500)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-primary-500)!important;
-		}		
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-primary-500) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-primary-500) !important;
+        }
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -251,13 +261,14 @@
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-primary-600)!important;
-			}
-					
-			.br-icon:not(.outline) svg line, polyline {
-				stroke: var(--br-color-primary-600)!important;
-			}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-primary-600) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-primary-600) !important;
+          }
         }
       }
 
@@ -274,13 +285,14 @@
           text-decoration: none;
           cursor: not-allowed;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-primary-200)!important;
-			}
-					
-			.br-icon:not(.outline) svg line, polyline {
-				stroke: var(--br-color-primary-200)!important;
-			}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-primary-200) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-primary-200) !important;
+          }
         }
       }
     }
@@ -297,13 +309,14 @@
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
 
-	  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-white)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-white)!important;
-		}
+      .br-icon:not(.outline) svg path {
+        fill: var(--br-color-white) !important;
+      }
+
+      .br-icon:not(.outline) svg line,
+      polyline {
+        stroke: var(--br-color-white) !important;
+      }
     }
 
     &:hover:not(:disabled, .disabled) {
@@ -317,13 +330,14 @@
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-white)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-white)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-white) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-white) !important;
+        }
       }
     }
 
@@ -346,13 +360,14 @@
         text-decoration: none;
         cursor: not-allowed;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-white)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-white)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-white) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-white) !important;
+        }
       }
     }
 
@@ -367,13 +382,14 @@
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-neutral-500)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-neutral-500)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-neutral-500) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-neutral-500) !important;
+        }
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -387,13 +403,14 @@
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-white)!important;
-			}
-					
-			.br-icon:not(.outline) svg line, polyline {
-				stroke: var(--br-color-white)!important;
-			}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-white) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-white) !important;
+          }
         }
       }
 
@@ -410,13 +427,14 @@
           text-decoration: none;
           cursor: not-allowed;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-neutral-200)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-neutral-200)!important;
-		}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-neutral-200) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-neutral-200) !important;
+          }
         }
       }
     }
@@ -432,13 +450,14 @@
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-neutral-500)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-neutral-500)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-neutral-500) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-neutral-500) !important;
+        }
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -452,13 +471,14 @@
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
 
-		  .br-icon:not(.outline) svg path {
-				fill: var(--br-color-neutral-600)!important;
-			}
-					
-			.br-icon:not(.outline) svg line, polyline {
-				stroke: var(--br-color-neutral-600)!important;
-			}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-neutral-600) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-neutral-600) !important;
+          }
         }
       }
 
@@ -475,13 +495,14 @@
           text-decoration: none;
           cursor: not-allowed;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-neutral-200)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-neutral-200)!important;
-		}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-neutral-200) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-neutral-200) !important;
+          }
         }
       }
     }
@@ -498,13 +519,14 @@
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
 
-	  .br-icon:not(.outline) svg path {
-		fill: var(--br-color-white)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-white)!important;
-		}
+      .br-icon:not(.outline) svg path {
+        fill: var(--br-color-white) !important;
+      }
+
+      .br-icon:not(.outline) svg line,
+      polyline {
+        stroke: var(--br-color-white) !important;
+      }
     }
 
     &:hover:not(:disabled, .disabled) {
@@ -515,16 +537,17 @@
       a,
       * {
         color: var(--br-color-white);
-		font-weight: var(--br-font-weight-bold);
+        font-weight: var(--br-font-weight-bold);
         text-decoration: none;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-white)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-white)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-white) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-white) !important;
+        }
       }
     }
 
@@ -547,13 +570,14 @@
         text-decoration: none;
         cursor: not-allowed;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-white)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-white)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-white) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-white) !important;
+        }
       }
     }
 
@@ -568,13 +592,15 @@
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-success-500)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-success-500)!important;
-		}      }
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-success-500) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-success-500) !important;
+        }
+      }
 
       &:hover:not(:disabled, .disabled) {
         background-color: var(--br-color-success-500);
@@ -587,13 +613,14 @@
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
 
-		  .br-icon:not(.outline) svg path {
-				fill: var(--br-color-white)!important;
-			}
-					
-			.br-icon:not(.outline) svg line, polyline {
-				stroke: var(--br-color-white)!important;
-			}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-white) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-white) !important;
+          }
         }
       }
 
@@ -610,13 +637,14 @@
           text-decoration: none;
           cursor: not-allowed;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-success-200)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-success-200)!important;
-		}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-success-200) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-success-200) !important;
+          }
         }
       }
     }
@@ -632,13 +660,14 @@
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-success-500)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-success-500)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-success-500) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-success-500) !important;
+        }
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -652,13 +681,14 @@
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-success-600)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-success-600)!important;
-		}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-success-600) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-success-600) !important;
+          }
         }
       }
 
@@ -675,13 +705,14 @@
           text-decoration: none;
           cursor: not-allowed;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-success-200)!important;
-			}
-					
-			.br-icon:not(.outline) svg line, polyline {
-				stroke: var(--br-color-success-200)!important;
-			}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-success-200) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-success-200) !important;
+          }
         }
       }
     }
@@ -698,13 +729,14 @@
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
 
-	  .br-icon:not(.outline) svg path {
-		fill: var(--br-color-white)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-white)!important;
-		}
+      .br-icon:not(.outline) svg path {
+        fill: var(--br-color-white) !important;
+      }
+
+      .br-icon:not(.outline) svg line,
+      polyline {
+        stroke: var(--br-color-white) !important;
+      }
     }
 
     &:hover:not(:disabled, .disabled) {
@@ -718,13 +750,14 @@
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-white)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-white)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-white) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-white) !important;
+        }
       }
     }
 
@@ -747,13 +780,14 @@
         text-decoration: none;
         cursor: not-allowed;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-white)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-white)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-white) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-white) !important;
+        }
       }
     }
 
@@ -768,13 +802,14 @@
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-warning-500)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-warning-500)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-warning-500) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-warning-500) !important;
+        }
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -787,14 +822,15 @@
           color: var(--br-color-white);
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
-		  
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-white)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-white)!important;
-		}
+
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-white) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-white) !important;
+          }
         }
       }
 
@@ -811,13 +847,14 @@
           text-decoration: none;
           cursor: not-allowed;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-warning-200)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-warning-200)!important;
-		}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-warning-200) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-warning-200) !important;
+          }
         }
       }
     }
@@ -833,13 +870,14 @@
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-warning-500)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-warning-500)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-warning-500) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-warning-500) !important;
+        }
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -853,13 +891,14 @@
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-warning-600)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-warning-600)!important;
-		}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-warning-600) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-warning-600) !important;
+          }
         }
       }
 
@@ -876,13 +915,14 @@
           text-decoration: none;
           cursor: not-allowed;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-warning-200)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-warning-200)!important;
-		}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-warning-200) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-warning-200) !important;
+          }
         }
       }
     }
@@ -899,13 +939,14 @@
       font-weight: var(--br-font-weight-bold);
       text-decoration: none;
 
-	  .br-icon:not(.outline) svg path {
-		fill: var(--br-color-white)!important;
-	}
-			
-	.br-icon:not(.outline) svg line, polyline {
-		stroke: var(--br-color-white)!important;
-	}
+      .br-icon:not(.outline) svg path {
+        fill: var(--br-color-white) !important;
+      }
+
+      .br-icon:not(.outline) svg line,
+      polyline {
+        stroke: var(--br-color-white) !important;
+      }
     }
 
     &:hover:not(:disabled, .disabled) {
@@ -919,13 +960,14 @@
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-white)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-white)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-white) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-white) !important;
+        }
       }
     }
 
@@ -948,13 +990,14 @@
         text-decoration: none;
         cursor: not-allowed;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-white)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-white)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-white) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-white) !important;
+        }
       }
     }
 
@@ -969,13 +1012,14 @@
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-danger-500)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-danger-500)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-danger-500) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-danger-500) !important;
+        }
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -989,13 +1033,14 @@
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-white)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-white)!important;
-		}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-white) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-white) !important;
+          }
         }
       }
 
@@ -1012,13 +1057,14 @@
           text-decoration: none;
           cursor: not-allowed;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-danger-200)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-danger-200)!important;
-		}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-danger-200) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-danger-200) !important;
+          }
         }
       }
     }
@@ -1034,13 +1080,14 @@
         font-weight: var(--br-font-weight-bold);
         text-decoration: none;
 
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-danger-500)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-danger-500)!important;
-		}
+        .br-icon:not(.outline) svg path {
+          fill: var(--br-color-danger-500) !important;
+        }
+
+        .br-icon:not(.outline) svg line,
+        polyline {
+          stroke: var(--br-color-danger-500) !important;
+        }
       }
 
       &:hover:not(:disabled, .disabled) {
@@ -1054,13 +1101,14 @@
           font-weight: var(--br-font-weight-bold);
           text-decoration: none;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-danger-600)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-danger-600)!important;
-		}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-danger-600) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-danger-600) !important;
+          }
         }
       }
 
@@ -1077,13 +1125,14 @@
           text-decoration: none;
           cursor: not-allowed;
 
-		  .br-icon:not(.outline) svg path {
-			fill: var(--br-color-danger-200)!important;
-		}
-				
-		.br-icon:not(.outline) svg line, polyline {
-			stroke: var(--br-color-danger-200)!important;
-		}
+          .br-icon:not(.outline) svg path {
+            fill: var(--br-color-danger-200) !important;
+          }
+
+          .br-icon:not(.outline) svg line,
+          polyline {
+            stroke: var(--br-color-danger-200) !important;
+          }
         }
       }
     }
@@ -1095,12 +1144,12 @@
     font-size: var(--br-font-size-small);
 
     svg {
-      width: var(--br-font-size-x-small)!important;
-      height: var(--br-font-size-x-small)!important;
+      width: var(--br-font-size-x-small) !important;
+      height: var(--br-font-size-x-small) !important;
 
-	  * {
-		fill: var()
-	  }
+      * {
+        fill: var();
+      }
     }
   }
 
@@ -1109,8 +1158,8 @@
     font-size: var(--br-font-size-medium);
 
     svg {
-      width: var(--br-font-size-medium)!important;
-      height: var(--br-font-size-medium)!important;
+      width: var(--br-font-size-medium) !important;
+      height: var(--br-font-size-medium) !important;
     }
   }
 
@@ -1119,8 +1168,8 @@
     font-size: var(--br-font-size-large);
 
     svg {
-      width: var(--br-font-size-large)!important;
-      height: var(--br-font-size-large)!important;
+      width: var(--br-font-size-large) !important;
+      height: var(--br-font-size-large) !important;
     }
   }
 

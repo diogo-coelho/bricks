@@ -8,7 +8,7 @@
   width: 48px;
   height: 48px;
 
-	* {
+  * {
     color: var(--br-color-white);
     font-family: var(--br-font-sans);
     font-size: var(--br-font-size-large);
@@ -16,21 +16,29 @@
   }
 
   .br-icon {
-  	&:not(.outline) {
-		svg {
-			path, rect, ellipse, circle {
-				fill: var(--br-color-white);
-			}
-		}
-	}
+    &:not(.outline) {
+      svg {
+        path,
+        rect,
+        ellipse,
+        circle {
+          fill: var(--br-color-white);
+        }
+      }
+    }
 
-	&.outline {
-		svg {
-			line, polyline, path, circle, rect, ellipse {
-				stroke: var(--br-color-white)!important;
-			}
-		}
-	}	
+    &.outline {
+      svg {
+        line,
+        polyline,
+        path,
+        circle,
+        rect,
+        ellipse {
+          stroke: var(--br-color-white) !important;
+        }
+      }
+    }
   }
 
   &.square {

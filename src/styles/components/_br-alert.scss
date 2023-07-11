@@ -25,28 +25,32 @@
 
   button {
     width: 24px;
-	height: 24px;
+    height: 24px;
 
     .br-icon {
-		margin: 0px!important;
+      margin: 0px !important;
 
-		&:not(.outline) svg path {
-      		fill: var(--br-color-neutral-500)!important;
-		}
+      &:not(.outline) svg path {
+        fill: var(--br-color-neutral-500) !important;
+      }
 
-		&.outline svg line, polyline, path {
-			stroke: var(--br-color-neutral-500)!important;
-		}
+      &.outline svg line,
+      polyline,
+      path {
+        stroke: var(--br-color-neutral-500) !important;
+      }
     }
 
     &:hover .br-icon {
-		&:not(.outline) svg path {
-			fill: var(--br-color-neutral-600)!important;
-		}
+      &:not(.outline) svg path {
+        fill: var(--br-color-neutral-600) !important;
+      }
 
-		&.outline svg line, polyline, path {
-			stroke: var(--br-color-neutral-600)!important;
-		}
+      &.outline svg line,
+      polyline,
+      path {
+        stroke: var(--br-color-neutral-600) !important;
+      }
     }
   }
 
@@ -69,90 +73,100 @@
   &--primary {
     border-left: 5px solid var(--br-color-primary-500);
 
-	.br-icon {
-		margin-right: var(--br-spacing-medium);
+    .br-icon {
+      margin-right: var(--br-spacing-medium);
 
-		&:not(.outline) svg *  {
-			fill: var(--br-color-primary-500)!important;
-			stroke: var(--br-color-primary-500)!important;
-		}
+      &:not(.outline) svg * {
+        fill: var(--br-color-primary-500) !important;
+        stroke: var(--br-color-primary-500) !important;
+      }
 
-		&.outline svg line, polyline, path {
-			stroke: var(--br-color-primary-500)!important;
-		}
+      &.outline svg line,
+      polyline,
+      path {
+        stroke: var(--br-color-primary-500) !important;
+      }
 
-		&.outline svg path:last-child {
-			fill: var(--br-color-primary-500)!important;
-		}
-	}
+      &.outline svg path:last-child {
+        fill: var(--br-color-primary-500) !important;
+      }
+    }
   }
 
   &--success {
     border-left: 5px solid var(--br-color-success-500);
 
-	.br-icon {
-		margin-right: var(--br-spacing-medium);
+    .br-icon {
+      margin-right: var(--br-spacing-medium);
 
-		&:not(.outline) svg *  {
-			fill: var(--br-color-success-500)!important;
-			stroke: var(--br-color-success-500)!important;
-		}
+      &:not(.outline) svg * {
+        fill: var(--br-color-success-500) !important;
+        stroke: var(--br-color-success-500) !important;
+      }
 
-		&.outline svg line, polyline, path {
-			stroke: var(--br-color-success-500)!important;
-		}
-	}
+      &.outline svg line,
+      polyline,
+      path {
+        stroke: var(--br-color-success-500) !important;
+      }
+    }
   }
 
   &--neutral {
     border-left: 5px solid var(--br-color-neutral-500);
 
     .br-icon {
-		margin-right: var(--br-spacing-medium);
+      margin-right: var(--br-spacing-medium);
 
-		&:not(.outline) svg *  {
-			fill: var(--br-color-neutral-500)!important;
-			stroke: var(--br-color-neutral-500)!important;
-		}
+      &:not(.outline) svg * {
+        fill: var(--br-color-neutral-500) !important;
+        stroke: var(--br-color-neutral-500) !important;
+      }
 
-		&.outline svg line, polyline, path {
-			stroke: var(--br-color-neutral-500)!important;
-		}
-	}
+      &.outline svg line,
+      polyline,
+      path {
+        stroke: var(--br-color-neutral-500) !important;
+      }
+    }
   }
 
   &--warning {
     border-left: 5px solid var(--br-color-warning-500);
 
     .br-icon {
-		margin-right: var(--br-spacing-medium);
+      margin-right: var(--br-spacing-medium);
 
-		&:not(.outline) svg *  {
-			fill: var(--br-color-warning-500)!important;
-			stroke: var(--br-color-warning-500)!important;
-		}
+      &:not(.outline) svg * {
+        fill: var(--br-color-warning-500) !important;
+        stroke: var(--br-color-warning-500) !important;
+      }
 
-		&.outline svg line, polyline, path {
-			stroke: var(--br-color-warning-500)!important;
-		}
-	}
+      &.outline svg line,
+      polyline,
+      path {
+        stroke: var(--br-color-warning-500) !important;
+      }
+    }
   }
 
   &--danger {
     border-left: 5px solid var(--br-color-danger-500);
 
     .br-icon {
-		margin-right: var(--br-spacing-medium);
-		
-		&:not(.outline) svg *  {
-			fill: var(--br-color-danger-500)!important;
-			stroke: var(--br-color-danger-500)!important;
-		}
+      margin-right: var(--br-spacing-medium);
 
-		&.outline svg line, polyline, path {
-			stroke: var(--br-color-danger-500)!important;
-		}
-	}
+      &:not(.outline) svg * {
+        fill: var(--br-color-danger-500) !important;
+        stroke: var(--br-color-danger-500) !important;
+      }
+
+      &.outline svg line,
+      polyline,
+      path {
+        stroke: var(--br-color-danger-500) !important;
+      }
+    }
   }
 
   @keyframes fadeIn {

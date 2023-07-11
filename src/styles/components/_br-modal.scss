@@ -87,20 +87,23 @@
           fill: var(--br-color-neutral-500);
         }
 
-		.br-icon.outline svg path, line, polyline {
-			fill: var(--br-color-neutral-500);
-		}
+        .br-icon.outline svg path,
+        line,
+        polyline {
+          fill: var(--br-color-neutral-500);
+        }
 
-        &:hover .br-icon{
+        &:hover .br-icon {
+          &:not(.outline) svg path {
+            fill: var(--br-color-neutral-500);
+          }
 
-			&:not(.outline) svg path {
-				fill: var(--br-color-neutral-500);
-			}
-  
-			&.outline svg path, line, polyline {
-				fill: var(--br-color-neutral-500);
-			}
-		}
+          &.outline svg path,
+          line,
+          polyline {
+            fill: var(--br-color-neutral-500);
+          }
+        }
       }
 
       .modal-header {

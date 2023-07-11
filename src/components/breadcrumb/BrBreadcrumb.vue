@@ -11,8 +11,8 @@
           {{ item.text }}
         </a>
         <br-icon
-          :name="computedSeparator"
           v-if="isNotLastBreadcrumb(items.length, i)"
+          :name="computedSeparator"
         />
       </li>
     </ol>
