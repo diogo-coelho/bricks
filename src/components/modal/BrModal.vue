@@ -15,7 +15,7 @@
         @keyup.esc="closeModal"
       >
         <button v-if="!hideCloseButton" class="btn-close" @click="closeModal">
-          <br-icon name="br-icon-close"/>
+          <br-icon name="br-icon-close" />
         </button>
         <div v-if="computedFooterSlot" class="modal-header">
           <slot name="header"></slot>

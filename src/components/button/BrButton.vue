@@ -53,7 +53,7 @@ export default defineComponent({
     },
     /**
      * Color of button
-     * @values primary, secondary, info, warning, danger
+     * @values primary, neutral, success, warning, danger
      */
     variant: {
       type: String,

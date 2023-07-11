@@ -125,26 +125,27 @@
     position: absolute;
     right: var(--br-spacing-small);
 
-	.br-icon svg {
-	  width: var(--br-font-size-medium)!important;
-	  height: var(--br-font-size-medium)!important;
+    .br-icon svg {
+      width: var(--br-font-size-medium) !important;
+      height: var(--br-font-size-medium) !important;
       display: inline-block;
       vertical-align: middle;
       transition: transform 0.3s ease;
       cursor: pointer;
 
-	  &.disabled {
+      &.disabled {
         visibility: hidden;
       }
-	}
-
-    .br-icon:not(.outline) svg path {
-      fill: var(--br-color-neutral-600)!important;    
     }
 
-	.br-icon.outline svg line, polyline {
-	  stroke: var(--br-color-neutral-600)!important;
-	}
+    .br-icon:not(.outline) svg path {
+      fill: var(--br-color-neutral-600) !important;
+    }
+
+    .br-icon.outline svg line,
+    polyline {
+      stroke: var(--br-color-neutral-600) !important;
+    }
 
     &:focus-visible,
     &:active,
@@ -156,15 +157,16 @@
       -webkit-appearance: none;
     }
 
-	&:hover {
-		.br-icon:not(.outline) svg path {
-			fill: var(--br-color-primary-500)!important;    
-		}
-	  
-		.br-icon.outline svg line, polyline {
-			stroke: var(--br-color-primary-500)!important;
-		}
-	}
+    &:hover {
+      .br-icon:not(.outline) svg path {
+        fill: var(--br-color-primary-500) !important;
+      }
+
+      .br-icon.outline svg line,
+      polyline {
+        stroke: var(--br-color-primary-500) !important;
+      }
+    }
   }
 
   input.active ~ button:not(.disabled) > svg {
@@ -223,7 +225,7 @@
 
 .br-input.disabled > button .br-icon * {
   fill: var(--br-color-neutral-200);
-  stroke: var(--br-color-neutral-200)!important;
+  stroke: var(--br-color-neutral-200) !important;
   cursor: not-allowed;
 }
 
@@ -288,6 +290,6 @@
 
   button:hover .br-icon * {
     fill: var(--br-color-primary-500);
-	stroke: var(--br-color-primary-500)!important;
+    stroke: var(--br-color-primary-500) !important;
   }
 }

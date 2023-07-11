@@ -4,7 +4,7 @@
       <span>{{ computedInitials }}</span>
     </div>
     <br-icon
-	  v-if="!computedInitials && !computedImage"
+      v-if="!computedInitials && !computedImage"
       :name="computedAvatar"
     />
   </div>
