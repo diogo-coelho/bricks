@@ -1,0 +1,141 @@
+.br-checkbox {
+  display: inline-flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  transition: background-color 0.3s ease-in;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0px;
+    width: 0px;
+  }
+
+  label {
+    cursor: pointer;
+    font-size: var(--br-font-size-small);
+  }
+
+  .checkmark {
+    height: var(--br-font-size-medium);
+    width: var(--br-font-size-medium);
+    border-radius: var(--br-border-radius-small);
+    border: 1px solid var(--br-color-neutral-100);
+    margin-right: var(--br-spacing-small);
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: none;
+    }
+  }
+
+  &:hover input ~ .checkmark {
+    background-color: var(--br-color-neutral-100);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  & input:checked ~ .checkmark {
+    border: 1px solid var(--br-color-primary-500);
+    background-color: var(--br-color-primary-500);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  & input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  & .checkmark:after {
+    left: 0.313rem;
+    top: 0.325rem;
+    width: 0.375rem;
+    height: 0.625rem;
+    border: solid var(--br-color-white);
+    border-width: 0 0.125rem 0.125rem 0;
+    transform: rotate(45deg);
+  }
+
+  &--small {
+    .checkmark {
+      height: var(--br-font-size-medium);
+      width: var(--br-font-size-medium);
+    }
+
+    & .checkmark:after {
+      left: 0.313rem;
+      top: 0.325rem;
+      width: 0.375rem;
+      height: 0.625rem;
+    }
+  }
+
+  &--medium {
+    label {
+      font-size: var(--br-font-size-medium);
+    }
+
+    .checkmark {
+      height: var(--br-font-size-large);
+      width: var(--br-font-size-large);
+    }
+
+    & .checkmark:after {
+      left: 0.438rem;
+      top: 0.313rem;
+      width: 0.375rem;
+      height: 0.75rem;
+    }
+  }
+
+  &--large {
+    label {
+      font-size: var(--br-font-size-large);
+    }
+
+    .checkmark {
+      height: var(--br-font-size-x-large);
+      width: var(--br-font-size-x-large);
+    }
+
+    & .checkmark:after {
+      left: 0.5rem;
+      top: 0.25rem;
+      width: 0.438rem;
+      height: 0.875rem;
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+
+    label {
+      cursor: not-allowed;
+      color: var(--br-color-neutral-300);
+    }
+
+    input {
+      cursor: not-allowed;
+    }
+
+    .checkmark {
+      cursor: not-allowed;
+      background-color: var(--br-color-neutral-50);
+    }
+
+    &:hover input ~ .checkmark {
+      background-color: var(--br-color-neutral-50);
+    }
+
+    & input:checked ~ .checkmark {
+      border: 1px solid var(--br-color-neutral-100);
+      background-color: var(--br-color-neutral-50);
+    }
+
+    & input:checked ~ .checkmark:after {
+      display: none;
+    }
+  }
+}
