@@ -3,6 +3,7 @@
   position: relative;
   justify-content: flex-start;
   align-items: center;
+  flex-basis: content;
   transition: background-color 0.3s ease-in;
 
   input {
