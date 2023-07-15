@@ -1,5 +1,5 @@
 <template>
-  <div class="br-radio-group">
+  <div class="br-radio-group" :class="rootClasses">
     <label v-if="label">{{ label }}</label>
     <slot></slot>
   </div>
@@ -50,14 +50,32 @@ export default defineComponent({
       type: String,
       default: () => undefined,
     },
+    /**
+     * Size of radio group
+     * @values true, false
+     */
+    size: {
+      type: String,
+      default: () => undefined,
+      validator: (value: string) => {
+        return ['small', 'medium', 'large'].includes(value)
+      },
+    },
   },
   emits: ['on-change'],
-  setup(props: RadioGroupProps) {
+  setup(props: RadioGroupProps, { emit }) {
     const id: Ref<string | null> = ref(null)
+    const checkedValue: Ref<string> = ref('')
 
     const computedValue: ComputedRef<string | undefined> = computed(() => {
       if (props.value) return props.value
       return undefined
+    })
+
+    checkedValue.value = computedValue.value || ''
+
+    const rootClasses: ComputedRef<string[]> = computed(() => {
+      return [props.size ? `br-radio-group--${props.size}` : ``]
     })
 
     const setRadioChecked = () => {
@@ -71,9 +89,14 @@ export default defineComponent({
     }
 
     const createIdentifierAndRegistry = () => {
-	  const number = getRadioElementsLength()
-	  id.value = `radio-group-${generateHashCode((number + 1).toString())}`
+      const number = getRadioElementsLength()
+      id.value = `radio-group-${generateHashCode((number + 1).toString())}`
       addRadioElement(id.value)
+    }
+
+    const emitValue = (value: string) => {
+      checkedValue.value = value
+      emit('on-change', value)
     }
 
     onMounted(() => {
@@ -83,8 +106,14 @@ export default defineComponent({
 
     provide('radio-group-control', {
       name: props.name,
-	  id: computed(() => id.value)
+      id: computed(() => id.value),
+      emitValue,
     })
+
+    return {
+      rootClasses,
+      checkedValue,
+    }
   },
 })
 </script>
