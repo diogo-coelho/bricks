@@ -18,6 +18,7 @@ import {
 import { RadioGroupProps } from '../../types/_radio'
 import {
   addRadioElement,
+  getRadioElementsLength,
   setSelectedRadio,
 } from '../../listeners/radioEventListener'
 import { generateHashCode } from '../../helpers/generateHashCode'
@@ -70,7 +71,8 @@ export default defineComponent({
     }
 
     const createIdentifierAndRegistry = () => {
-      id.value = `radio-group-${generateHashCode(props.name)}`
+	  const number = getRadioElementsLength()
+	  id.value = `radio-group-${generateHashCode((number + 1).toString())}`
       addRadioElement(id.value)
     }
 
@@ -81,6 +83,7 @@ export default defineComponent({
 
     provide('radio-group-control', {
       name: props.name,
+	  id: computed(() => id.value)
     })
   },
 })

@@ -41,6 +41,10 @@ Informe o `value` da opção que deseja deixar previamente selecionada.
 </BrRadioGroup>
 ```
 
+### Desabilitado
+
+
+
 <style lang="scss">
 @import '../../src/styles/index.scss'
 </style>

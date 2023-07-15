@@ -1,3 +1,5 @@
+import { ComputedRef } from 'vue'
+
 export type RadioGroupProps = {
   name: string
   label?: string
@@ -6,6 +8,7 @@ export type RadioGroupProps = {
 
 export type RadioProvidedAttributes = {
   name: string
+  id?: ComputedRef<string>
 }
 
 export type RadioSelectedItem = {

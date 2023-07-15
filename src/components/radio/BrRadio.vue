@@ -1,5 +1,5 @@
 <template>
-  <div class="br-radio" @click="toggleRadioStatus(!computedChecked)">
+  <div class="br-radio" @click="toggleRadioStatus(true)">
     <input
       ref="radioRef"
       type="radio"
@@ -19,7 +19,6 @@ import { RadioProps, RadioProvidedAttributes } from '../../types/_radio'
 import useEventRadioListener, {
   setSelectedRadio,
 } from '../../listeners/radioEventListener'
-import { generateHashCode } from '../../helpers/generateHashCode'
 
 export default defineComponent({
   name: 'BrRadio',
@@ -34,12 +33,11 @@ export default defineComponent({
     },
   },
   setup(props: RadioProps) {
-    const { name } = inject('radio-group-control') as RadioProvidedAttributes
-    const id: Ref<string> = ref(`radio-group-${generateHashCode(name)}`)
+    const { id, name } = inject('radio-group-control') as RadioProvidedAttributes
     const selectedRadio = useEventRadioListener()
 
     const computedChecked: ComputedRef<boolean | undefined> = computed(() => {
-      const radioElement = selectedRadio.find((radio) => radio.id == id.value)
+      const radioElement = selectedRadio.find((radio) => radio.id == id?.value)
       if (!radioElement) return undefined
       return radioElement?.value === props.value ? radioElement.checked : false
     })
@@ -50,7 +48,7 @@ export default defineComponent({
     })
 
     const toggleRadioStatus = (checked: boolean) => {
-      setSelectedRadio({ id: id.value, value: props.value, checked })
+      setSelectedRadio({ id: id?.value as string, value: props.value, checked })
     }
 
     return {
@@ -61,5 +59,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style></style>
