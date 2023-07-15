@@ -7,14 +7,34 @@ import BrRadio from '../../src/components/radio/BrRadio.vue'
 
 `BrRadio` permite que o usuário selecione uma única opção dentro de um grupo determinado.
 
-<BrRadioGroup name="exemplo">
+<BrRadioGroup name="exemplo1" label="Select an option">
 	<BrRadio value="1">Um</BrRadio>
 	<BrRadio value="2">Dois</BrRadio>
 	<BrRadio value="3">Três</BrRadio>
 </BrRadioGroup>
 
 ```jsx
-<BrRadioGroup name="exemplo">
+<BrRadioGroup name="exemplo1" label="Select an option">
+	<BrRadio value="1">Um</BrRadio>
+	<BrRadio value="2">Dois</BrRadio>
+	<BrRadio value="3">Três</BrRadio>
+</BrRadioGroup>
+```
+
+## Exemplos
+
+### Valor inicial
+
+Informe o `value` da opção que deseja deixar previamente selecionada.
+
+<BrRadioGroup name="exemplo2" label="Select an option" value="3">
+	<BrRadio value="1">Um</BrRadio>
+	<BrRadio value="2">Dois</BrRadio>
+	<BrRadio value="3">Três</BrRadio>
+</BrRadioGroup>
+
+```jsx
+<BrRadioGroup name="exemplo2" label="Select an option" value="3">
 	<BrRadio value="1">Um</BrRadio>
 	<BrRadio value="2">Dois</BrRadio>
 	<BrRadio value="3">Três</BrRadio>

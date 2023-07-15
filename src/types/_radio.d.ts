@@ -1,17 +1,19 @@
 export type RadioGroupProps = {
-	name: string
+  name: string
+  label?: string
+  value?: string
 }
 
 export type RadioProvidedAttributes = {
-	name: string
-	selectedRadio: RadioSelectedItem
+  name: string
 }
 
 export type RadioSelectedItem = {
-	value: string
-	checked: boolean
+  id: string
+  value: string
+  checked: boolean
 }
 
 export type RadioProps = {
-	value: string
+  value: string
 }

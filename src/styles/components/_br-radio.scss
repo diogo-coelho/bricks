@@ -1,65 +1,65 @@
 .br-radio-group {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-	.br-radio {
-		display: inline-flex;
-		position: relative;
-		justify-content: flex-start;
-		align-items: center;
-		flex-basis: content;
-		transition: background-color 0.3s ease-in;		
+  .br-radio {
+    display: inline-flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    flex-basis: content;
+    transition: background-color 0.3s ease-in;
 
-		input {
-			position: absolute;
-			opacity: 0;
-			cursor: pointer;
-			height: 0px;
-			width: 0px;
-		}
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0px;
+      width: 0px;
+    }
 
-		label {
-			cursor: pointer;
-			font-size: var(--br-font-size-small);
-		}
+    label {
+      cursor: pointer;
+      font-size: var(--br-font-size-small);
+    }
 
-		.checkmark {
-			height: var(--br-font-size-medium);
-			width: var(--br-font-size-medium);
-			border-radius: var(--br-border-radius-circle);
-			border: 1px solid var(--br-color-neutral-100);
-			margin-right: var(--br-spacing-small);
-			cursor: pointer;
-		
-			&:after {
-			  content: '';
-			  position: absolute;
-			  display: none;
-			}
-		}
+    .checkmark {
+      height: var(--br-font-size-medium);
+      width: var(--br-font-size-medium);
+      border-radius: var(--br-border-radius-circle);
+      border: 1px solid var(--br-color-neutral-100);
+      margin-right: var(--br-spacing-small);
+      cursor: pointer;
 
-		&:hover input ~ .checkmark {
-			background-color: var(--br-color-neutral-100);
-			transition: background-color 0.3s ease-in-out;
-		}
+      &:after {
+        content: '';
+        position: absolute;
+        display: none;
+      }
+    }
 
-		& input:checked ~ .checkmark {
-			border: 1px solid var(--br-color-primary-500);
-			background-color: var(--br-color-primary-500);
-			transition: background-color 0.3s ease-in-out;
-		  }
-		
-		  & input:checked ~ .checkmark:after {
-			display: block;
-		  }
-		
-		  & .checkmark:after {
-			left: 0.313rem;
-			top: 0.563rem;
-			width: 0.375rem;
-			height: 0.375rem;
-			border-radius: var(--br-border-radius-circle);
-			background-color: var(--br-color-white);
-		}
-	}
+    &:hover input ~ .checkmark {
+      background-color: var(--br-color-neutral-100);
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    & input:checked ~ .checkmark {
+      border: 1px solid var(--br-color-primary-500);
+      background-color: var(--br-color-primary-500);
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    & input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    & .checkmark:after {
+      left: 0.313rem;
+      top: 0.563rem;
+      width: 0.375rem;
+      height: 0.375rem;
+      border-radius: var(--br-border-radius-circle);
+      background-color: var(--br-color-white);
+    }
+  }
 }

@@ -5,7 +5,7 @@ import BrRadioGroup from './BrRadioGroup.vue'
 export default {
   install(app: App) {
     app.component(BrRadioGroup.name, BrRadioGroup)
-	app.component(BrRadio.name, BrRadio)
+    app.component(BrRadio.name, BrRadio)
   },
 } as Plugin
 

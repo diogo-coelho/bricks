@@ -1,40 +1,87 @@
 <template>
-	<div class="br-radio-group">
-		<slot></slot>
-	</div>
+  <div class="br-radio-group">
+    <label v-if="label">{{ label }}</label>
+    <slot></slot>
+  </div>
 </template>
-  
+
 <script lang="ts">
-import { defineComponent, provide } from 'vue'
+import {
+  computed,
+  ComputedRef,
+  defineComponent,
+  onMounted,
+  provide,
+  Ref,
+  ref,
+} from 'vue'
 import { RadioGroupProps } from '../../types/_radio'
-import useEventRadioListener from '../../listeners/radioEventListener'
-  
+import {
+  addRadioElement,
+  setSelectedRadio,
+} from '../../listeners/radioEventListener'
+import { generateHashCode } from '../../helpers/generateHashCode'
+
 export default defineComponent({
   name: 'BrRadioGroup',
   props: {
-	/**
-	 * Name of radio group
-	 * @values string
-	 */
-	name: {
-		type: String,
-		required: true
-	}
+    /**
+     * Name of radio group
+     * @values string
+     */
+    name: {
+      type: String,
+      required: true,
+    },
+    /**
+     * Label of radio group
+     * @values string
+     */
+    label: {
+      type: String,
+      default: () => undefined,
+    },
+    /**
+     * Set an initial value
+     * @values string
+     */
+    value: {
+      type: String,
+      default: () => undefined,
+    },
   },
   emits: ['on-change'],
-  setup (props: RadioGroupProps) {
-	const selectedRadio = useEventRadioListener()
+  setup(props: RadioGroupProps) {
+    const id: Ref<string | null> = ref(null)
 
-	provide('radio-group-control', { 
-		name: props.name,
-		selectedRadio
-	})
+    const computedValue: ComputedRef<string | undefined> = computed(() => {
+      if (props.value) return props.value
+      return undefined
+    })
 
-	return {
-		selectedRadio
-	}
-  }
+    const setRadioChecked = () => {
+      if (computedValue.value) {
+        setSelectedRadio({
+          id: id.value as string,
+          value: computedValue.value,
+          checked: true,
+        })
+      }
+    }
+
+    const createIdentifierAndRegistry = () => {
+      id.value = `radio-group-${generateHashCode(props.name)}`
+      addRadioElement(id.value)
+    }
+
+    onMounted(() => {
+      createIdentifierAndRegistry()
+      setRadioChecked()
+    })
+
+    provide('radio-group-control', {
+      name: props.name,
+    })
+  },
 })
 </script>
-
-  
