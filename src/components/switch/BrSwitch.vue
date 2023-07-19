@@ -1,5 +1,8 @@
 <template>
-  <p>Isso é um switch</p>
+  <label class="br-switch">
+    <input type="checkbox" />
+    <span class="slider round"></span>
+  </label>
 </template>
 
 <script lang="ts">
@@ -9,5 +12,3 @@ export default defineComponent({
   name: 'BrSwitch',
 })
 </script>
-
-<style></style>
