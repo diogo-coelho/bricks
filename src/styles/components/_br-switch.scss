@@ -1,60 +1,150 @@
 .br-switch {
-  position: relative;
-  display: inline-flex;
-  width: var(--br-font-size-2x-large);
-  height: var(--br-font-size-medium);
+  display: flex;
+  align-items: center;
 
-  input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
+  label {
+    position: relative;
+    display: inline-flex;
+    width: var(--br-thumbs-size-x-large);
+    height: var(--br-thumbs-size-2x-small);
 
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: var(--br-color-neutral-300);
-    transition: 0.4s;
-
-    &.round {
-      border-radius: var(--br-border-radius-pill);
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      display: none;
     }
 
-    &:before {
+    .slider {
       position: absolute;
-      content: '';
-      width: var(--br-font-size-x-large);
-      height: var(--br-font-size-x-large);
-      background-color: var(--br-color-white);
-      top: -0.25rem;
-      left: -0.25rem;
-      border-radius: var(--br-border-radius-circle);
-      border: 1px solid var(--br-color-neutral-400);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: var(--br-color-neutral-300);
       transition: 0.4s;
+
+      &.round {
+        border-radius: var(--br-border-radius-pill);
+      }
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: var(--br-thumbs-size-medium);
+        height: var(--br-thumbs-size-medium);
+        background-color: var(--br-color-white);
+        border-radius: var(--br-border-radius-circle);
+        border: 1px solid var(--br-color-neutral-400);
+        transition: 0.4s;
+      }
+
+      &.round:before {
+        border-radius: var(--br-border-radius-circle);
+      }
     }
 
-    &.round:before {
-      border-radius: var(--br-border-radius-circle);
+    input:checked:not(:disabled) + .slider {
+      background-color: var(--br-color-primary-500);
+    }
+
+    input:checked:not(:disabled) + .slider:before {
+      border: 1px solid var(--br-color-primary-500);
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px var(--br-color-primary-500);
+    }
+
+    input:checked:not(:disabled) + .slider:before {
+      transform: translateX(var(--br-thumbs-size-3x-small));
     }
   }
 
-  input:checked + .slider {
-    background-color: var(--br-color-primary-500);
+  .br-switch-label {
+    font-size: var(--br-font-size-small);
+    margin-left: var(--br-font-size-small);
+    display: flex;
+    align-items: center;
   }
 
-  input:checked + .slider:before {
-    border: 1px solid var(--br-color-primary-500);
+  &.disabled {
+    .slider {
+      background-color: var(--br-color-neutral-50);
+
+      &:before {
+        border: 1px solid var(--br-color-neutral-100);
+      }
+    }
+
+    .br-switch-label {
+      color: var(--br-color-neutral-300);
+    }
   }
 
-  input:focus + .slider {
-    box-shadow: 0 0 1px var(--br-color-primary-500);
+  &--small {
+	label {
+		width: var(--br-thumbs-size-x-large);
+		height: var(--br-thumbs-size-2x-small);
+
+		.slider:before {
+			width: var(--br-thumbs-size-medium);
+			height: var(--br-thumbs-size-medium);
+		}
+
+		input:checked:not(:disabled) + .slider:before {
+			transform: translateX(var(--br-thumbs-size-3x-small));
+		}
+	}
+
+	.br-switch-label {
+		font-size: var(--br-font-size-small);
+		margin-left: var(--br-font-size-small);
+	}
   }
 
-  input:checked + .slider:before {
-    transform: translateX(21px);
+  &--medium {
+	label {
+		width: var(--br-thumbs-size-2x-large);
+		height: var(--br-thumbs-size-small);
+
+		.slider:before {
+			width: var(--br-thumbs-size-large);
+			height: var(--br-thumbs-size-large);
+		}
+	
+		input:checked:not(:disabled) + .slider:before {
+			transform: translateX(var(--br-thumbs-size-2x-small));
+		}
+	}
+
+	.br-switch-label {
+		font-size: var(--br-font-size-medium);
+		margin-left: var(--br-font-size-medium);
+	}
+  }
+
+  &--large {
+	label {
+		width: var(--br-thumbs-size-3x-large);
+		height: var(--br-thumbs-size-medium);
+
+		.slider:before {
+			width: var(--br-thumbs-size-x-large);
+			height: var(--br-thumbs-size-x-large);
+		}
+	
+		input:checked:not(:disabled) + .slider:before {
+			transform: translateX(var(--br-thumbs-size-x-small));
+		}
+	}	
+
+	.br-switch-label {
+		font-size: var(--br-font-size-large);
+		margin-left: var(--br-font-size-large);
+	}
   }
 }
