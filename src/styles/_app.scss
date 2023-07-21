@@ -12,12 +12,21 @@ a {
   color: var(--br-color-neutral-500);
 }
 
+// Display block
+.block {
+  display: block;
+}
+
 // display flex
 .flex {
   display: flex;
 
   &-wrap {
     flex-wrap: wrap;
+  }
+
+  &-column {
+    flex-direction: column;
   }
 }
 
