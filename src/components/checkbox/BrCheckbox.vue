@@ -18,14 +18,7 @@
 </template>
 
 <script lang="ts">
-import {
-  computed,
-  ComputedRef,
-  defineComponent,
-  ref,
-  Ref,
-  defineExpose,
-} from 'vue'
+import { computed, ComputedRef, defineComponent, ref, Ref } from 'vue'
 import { CheckboxProps } from '../../types/_checkbox'
 
 export default defineComponent({
@@ -83,8 +76,6 @@ export default defineComponent({
       checkedValue.value = value
       emit('on-change', computedChecked.value)
     }
-
-    defineExpose({ checkedValue })
 
     return {
       checkedValue,

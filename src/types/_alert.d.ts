@@ -16,6 +16,7 @@ export type ToastStyles = {
   boxShadow?: string
   width?: string
   minWidth?: string
+  maxWidth?: string
   zIndex?: number
   marginBottom?: string
 }

@@ -44,7 +44,7 @@ Passe o atributo `disabled` para desabilitar o componente.
 
 ### Tamanhos
 
-Passe o atributo `size` para desabilitar o componente.
+Passe o atributo `size` para configurar o tamanho do componente.
 
 <div class="w-full">
 	<BrCheckbox class="w-full mb-small" size="small" checked>Select this option</BrCheckbox>

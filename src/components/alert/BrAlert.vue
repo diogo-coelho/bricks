@@ -98,7 +98,8 @@ export default defineComponent({
 
     const toastStyles: Ref<ToastStyles> = ref({
       filter: 'drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.15))',
-      width: '400px',
+      width: 'auto',
+      maxWidth: '400px',
       marginBottom: '20px',
     })
 

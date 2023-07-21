@@ -9,6 +9,7 @@ import BrIcon from './components/icon'
 import BrInput from './components/input'
 import BrModal from './components/modal'
 import BrRadio from './components/radio'
+import BrRadioGroup from './components/radio'
 import BrSelect from './components/select'
 import BrSelectItem from './components/select-item'
 import BrSwitch from './components/switch'
@@ -25,6 +26,7 @@ export {
   BrInput,
   BrModal,
   BrRadio,
+  BrRadioGroup,
   BrSelect,
   BrSelectItem,
   BrSwitch,
