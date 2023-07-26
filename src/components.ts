@@ -13,6 +13,9 @@ import BrRadioGroup from './components/radio'
 import BrSelect from './components/select'
 import BrSelectItem from './components/select-item'
 import BrSwitch from './components/switch'
+import BrTable from './components/table'
+import BrTHead from './components/table'
+import BrTBody from './components/table'
 
 export {
   // components
@@ -30,4 +33,7 @@ export {
   BrSelect,
   BrSelectItem,
   BrSwitch,
+  BrTable,
+  BrTHead,
+  BrTBody,
 }

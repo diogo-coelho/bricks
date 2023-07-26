@@ -48,6 +48,9 @@
     }
 
     & input:checked ~ .checkmark {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;	
       border: 1px solid var(--br-color-primary-500);
       background-color: var(--br-color-primary-500);
       transition: background-color 0.3s ease-in-out;
@@ -58,8 +61,6 @@
     }
 
     & .checkmark:after {
-      left: 0.313rem;
-      top: 0.563rem;
       width: 0.375rem;
       height: 0.375rem;
       border-radius: var(--br-border-radius-circle);
@@ -110,8 +111,6 @@
       }
 
       & .checkmark:after {
-        left: 0.313rem;
-        top: 0.563rem;
         width: 0.375rem;
         height: 0.375rem;
       }
@@ -167,8 +166,6 @@
       }
 
       & .checkmark:after {
-        left: 0.375rem;
-        top: 0.5rem;
         width: 0.5rem;
         height: 0.5rem;
       }
@@ -226,8 +223,6 @@
       }
 
       & .checkmark:after {
-        left: 0.438rem;
-        top: 0.438rem;
         width: 0.625rem;
         height: 0.625rem;
       }
