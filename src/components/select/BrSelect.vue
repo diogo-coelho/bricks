@@ -33,13 +33,7 @@
         }"
       >
         <ul>
-          <br-select-item
-            v-for="(item, i) in items"
-            :key="`br-select-item-${i}`"
-            :item="item"
-            :active="item.value === selectedOption?.value"
-            @selected-option="setSelectValue"
-          />
+          <slot></slot>
         </ul>
       </div>
     </teleport>
@@ -52,18 +46,22 @@ import {
   ComputedRef,
   defineComponent,
   onMounted,
-  PropType,
   Ref,
   ref,
+  provide,
 } from 'vue'
 import BrInput from '../input/BrInput.vue'
-import BrSelectItem from '../select-item/BrSelectItem.vue'
 import {
   SelectProps,
   SelectOption,
   DropdownElementPosition,
 } from '../../types/_select'
+import {
+  addSelectElement,
+  getSelectInputElementsLength,
+} from '../../listeners/selectEventListener'
 import BrClickOutsideDirective from '../../directives/BrClickOutside/BrClickOutsideDirective'
+import { generateHashCode } from '../../helpers/generateHashCode'
 
 const ELEMENT_SIZE_DEFAULT = 42
 const ELEMENT_SIZE_SMALL = 42
@@ -77,17 +75,8 @@ export default defineComponent({
   },
   components: {
     BrInput,
-    BrSelectItem,
   },
   props: {
-    /**
-     * Items of menu select dropdown
-     * @values { value: string, label: string }[]
-     */
-    items: {
-      type: Array as PropType<SelectOption[]>,
-      default: () => [],
-    },
     /**
      * Set label od select input
      * @values string
@@ -132,6 +121,7 @@ export default defineComponent({
   },
   emits: ['on-change'],
   setup(props: SelectProps, { emit }) {
+    const id: Ref<string | null> = ref(null)
     const BrSelectRef = ref(null)
     const InputRef = ref(null)
     const dropdownWidth: Ref<number> = ref(0)
@@ -237,11 +227,13 @@ export default defineComponent({
       dropdownWidth.value = elem ? elem.clientWidth : 100
     }
 
-    const setSelectValue = (item: SelectOption): void => {
-      selectedOption.value = item
-      toggleSelectDropdown(false)
-      emit('on-change', selectedOption.value)
-    }
+    /**
+    const setSelectedOptionWithPropsValue = (): void => {
+      if (!computedSelected.value) return
+      selectedOption.value = props.items.find(
+        (item) => item.label === computedSelected.value
+      )
+    } */
 
     const setOnFocus = (value: boolean): void => {
       onFocus.value = value
@@ -251,13 +243,6 @@ export default defineComponent({
       const elem = document.querySelector('.br-select') as HTMLDivElement
       if (!elem.contains(event.target as HTMLElement))
         toggleSelectDropdown(false)
-    }
-
-    const setSelectedOptionWithPropsValue = (): void => {
-      if (!computedSelected.value) return
-      selectedOption.value = props.items.find(
-        (item) => item.label === computedSelected.value
-      )
     }
 
     const onWindowResize = (): void => {
@@ -283,11 +268,29 @@ export default defineComponent({
       )
     }
 
+    const createIdentifierAndRegistry = () => {
+      const number = getSelectInputElementsLength()
+      id.value = `select-group-${generateHashCode((number + 1).toString())}`
+      addSelectElement(id.value)
+    }
+
+    const emitValue = (option: SelectOption) => {
+      selectedOption.value = option
+      emit('on-change', option)
+    }
+
+    provide('select-group-control', {
+      id: computed(() => id.value),
+      selected: computed(() => selectedOption.value),
+      emitValue,
+    })
+
     onMounted(() => {
+      createIdentifierAndRegistry()
       setDropdownWidth()
       onWindowResize()
       onScroll()
-      setSelectedOptionWithPropsValue()
+      //setSelectedOptionWithPropsValue()
     })
 
     return {
@@ -301,7 +304,6 @@ export default defineComponent({
       selectedOption,
       onFocus,
       rootClasses,
-      setSelectValue,
       setDropdownWidth,
       toggleSelectDropdown,
       setOnFocus,

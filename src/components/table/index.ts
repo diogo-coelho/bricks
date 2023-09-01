@@ -6,8 +6,8 @@ import BrTBody from './BrTBody.vue'
 export default {
   install(app: App) {
     app.component(BrTable.name, BrTable)
-	app.component(BrTHead.name, BrTHead)
-	app.component(BrTBody.name, BrTBody)
+    app.component(BrTHead.name, BrTHead)
+    app.component(BrTBody.name, BrTBody)
   },
 } as Plugin
 

@@ -99,15 +99,15 @@ export default defineComponent({
       emit('on-change', value)
     }
 
-    onMounted(() => {
-      createIdentifierAndRegistry()
-      setRadioChecked()
-    })
-
     provide('radio-group-control', {
       name: props.name,
       id: computed(() => id.value),
       emitValue,
+    })
+
+    onMounted(() => {
+      createIdentifierAndRegistry()
+      setRadioChecked()
     })
 
     return {

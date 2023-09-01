@@ -11,7 +11,7 @@
     position: relative;
     justify-content: flex-start;
     align-items: center;
-	align-self: flex-start;
+    align-self: flex-start;
     flex-basis: content;
     transition: background-color 0.3s ease-in;
 
@@ -49,9 +49,9 @@
     }
 
     & input:checked ~ .checkmark {
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;	
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border: 1px solid var(--br-color-primary-500);
       background-color: var(--br-color-primary-500);
       transition: background-color 0.3s ease-in-out;
