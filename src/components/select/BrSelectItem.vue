@@ -19,6 +19,7 @@ import {
   computed,
   ComputedRef,
   useSlots,
+  onMounted,
 } from 'vue'
 import {
   SelectItemProps,
@@ -57,10 +58,11 @@ export default defineComponent({
     const slots = useSlots()
     const label = slots.default ? slots?.default() : undefined
     const computedLabel: ComputedRef<string> = computed(() => {
-      return label && label.length > 0 ? label[0].children!.toString() : ''
+      if (label && label.length > 0) return label[0].children?.toString() || ''
+      return ''
     })
 
-    const { id, selected, emitValue } = inject(
+    const { id, selected, initialSelected, emitValue } = inject(
       'select-group-control'
     ) as SelectProvidedAttributes
 
@@ -72,8 +74,15 @@ export default defineComponent({
     )
 
     const active: ComputedRef<boolean> = computed(
-      () => computedSelected.value?.value === props.value
+      () =>
+        computedSelected.value?.value === props.value ||
+        computedSelected.value?.label === computedLabel.value
     )
+
+    const setInitialSelected = () => {
+      if (initialSelected && computedLabel.value === initialSelected)
+        selectValue()
+    }
 
     const selectValue = () => {
       setSelectedSelectInput({
@@ -82,6 +91,8 @@ export default defineComponent({
       })
       emitValue({ value: props.value, label: computedLabel.value })
     }
+
+    onMounted(() => setInitialSelected())
 
     return {
       computedSelected,

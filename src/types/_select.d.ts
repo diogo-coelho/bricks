@@ -38,5 +38,6 @@ export type SelectInputSelected = {
 export type SelectProvidedAttributes = {
   id?: ComputedRef<string>
   selected?: ComputedRef<SelectedOption>
+  initialSelected?: string
   emitValue: (value: SelectOption) => boolean
 }

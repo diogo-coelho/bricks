@@ -133,11 +133,6 @@ export default defineComponent({
     const selectedOption: Ref<SelectOption | undefined> = ref()
     const onFocus: Ref<boolean> = ref(false)
 
-    const computedSelected: ComputedRef<string | undefined> = computed(() => {
-      if (!props.selected) return undefined
-      return props.selected
-    })
-
     const computedLabel: ComputedRef<boolean | undefined> = computed(() => {
       if (props.label !== '') return true
       return undefined
@@ -227,14 +222,6 @@ export default defineComponent({
       dropdownWidth.value = elem ? elem.clientWidth : 100
     }
 
-    /**
-    const setSelectedOptionWithPropsValue = (): void => {
-      if (!computedSelected.value) return
-      selectedOption.value = props.items.find(
-        (item) => item.label === computedSelected.value
-      )
-    } */
-
     const setOnFocus = (value: boolean): void => {
       onFocus.value = value
     }
@@ -277,11 +264,13 @@ export default defineComponent({
     const emitValue = (option: SelectOption) => {
       selectedOption.value = option
       emit('on-change', option)
+      console.log('option', option)
     }
 
     provide('select-group-control', {
       id: computed(() => id.value),
       selected: computed(() => selectedOption.value),
+      initialSelected: props.selected,
       emitValue,
     })
 
@@ -290,7 +279,6 @@ export default defineComponent({
       setDropdownWidth()
       onWindowResize()
       onScroll()
-      //setSelectedOptionWithPropsValue()
     })
 
     return {
