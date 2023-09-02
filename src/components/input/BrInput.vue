@@ -193,13 +193,13 @@ export default defineComponent({
     const inputWidthComputed: ComputedRef<number> = computed(() => {
       const inputContainer = BrInputRef.value as unknown as HTMLElement
       const paragraphElement = paragraphRef.value as unknown as HTMLElement
-      return inputContainer?.clientWidth - paragraphElement?.offsetWidth
+      return inputContainer?.clientWidth - paragraphElement?.clientWidth
     })
 
     const inputWidth = (): number => {
       const inputContainer = BrInputRef.value as unknown as HTMLElement
       const paragraphElement = paragraphRef.value as unknown as HTMLElement
-      return inputContainer?.clientWidth - paragraphElement?.offsetWidth
+      return inputContainer?.clientWidth - paragraphElement?.clientWidth
     }
 
     const onClick = () => {

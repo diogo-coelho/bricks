@@ -1,37 +1,28 @@
 <script setup>
 import BrSelect from '../../src/components/select/BrSelect.vue'
+import BrSelectItem from '../../src/components/select/BrSelectItem.vue'
 </script>
 
 # BrSelect <Badge type="warning" text="alpha" />
 
 `BrSelect` é um componente que permite a seleção de um item para dentro de uma lista pré-determinada.
 
-<BrSelect 
-	:items="[
-		{ value: '1', label: 'Item 1'}, 
-		{ value: '2', label: 'Item 2'}, 
-		{ value: '3', label: 'Item 3'},
-		{ value: '4', label: 'Item 4'}, 
-		{ value: '5', label: 'Item 5'}, 
-		{ value: '6', label: 'Item 6'},
-		{ value: '7', label: 'Item 7'}, 
-		{ value: '8', label: 'Item 8'}, 
-		{ value: '9', label: 'Item 9'},
-	]"
-></BrSelect>
+<BrSelect>
+	<BrSelectItem value="1">Item 1</BrSelectItem>
+	<BrSelectItem value="2">Item 2</BrSelectItem>
+	<BrSelectItem value="3">Item 3</BrSelectItem>
+	<BrSelectItem value="4">Item 4</BrSelectItem>
+	<BrSelectItem value="5">Item 5</BrSelectItem>
+</BrSelect>
 
-```vue
-<BrSelect :items="[
-	{ value: '1', label: 'Item 1'}, 
-	{ value: '2', label: 'Item 2'}, 
-	{ value: '3', label: 'Item 3'},
-	{ value: '4', label: 'Item 4'}, 
-	{ value: '5', label: 'Item 5'}, 
-	{ value: '6', label: 'Item 6'},
-	{ value: '7', label: 'Item 7'}, 
-	{ value: '8', label: 'Item 8'}, 
-	{ value: '9', label: 'Item 9'},
-]"></BrSelect>
+```jsx
+<BrSelect>
+	<BrSelectItem value="1">Item 1</BrSelectItem>
+	<BrSelectItem value="2">Item 2</BrSelectItem>
+	<BrSelectItem value="3">Item 3</BrSelectItem>
+	<BrSelectItem value="4">Item 4</BrSelectItem>
+	<BrSelectItem value="5">Item 5</BrSelectItem>
+</BrSelect>
 ```
 
 ## Exemplos
@@ -40,248 +31,169 @@ import BrSelect from '../../src/components/select/BrSelect.vue'
 
 Passe o atributo `label` para adicionar uma label no select.
 
-<BrSelect
-	label="Modelo de carro"
-	:items="[
-		{ value: '1', label: 'Audi'},
-		{ value: '2', label: 'Volkswagen'},
-		{ value: '3', label: 'Merdedes-Benz'},
-	]"
-></BrSelect>
+<BrSelect label="Modelo de carro">
+	<BrSelectItem value="1">Audi</BrSelectItem>
+	<BrSelectItem value="2">Volkswagen</BrSelectItem>
+	<BrSelectItem value="3">Mercedes-Benz</BrSelectItem>
+</BrSelect>
 
-```vue
-<BrSelect 
-	label="Modelo de carro"
-	:items="[
-		{ value: '1', label: 'Audi'},
-		{ value: '2', label: 'Volkswagen'},
-		{ value: '3', label: 'Merdedes-Benz'},
-	]"
-></BrSelect>
+```jsx
+<BrSelect label="Modelo de carro">
+	<BrSelectItem value="1">Audi</BrSelectItem>
+	<BrSelectItem value="2">Volkswagen</BrSelectItem>
+	<BrSelectItem value="3">Mercedes-Benz</BrSelectItem>
+</BrSelect>
 ```
 
 ### Desabilitado
 
 Passe o atributo `disabled` para desabilitar o elemento.
 
-<BrSelect
-	disabled
-	:items="[
-		{ value: '1', label: 'Item 1'},
-		{ value: '2', label: 'Item 2'},
-		{ value: '3', label: 'Item 3'},
-	]"
-></BrSelect>
+<BrSelect disabled>
+	<BrSelectItem value="1">Item 1</BrSelectItem>
+	<BrSelectItem value="2">Item 2</BrSelectItem>
+	<BrSelectItem value="3">Item 3</BrSelectItem>
+</BrSelect>
 
-```vue
-<BrSelect 
-	disabled
-	:items="[
-		{ value: '1', label: 'Item 1'},
-		{ value: '2', label: 'Item 2'},
-		{ value: '3', label: 'Item 3'},
-	]"
-></BrSelect>
+```jsx
+<BrSelect disabled>
+	<BrSelectItem value="1">Item 1</BrSelectItem>
+	<BrSelectItem value="2">Item 2</BrSelectItem>
+	<BrSelectItem value="3">Item 3</BrSelectItem>
+</BrSelect>
 ```
 
 ### Select arredondado
 
 Passe o atributo `pill` para deixar as bordas do select arredondadas.
 
-<div class="inline-block w-full">
-	<BrSelect
-		class="mb-medium"
-		pill
-		:items="[
-			{ value: '1', label: 'Item 1'},
-			{ value: '2', label: 'Item 2'},
-			{ value: '3', label: 'Item 3'},
-		]"
-	></BrSelect>
-	<BrSelect
-		pill
-		class="mb-medium"
-		label="Cidade"
-		:items="[
-			{ value: '1', label: 'São Paulo'},
-			{ value: '2', label: 'Rio de Janeiro'},
-			{ value: '3', label: 'Belo Horizonte'},
-		]"
-	></BrSelect>
-</div>
+<BrSelect pill class="mb-medium">
+	<BrSelectItem value="1">Item 1</BrSelectItem>
+	<BrSelectItem value="2">Item 2</BrSelectItem>
+	<BrSelectItem value="3">Item 3</BrSelectItem>
+</BrSelect>
 
-```vue
-<BrSelect 
-	pill
-	:items="[
-		{ value: '1', label: 'Item 1'},
-		{ value: '2', label: 'Item 2'},
-		{ value: '3', label: 'Item 3'},
-	]"
-></BrSelect>
+<BrSelect pill label="Cidades">
+	<BrSelectItem value="1">São Paulo</BrSelectItem>
+	<BrSelectItem value="2">Rio de Janeiro</BrSelectItem>
+	<BrSelectItem value="3">Belo Horizonte</BrSelectItem>
+</BrSelect>
 
-<BrSelect
-	pill
-	label="Cidade"
-	:items="[
-		{ value: '1', label: 'São Paulo'},
-		{ value: '2', label: 'Rio de Janeiro'},
-		{ value: '3', label: 'Belo Horizonte'},
-	]"
-></BrSelect>
+```jsx
+<BrSelect pill>
+	<BrSelectItem value="1">Item 1</BrSelectItem>
+	<BrSelectItem value="2">Item 2</BrSelectItem>
+	<BrSelectItem value="3">Item 3</BrSelectItem>
+</BrSelect>
+
+<BrSelect pill label="Cidades">
+	<BrSelectItem value="1">São Paulo</BrSelectItem>
+	<BrSelectItem value="2">Rio de Janeiro</BrSelectItem>
+	<BrSelectItem value="3">Belo Horizonte</BrSelectItem>
+</BrSelect>
 ```
 
 ### Tamanhos
 
 Passe através do atributo `size` o tamanho que o select deve ter.
 
-<div class="inline-block w-full">
-	<BrSelect
-		class="mb-medium"
-		size="small"
-		:items="[
-			{ value: '1', label: 'Item 1'},
-			{ value: '2', label: 'Item 2'},
-			{ value: '3', label: 'Item 3'},
-		]"
-	></BrSelect>
-	<BrSelect
-		size="medium"
-		class="mb-medium"
-		:items="[
-			{ value: '1', label: 'Item 1'},
-			{ value: '2', label: 'Item 2'},
-			{ value: '3', label: 'Item 3'},
-		]"
-	></BrSelect>
-	<BrSelect
-		size="large"
-		class="mb-2x-large"
-		:items="[
-			{ value: '1', label: 'Item 1'},
-			{ value: '2', label: 'Item 2'},
-			{ value: '3', label: 'Item 3'},
-		]"
-	></BrSelect>
-</div>
+<BrSelect class="mb-medium" size="small">
+	<BrSelectItem value="1">Item 1</BrSelectItem>
+	<BrSelectItem value="2">Item 2</BrSelectItem>
+	<BrSelectItem value="3">Item 3</BrSelectItem>
+</BrSelect>
 
-<div class="inline-block w-full">
-	<BrSelect
-		class="mb-medium"
-		size="small"
-		label="Cidade"
-		:items="[
-			{ value: '1', label: 'São Paulo'},
-			{ value: '2', label: 'Rio de Janeira'},
-			{ value: '3', label: 'Belo Horizonte'},
-		]"
-	></BrSelect>
-	<BrSelect
-		size="medium"
-		class="mb-medium"
-		label="Cidade"
-		:items="[
-			{ value: '1', label: 'São Paulo'},
-			{ value: '2', label: 'Rio de Janeiro'},
-			{ value: '3', label: 'Belo Horizonte'},
-		]"
-	></BrSelect>
-	<BrSelect
-		size="large"
-		class="mb-medium"
-		label="Cidade"
-		:items="[
-			{ value: '1', label: 'São Paulo'},
-			{ value: '2', label: 'Rio de Janeiro'},
-			{ value: '3', label: 'Belo Horizonte'},
-		]"
-	></BrSelect>
-</div>
+<BrSelect class="mb-medium" size="medium">
+	<BrSelectItem value="1">Item 1</BrSelectItem>
+	<BrSelectItem value="2">Item 2</BrSelectItem>
+	<BrSelectItem value="3">Item 3</BrSelectItem>
+</BrSelect>
 
-```vue
-<BrSelect
-	size="small"
-	:items="[
-		{ value: '1', label: 'Item 1'},
-		{ value: '2', label: 'Item 2'},
-		{ value: '3', label: 'Item 3'},
-	]"
-></BrSelect>
-<BrSelect
-	size="medium"
-	:items="[
-		{ value: '1', label: 'Item 1'},
-		{ value: '2', label: 'Item 2'},
-		{ value: '3', label: 'Item 3'},
-	]"
-></BrSelect>
-<BrSelect
-	class="mb-medium"
-	:items="[
-		{ value: '1', label: 'Item 1'},
-		{ value: '2', label: 'Item 2'},
-		{ value: '3', label: 'Item 3'},
-	]"
-></BrSelect>
+<BrSelect class="mb-3x-large" size="large">
+	<BrSelectItem value="1">Item 1</BrSelectItem>
+	<BrSelectItem value="2">Item 2</BrSelectItem>
+	<BrSelectItem value="3">Item 3</BrSelectItem>
+</BrSelect>
 
-<BrSelect
-	size="small"
-	label="Cidade"
-	:items="[
-		{ value: '1', label: 'São Paulo'},
-		{ value: '2', label: 'Rio de Janeira'},
-		{ value: '3', label: 'Belo Horizonte'},
-	]"
-></BrSelect>
-<BrSelect
-	size="medium"
-	label="Cidade"
-	:items="[
-		{ value: '1', label: 'São Paulo'},
-		{ value: '2', label: 'Rio de Janeiro'},
-		{ value: '3', label: 'Belo Horizonte'},
-	]"
-></BrSelect>
-<BrSelect
-	size="large"
-	label="Cidade"
-	:items="[
-		{ value: '1', label: 'São Paulo'},
-		{ value: '2', label: 'Rio de Janeiro'},
-		{ value: '3', label: 'Belo Horizonte'},
-	]"
-></BrSelect>
+<BrSelect class="mb-medium" label="Cidades" size="small">
+	<BrSelectItem value="1">São Paulo</BrSelectItem>
+	<BrSelectItem value="2">Rio de Janeiro</BrSelectItem>
+	<BrSelectItem value="3">Belo Horizonte</BrSelectItem>
+</BrSelect>
+
+<BrSelect class="mb-medium" label="Cidades" size="medium">
+	<BrSelectItem value="1">São Paulo</BrSelectItem>
+	<BrSelectItem value="2">Rio de Janeiro</BrSelectItem>
+	<BrSelectItem value="3">Belo Horizonte</BrSelectItem>
+</BrSelect>
+
+<BrSelect label="Cidades" size="large">
+	<BrSelectItem value="1">São Paulo</BrSelectItem>
+	<BrSelectItem value="2">Rio de Janeiro</BrSelectItem>
+	<BrSelectItem value="3">Belo Horizonte</BrSelectItem>
+</BrSelect>
+
+```jsx
+<BrSelect size="small">
+	<BrSelectItem value="1">Item 1</BrSelectItem>
+	<BrSelectItem value="2">Item 2</BrSelectItem>
+	<BrSelectItem value="3">Item 3</BrSelectItem>
+</BrSelect>
+
+<BrSelect size="medium">
+	<BrSelectItem value="1">Item 1</BrSelectItem>
+	<BrSelectItem value="2">Item 2</BrSelectItem>
+	<BrSelectItem value="3">Item 3</BrSelectItem>
+</BrSelect>
+
+<BrSelect size="large">
+	<BrSelectItem value="1">Item 1</BrSelectItem>
+	<BrSelectItem value="2">Item 2</BrSelectItem>
+	<BrSelectItem value="3">Item 3</BrSelectItem>
+</BrSelect>
+
+<BrSelect label="Cidades" size="small">
+	<BrSelectItem value="1">São Paulo</BrSelectItem>
+	<BrSelectItem value="2">Rio de Janeiro</BrSelectItem>
+	<BrSelectItem value="3">Belo Horizonte</BrSelectItem>
+</BrSelect>
+
+<BrSelect label="Cidades" size="medium">
+	<BrSelectItem value="1">São Paulo</BrSelectItem>
+	<BrSelectItem value="2">Rio de Janeiro</BrSelectItem>
+	<BrSelectItem value="3">Belo Horizonte</BrSelectItem>
+</BrSelect>
+
+<BrSelect label="Cidades" size="large">
+	<BrSelectItem value="1">São Paulo</BrSelectItem>
+	<BrSelectItem value="2">Rio de Janeiro</BrSelectItem>
+	<BrSelectItem value="3">Belo Horizonte</BrSelectItem>
+</BrSelect>
 ```
 
 ### Item selecionado
 
-É possível passar um item como pré-selecionado através da propriedade `selected`
+É possível passar um item como pré-selecionado através da propriedade `selected`.
 
-<BrSelect
-	selected="Item 3"
-	:items="[
-		{ value: '1', label: 'Item 1'},
-		{ value: '2', label: 'Item 2'},
-		{ value: '3', label: 'Item 3'},
-	]"
-></BrSelect>
+<BrSelect selected="Item 3">
+	<BrSelectItem value="1">Item 1</BrSelectItem>
+	<BrSelectItem value="2">Item 2</BrSelectItem>
+	<BrSelectItem value="3">Item 3</BrSelectItem>
+</BrSelect>
 
-```vue
-<BrSelect
-	selected="Item 3"
-	:items="[
-		{ value: '1', label: 'Item 1'},
-		{ value: '2', label: 'Item 2'},
-		{ value: '3', label: 'Item 3'},
-	]"
-></BrSelect>
+```jsx
+<BrSelect selected="Item 3">
+	<BrSelectItem value="1">Item 1</BrSelectItem>
+	<BrSelectItem value="2">Item 2</BrSelectItem>
+	<BrSelectItem value="3">Item 3</BrSelectItem>
+</BrSelect>
 ```
+
 ## Eventos
 
 | Nome          | Descrição                                                                              |
 | ------------- | :------------------------------------------------------------------------------------: |
 | on-change     | Evento emitido ao trocar a opção do select                                             |
-
 
 <style lang="scss">
 @import '../../src/styles/index.scss'

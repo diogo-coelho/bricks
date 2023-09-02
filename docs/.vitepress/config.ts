@@ -22,12 +22,13 @@ export default defineConfig({
 		  { text: 'Breadcrumb', link: '/components/br-breadcrumb'},
 		  { text: 'Botão', link: '/components/br-button' },
 		  { text: 'Checkbox', link: '/components/br-checkbox'},
-		  { text: 'Icon', link: '/components/br-icon'},
+		  { text: 'Ícone', link: '/components/br-icon'},
 		  { text: 'Input', link: '/components/br-input'},
 		  { text: 'Modal', link: '/components/br-modal'},
 		  { text: 'Radio', link: '/components/br-radio'},
 		  { text: 'Select', link: '/components/br-select' },
 		  { text: 'Switch', link: '/components/br-switch'},
+		  { text: 'Table', link: '/components/br-table' },
         ]
       },
 	  {

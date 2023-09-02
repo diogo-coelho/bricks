@@ -38,11 +38,11 @@ export default defineComponent({
       type: Boolean,
       default: () => undefined,
     },
-	/**
+    /**
      * Size of the checkbox
      * @values small, medium, large
      */
-	size: {
+    size: {
       type: String,
       default: () => undefined,
       validator: (value: string) => {
@@ -65,9 +65,9 @@ export default defineComponent({
 
     const rootClasses: ComputedRef<string[]> = computed(() => {
       return [
-	  	props.size ? `br-switch--${props.size}` : ``,
-		computedDisabled.value ? ' disabled' : ''
-	  ]
+        props.size ? `br-switch--${props.size}` : ``,
+        computedDisabled.value ? ' disabled' : '',
+      ]
     })
 
     const toggleCheckboxStatus = (value: boolean) => {
