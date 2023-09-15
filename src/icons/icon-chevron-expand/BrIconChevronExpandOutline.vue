@@ -2,19 +2,19 @@
   <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M136 208L256 104L376 208"
-      stroke="currentColor"
       fill="none"
       stroke-width="32"
       stroke-linecap="round"
       stroke-linejoin="round"
+      :style="{ stroke: color }"
     />
     <path
       d="M136 304L256 408L376 304"
-      stroke="currentColor"
       fill="none"
       stroke-width="32"
       stroke-linecap="round"
       stroke-linejoin="round"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -24,5 +24,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconChevronExpandOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

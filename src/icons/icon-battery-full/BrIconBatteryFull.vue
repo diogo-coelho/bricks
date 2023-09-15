@@ -14,11 +14,11 @@
       ry="45.7"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <rect
       x="85.69"
@@ -27,12 +27,8 @@
       height="114.14"
       rx="4"
       ry="4"
-      style="
-        stroke: #000;
-        stroke-linecap: square;
-        stroke-miterlimit: 10;
-        stroke-width: 32px;
-      "
+      style="stroke-linecap: square; stroke-miterlimit: 10; stroke-width: 32px"
+      :style="{ fill: color }"
     />
     <line
       x1="480"
@@ -41,11 +37,11 @@
       y2="293.33"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -55,5 +51,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconBatteryFull',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

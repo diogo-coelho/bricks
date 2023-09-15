@@ -23,10 +23,10 @@ const computedComponents = computed(() => {
 
 `BrIcon` provê ícones para representação visual dentro da aplicação.
 
-<BrIcon name="br-icon-beer-outline"></BrIcon>
+<BrIcon name="br-icon-beer-outline" color="var(--br-color-success-500)"></BrIcon>
 
 ```vue
-<BrIcon name="br-icon-beer-outline"></BrIcon>
+<BrIcon name="br-icon-beer-outline" color="var(--br-color-success-500)"></BrIcon>
 ```
 
 ## Exemplos
@@ -35,10 +35,10 @@ const computedComponents = computed(() => {
 
 Para renderizar o componente é necessário passar o atributo `name`, correspondendo ao nome do ícone dentro da biblioteca, ou o caminho do arquivo `svg`, caso queira gerar um ícone personalizado.
 
-<BrIcon name="br-icon-balloon"></BrIcon>
+<BrIcon name="br-icon-balloon" color="var(--br-color-success-500)"></BrIcon>
 
 ```vue
-<BrIcon name="br-icon-balloon"></BrIcon>
+<BrIcon name="br-icon-balloon" color="var(--br-color-success-500)"></BrIcon>
 ```
 
 ## Ícones da biblioteca
@@ -51,7 +51,7 @@ Para renderizar o componente é necessário passar o atributo `name`, correspond
 		v-for="component in computedComponents"
 		:key="`icon-${ component }`"
 	>
-		<BrIcon	:name="component" class="mb-small"></BrIcon>
+		<BrIcon	:name="component" color="var(--br-color-danger-500)" class="mb-small"></BrIcon>
 		<span>{{ component }}</span>
 	</div>
 </div>

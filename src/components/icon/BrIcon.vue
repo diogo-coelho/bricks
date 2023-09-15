@@ -1,6 +1,6 @@
 <template>
   <div class="br-icon" :class="computedOutlineClass">
-    <component :is="name" v-if="computedName" />
+    <component :is="name" v-if="computedName" :color="color" />
     <img v-else :src="name" alt="ícone" />
   </div>
 </template>
@@ -23,6 +23,14 @@ export default defineComponent({
     name: {
       type: String,
       required: true,
+    },
+    /**
+     * Set icon's color
+     * @values string
+     */
+    color: {
+      type: String,
+      default: () => undefined,
     },
   },
   setup(props: IconProps) {

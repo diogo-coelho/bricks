@@ -9,11 +9,11 @@
       points="112 268 256 412 400 268"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 48px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="256"
@@ -22,11 +22,11 @@
       y2="100"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 48px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -36,5 +36,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconArrowDownSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

@@ -9,11 +9,11 @@
       points="240 80 248 320 264 320 272 80 240 80"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <rect
       x="240"
@@ -22,11 +22,11 @@
       height="32"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -36,5 +36,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconAlertSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

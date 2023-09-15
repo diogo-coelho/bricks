@@ -1,10 +1,11 @@
-.br-icon:not(.outline) {
+.br-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   width: var(--br-spacing-large);
   height: var(--br-spacing-large);
 
+  /**
   svg {
     width: var(--br-spacing-large);
     height: var(--br-spacing-large);
@@ -47,5 +48,5 @@
     ellipse {
       stroke: var(--br-color-black);
     }
-  }
+  }*/
 }

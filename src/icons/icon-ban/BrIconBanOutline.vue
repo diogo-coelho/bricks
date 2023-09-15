@@ -5,9 +5,9 @@
       cy="256"
       r="208"
       fill="none"
-      stroke="#000"
       stroke-miterlimit="10"
       stroke-width="32"
+      :style="{ stroke: color }"
     />
     <line
       x1="108.92"
@@ -15,9 +15,9 @@
       x2="403.08"
       y2="403.08"
       fill="none"
-      stroke="#000"
       stroke-miterlimit="10"
       stroke-width="32"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -27,5 +27,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconBanOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

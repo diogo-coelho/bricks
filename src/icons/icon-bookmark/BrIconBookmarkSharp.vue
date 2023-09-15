@@ -5,7 +5,7 @@
     height="512"
     viewBox="0 0 512 512"
   >
-    <path d="M416,480,256,357.41,96,480V32H416Z" />
+    <path d="M416,480,256,357.41,96,480V32H416Z" :style="{ fill: color }" />
   </svg>
 </template>
 
@@ -14,5 +14,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconBookmarkSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>
