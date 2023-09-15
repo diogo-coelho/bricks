@@ -13,7 +13,7 @@
         stroke-miterlimit: 10;
         stroke-width: 44px;
       "
-	  :style="{stroke: color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="140"
@@ -26,7 +26,7 @@
         stroke-miterlimit: 10;
         stroke-width: 44px;
       "
-	  :style="{stroke: color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="363"
@@ -39,7 +39,7 @@
         stroke-miterlimit: 10;
         stroke-width: 44px;
       "
-	  :style="{stroke: color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>

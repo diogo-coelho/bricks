@@ -13,7 +13,7 @@
         stroke-miterlimit: 10;
         stroke-width: 48px;
       "
-	  :style="{stroke: color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>

@@ -13,7 +13,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <rect
       x="400"
@@ -26,7 +26,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <rect
       x="56"
@@ -39,20 +39,20 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M364.47,309.16c-5.91-6.83-25.17-12.53-50.67-16.35S279,288,256.2,288s-33.17,1.64-57.61,4.81-42.79,8.81-50.66,16.35C136.12,320.6,153.42,333.44,167,335c13.16,1.5,39.47.95,89.31.95s76.15.55,89.31-.95C359.18,333.35,375.24,321.4,364.47,309.16Z"
-	  :style="{fill:color}"
-	  />
+      :style="{ fill: color }"
+    />
     <path
       d="M431.57,243.05a3.23,3.23,0,0,0-3.1-3c-11.81-.42-23.8.42-45.07,6.69a93.88,93.88,0,0,0-30.08,15.06c-2.28,1.78-1.47,6.59,1.39,7.1A455.32,455.32,0,0,0,407.53,272c10.59,0,21.52-3,23.55-12.44A52.41,52.41,0,0,0,431.57,243.05Z"
-	  :style="{fill:color}"
-	  />
+      :style="{ fill: color }"
+    />
     <path
       d="M80.43,243.05a3.23,3.23,0,0,1,3.1-3c11.81-.42,23.8.42,45.07,6.69a93.88,93.88,0,0,1,30.08,15.06c2.28,1.78,1.47,6.59-1.39,7.1A455.32,455.32,0,0,1,104.47,272c-10.59,0-21.52-3-23.55-12.44A52.41,52.41,0,0,1,80.43,243.05Z"
-	  :style="{fill:color}"
-	  />
+      :style="{ fill: color }"
+    />
     <line
       x1="432"
       y1="192"
@@ -64,7 +64,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="64"
@@ -77,7 +77,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M78,211s46.35-12,178-12,178,12,178,12"
@@ -87,7 +87,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>

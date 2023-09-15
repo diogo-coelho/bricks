@@ -18,7 +18,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke: color}"
+      :style="{ stroke: color }"
     />
     <rect
       x="80"
@@ -33,7 +33,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke: color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M400,112H112A32.09,32.09,0,0,1,80,80h0a32.09,32.09,0,0,1,32-32H400a32.09,32.09,0,0,1,32,32h0A32.09,32.09,0,0,1,400,112Z"
@@ -43,7 +43,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke: color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M144,432v22a10,10,0,0,1-10,10H106a10,10,0,0,1-10-10V432Z"
@@ -53,7 +53,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke: color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M416,432v22a10,10,0,0,1-10,10H378a10,10,0,0,1-10-10V432Z"
@@ -63,29 +63,21 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke: color}"
+      :style="{ stroke: color }"
     />
     <circle
       cx="368"
       cy="368"
       r="16"
-      style="
-        fill: none;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
-	  :style="{stroke: color}"
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <circle
       cx="144"
       cy="368"
       r="16"
-      style="
-        fill: none;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
-	  :style="{stroke: color}"
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <line
       x1="256"
@@ -98,7 +90,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke: color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="80"
@@ -111,7 +103,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke: color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="432"
@@ -124,7 +116,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke: color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>

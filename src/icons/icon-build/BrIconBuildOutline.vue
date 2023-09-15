@@ -13,9 +13,9 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
-    <circle cx="96" cy="416" r="16" :style="{fill:color}"/>
+    <circle cx="96" cy="416" r="16" :style="{ fill: color }" />
   </svg>
 </template>
 

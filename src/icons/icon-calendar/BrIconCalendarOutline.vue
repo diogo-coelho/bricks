@@ -9,17 +9,17 @@
       width="416"
       height="384"
       rx="48"
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
-    <circle cx="296" cy="232" r="24" :style="{fill:color}"/>
-    <circle cx="376" cy="232" r="24" :style="{fill:color}"/>
-    <circle cx="296" cy="312" r="24" :style="{fill:color}"/>
-    <circle cx="376" cy="312" r="24" :style="{fill:color}"/>
-    <circle cx="136" cy="312" r="24" :style="{fill:color}"/>
-    <circle cx="216" cy="312" r="24" :style="{fill:color}"/>
-    <circle cx="136" cy="392" r="24" :style="{fill:color}"/>
-    <circle cx="216" cy="392" r="24" :style="{fill:color}"/>
-    <circle cx="296" cy="392" r="24" :style="{fill:color}"/>
+    <circle cx="296" cy="232" r="24" :style="{ fill: color }" />
+    <circle cx="376" cy="232" r="24" :style="{ fill: color }" />
+    <circle cx="296" cy="312" r="24" :style="{ fill: color }" />
+    <circle cx="376" cy="312" r="24" :style="{ fill: color }" />
+    <circle cx="136" cy="312" r="24" :style="{ fill: color }" />
+    <circle cx="216" cy="312" r="24" :style="{ fill: color }" />
+    <circle cx="136" cy="392" r="24" :style="{ fill: color }" />
+    <circle cx="216" cy="392" r="24" :style="{ fill: color }" />
+    <circle cx="296" cy="392" r="24" :style="{ fill: color }" />
     <line
       fill="none"
       stroke-linejoin="round"
@@ -29,7 +29,7 @@
       y1="48"
       x2="128"
       y2="80"
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       fill="none"
@@ -40,7 +40,7 @@
       y1="48"
       x2="384"
       y2="80"
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       fill="none"
@@ -50,7 +50,7 @@
       y1="160"
       x2="48"
       y2="160"
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>

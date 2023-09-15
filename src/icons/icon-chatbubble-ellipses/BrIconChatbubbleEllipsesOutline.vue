@@ -14,11 +14,11 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
-    <circle cx="160" cy="256" r="32" :style="{fill:color}"/>
-    <circle cx="256" cy="256" r="32" :style="{fill:color}"/>
-    <circle cx="352" cy="256" r="32" :style="{fill:color}"/>
+    <circle cx="160" cy="256" r="32" :style="{ fill: color }" />
+    <circle cx="256" cy="256" r="32" :style="{ fill: color }" />
+    <circle cx="352" cy="256" r="32" :style="{ fill: color }" />
   </svg>
 </template>
 

@@ -13,7 +13,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <rect
       x="64"
@@ -22,12 +22,8 @@
       height="384"
       rx="48"
       ry="48"
-      style="
-        fill: none;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
-	   :style="{stroke:color}"
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>

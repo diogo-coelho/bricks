@@ -13,7 +13,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <polyline
       points="124 158 124 136 100 136 100 158"
@@ -23,7 +23,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M335.76,285.22V271.91a80,80,0,0,0-131-61.6M176,258.78v13.31a80,80,0,0,0,130.73,61.8"
@@ -33,7 +33,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <polyline
       points="196 272 176 252 156 272"
@@ -43,7 +43,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <polyline
       points="356 272 336 292 316 272"
@@ -53,7 +53,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>

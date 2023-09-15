@@ -13,12 +13,8 @@
       rx="16"
       ry="16"
       transform="translate(512 416) rotate(180)"
-      style="
-        fill: none;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
-	  :style="{stroke:color}"
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <line
       x1="64"
@@ -31,7 +27,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="96"
@@ -44,7 +40,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <circle
       cx="256"
@@ -56,7 +52,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M480,160a80,80,0,0,1-80-80"
@@ -66,7 +62,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M32,160a80,80,0,0,0,80-80"
@@ -76,7 +72,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M480,256a80,80,0,0,0-80,80"
@@ -86,7 +82,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M32,256a80,80,0,0,1,80,80"
@@ -96,7 +92,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>

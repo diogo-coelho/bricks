@@ -13,18 +13,14 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <circle
       cx="256"
       cy="272"
       r="80"
-      style="
-        fill: none;
-        stroke-miterlimit: 10;
-        stroke-width: 32px;
-      "
-	  :style="{stroke:color}"
+      style="fill: none; stroke-miterlimit: 10; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <polyline
       points="124 158 124 136 100 136 100 158"
@@ -34,7 +30,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>

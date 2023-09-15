@@ -6,7 +6,7 @@
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="32"
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M136 408L256 304L376 408"
@@ -14,7 +14,7 @@
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="32"
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>

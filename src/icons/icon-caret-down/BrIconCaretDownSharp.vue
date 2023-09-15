@@ -5,7 +5,7 @@
     height="512"
     viewBox="0 0 512 512"
   >
-    <polygon points="64 144 256 368 448 144 64 144" :style="{fill:color}"/>
+    <polygon points="64 144 256 368 448 144 64 144" :style="{ fill: color }" />
   </svg>
 </template>
 
