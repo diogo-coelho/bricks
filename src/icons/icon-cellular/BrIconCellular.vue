@@ -7,16 +7,20 @@
   >
     <path
       d="M472,432H424a24,24,0,0,1-24-24V104a24,24,0,0,1,24-24h48a24,24,0,0,1,24,24V408A24,24,0,0,1,472,432Z"
-    />
+	  :style="{fill:color}"
+	  />
     <path
       d="M344,432H296a24,24,0,0,1-24-24V184a24,24,0,0,1,24-24h48a24,24,0,0,1,24,24V408A24,24,0,0,1,344,432Z"
-    />
+	  :style="{fill:color}"
+	  />
     <path
       d="M216,432H168a24,24,0,0,1-24-24V248a24,24,0,0,1,24-24h48a24,24,0,0,1,24,24V408A24,24,0,0,1,216,432Z"
-    />
+	  :style="{fill:color}"
+	  />
     <path
       d="M88,432H40a24,24,0,0,1-24-24V312a24,24,0,0,1,24-24H88a24,24,0,0,1,24,24v96A24,24,0,0,1,88,432Z"
-    />
+	  :style="{fill:color}"
+	  />
   </svg>
 </template>
 
@@ -25,5 +29,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconCellular',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

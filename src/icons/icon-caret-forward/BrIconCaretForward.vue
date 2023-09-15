@@ -7,7 +7,8 @@
   >
     <path
       d="M190.06,414,353.18,274.22a24,24,0,0,0,0-36.44L190.06,98c-15.57-13.34-39.62-2.28-39.62,18.22V395.82C150.44,416.32,174.49,427.38,190.06,414Z"
-    />
+    :style="{fill:color}"
+	  />
   </svg>
 </template>
 
@@ -16,5 +17,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconCaretForward',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

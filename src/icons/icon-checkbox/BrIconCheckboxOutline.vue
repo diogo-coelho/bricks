@@ -9,11 +9,11 @@
       points="352 176 217.6 336 160 272"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
     <rect
       x="64"
@@ -24,10 +24,10 @@
       ry="48"
       style="
         fill: none;
-        stroke: #000;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	   :style="{stroke:color}"
     />
   </svg>
 </template>
@@ -37,5 +37,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconCheckboxOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

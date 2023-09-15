@@ -9,11 +9,11 @@
       points="464 128 240 384 144 288"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke: color}"
     />
     <line
       x1="144"
@@ -22,11 +22,11 @@
       y2="288"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke: color}"
     />
     <line
       x1="368"
@@ -35,11 +35,11 @@
       y2="284"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke: color}"
     />
   </svg>
 </template>
@@ -49,5 +49,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconCheckmarkDoneOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

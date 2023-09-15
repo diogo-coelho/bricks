@@ -14,10 +14,11 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
-    <circle cx="160" cy="256" r="32" />
-    <circle cx="256" cy="256" r="32" />
-    <circle cx="352" cy="256" r="32" />
+    <circle cx="160" cy="256" r="32" :style="{fill:color}"/>
+    <circle cx="256" cy="256" r="32" :style="{fill:color}"/>
+    <circle cx="352" cy="256" r="32" :style="{fill:color}"/>
   </svg>
 </template>
 
@@ -26,5 +27,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconChatbubbleEllipsesOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

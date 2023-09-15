@@ -14,11 +14,11 @@
       ry="32"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke: color}"
     />
     <rect
       x="80"
@@ -29,41 +29,41 @@
       ry="32"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke: color}"
     />
     <path
       d="M400,112H112A32.09,32.09,0,0,1,80,80h0a32.09,32.09,0,0,1,32-32H400a32.09,32.09,0,0,1,32,32h0A32.09,32.09,0,0,1,400,112Z"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke: color}"
     />
     <path
       d="M144,432v22a10,10,0,0,1-10,10H106a10,10,0,0,1-10-10V432Z"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke: color}"
     />
     <path
       d="M416,432v22a10,10,0,0,1-10,10H378a10,10,0,0,1-10-10V432Z"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke: color}"
     />
     <circle
       cx="368"
@@ -71,10 +71,10 @@
       r="16"
       style="
         fill: none;
-        stroke: #000;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke: color}"
     />
     <circle
       cx="144"
@@ -82,10 +82,10 @@
       r="16"
       style="
         fill: none;
-        stroke: #000;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke: color}"
     />
     <line
       x1="256"
@@ -94,11 +94,11 @@
       y2="304"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke: color}"
     />
     <line
       x1="80"
@@ -107,11 +107,11 @@
       y2="368"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke: color}"
     />
     <line
       x1="432"
@@ -120,11 +120,11 @@
       y2="368"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke: color}"
     />
   </svg>
 </template>
@@ -134,5 +134,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconBusOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

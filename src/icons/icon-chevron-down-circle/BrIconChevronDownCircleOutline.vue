@@ -9,20 +9,20 @@
       d="M256,64C150,64,64,150,64,256s86,192,192,192,192-86,192-192S362,64,256,64Z"
       style="
         fill: none;
-        stroke: #000;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
     <polyline
       points="352 216 256 312 160 216"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
   </svg>
 </template>
@@ -32,5 +32,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconChevronDownCircleOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>
