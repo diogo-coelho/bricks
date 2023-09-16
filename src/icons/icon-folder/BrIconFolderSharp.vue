@@ -5,9 +5,13 @@
     height="512"
     viewBox="0 0 512 512"
   >
-    <path d="M16,420a28,28,0,0,0,28,28H468a28,28,0,0,0,28-28V208H16Z" />
+    <path
+      d="M16,420a28,28,0,0,0,28,28H468a28,28,0,0,0,28-28V208H16Z"
+      :style="{ fill: color }"
+    />
     <path
       d="M496,124a28,28,0,0,0-28-28H212.84l-48-32H44A28,28,0,0,0,16,92v84H496Z"
+      :style="{ fill: color }"
     />
   </svg>
 </template>
@@ -17,5 +21,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconFolderSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

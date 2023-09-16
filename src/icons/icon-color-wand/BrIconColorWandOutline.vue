@@ -2,7 +2,6 @@
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
     <rect
       fill="none"
-      stroke="#000"
       stroke-miterlimit="10"
       stroke-width="32"
       x="280.48"
@@ -11,12 +10,13 @@
       height="378.2"
       rx="31.52"
       transform="translate(-129.23 312) rotate(-45)"
+      :style="{ stroke: color }"
     />
     <path
       d="M178.38,178.38h0a31.64,31.64,0,0,0,0,44.75L223.25,268,268,223.25l-44.87-44.87A31.64,31.64,0,0,0,178.38,178.38Z"
+      :style="{ fill: color }"
     />
     <line
-      stroke="#000"
       stroke-miterlimit="10"
       stroke-width="32"
       stroke-linecap="round"
@@ -24,9 +24,9 @@
       y1="192"
       x2="96"
       y2="192"
+      :style="{ stroke: color }"
     />
     <line
-      stroke="#000"
       stroke-miterlimit="10"
       stroke-width="32"
       stroke-linecap="round"
@@ -34,9 +34,9 @@
       y1="90.18"
       x2="124.12"
       y2="124.12"
+      :style="{ stroke: color }"
     />
     <line
-      stroke="#000"
       stroke-miterlimit="10"
       stroke-width="32"
       stroke-linecap="round"
@@ -44,9 +44,9 @@
       y1="48"
       x2="192"
       y2="96"
+      :style="{ stroke: color }"
     />
     <line
-      stroke="#000"
       stroke-miterlimit="10"
       stroke-width="32"
       stroke-linecap="round"
@@ -54,9 +54,9 @@
       y1="90.18"
       x2="259.88"
       y2="124.12"
+      :style="{ stroke: color }"
     />
     <line
-      stroke="#000"
       stroke-miterlimit="10"
       stroke-width="32"
       stroke-linecap="round"
@@ -64,6 +64,7 @@
       y1="259.88"
       x2="90.18"
       y2="293.82"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -73,5 +74,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconColorWandOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

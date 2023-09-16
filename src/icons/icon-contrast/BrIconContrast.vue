@@ -7,6 +7,7 @@
   >
     <path
       d="M256,32A224,224,0,0,0,97.61,414.39,224,224,0,1,0,414.39,97.61,222.53,222.53,0,0,0,256,32ZM64,256C64,150.13,150.13,64,256,64V448C150.13,448,64,361.87,64,256Z"
+      :style="{ fill: color }"
     />
   </svg>
 </template>
@@ -16,5 +17,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconContrast',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

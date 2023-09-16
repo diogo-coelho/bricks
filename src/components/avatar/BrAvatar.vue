@@ -6,6 +6,7 @@
     <br-icon
       v-if="!computedInitials && !computedImage"
       :name="computedAvatar"
+      :color="color"
     />
   </div>
 </template>
@@ -55,6 +56,14 @@ export default defineComponent({
       validator: (value: string) => {
         return ['square', 'rounded', 'circle'].indexOf(value) >= 0
       },
+    },
+    /**
+     * Set the color of avatar
+     * @values string
+     */
+    color: {
+      type: String,
+      default: () => `var(--br-color-white)`,
     },
   },
   setup(props: AvatarProps) {

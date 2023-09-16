@@ -9,21 +9,21 @@
       d="M320,176V136a40,40,0,0,0-40-40H88a40,40,0,0,0-40,40V376a40,40,0,0,0,40,40H280a40,40,0,0,0,40-40V336"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <polyline
       points="384 176 464 256 384 336"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="191"
@@ -32,11 +32,11 @@
       y2="256"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -46,5 +46,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconExitOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

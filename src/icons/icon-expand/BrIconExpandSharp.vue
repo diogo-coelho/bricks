@@ -9,11 +9,11 @@
       points="432 320 432 432 320 432"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="421.8"
@@ -22,21 +22,21 @@
       y2="304"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <polyline
       points="80 192 80 80 192 80"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="90.2"
@@ -45,21 +45,21 @@
       y2="208"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <polyline
       points="320 80 432 80 432 192"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="421.77"
@@ -68,21 +68,21 @@
       y2="208"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <polyline
       points="192 432 80 432 80 320"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="90.23"
@@ -91,11 +91,11 @@
       y2="304"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -105,5 +105,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconExpandSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

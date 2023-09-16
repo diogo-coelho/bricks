@@ -3,6 +3,7 @@ export type AvatarProps = {
   initials?: string
   image?: string
   shape?: string
+  color: string
 }
 
 export type AvatarImageStyle = {

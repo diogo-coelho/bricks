@@ -5,7 +5,10 @@
     height="512"
     viewBox="0 0 512 512"
   >
-    <path d="M432,208H288L320,16,80,304H224L192,496Z" />
+    <path
+      d="M432,208H288L320,16,80,304H224L192,496Z"
+      :style="{ fill: color }"
+    />
   </svg>
 </template>
 
@@ -14,5 +17,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconFlashSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

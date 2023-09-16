@@ -11,11 +11,11 @@
       r="96"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="160"
@@ -24,11 +24,11 @@
       y2="256"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="464"
@@ -37,11 +37,11 @@
       y2="256"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -51,5 +51,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconGitCommitOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

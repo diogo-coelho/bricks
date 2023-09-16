@@ -9,31 +9,31 @@
       points="160 368 32 256 160 144"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <polyline
       points="352 368 480 256 352 144"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <polyline
       points="192 288.1 256 352 320 288.1"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="256"
@@ -42,11 +42,11 @@
       y2="336.03"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -56,5 +56,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconCodeDownloadOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

@@ -9,21 +9,21 @@
       points="304 160 240 96 304 32"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <polyline
       points="207 352 271 416 207 480"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <circle
       cx="112"
@@ -31,11 +31,11 @@
       r="48"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <circle
       cx="400"
@@ -43,31 +43,31 @@
       r="48"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <path
       d="M256,96h84a60,60,0,0,1,60,60V368"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <path
       d="M255,416H171a60,60,0,0,1-60-60V144"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -77,5 +77,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconGitCompareOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

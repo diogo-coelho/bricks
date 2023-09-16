@@ -14,6 +14,7 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -23,5 +24,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconFlagOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>
