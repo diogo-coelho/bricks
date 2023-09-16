@@ -12,12 +12,8 @@
       height="352"
       rx="48"
       ry="48"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <rect
       x="144"
@@ -26,12 +22,8 @@
       height="224"
       rx="16"
       ry="16"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <line
       x1="256"
@@ -40,11 +32,11 @@
       y2="48"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="336"
@@ -53,11 +45,11 @@
       y2="48"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="176"
@@ -66,11 +58,11 @@
       y2="48"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="256"
@@ -79,11 +71,11 @@
       y2="432"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="336"
@@ -92,11 +84,11 @@
       y2="432"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="176"
@@ -105,11 +97,11 @@
       y2="432"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="432"
@@ -118,11 +110,11 @@
       y2="256"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="432"
@@ -131,11 +123,11 @@
       y2="336"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="432"
@@ -144,11 +136,11 @@
       y2="176"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="48"
@@ -157,11 +149,11 @@
       y2="256"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="48"
@@ -170,11 +162,11 @@
       y2="336"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="48"
@@ -183,11 +175,11 @@
       y2="176"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -197,5 +189,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconHardwareChipOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>
