@@ -32,5 +32,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconRadio',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

@@ -5,7 +5,10 @@
     height="512"
     viewBox="0 0 512 512"
   >
-    <polygon points="496 16 15.88 208 195 289 448 64 223 317 304 496 496 16" />
+    <polygon
+      points="496 16 15.88 208 195 289 448 64 223 317 304 496 496 16"
+      :style="{ fill: color }"
+    />
   </svg>
 </template>
 
@@ -14,5 +17,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconPaperPlaneSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

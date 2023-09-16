@@ -10,18 +10,18 @@
       cy="296"
       r="152"
       fill="none"
-      stroke="#000"
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="32"
+      :style="{ stroke: color }"
     />
     <polyline
       points="448 160 448 64 352 64"
       fill="none"
-      stroke="#000"
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="32"
+      :style="{ stroke: color }"
     />
     <line
       x1="324"
@@ -29,10 +29,10 @@
       x2="448"
       y2="64"
       fill="none"
-      stroke="#000"
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="32"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -42,5 +42,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconMaleOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

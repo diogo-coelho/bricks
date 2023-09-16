@@ -9,11 +9,11 @@
       points="48 320 112 320 176 64 240 448 304 224 336 320 400 320"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <circle
       cx="432"
@@ -21,11 +21,11 @@
       r="32"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -35,5 +35,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconPulseOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>
