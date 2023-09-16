@@ -9,11 +9,11 @@
       points="196 220 260 220 260 392"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 40px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="187"
@@ -22,13 +22,16 @@
       y2="396"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 40px;
       "
+      :style="{ stroke: color }"
     />
-    <path d="M256,160a32,32,0,1,1,32-32A32,32,0,0,1,256,160Z" />
+    <path
+      d="M256,160a32,32,0,1,1,32-32A32,32,0,0,1,256,160Z"
+      :style="{ fill: color }"
+    />
   </svg>
 </template>
 
@@ -37,5 +40,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconInformation',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

@@ -12,11 +12,11 @@
       y2="56"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 48px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="256"
@@ -25,20 +25,16 @@
       y2="416"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 48px;
       "
+      :style="{ stroke: color }"
     />
     <path
       d="M256,112A144,144,0,1,0,400,256,144,144,0,0,0,256,112Z"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-miterlimit: 10;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-miterlimit: 10; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <line
       x1="416"
@@ -47,11 +43,11 @@
       y2="256"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 48px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="56"
@@ -60,11 +56,11 @@
       y2="256"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 48px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -74,5 +70,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconLocateOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

@@ -12,24 +12,16 @@
       height="304"
       rx="32.14"
       ry="32.14"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <line
       x1="16"
       y1="416"
       x2="496"
       y2="416"
-      style="
-        stroke: #000;
-        stroke-linecap: round;
-        stroke-miterlimit: 10;
-        stroke-width: 32px;
-      "
+      style="stroke-linecap: round; stroke-miterlimit: 10; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -39,5 +31,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconLaptopOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>
