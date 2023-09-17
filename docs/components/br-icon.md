@@ -51,7 +51,7 @@ Para renderizar o componente é necessário passar o atributo `name`, correspond
 		v-for="component in computedComponents"
 		:key="`icon-${ component }`"
 	>
-		<BrIcon	:name="component" color="var(--br-color-danger-500)" class="mb-small"></BrIcon>
+		<BrIcon	:name="component" class="mb-small"></BrIcon>
 		<span>{{ component }}</span>
 	</div>
 </div>

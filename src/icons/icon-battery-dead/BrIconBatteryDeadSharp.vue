@@ -42,7 +42,7 @@ export default defineComponent({
   props: {
     color: {
       type: String,
-      default: () => `var(--br-color-neutral-500)`,
+      default: () => `var(--br-color-neutral-800)`,
     },
   },
 })
