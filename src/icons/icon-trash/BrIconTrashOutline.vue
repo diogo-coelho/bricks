@@ -9,11 +9,11 @@
       d="M112,112l20,320c.95,18.49,14.4,32,32,32H348c17.67,0,30.87-13.51,32-32l20-320"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
     <line
       x1="80"
@@ -21,21 +21,21 @@
       x2="432"
       y2="112"
       style="
-        stroke: #000;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+	   :style="{stroke:color}"
     />
     <path
       d="M192,112V72h0a23.93,23.93,0,0,1,24-24h80a23.93,23.93,0,0,1,24,24h0v40"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	   :style="{stroke:color}"
     />
     <line
       x1="256"
@@ -44,11 +44,11 @@
       y2="400"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	   :style="{stroke:color}"
     />
     <line
       x1="184"
@@ -57,11 +57,11 @@
       y2="400"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	   :style="{stroke:color}"
     />
     <line
       x1="328"
@@ -70,11 +70,11 @@
       y2="400"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	   :style="{stroke:color}"
     />
   </svg>
 </template>
@@ -84,5 +84,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconTrashOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  }
 })
 </script>

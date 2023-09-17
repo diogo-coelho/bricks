@@ -14,28 +14,28 @@
       ry="64"
       style="
         fill: none;
-        stroke: #000;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
     <path
       d="M176,112V40a8,8,0,0,1,8-8H328a8,8,0,0,1,8,8v72"
       style="
         fill: none;
-        stroke: #000;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
     <path
       d="M336,400v72a8,8,0,0,1-8,8H184a8,8,0,0,1-8-8V400"
       style="
         fill: none;
-        stroke: #000;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
   </svg>
 </template>
@@ -45,5 +45,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconWatchOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  }
 })
 </script>

@@ -7,7 +7,8 @@
   >
     <path
       d="M430,0H82A18,18,0,0,0,64,18V494a18,18,0,0,0,18,18H430a18,18,0,0,0,18-18V18A18,18,0,0,0,430,0ZM100,448V64H412V448Z"
-    />
+	  :style="{fill:color}"
+	  />
   </svg>
 </template>
 
@@ -16,5 +17,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconTabletPortraitSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  }
 })
 </script>

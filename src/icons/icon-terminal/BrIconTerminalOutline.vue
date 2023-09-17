@@ -14,20 +14,20 @@
       ry="48"
       style="
         fill: none;
-        stroke: #000;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
     <polyline
       points="96 112 176 176 96 240"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
     <line
       x1="192"
@@ -36,11 +36,11 @@
       y2="240"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
   </svg>
 </template>
@@ -50,5 +50,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconTerminalOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  }
 })
 </script>

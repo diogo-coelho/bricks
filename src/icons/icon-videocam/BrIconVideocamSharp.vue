@@ -7,7 +7,8 @@
   >
     <path
       d="M336,208V128a16,16,0,0,0-16-16H32a16,16,0,0,0-16,16V384a16,16,0,0,0,16,16H320a16,16,0,0,0,16-16V304l160,96V112Z"
-    />
+	  :style="{fill:color}"
+	  />
   </svg>
 </template>
 
@@ -16,5 +17,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconVideocamSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  }
 })
 </script>

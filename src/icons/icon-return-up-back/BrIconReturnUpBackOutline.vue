@@ -9,21 +9,21 @@
       points="112 160 48 224 112 288"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke: color}"
     />
     <path
       d="M64,224H358c58.76,0,106,49.33,106,108v20"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke: color}"
     />
   </svg>
 </template>
@@ -33,5 +33,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconReturnUpBackOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

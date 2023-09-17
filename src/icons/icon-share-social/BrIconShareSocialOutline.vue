@@ -11,11 +11,11 @@
       r="48"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	   :style="{stroke:color}"
     />
     <circle
       cx="384"
@@ -23,11 +23,11 @@
       r="48"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
     <circle
       cx="384"
@@ -35,11 +35,11 @@
       r="48"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
     <line
       x1="169.83"
@@ -48,11 +48,11 @@
       y2="376.47"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
     <line
       x1="342.17"
@@ -61,11 +61,11 @@
       y2="232.47"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
   </svg>
 </template>
@@ -75,5 +75,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconShareSocialOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>

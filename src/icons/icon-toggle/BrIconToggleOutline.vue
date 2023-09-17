@@ -11,10 +11,10 @@
       r="128"
       style="
         fill: none;
-        stroke: #000;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
     <rect
       x="16"
@@ -25,10 +25,10 @@
       ry="128"
       style="
         fill: none;
-        stroke: #000;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	   :style="{stroke:color}"
     />
   </svg>
 </template>
@@ -38,5 +38,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconToggleOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  }
 })
 </script>

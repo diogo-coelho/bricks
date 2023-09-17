@@ -14,21 +14,21 @@
       ry="48"
       style="
         fill: none;
-        stroke: #000;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
     <path
       d="M411.36,144V114A50,50,0,0,0,352,64.9L88.64,109.85A50,50,0,0,0,48,159v49"
       style="
         fill: none;
-        stroke: #000;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+	  :style="{stroke:color}"
     />
-    <path d="M368,320a32,32,0,1,1,32-32A32,32,0,0,1,368,320Z" />
+    <path d="M368,320a32,32,0,1,1,32-32A32,32,0,0,1,368,320Z" :style="{fill:color}"/>
   </svg>
 </template>
 
@@ -37,5 +37,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconWalletOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  }
 })
 </script>

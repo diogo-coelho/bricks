@@ -5,7 +5,7 @@
     height="512"
     viewBox="0 0 512 512"
   >
-    <rect x="80" y="80" width="352" height="352" />
+    <rect x="80" y="80" width="352" height="352" :style="{fill:color}"/>
   </svg>
 </template>
 
@@ -14,5 +14,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconStopSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-500)`,
+    },
+  },
 })
 </script>
