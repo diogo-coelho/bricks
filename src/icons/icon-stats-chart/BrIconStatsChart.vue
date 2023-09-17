@@ -7,20 +7,20 @@
   >
     <path
       d="M104,496H72a24,24,0,0,1-24-24V328a24,24,0,0,1,24-24h32a24,24,0,0,1,24,24V472A24,24,0,0,1,104,496Z"
-    :style="{fill:color}"
-	  />
+      :style="{ fill: color }"
+    />
     <path
       d="M328,496H296a24,24,0,0,1-24-24V232a24,24,0,0,1,24-24h32a24,24,0,0,1,24,24V472A24,24,0,0,1,328,496Z"
-	  :style="{fill:color}"
-	  />
+      :style="{ fill: color }"
+    />
     <path
       d="M440,496H408a24,24,0,0,1-24-24V120a24,24,0,0,1,24-24h32a24,24,0,0,1,24,24V472A24,24,0,0,1,440,496Z"
-	  :style="{fill:color}"
-	  />
+      :style="{ fill: color }"
+    />
     <path
       d="M216,496H184a24,24,0,0,1-24-24V40a24,24,0,0,1,24-24h32a24,24,0,0,1,24,24V472A24,24,0,0,1,216,496Z"
-	  :style="{fill:color}"
-	  />
+      :style="{ fill: color }"
+    />
   </svg>
 </template>
 
@@ -35,6 +35,5 @@ export default defineComponent({
       default: () => `var(--br-color-neutral-500)`,
     },
   },
-  
 })
 </script>

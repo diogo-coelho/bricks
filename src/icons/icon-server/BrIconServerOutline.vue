@@ -36,7 +36,7 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M64,127.24V384.76C64,428.52,150,464,256,464s192-35.48,192-79.24V127.24"
@@ -46,7 +46,7 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>

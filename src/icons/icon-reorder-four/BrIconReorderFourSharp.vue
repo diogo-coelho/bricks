@@ -16,7 +16,7 @@
         stroke-linejoin: round;
         stroke-width: 44px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="102"
@@ -29,7 +29,7 @@
         stroke-linejoin: round;
         stroke-width: 44px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="102"
@@ -42,7 +42,7 @@
         stroke-linejoin: round;
         stroke-width: 44px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="102"
@@ -55,7 +55,7 @@
         stroke-linejoin: round;
         stroke-width: 44px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>

@@ -6,7 +6,7 @@
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="32"
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <polygon
       points="108 68 88 16 68 68 16 88 68 108 88 160 108 108 160 88 108 68"
@@ -14,7 +14,7 @@
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="32"
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <polygon
       points="426.67 117.33 400 48 373.33 117.33 304 144 373.33 170.67 400 240 426.67 170.67 496 144 426.67 117.33"
@@ -22,7 +22,7 @@
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="32"
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>

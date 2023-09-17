@@ -16,7 +16,7 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="256"
@@ -29,7 +29,7 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="403.08"
@@ -42,7 +42,7 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="142.86"
@@ -55,7 +55,7 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="464"
@@ -68,7 +68,7 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="96"
@@ -81,7 +81,7 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="403.08"
@@ -94,7 +94,7 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="142.86"
@@ -107,7 +107,7 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <circle
       cx="256"
@@ -119,7 +119,7 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -134,6 +134,6 @@ export default defineComponent({
       type: String,
       default: () => `var(--br-color-neutral-500)`,
     },
-  }
+  },
 })
 </script>

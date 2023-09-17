@@ -13,7 +13,7 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke: color}"
+      :style="{ stroke: color }"
     />
     <polyline
       points="64 224 464 224 464 352"
@@ -23,7 +23,7 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke: color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>

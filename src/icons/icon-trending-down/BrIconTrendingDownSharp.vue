@@ -13,7 +13,7 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <polyline
       points="48 144 192 288 288 192 448 352"
@@ -23,7 +23,7 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -38,6 +38,6 @@ export default defineComponent({
       type: String,
       default: () => `var(--br-color-neutral-500)`,
     },
-  }
+  },
 })
 </script>

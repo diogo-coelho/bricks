@@ -19,7 +19,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	   :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -34,6 +34,6 @@ export default defineComponent({
       type: String,
       default: () => `var(--br-color-neutral-500)`,
     },
-  }
+  },
 })
 </script>

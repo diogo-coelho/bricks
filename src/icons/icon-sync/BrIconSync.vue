@@ -13,7 +13,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <polyline
       points="32 256 76 212 122 256"
@@ -23,7 +23,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	   :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <polyline
       points="480 256 436 300 390 256"
@@ -33,7 +33,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	   :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -48,6 +48,6 @@ export default defineComponent({
       type: String,
       default: () => `var(--br-color-neutral-500)`,
     },
-  }
+  },
 })
 </script>

@@ -9,12 +9,8 @@
       cx="368"
       cy="256"
       r="128"
-      style="
-        fill: none;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
-	  :style="{stroke:color}"
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <rect
       x="16"
@@ -23,12 +19,8 @@
       height="256"
       rx="128"
       ry="128"
-      style="
-        fill: none;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
-	   :style="{stroke:color}"
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -43,6 +35,6 @@ export default defineComponent({
       type: String,
       default: () => `var(--br-color-neutral-500)`,
     },
-  }
+  },
 })
 </script>

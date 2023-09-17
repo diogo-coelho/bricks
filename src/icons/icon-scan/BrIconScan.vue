@@ -13,7 +13,7 @@
         stroke-linejoin: round;
         stroke-width: 44px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M444,170V124a56,56,0,0,0-56-56H342"
@@ -23,7 +23,7 @@
         stroke-linejoin: round;
         stroke-width: 44px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M170,444H124a56,56,0,0,1-56-56V342"
@@ -33,7 +33,7 @@
         stroke-linejoin: round;
         stroke-width: 44px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M68,170V124a56,56,0,0,1,56-56h46"
@@ -43,7 +43,7 @@
         stroke-linejoin: round;
         stroke-width: 44px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>

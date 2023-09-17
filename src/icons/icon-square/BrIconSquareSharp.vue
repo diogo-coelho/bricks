@@ -5,7 +5,7 @@
     height="512"
     viewBox="0 0 512 512"
   >
-    <rect x="48" y="48" width="416" height="416"  :style="{fill:color}"/>
+    <rect x="48" y="48" width="416" height="416" :style="{ fill: color }" />
   </svg>
 </template>
 

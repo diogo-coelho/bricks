@@ -13,7 +13,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M250.26,195.39l5.74,122,5.73-121.95a5.74,5.74,0,0,0-5.79-6h0A5.74,5.74,0,0,0,250.26,195.39Z"
@@ -23,9 +23,12 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
-    <path d="M256,397.25a20,20,0,1,1,20-20A20,20,0,0,1,256,397.25Z" :style="{fill:color}"/>
+    <path
+      d="M256,397.25a20,20,0,1,1,20-20A20,20,0,0,1,256,397.25Z"
+      :style="{ fill: color }"
+    />
   </svg>
 </template>
 
@@ -39,6 +42,6 @@ export default defineComponent({
       type: String,
       default: () => `var(--br-color-neutral-500)`,
     },
-  }
+  },
 })
 </script>

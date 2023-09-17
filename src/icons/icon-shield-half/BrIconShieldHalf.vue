@@ -6,11 +6,11 @@
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="32"
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M256,48c80.71,36.45,117.68,48.33,207.1,64.37C479.3,369.13,271.42,457.79,256,464Z"
-	  :style="{fill:color}"
+      :style="{ fill: color }"
     />
   </svg>
 </template>

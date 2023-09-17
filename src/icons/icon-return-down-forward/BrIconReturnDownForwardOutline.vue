@@ -13,7 +13,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke: color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M448,288H154C95.24,288,48,238.67,48,180V160"
@@ -23,7 +23,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke: color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>

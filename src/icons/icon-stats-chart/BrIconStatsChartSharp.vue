@@ -5,10 +5,10 @@
     height="512"
     viewBox="0 0 512 512"
   >
-    <path d="M128,496H48V304h80Z" :style="{fill:color}"/>
-    <path d="M352,496H272V208h80Z" :style="{fill:color}"/>
-    <path d="M464,496H384V96h80Z" :style="{fill:color}"/>
-    <path d="M240,496H160V16h80Z" :style="{fill:color}"/>
+    <path d="M128,496H48V304h80Z" :style="{ fill: color }" />
+    <path d="M352,496H272V208h80Z" :style="{ fill: color }" />
+    <path d="M464,496H384V96h80Z" :style="{ fill: color }" />
+    <path d="M240,496H160V16h80Z" :style="{ fill: color }" />
   </svg>
 </template>
 

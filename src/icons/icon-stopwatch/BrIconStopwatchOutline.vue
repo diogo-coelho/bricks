@@ -16,7 +16,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="256"
@@ -29,7 +29,7 @@
         stroke-linejoin: round;
         stroke-width: 48px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="132"
@@ -42,27 +42,19 @@
         stroke-linejoin: round;
         stroke-width: 48px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <circle
       cx="256"
       cy="272"
       r="32"
-      style="
-        fill: none;
-        stroke-miterlimit: 10;
-        stroke-width: 32px;
-      "
-	  :style="{stroke:color}"
+      style="fill: none; stroke-miterlimit: 10; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <path
       d="M256,96A176,176,0,1,0,432,272,176,176,0,0,0,256,96Z"
-      style="
-        fill: none;
-        stroke-miterlimit: 10;
-        stroke-width: 32px;
-      "
-	  :style="{stroke:color}"
+      style="fill: none; stroke-miterlimit: 10; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -77,6 +69,6 @@ export default defineComponent({
       type: String,
       default: () => `var(--br-color-neutral-500)`,
     },
-  }
+  },
 })
 </script>

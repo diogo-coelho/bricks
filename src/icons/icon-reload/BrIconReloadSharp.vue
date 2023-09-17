@@ -13,12 +13,12 @@
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M464,68.45V220a4,4,0,0,1-4,4H308.45a4,4,0,0,1-2.83-6.83L457.17,65.62A4,4,0,0,1,464,68.45Z"
-	  :style="{fill:color}"
-	  />
+      :style="{ fill: color }"
+    />
   </svg>
 </template>
 

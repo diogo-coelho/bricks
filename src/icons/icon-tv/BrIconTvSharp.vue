@@ -7,9 +7,17 @@
   >
     <path
       d="M488,384H24a8,8,0,0,1-8-8V88a8,8,0,0,1,8-8H488a8,8,0,0,1,8,8V376A8,8,0,0,1,488,384Z"
-	  :style="{fill:color}"
+      :style="{ fill: color }"
     />
-    <rect x="112" y="400" width="288" height="32" rx="4" ry="4"  :style="{fill:color}"/>
+    <rect
+      x="112"
+      y="400"
+      width="288"
+      height="32"
+      rx="4"
+      ry="4"
+      :style="{ fill: color }"
+    />
   </svg>
 </template>
 
@@ -23,6 +31,6 @@ export default defineComponent({
       type: String,
       default: () => `var(--br-color-neutral-500)`,
     },
-  }
+  },
 })
 </script>

@@ -16,7 +16,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="136"
@@ -29,7 +29,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="400"
@@ -42,7 +42,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <line
       x1="416"
@@ -55,7 +55,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <polyline
       points="208 304 192 400 240 400 240 480 320 368 272 368 288 304"
@@ -65,7 +65,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M404.33,152.89H392.2C384.71,84.85,326.14,32,256,32a136.39,136.39,0,0,0-128.63,90.67H122.8c-49.94,0-90.8,40.8-90.8,90.66h0C32,263.2,72.86,304,122.8,304H404.33C446,304,480,270,480,228.44h0C480,186.89,446,152.89,404.33,152.89Z"
@@ -75,7 +75,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
-	  	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -90,6 +90,6 @@ export default defineComponent({
       type: String,
       default: () => `var(--br-color-neutral-500)`,
     },
-  }
+  },
 })
 </script>

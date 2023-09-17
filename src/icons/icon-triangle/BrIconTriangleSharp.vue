@@ -5,7 +5,7 @@
     height="512"
     viewBox="0 0 512 512"
   >
-    <polygon points="256 32 20 464 492 464 256 32" :style="{fill:color}"/>
+    <polygon points="256 32 20 464 492 464 256 32" :style="{ fill: color }" />
   </svg>
 </template>
 
@@ -19,6 +19,6 @@ export default defineComponent({
       type: String,
       default: () => `var(--br-color-neutral-500)`,
     },
-  }
+  },
 })
 </script>

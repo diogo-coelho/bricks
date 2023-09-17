@@ -6,7 +6,7 @@
       stroke-linecap="square"
       stroke-linejoin="round"
       stroke-width="48"
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
     <path
       d="M312.59,160H368a96,96,0,0,1,0,192H311.34"
@@ -14,7 +14,7 @@
       stroke-linecap="square"
       stroke-linejoin="round"
       stroke-width="48"
-	  :style="{stroke:color}"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -29,6 +29,6 @@ export default defineComponent({
       type: String,
       default: () => `var(--br-color-neutral-500)`,
     },
-  }
+  },
 })
 </script>
