@@ -41,6 +41,26 @@ Para renderizar o componente é necessário passar o atributo `name`, correspond
 <BrIcon name="br-icon-balloon"></BrIcon>
 ```
 
+### Cores
+
+Você pode definir uma cor personalizada para o ícone através do atributo `color`.
+
+<BrIcon name="br-icon-basketball-sharp" color="var(--br-color-primary-500)"></BrIcon>
+
+```vue
+<BrIcon name="br-icon-basketball-sharp" color="var(--br-color-primary-500)"></BrIcon>
+```
+
+## Ícones personalizados
+
+Você também pode definir um ícone personalizado, passando o caminho do ícone através do atributo `src`.
+
+<BrIcon src="../public/images/html-5-logo.png"></BrIcon>
+
+```vue
+<BrIcon src="../public/images/html-5-logo.png"></BrIcon>
+```
+
 ## Ícones da biblioteca
 
 `Bricks` utiliza a biblioteca de ícones [Ionicons](https://ionic.io/ionicons). Abaixo segue a lista de ícones disponíveis:
