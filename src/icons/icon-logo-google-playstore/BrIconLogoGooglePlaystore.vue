@@ -25,5 +25,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconLogoGooglePlaystore',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

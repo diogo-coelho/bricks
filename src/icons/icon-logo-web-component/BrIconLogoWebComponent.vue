@@ -19,9 +19,11 @@
     />
     <polygon
       points="496 256 376 48 239.74 48 195.9 124 332.11 124 408.26 256 332.11 388 195.9 388 239.74 464 376 464 496 256"
+      :style="{ fill: color }"
     />
     <polygon
       points="179.9 388 103.74 256 179.9 124 179.9 124 223.74 48 136 48 16 256 136 464 223.74 464 179.9 388 179.9 388"
+      :style="{ fill: color }"
     />
   </svg>
 </template>
@@ -31,5 +33,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconLogoWebComponent',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>
