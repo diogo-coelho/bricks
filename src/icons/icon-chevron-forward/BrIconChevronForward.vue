@@ -9,11 +9,11 @@
       points="184 112 328 256 184 400"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 48px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -23,5 +23,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconChevronForward',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

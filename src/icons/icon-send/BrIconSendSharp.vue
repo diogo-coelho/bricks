@@ -5,7 +5,10 @@
     height="512"
     viewBox="0 0 512 512"
   >
-    <path d="M16,464,496,256,16,48V208l320,48L16,304Z" />
+    <path
+      d="M16,464,496,256,16,48V208l320,48L16,304Z"
+      :style="{ fill: color }"
+    />
   </svg>
 </template>
 
@@ -14,5 +17,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconSendSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

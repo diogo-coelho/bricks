@@ -7,6 +7,7 @@
   >
     <path
       d="M416,48a16,16,0,0,0-16-16H112A16,16,0,0,0,96,48V464a16,16,0,0,0,16,16H400a16,16,0,0,0,16-16ZM192,432H144V384h48Zm0-80H144V304h48Zm0-80H144V224h48Zm88,160H232V384h48Zm0-80H232V304h48Zm0-80H232V224h48Zm88,160H320V304h48Zm0-160H320V224h48Zm0-96H144V80H368Z"
+      :style="{ fill: color }"
     />
   </svg>
 </template>
@@ -16,5 +17,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconCalculatorSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

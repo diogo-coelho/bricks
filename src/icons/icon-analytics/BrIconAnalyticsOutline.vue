@@ -12,11 +12,11 @@
       y2="192"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="232"
@@ -25,11 +25,11 @@
       y2="280"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="80"
@@ -38,11 +38,11 @@
       y2="216"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <circle
       cx="456"
@@ -50,11 +50,11 @@
       r="24"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <circle
       cx="320"
@@ -62,11 +62,11 @@
       r="24"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <circle
       cx="208"
@@ -74,11 +74,11 @@
       r="24"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <circle
       cx="56"
@@ -86,11 +86,11 @@
       r="24"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -100,5 +100,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconAnalyticsOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

@@ -12,22 +12,18 @@
       height="320"
       rx="48"
       ry="48"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <path
       d="M144,128V96a32,32,0,0,1,32-32H336a32,32,0,0,1,32,32v32"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="480"
@@ -36,21 +32,21 @@
       y2="240"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <path
       d="M320,240v24a8,8,0,0,1-8,8H200a8,8,0,0,1-8-8V240"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -60,5 +56,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconBriefcaseOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

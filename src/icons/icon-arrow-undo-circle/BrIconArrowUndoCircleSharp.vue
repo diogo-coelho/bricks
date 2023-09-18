@@ -7,6 +7,7 @@
   >
     <path
       d="M256,48C141.13,48,48,141.13,48,256s93.13,208,208,208,208-93.13,208-208S370.87,48,256,48Zm-9.17,241.14V344L146,248l100.83-96v54.86c96.5,0,119.17,69,119.17,137.14C338.15,308.43,313.52,289.14,246.83,289.14Z"
+      :style="{ fill: color }"
     />
   </svg>
 </template>
@@ -16,5 +17,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconArrowUndoCircleSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

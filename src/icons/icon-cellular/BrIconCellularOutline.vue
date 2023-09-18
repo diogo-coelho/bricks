@@ -12,12 +12,8 @@
       height="320"
       rx="8"
       ry="8"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <rect
       x="288"
@@ -26,12 +22,8 @@
       height="240"
       rx="8"
       ry="8"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <rect
       x="160"
@@ -40,12 +32,8 @@
       height="176"
       rx="8"
       ry="8"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <rect
       x="32"
@@ -54,12 +42,8 @@
       height="112"
       rx="8"
       ry="8"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -69,5 +53,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconCellularOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

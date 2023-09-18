@@ -12,11 +12,11 @@
       y2="152"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="256"
@@ -25,11 +25,11 @@
       y2="72"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 48px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="132"
@@ -38,31 +38,23 @@
       y2="120"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 48px;
       "
+      :style="{ stroke: color }"
     />
     <circle
       cx="256"
       cy="272"
       r="32"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-miterlimit: 10;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-miterlimit: 10; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <path
       d="M256,96A176,176,0,1,0,432,272,176,176,0,0,0,256,96Z"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-miterlimit: 10;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-miterlimit: 10; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -72,5 +64,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconStopwatchOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

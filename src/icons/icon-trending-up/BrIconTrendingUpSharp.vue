@@ -9,21 +9,21 @@
       points="352 144 464 144 464 256"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <polyline
       points="48 368 192 224 288 320 448 160"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -33,5 +33,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconTrendingUpSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

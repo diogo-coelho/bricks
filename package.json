@@ -1,6 +1,6 @@
 {
   "name": "@diogo-coelho/bricks",
-  "version": "0.0.9-ALPHA",
+  "version": "0.0.1-alpha",
   "description": "A UI components library for Vue.js",
   "main": "./dist/bricks-ui-lib.umd.js",
   "type": "module",
@@ -16,7 +16,7 @@
     "styles:fix": "npx stylelint --fix \"src/**/*.{scss,css}\"",
     "lint:fix": "eslint --fix --ext .ts,.vue src && npm run styles:fix",
     "test": "exit 0",
-	"script": "node ./src/script.js"
+    "script": "node ./src/script.js"
   },
   "repository": {
     "type": "git",
@@ -78,6 +78,6 @@
   },
   "types": "./dist/types/index.d.ts",
   "publishConfig": {
-	"@diogo-coelho:registry": "https://npm.pkg.github.com"
+    "@diogo-coelho:registry": "https://npm.pkg.github.com"
   }
 }

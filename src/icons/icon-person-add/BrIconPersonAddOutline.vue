@@ -9,20 +9,16 @@
       d="M376,144c-3.92,52.87-44,96-88,96s-84.15-43.12-88-96c-4-55,35-96,88-96S380,90,376,144Z"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <path
       d="M288,304c-87,0-175.3,48-191.64,138.6-2,10.92,4.21,21.4,15.65,21.4H464c11.44,0,17.62-10.48,15.65-21.4C463.3,352,375,304,288,304Z"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-miterlimit: 10;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-miterlimit: 10; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <line
       x1="88"
@@ -31,11 +27,11 @@
       y2="288"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="144"
@@ -44,11 +40,11 @@
       y2="232"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -58,5 +54,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconPersonAddOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

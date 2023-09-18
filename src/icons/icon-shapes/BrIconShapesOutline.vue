@@ -7,21 +7,13 @@
   >
     <polygon
       points="336 320 32 320 184 48 336 320"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <path
       d="M265.32,194.51A144,144,0,1,1,192,320"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -31,5 +23,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconShapesOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

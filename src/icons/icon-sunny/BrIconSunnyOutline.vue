@@ -12,11 +12,11 @@
       y2="96"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="256"
@@ -25,11 +25,11 @@
       y2="464"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="403.08"
@@ -38,11 +38,11 @@
       y2="142.86"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="142.86"
@@ -51,11 +51,11 @@
       y2="403.08"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="464"
@@ -64,11 +64,11 @@
       y2="256"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="96"
@@ -77,11 +77,11 @@
       y2="256"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="403.08"
@@ -90,11 +90,11 @@
       y2="369.14"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="142.86"
@@ -103,11 +103,11 @@
       y2="108.92"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <circle
       cx="256"
@@ -115,11 +115,11 @@
       r="80"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -129,5 +129,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconSunnyOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

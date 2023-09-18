@@ -7,22 +7,18 @@
   >
     <path
       d="M248,64C146.39,64,64,146.39,64,248s82.39,184,184,184,184-82.39,184-184S349.61,64,248,64Z"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-miterlimit: 10;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-miterlimit: 10; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <polyline
       points="220 220 252 220 252 336"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="208"
@@ -31,13 +27,16 @@
       y2="340"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
-    <path d="M248,130a26,26,0,1,0,26,26A26,26,0,0,0,248,130Z" />
+    <path
+      d="M248,130a26,26,0,1,0,26,26A26,26,0,0,0,248,130Z"
+      :style="{ fill: color }"
+    />
   </svg>
 </template>
 
@@ -46,5 +45,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconInformationCircleOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

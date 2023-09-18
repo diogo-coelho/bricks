@@ -7,8 +7,9 @@
   >
     <path
       d="M376,352H272V198.63l52.69,52.68a16,16,0,0,0,22.62-22.62l-80-80a16,16,0,0,0-22.62,0l-80,80a16,16,0,0,0,22.62,22.62L240,198.63V352H136a56.06,56.06,0,0,1-56-56V88a56.06,56.06,0,0,1,56-56H376a56.06,56.06,0,0,1,56,56V296A56.06,56.06,0,0,1,376,352Z"
+      :style="{ fill: color }"
     />
-    <path d="M272,464a16,16,0,0,1-32,0V352h32Z" />
+    <path d="M272,464a16,16,0,0,1-32,0V352h32Z" :style="{ fill: color }" />
   </svg>
 </template>
 
@@ -17,5 +18,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconPush',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

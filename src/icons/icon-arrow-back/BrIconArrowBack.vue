@@ -9,11 +9,11 @@
       points="244 400 100 256 244 112"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 48px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="120"
@@ -22,11 +22,11 @@
       y2="256"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 48px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -36,5 +36,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconArrowBack',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

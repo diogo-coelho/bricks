@@ -5,13 +5,13 @@
       cy="256"
       r="208"
       fill="none"
-      stroke="#000"
       stroke-miterlimit="10"
       stroke-width="32"
+      :style="{ stroke: color }"
     />
-    <circle cx="288" cy="200" r="24" />
-    <circle cx="296" cy="128" r="24" />
-    <circle cx="360" cy="168" r="24" />
+    <circle cx="288" cy="200" r="24" :style="{ fill: color }" />
+    <circle cx="296" cy="128" r="24" :style="{ fill: color }" />
+    <circle cx="360" cy="168" r="24" :style="{ fill: color }" />
   </svg>
 </template>
 
@@ -20,5 +20,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconBowlingBallOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

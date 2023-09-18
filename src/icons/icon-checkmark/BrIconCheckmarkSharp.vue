@@ -9,11 +9,11 @@
       points="416 128 192 384 96 288"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 44px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -23,5 +23,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconCheckmarkSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

@@ -5,10 +5,13 @@
     height="512"
     viewBox="0 0 512 512"
   >
-    <polygon points="496 496 16 496 16 16 48 16 48 464 496 464 496 496" />
-    <path d="M192,432H80V208H192Z" />
-    <path d="M336,432H224V160H336Z" />
-    <path d="M479.64,432h-112V96h112Z" />
+    <polygon
+      points="496 496 16 496 16 16 48 16 48 464 496 464 496 496"
+      :style="{ fill: color }"
+    />
+    <path d="M192,432H80V208H192Z" :style="{ fill: color }" />
+    <path d="M336,432H224V160H336Z" :style="{ fill: color }" />
+    <path d="M479.64,432h-112V96h112Z" :style="{ fill: color }" />
   </svg>
 </template>
 
@@ -17,5 +20,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconBarChartSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

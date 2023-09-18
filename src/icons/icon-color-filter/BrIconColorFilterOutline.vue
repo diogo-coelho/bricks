@@ -9,34 +9,22 @@
       cx="256"
       cy="184"
       r="120"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <circle
       cx="344"
       cy="328"
       r="120"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <circle
       cx="168"
       cy="328"
       r="120"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -46,5 +34,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconColorFilterOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

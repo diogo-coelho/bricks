@@ -12,12 +12,8 @@
       height="320"
       rx="28"
       ry="28"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <rect
       x="384"
@@ -26,12 +22,8 @@
       height="80"
       rx="28"
       ry="28"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <rect
       x="384"
@@ -40,12 +32,8 @@
       height="80"
       rx="28"
       ry="28"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <rect
       x="384"
@@ -54,12 +42,8 @@
       height="80"
       rx="28"
       ry="28"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <rect
       x="384"
@@ -68,12 +52,8 @@
       height="80"
       rx="28"
       ry="28"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <rect
       x="48"
@@ -82,12 +62,8 @@
       height="80"
       rx="28"
       ry="28"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <rect
       x="48"
@@ -96,12 +72,8 @@
       height="80"
       rx="28"
       ry="28"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <rect
       x="48"
@@ -110,12 +82,8 @@
       height="80"
       rx="28"
       ry="28"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <rect
       x="48"
@@ -124,12 +92,8 @@
       height="80"
       rx="28"
       ry="28"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <rect
       x="128"
@@ -138,12 +102,8 @@
       height="160"
       rx="28"
       ry="28"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <rect
       x="128"
@@ -152,12 +112,8 @@
       height="160"
       rx="28"
       ry="28"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -167,5 +123,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconFilmOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

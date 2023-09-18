@@ -12,21 +12,13 @@
       height="320"
       rx="32"
       ry="32"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <polygon
       points="304 448 296 384 216 384 208 448 304 448"
-      style="
-        stroke: #000;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ fill: color }"
     />
     <line
       x1="368"
@@ -35,14 +27,15 @@
       y2="448"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <path
       d="M32,304v48a32.09,32.09,0,0,0,32,32H448a32.09,32.09,0,0,0,32-32V304Zm224,64a16,16,0,1,1,16-16A16,16,0,0,1,256,368Z"
+      :style="{ fill: color }"
     />
   </svg>
 </template>
@@ -52,5 +45,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconDesktopOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

@@ -13,6 +13,7 @@
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -22,5 +23,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconCloudyOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

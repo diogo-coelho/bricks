@@ -12,11 +12,11 @@
       y2="160"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="80"
@@ -25,11 +25,11 @@
       y2="256"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="80"
@@ -38,11 +38,11 @@
       y2="352"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -52,5 +52,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconMenuOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

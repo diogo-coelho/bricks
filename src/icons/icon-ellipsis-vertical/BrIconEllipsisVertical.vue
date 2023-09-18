@@ -5,9 +5,9 @@
     height="512"
     viewBox="0 0 512 512"
   >
-    <circle cx="256" cy="256" r="48" />
-    <circle cx="256" cy="416" r="48" />
-    <circle cx="256" cy="96" r="48" />
+    <circle cx="256" cy="256" r="48" :style="{ fill: color }" />
+    <circle cx="256" cy="416" r="48" :style="{ fill: color }" />
+    <circle cx="256" cy="96" r="48" :style="{ fill: color }" />
   </svg>
 </template>
 
@@ -16,5 +16,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconEllipsisVertical',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

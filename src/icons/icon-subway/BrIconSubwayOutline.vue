@@ -12,12 +12,8 @@
       height="352"
       rx="48"
       ry="48"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-miterlimit: 10;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-miterlimit: 10; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <line
       x1="208"
@@ -26,11 +22,11 @@
       y2="80"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <rect
       x="112"
@@ -41,33 +37,25 @@
       ry="32"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <circle
       cx="176"
       cy="320"
       r="16"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <circle
       cx="336"
       cy="320"
       r="16"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <line
       x1="144"
@@ -76,11 +64,11 @@
       y2="464"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="336"
@@ -89,11 +77,11 @@
       y2="480"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="176"
@@ -102,11 +90,11 @@
       y2="480"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -116,5 +104,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconSubwayOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

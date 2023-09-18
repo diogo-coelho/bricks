@@ -11,12 +11,15 @@
       width="31.11"
       height="511.95"
       transform="translate(-106.04 256) rotate(-45)"
+      :style="{ fill: color }"
     />
     <polygon
       points="80 304 224 304 192 496 300.18 366.18 151.82 217.82 80 304"
+      :style="{ fill: color }"
     />
     <polygon
       points="432 208 288 208 320 16 211.82 145.82 360.18 294.18 432 208"
+      :style="{ fill: color }"
     />
   </svg>
 </template>
@@ -26,5 +29,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconFlashOffSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

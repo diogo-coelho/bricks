@@ -5,9 +5,10 @@
     height="512"
     viewBox="0 0 512 512"
   >
-    <circle cx="256" cy="256" r="32" />
+    <circle cx="256" cy="256" r="32" :style="{ fill: color }" />
     <path
       d="M414.39,97.61A224,224,0,1,0,97.61,414.39,224,224,0,1,0,414.39,97.61ZM256,336a80,80,0,1,1,80-80A80.09,80.09,0,0,1,256,336Z"
+      :style="{ fill: color }"
     />
   </svg>
 </template>
@@ -17,5 +18,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconDiscSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

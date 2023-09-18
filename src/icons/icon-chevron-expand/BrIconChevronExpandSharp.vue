@@ -3,16 +3,16 @@
     <path
       d="M136 208L256 104L376 208"
       fill="none"
-      stroke="currentColor"
       stroke-width="48"
       stroke-linecap="square"
+      :style="{ stroke: color }"
     />
     <path
       d="M136 304L256 408L376 304"
       fill="none"
-      stroke="currentColor"
       stroke-width="48"
       stroke-linecap="square"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -22,5 +22,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconChevronExpandSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

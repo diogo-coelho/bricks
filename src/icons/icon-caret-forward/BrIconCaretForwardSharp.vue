@@ -5,7 +5,7 @@
     height="512"
     viewBox="0 0 512 512"
   >
-    <polygon points="144 448 368 256 144 64 144 448" />
+    <polygon points="144 448 368 256 144 64 144 448" :style="{ fill: color }" />
   </svg>
 </template>
 
@@ -14,5 +14,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconCaretForwardSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

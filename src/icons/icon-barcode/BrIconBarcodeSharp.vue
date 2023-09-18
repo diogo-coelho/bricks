@@ -9,21 +9,21 @@
       points="400 400.33 448 400 448 112 400 112.33"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <polyline
       points="112 112 64 112.33 64 400.33 112 400"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="384"
@@ -32,11 +32,11 @@
       y2="320"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="320"
@@ -45,11 +45,11 @@
       y2="352"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="256"
@@ -58,11 +58,11 @@
       y2="336"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="192"
@@ -71,11 +71,11 @@
       y2="352"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="128"
@@ -84,11 +84,11 @@
       y2="320"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -98,5 +98,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconBarcodeSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

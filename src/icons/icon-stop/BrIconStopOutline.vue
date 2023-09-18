@@ -12,12 +12,8 @@
       height="320"
       rx="24"
       ry="24"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -27,5 +23,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconStopOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

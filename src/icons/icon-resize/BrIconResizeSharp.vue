@@ -9,11 +9,11 @@
       points="304 96 416 96 416 208"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="405.77"
@@ -22,21 +22,21 @@
       y2="400.02"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <polyline
       points="208 416 96 416 96 304"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -46,5 +46,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconResizeSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

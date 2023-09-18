@@ -9,21 +9,21 @@
       d="M208,352H144a96,96,0,0,1,0-192h64"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 36px;
       "
+      :style="{ stroke: color }"
     />
     <path
       d="M304,160h64a96,96,0,0,1,0,192H304"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 36px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="163.29"
@@ -32,11 +32,11 @@
       y2="256"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 36px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -46,5 +46,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconLinkOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

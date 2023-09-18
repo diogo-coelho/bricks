@@ -12,24 +12,16 @@
       height="416"
       rx="48"
       ry="48"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 32px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 32px"
+      :style="{ stroke: color }"
     />
     <line
       x1="320"
       y1="48"
       x2="320"
       y2="464"
-      style="
-        fill: none;
-        stroke: #000;
-        stroke-linejoin: round;
-        stroke-width: 60px;
-      "
+      style="fill: none; stroke-linejoin: round; stroke-width: 60px"
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -39,5 +31,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconJournalOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

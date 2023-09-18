@@ -1,51 +1,12 @@
-.br-icon:not(.outline) {
+.br-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: var(--br-spacing-large);
-  height: var(--br-spacing-large);
+  width: var(--br-spacing-x-large);
+  height: var(--br-spacing-x-large);
 
   svg {
-    width: var(--br-spacing-large);
-    height: var(--br-spacing-large);
-
-    path,
-    rect,
-    polygon,
-    circle {
-      fill: var(--br-color-black);
-    }
-
-    line,
-    path,
-    circle,
-    polygon,
-    rect,
-    ellipse,
-    polyline {
-      stroke: var(--br-color-black);
-    }
-  }
-}
-
-.br-icon.outline {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: var(--br-spacing-large);
-  height: var(--br-spacing-large);
-
-  svg {
-    width: var(--br-spacing-large);
-    height: var(--br-spacing-large);
-
-    line,
-    polyline,
-    path,
-    circle,
-    rect,
-    ellipse {
-      stroke: var(--br-color-black);
-    }
+    width: var(--br-spacing-x-large);
+    height: var(--br-spacing-x-large);
   }
 }

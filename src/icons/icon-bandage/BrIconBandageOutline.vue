@@ -15,11 +15,11 @@
       transform="translate(-106.04 256) rotate(-45)"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <rect
       x="169.41"
@@ -31,16 +31,16 @@
       transform="translate(255.41 -107.45) rotate(45)"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
-    <circle cx="256" cy="208" r="16" />
-    <circle cx="304" cy="256" r="16" />
-    <circle cx="208" cy="256" r="16" />
-    <circle cx="256" cy="304" r="16" />
+    <circle cx="256" cy="208" r="16" :style="{ fill: color }" />
+    <circle cx="304" cy="256" r="16" :style="{ fill: color }" />
+    <circle cx="208" cy="256" r="16" :style="{ fill: color }" />
+    <circle cx="256" cy="304" r="16" :style="{ fill: color }" />
   </svg>
 </template>
 
@@ -49,5 +49,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconBandageOutline',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

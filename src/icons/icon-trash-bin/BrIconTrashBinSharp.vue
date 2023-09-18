@@ -15,8 +15,17 @@
     />
     <path
       d="M64,160,93.74,442.51A24,24,0,0,0,117.61,464H394.39a24,24,0,0,0,23.87-21.49L448,160ZM312,377.46l-56-56-56,56L174.54,352l56-56-56-56L200,214.54l56,56,56-56L337.46,240l-56,56,56,56Z"
+      :style="{ fill: color }"
     />
-    <rect x="32" y="48" width="448" height="80" rx="12" ry="12" />
+    <rect
+      x="32"
+      y="48"
+      width="448"
+      height="80"
+      rx="12"
+      ry="12"
+      :style="{ fill: color }"
+    />
   </svg>
 </template>
 
@@ -25,5 +34,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconTrashBinSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

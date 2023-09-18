@@ -9,21 +9,21 @@
       points="400 352 464 288 400 224"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
     <polyline
       points="448 288 48 288 48 160"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: square;
         stroke-miterlimit: 10;
         stroke-width: 32px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -33,5 +33,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconReturnDownForwardSharp',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

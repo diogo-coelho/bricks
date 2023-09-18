@@ -12,11 +12,11 @@
       y2="304"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 44px;
       "
+      :style="{ stroke: color }"
     />
     <line
       x1="118"
@@ -25,11 +25,11 @@
       y2="208"
       style="
         fill: none;
-        stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 44px;
       "
+      :style="{ stroke: color }"
     />
   </svg>
 </template>
@@ -39,5 +39,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'BrIconReorderTwo',
+  props: {
+    color: {
+      type: String,
+      default: () => `var(--br-color-neutral-800)`,
+    },
+  },
 })
 </script>

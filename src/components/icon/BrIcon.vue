@@ -1,7 +1,7 @@
 <template>
-  <div class="br-icon" :class="computedOutlineClass">
-    <component :is="name" v-if="computedName" />
-    <img v-else :src="name" alt="ícone" />
+  <div class="br-icon">
+    <component :is="name" v-if="computedName" :color="color" />
+    <img v-if="computedSource && !computedName" :src="computedSource" alt="ícone" />
   </div>
 </template>
 
@@ -24,6 +24,22 @@ export default defineComponent({
       type: String,
       required: true,
     },
+    /**
+     * Set icon's color
+     * @values string
+     */
+    color: {
+      type: String,
+      default: () => undefined,
+    },
+	/**
+	 * Set icon's source
+	 * @values string
+	 */
+	src: {
+		type: String, 
+		default: () => undefined
+	}
   },
   setup(props: IconProps) {
     const convertStringComponentName = (str: string): string => {
@@ -44,17 +60,14 @@ export default defineComponent({
       return componentsArray.includes(props.name)
     })
 
-    const computedOutlineClass: ComputedRef<string | undefined> = computed(
-      () => {
-        if (computedName.value && props.name.includes('outline'))
-          return 'outline'
-        return undefined
-      }
-    )
+	const computedSource: ComputedRef<string | undefined> = computed(() => {
+		if (props.src) return props.src
+		return undefined
+	})
 
     return {
       computedName,
-      computedOutlineClass,
+	  computedSource
     }
   },
 })
