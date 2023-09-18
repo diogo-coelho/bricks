@@ -55,10 +55,10 @@ Você pode definir uma cor personalizada para o ícone através do atributo `col
 
 Você também pode definir um ícone personalizado, passando o caminho do ícone através do atributo `src`.
 
-<BrIcon src="../public/images/html-5-logo.png"></BrIcon>
+<BrIcon src="../images/html-5-logo.png"></BrIcon>
 
 ```vue
-<BrIcon src="../public/images/html-5-logo.png"></BrIcon>
+<BrIcon src="../images/html-5-logo.png"></BrIcon>
 ```
 
 ## Ícones da biblioteca
