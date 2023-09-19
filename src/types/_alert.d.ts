@@ -21,6 +21,11 @@ export type ToastStyles = {
   marginBottom?: string
 }
 
+export type IconAlert = {
+	icon: string,
+	color: string
+}
+
 export type ToastPositions =
   | 'top-right'
   | 'bottom-right'

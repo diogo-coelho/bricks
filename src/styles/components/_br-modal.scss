@@ -83,27 +83,15 @@
         position: absolute;
         right: 27px;
 
-        .br-icon:not(.outline) svg path {
-          fill: var(--br-color-neutral-500);
-        }
-
-        .br-icon.outline svg path,
-        line,
-        polyline {
-          fill: var(--br-color-neutral-500);
-        }
-
-        &:hover .br-icon {
-          &:not(.outline) svg path {
-            fill: var(--br-color-neutral-500);
-          }
-
-          &.outline svg path,
-          line,
-          polyline {
-            fill: var(--br-color-neutral-500);
-          }
-        }
+        .close path {
+			fill: var(--br-color-neutral-500)!important;
+			transition: fill .4s ease
+		}
+		
+		.close:hover path {
+			fill: var(--br-color-neutral-600)!important;
+			transition: fill .4s ease-out
+		}
       }
 
       .modal-header {
