@@ -22,8 +22,8 @@ export type ToastStyles = {
 }
 
 export type IconAlert = {
-	icon: string,
-	color: string
+  icon: string
+  color: string
 }
 
 export type ToastPositions =

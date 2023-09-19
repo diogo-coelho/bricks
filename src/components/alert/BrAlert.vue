@@ -13,7 +13,10 @@
   >
     <div class="message">
       <div v-if="computedIcon && !computedDisableIconsVisibility">
-        <br-icon :name="computedIcon?.icon" :color="computedIcon?.color"></br-icon>
+        <br-icon
+          :name="computedIcon?.icon"
+          :color="computedIcon?.color"
+        ></br-icon>
       </div>
 
       <div>
@@ -126,29 +129,29 @@ export default defineComponent({
       switch (props.variant) {
         case 'primary':
           return {
-			icon: `br-icon-information-circle-outline`,
-			color: `var(--br-color-primary-500)`
-		  }
+            icon: `br-icon-information-circle-outline`,
+            color: `var(--br-color-primary-500)`,
+          }
         case 'neutral':
           return {
-			icon: 'br-icon-settings-outline',
-			color: `var(--br-color-neutral-500)`
-		  }
+            icon: 'br-icon-settings-outline',
+            color: `var(--br-color-neutral-500)`,
+          }
         case 'success':
           return {
-			icon: 'br-icon-checkmark-circle-outline',
-			color: `var(--br-color-success-500)`
-		  }
+            icon: 'br-icon-checkmark-circle-outline',
+            color: `var(--br-color-success-500)`,
+          }
         case 'warning':
           return {
-			icon: 'br-icon-warning-outline',
-			color: `var(--br-color-warning-500)`
-		  }
+            icon: 'br-icon-warning-outline',
+            color: `var(--br-color-warning-500)`,
+          }
         case 'danger':
           return {
-			icon: 'br-icon-alert-circle-outline',
-			color: `var(--br-color-danger-500)`
-		  }
+            icon: 'br-icon-alert-circle-outline',
+            color: `var(--br-color-danger-500)`,
+          }
         default:
           return undefined
       }
@@ -166,7 +169,7 @@ export default defineComponent({
       })
 
     const showAlert = (): void => {
-	  clearTimeout(timeout.value as NodeJS.Timeout)
+      clearTimeout(timeout.value as NodeJS.Timeout)
       fadeOut.value = false
       hidden.value = false
       closeAfterDuration()
