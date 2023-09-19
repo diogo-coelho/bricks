@@ -15,32 +15,6 @@
     font-weight: var(--br-font-weight-normal);
   }
 
-  .br-icon {
-    &:not(.outline) {
-      svg {
-        path,
-        rect,
-        ellipse,
-        circle {
-          fill: var(--br-color-white);
-        }
-      }
-    }
-
-    &.outline {
-      svg {
-        line,
-        polyline,
-        path,
-        circle,
-        rect,
-        ellipse {
-          stroke: var(--br-color-white) !important;
-        }
-      }
-    }
-  }
-
   &.square {
     border-radius: 0px;
   }

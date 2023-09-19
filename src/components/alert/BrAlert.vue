@@ -13,7 +13,7 @@
   >
     <div class="message">
       <div v-if="computedIcon && !computedDisableIconsVisibility">
-        <br-icon :name="computedIcon"></br-icon>
+        <br-icon :name="computedIcon?.icon" :color="computedIcon?.color"></br-icon>
       </div>
 
       <div>
@@ -22,7 +22,7 @@
     </div>
 
     <button v-if="computedClosable" @click="closeAlert()">
-      <br-icon name="br-icon-close"></br-icon>
+      <br-icon class="close" name="br-icon-close"></br-icon>
     </button>
   </div>
 </template>
@@ -37,7 +37,7 @@ import {
   ref,
   StyleValue,
 } from 'vue'
-import { AlertProps, ToastStyles } from '../../types/_alert'
+import { AlertProps, ToastStyles, IconAlert } from '../../types/_alert'
 import useToastStyle from '../../utils/useToastStyle'
 import BrIcon from '../icon/BrIcon.vue'
 
@@ -122,18 +122,33 @@ export default defineComponent({
       return { display: hidden.value ? 'none' : 'flex' }
     })
 
-    const computedIcon: ComputedRef<string | undefined> = computed(() => {
+    const computedIcon: ComputedRef<IconAlert | undefined> = computed(() => {
       switch (props.variant) {
         case 'primary':
-          return `br-icon-information-circle-outline`
+          return {
+			icon: `br-icon-information-circle-outline`,
+			color: `var(--br-color-primary-500)`
+		  }
         case 'neutral':
-          return 'br-icon-settings-outline'
+          return {
+			icon: 'br-icon-settings-outline',
+			color: `var(--br-color-neutral-500)`
+		  }
         case 'success':
-          return 'br-icon-checkmark-circle-outline'
+          return {
+			icon: 'br-icon-checkmark-circle-outline',
+			color: `var(--br-color-success-500)`
+		  }
         case 'warning':
-          return 'br-icon-warning-outline'
+          return {
+			icon: 'br-icon-warning-outline',
+			color: `var(--br-color-warning-500)`
+		  }
         case 'danger':
-          return 'br-icon-alert-circle-outline'
+          return {
+			icon: 'br-icon-alert-circle-outline',
+			color: `var(--br-color-danger-500)`
+		  }
         default:
           return undefined
       }
@@ -151,6 +166,7 @@ export default defineComponent({
       })
 
     const showAlert = (): void => {
+	  clearTimeout(timeout.value as NodeJS.Timeout)
       fadeOut.value = false
       hidden.value = false
       closeAfterDuration()
