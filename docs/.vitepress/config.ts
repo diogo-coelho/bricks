@@ -21,6 +21,7 @@ export default defineConfig({
 		  { text: 'Badge', link: '/components/br-badge'},
 		  { text: 'Breadcrumb', link: '/components/br-breadcrumb'},
 		  { text: 'Botão', link: '/components/br-button' },
+		  { text: 'Botão de Ícone', link: '/components/br-icon-button'},
 		  { text: 'Checkbox', link: '/components/br-checkbox'},
 		  { text: 'Ícone', link: '/components/br-icon'},
 		  { text: 'Input', link: '/components/br-input'},

@@ -5,6 +5,8 @@
     :type="type"
     :disabled="computedDisabled"
     @click="onClick"
+	@focus="onFocus"
+	@blur="onBlur"
   >
     <div v-if="prefix" :class="prefixSlotSpacing">
       <br-icon :name="prefix" />
@@ -217,12 +219,12 @@ export default defineComponent({
       emit('on-click', event)
     }
 
-    const onFocus = (event: KeyboardEvent): void => {
-      emit('on-focus', event)
+    const onFocus = (payload: FocusEvent): void => {
+      emit('on-focus', payload)
     }
 
-    const onBlur = (event: KeyboardEvent): void => {
-      emit('on-blur', event)
+    const onBlur = (payload: FocusEvent): void => {
+      emit('on-blur', payload)
     }
 
     return {

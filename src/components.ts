@@ -4,6 +4,7 @@ import BrAvatar from './components/avatar'
 import BrBadge from './components/badge'
 import BrBreadcrumb from './components/breadcrumb'
 import BrButton from './components/button'
+import BrIconButton from './components/button'
 import BrCheckbox from './components/checkbox'
 import BrIcon from './components/icon'
 import BrInput from './components/input'
@@ -24,6 +25,7 @@ export {
   BrBadge,
   BrBreadcrumb,
   BrButton,
+  BrIconButton,
   BrCheckbox,
   BrIcon,
   BrInput,
