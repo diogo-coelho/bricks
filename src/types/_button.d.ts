@@ -20,8 +20,9 @@ export type ButtonLink = {
 }
 
 export type ButtonIcon = {
-  name: string,
-  type?: ButtonHTMLAttributes['type'],
+  name: string
+  type?: ButtonHTMLAttributes['type']
   disabled?: boolean
   color?: string
+  noBorders?: boolean
 }

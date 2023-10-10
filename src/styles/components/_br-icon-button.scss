@@ -14,35 +14,38 @@
   padding: var(--br-spacing-x-small) var(--br-spacing-x-small);
   border-radius: var(--br-border-radius-medium);
   height: auto;
+  background-color: transparent;
+  border: 1px solid var(--br-color-neutral-300);
 
   .br-icon {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: var(--br-spacing-large);
-	height: var(--br-spacing-large);
-  
-	svg {
-	  width: var(--br-spacing-large);
-	  height: var(--br-spacing-large);
-	}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--br-spacing-large);
+    height: var(--br-spacing-large);
+
+    svg {
+      width: var(--br-spacing-large);
+      height: var(--br-spacing-large);
+    }
   }
 
   &:hover {
-	background-color: var(--br-color-primary-50);
+    background-color: var(--br-color-primary-50);
+    border: 1px solid var(--br-color-primary-300);
   }
 
-}
+  &:disabled,
+  &.disabled {
+    background-color: transparent;
+    color: var(--br-color-neutral-200);
+    border: 1px solid var(--br-color-neutral-200);
+    cursor: not-allowed;
+  }
 
-// Ripple effect
-.br-icon-button.ripple {
-	background-position: center;
-	transition: background 0.5s;
-
-	&:hover:not(:disabled, .disabled, .outline, .text) {
-		background: var(--br-color-primary-100)
-			radial-gradient(circle, transparent 1%, var(--br-color-primary-100) 1%)
-			center/15000%;
-	}
-
+  /** Without borders */
+  &.no-borders {
+    background-color: transparent;
+    border: transparent;
+  }
 }

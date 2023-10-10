@@ -5,7 +5,7 @@ import BrIconButton from './BrButtonIcon.vue'
 export default {
   install(app: App) {
     app.component(BrButton.name, BrButton)
-	app.component(BrIconButton.name, BrIconButton)
+    app.component(BrIconButton.name, BrIconButton)
   },
 } as Plugin
 

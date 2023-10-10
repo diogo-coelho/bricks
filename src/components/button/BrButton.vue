@@ -4,12 +4,14 @@
     :class="rootClasses"
     :type="type"
     :disabled="computedDisabled"
+    @mouseover="setIconColorOnMouseOver()"
+    @mouseout="setIconColor()"
     @click="onClick"
-	@focus="onFocus"
-	@blur="onBlur"
+    @focus="onFocus"
+    @blur="onBlur"
   >
     <div v-if="prefix" :class="prefixSlotSpacing">
-      <br-icon :name="prefix" />
+      <br-icon :name="prefix" :color="iconColor" />
     </div>
 
     <a
@@ -23,7 +25,7 @@
 
     <slot v-else />
     <div v-if="suffix" :class="suffixSlotSpacing">
-      <br-icon :name="suffix" />
+      <br-icon :name="suffix" :color="iconColor" />
     </div>
   </button>
 </template>
@@ -35,9 +37,17 @@ import {
   ComputedRef,
   defineComponent,
   PropType,
+  Ref,
+  ref,
+  onMounted,
 } from 'vue'
 import { ButtonProps, ButtonLink } from '../../types/_button'
 import BrIcon from '../icon/BrIcon.vue'
+import {
+  colorOnMouseOver,
+  colorOnMouseOut,
+  ColorConfiguration,
+} from '../../helpers/iconButtonColorHandler'
 
 export default defineComponent({
   name: 'BrButton',
@@ -140,6 +150,12 @@ export default defineComponent({
   },
   emits: ['on-click', 'on-focus', 'on-blur'],
   setup(props: ButtonProps, { emit }) {
+    const iconColor: Ref<string | undefined> = ref(undefined)
+    const colorConfiguration: ColorConfiguration = {
+      disabled: props.disabled,
+      variant: props.variant,
+      outline: props.outline,
+    }
     const computedDisabled: ComputedRef<boolean | undefined> = computed(() => {
       if (props.disabled) return true
       return undefined
@@ -227,7 +243,18 @@ export default defineComponent({
       emit('on-blur', payload)
     }
 
+    const setIconColor = () => {
+      iconColor.value = colorOnMouseOut(colorConfiguration)
+    }
+
+    const setIconColorOnMouseOver = () => {
+      iconColor.value = colorOnMouseOver(colorConfiguration)
+    }
+
+    onMounted(() => setIconColor())
+
     return {
+      iconColor,
       computedDisabled,
       computedPill,
       computedOutline,
@@ -240,6 +267,8 @@ export default defineComponent({
       onFocus,
       onBlur,
       emit,
+      setIconColor,
+      setIconColorOnMouseOver,
     }
   },
 })
