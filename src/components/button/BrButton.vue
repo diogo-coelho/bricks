@@ -20,10 +20,10 @@
       :target="computedLink.target"
       :download="computedLink.download"
     >
-      <slot />
+      <slot></slot>
     </a>
 
-    <slot v-else />
+    <slot v-else></slot>
     <div v-if="suffix" :class="suffixSlotSpacing">
       <br-icon :name="suffix" :color="iconColor" />
     </div>

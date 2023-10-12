@@ -4,9 +4,10 @@ import BrAvatar from './components/avatar'
 import BrBadge from './components/badge'
 import BrBreadcrumb from './components/breadcrumb'
 import BrButton from './components/button'
-import BrIconButton from './components/button'
+import BrButtonGroup from './components/button'
 import BrCheckbox from './components/checkbox'
 import BrIcon from './components/icon'
+import BrIconButton from './components/button'
 import BrInput from './components/input'
 import BrModal from './components/modal'
 import BrRadio from './components/radio'
@@ -25,9 +26,10 @@ export {
   BrBadge,
   BrBreadcrumb,
   BrButton,
-  BrIconButton,
+  BrButtonGroup,
   BrCheckbox,
   BrIcon,
+  BrIconButton,
   BrInput,
   BrModal,
   BrRadio,

@@ -1,0 +1,105 @@
+.br-button-group {
+  .br-button {
+    border-radius: 0;
+    border-right: 0;
+  }
+
+  .br-button:last-child {
+    border-right: 1px solid var(--br-color-neutral-300);
+  }
+
+  .br-button:hover + .br-button {
+    border-left: 0;
+  }
+
+  .br-button:hover:not(:disabled, .disabled):last-child {
+    border-right: 1px solid var(--br-color-primary-300);
+  }
+
+  .br-button:first-child {
+    border-top-left-radius: var(--br-border-radius-medium);
+    border-bottom-left-radius: var(--br-border-radius-medium);
+  }
+
+  .br-button:last-child {
+    border-top-right-radius: var(--br-border-radius-medium);
+    border-bottom-right-radius: var(--br-border-radius-medium);
+  }
+
+  // Pill
+  .br-button:first-child.br-button--pill {
+    border-top-left-radius: var(--br-border-radius-pill);
+    border-bottom-left-radius: var(--br-border-radius-pill);
+  }
+
+  .br-button:last-child.br-button--pill {
+    border-top-right-radius: var(--br-border-radius-pill);
+    border-bottom-right-radius: var(--br-border-radius-pill);
+  }
+
+  // Variants
+  .br-button--primary,
+  .br-button--primary:hover {
+    border-right: 1px solid var(--br-color-primary-300);
+  }
+
+  .br-button--primary:last-child {
+    border-right: 0;
+  }
+
+  .br-button--primary:hover:not(:disabled, .disabled):last-child {
+    border-right: 1px solid var(--br-color-primary-300);
+  }
+
+  .br-button--neutral,
+  .br-button--neutral:hover {
+    border-right: 1px solid var(--br-color-neutral-300);
+  }
+
+  .br-button--neutral:last-child {
+    border-right: 0;
+  }
+
+  .br-button--neutral:hover:not(:disabled, .disabled):last-child {
+    border-right: 1px solid var(--br-color-neutral-300);
+  }
+
+  .br-button--success,
+  .br-button--success:hover {
+    border-right: 1px solid var(--br-color-success-300);
+  }
+
+  .br-button--success:last-child {
+    border-right: 0;
+  }
+
+  .br-button--success:hover:not(:disabled, .disabled):last-child {
+    border-right: 1px solid var(--br-color-success-300);
+  }
+
+  .br-button--warning,
+  .br-button--warning:hover {
+    border-right: 1px solid var(--br-color-warning-300);
+  }
+
+  .br-button--warning:last-child {
+    border-right: 0;
+  }
+
+  .br-button--warning:hover:not(:disabled, .disabled):last-child {
+    border-right: 1px solid var(--br-color-warning-300);
+  }
+
+  .br-button--danger,
+  .br-button--danger:hover {
+    border-right: 1px solid var(--br-color-danger-300);
+  }
+
+  .br-button--danger:last-child {
+    border-right: 0;
+  }
+
+  .br-button--danger:hover:not(:disabled, .disabled):last-child {
+    border-right: 1px solid var(--br-color-danger-300);
+  }
+}
