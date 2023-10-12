@@ -5,8 +5,8 @@
     :type="type"
     :disabled="computedDisabled"
     :style="buttonStyles"
-    @mouseover="setIconColorOnMouseOver()"
-    @mouseout="setIconColor()"
+    @mouseover="setIconColorOnMouseOver"
+    @mouseout="setIconColor"
     @click="onClick"
     @focus="onFocus"
     @blur="onBlur"
@@ -27,7 +27,7 @@ import {
   onMounted,
 } from 'vue'
 import BrIcon from '../icon/BrIcon.vue'
-import { ButtonIcon } from '../../types/_button'
+import { IconButton } from '../../types/_button'
 import {
   colorOnMouseOver,
   colorOnMouseOut,
@@ -84,10 +84,29 @@ export default defineComponent({
     noBorders: {
       type: Boolean,
     },
+    /**
+     * size of button
+     * @values small, medium, large
+     */
+    size: {
+      type: String,
+      default: () => undefined,
+      validator: (value: string) => {
+        return ['small', 'medium', 'large'].includes(value)
+      },
+    },
+    /**
+     * rounded button
+     * @values boolean
+     */
+    rounded: {
+      type: Boolean,
+    },
   },
   emits: ['on-click', 'on-focus', 'on-blur'],
-  setup(props: ButtonIcon, { emit }) {
+  setup(props: IconButton, { emit }) {
     const iconColor: Ref<string | undefined> = ref(undefined)
+
     const buttonStyles: Ref<Partial<CSSStyleDeclaration> | undefined> =
       ref(undefined)
 
@@ -107,6 +126,11 @@ export default defineComponent({
       return undefined
     })
 
+    const computedRounded: ComputedRef<boolean | undefined> = computed(() => {
+      if (props.rounded) return true
+      return undefined
+    })
+
     const computedNoBorders: ComputedRef<boolean | undefined> = computed(() => {
       if (props.noBorders) return true
       return undefined
@@ -115,22 +139,12 @@ export default defineComponent({
     const rootClasses: ComputedRef<string[]> = computed(() => {
       return [
         `br-icon-button ripple`,
+        props.size ? `br-icon-button--${props.size}` : ``,
         computedDisabled.value ? `disabled` : '',
         computedNoBorders.value ? `no-borders` : '',
+        computedRounded.value ? `rounded` : '',
       ]
     })
-
-    const onClick = (event: MouseEvent): void => {
-      emit('on-click', event)
-    }
-
-    const onFocus = (payload: FocusEvent): void => {
-      emit('on-focus', payload)
-    }
-
-    const onBlur = (payload: FocusEvent): void => {
-      emit('on-blur', payload)
-    }
 
     const configureButtonStyles = (
       color: ColorPaletteModel,
@@ -165,6 +179,18 @@ export default defineComponent({
       buttonStyles.value = computedColors.value
         ? configureButtonStyles(computedColors.value, true)
         : undefined
+    }
+
+    const onClick = (event: MouseEvent): void => {
+      emit('on-click', event)
+    }
+
+    const onFocus = (payload: FocusEvent): void => {
+      emit('on-focus', payload)
+    }
+
+    const onBlur = (payload: FocusEvent): void => {
+      emit('on-blur', payload)
     }
 
     onMounted(() => setIconColor())

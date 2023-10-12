@@ -48,4 +48,51 @@
     background-color: transparent;
     border: transparent;
   }
+
+  // Sizes
+  &--small {
+    padding: var(--br-spacing-x-small) var(--br-spacing-x-small);
+
+    .br-icon {
+      width: var(--br-spacing-large);
+      height: var(--br-spacing-large);
+
+      svg {
+        width: var(--br-spacing-large);
+        height: var(--br-spacing-large);
+      }
+    }
+  }
+
+  &--medium {
+    padding: var(--br-spacing-small) var(--br-spacing-small);
+
+    .br-icon {
+      width: var(--br-spacing-x-large);
+      height: var(--br-spacing-x-large);
+
+      svg {
+        width: var(--br-spacing-x-large);
+        height: var(--br-spacing-x-large);
+      }
+    }
+  }
+
+  &--large {
+    padding: var(--br-spacing-medium) var(--br-spacing-medium);
+
+    .br-icon {
+      width: var(--br-spacing-2x-large);
+      height: var(--br-spacing-2x-large);
+
+      svg {
+        width: var(--br-spacing-2x-large);
+        height: var(--br-spacing-2x-large);
+      }
+    }
+  }
+
+  &.rounded {
+    border-radius: var(--br-border-radius-circle);
+  }
 }

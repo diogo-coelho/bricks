@@ -19,10 +19,12 @@ export type ButtonLink = {
   download?: string
 }
 
-export type ButtonIcon = {
+export type IconButton = {
   name: string
   type?: ButtonHTMLAttributes['type']
   disabled?: boolean
   color?: string
   noBorders?: boolean
+  size?: string
+  rounded?: boolean
 }

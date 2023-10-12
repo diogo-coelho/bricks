@@ -4,8 +4,8 @@
     :class="rootClasses"
     :type="type"
     :disabled="computedDisabled"
-    @mouseover="setIconColorOnMouseOver()"
-    @mouseout="setIconColor()"
+    @mouseover="setIconColorOnMouseOver"
+    @mouseout="setIconColor"
     @click="onClick"
     @focus="onFocus"
     @blur="onBlur"
@@ -231,6 +231,14 @@ export default defineComponent({
       }
     })
 
+    const setIconColor = () => {
+      iconColor.value = colorOnMouseOut(colorConfiguration)
+    }
+
+    const setIconColorOnMouseOver = () => {
+      iconColor.value = colorOnMouseOver(colorConfiguration)
+    }
+
     const onClick = (event: MouseEvent): void => {
       emit('on-click', event)
     }
@@ -241,14 +249,6 @@ export default defineComponent({
 
     const onBlur = (payload: FocusEvent): void => {
       emit('on-blur', payload)
-    }
-
-    const setIconColor = () => {
-      iconColor.value = colorOnMouseOut(colorConfiguration)
-    }
-
-    const setIconColorOnMouseOver = () => {
-      iconColor.value = colorOnMouseOver(colorConfiguration)
     }
 
     onMounted(() => setIconColor())
