@@ -31,6 +31,7 @@ export default defineConfig({
 		  { text: 'Select', link: '/components/br-select' },
 		  { text: 'Switch', link: '/components/br-switch'},
 		  { text: 'Table', link: '/components/br-table' },
+		  { text: 'Tooltip', link: '/components/br-tooltip' },
         ]
       },
 	  {

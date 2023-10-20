@@ -16,8 +16,9 @@ import BrSelect from './components/select'
 import BrSelectItem from './components/select'
 import BrSwitch from './components/switch'
 import BrTable from './components/table'
-import BrTHead from './components/table'
 import BrTBody from './components/table'
+import BrTHead from './components/table'
+import BrTooltip from './components/tooltip'
 
 export {
   // components
@@ -38,6 +39,7 @@ export {
   BrSelectItem,
   BrSwitch,
   BrTable,
-  BrTHead,
   BrTBody,
+  BrTHead,
+  BrTooltip,
 }
