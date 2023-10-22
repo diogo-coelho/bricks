@@ -4,7 +4,6 @@ import BrButton from '../../src/components/button/BrButton.vue'
 
 # BrButton <Badge type="warning" text="alpha" />
 
-
 `BrButton` é um componente que representa um elemento clicável que retornará uma ação para o usuário.
 <BrButton>Button</BrButton>
 
@@ -145,24 +144,24 @@ Caso queira usar um botão que funcione como um link, é necessário passar o at
 É possível criar botões com ícones passando os atributos `prefix` e `suffix`, com a string do ícone que deverá ser renderizado dentro do botão. Você encontrará a lista completa de ícones através deste link.
 
 <div class="inline-flex align-center w-full mb-medium">
-	<BrButton class="mr-x-small" size="small" prefix="br-icon-settings-sharp">
+	<BrButton class="mr-x-small" size="small" prefix="br-icon-settings-sharp" variant="neutral">
 		Settings
 	</BrButton>
-	<BrButton class="mr-x-small" size="small" suffix="br-icon-menu">
+	<BrButton class="mr-x-small" size="small" suffix="br-icon-menu" variant="success">
 		Menu
 	</BrButton>
-	<BrButton class="mr-x-small" size="small" prefix="br-icon-settings-sharp" suffix="br-icon-menu">
+	<BrButton class="mr-x-small" size="small" prefix="br-icon-settings-sharp" suffix="br-icon-menu" variant="danger">
 		Options
 	</BrButton>
 </div>
 <div class="inline-flex align-center w-full mb-medium">
-	<BrButton class="mr-x-small" size="medium" prefix="br-icon-settings-sharp">
+	<BrButton class="mr-x-small" size="medium" prefix="br-icon-settings-sharp" variant="neutral" outline>
 		Settings
 	</BrButton>
-	<BrButton class="mr-x-small" size="medium" suffix="br-icon-menu">
+	<BrButton class="mr-x-small" size="medium" suffix="br-icon-menu" variant="success" outline>
 		Menu
 	</BrButton>
-	<BrButton class="mr-x-small" size="medium" prefix="br-icon-settings-sharp" suffix="br-icon-menu">
+	<BrButton class="mr-x-small" size="medium" prefix="br-icon-settings-sharp" suffix="br-icon-menu" variant="danger" outline>
 		Options
 	</BrButton>
 </div>

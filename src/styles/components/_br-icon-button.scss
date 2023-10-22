@@ -1,0 +1,98 @@
+.br-icon-button {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  text-decoration: none;
+  font-family: var(--br-font-sans);
+  font-size: var(--br-font-size-small);
+  font-weight: var(--br-font-weight-bold);
+  padding: var(--br-spacing-x-small) var(--br-spacing-x-small);
+  border-radius: var(--br-border-radius-medium);
+  height: auto;
+  background-color: transparent;
+  border: 1px solid var(--br-color-neutral-300);
+
+  .br-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--br-spacing-large);
+    height: var(--br-spacing-large);
+
+    svg {
+      width: var(--br-spacing-large);
+      height: var(--br-spacing-large);
+    }
+  }
+
+  &:hover {
+    background-color: var(--br-color-primary-50);
+    border: 1px solid var(--br-color-primary-300);
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: transparent;
+    color: var(--br-color-neutral-200);
+    border: 1px solid var(--br-color-neutral-200);
+    cursor: not-allowed;
+  }
+
+  /** Without borders */
+  &.no-borders {
+    background-color: transparent;
+    border: transparent;
+  }
+
+  // Sizes
+  &--small {
+    padding: var(--br-spacing-x-small) var(--br-spacing-x-small);
+
+    .br-icon {
+      width: var(--br-spacing-large);
+      height: var(--br-spacing-large);
+
+      svg {
+        width: var(--br-spacing-large);
+        height: var(--br-spacing-large);
+      }
+    }
+  }
+
+  &--medium {
+    padding: var(--br-spacing-small) var(--br-spacing-small);
+
+    .br-icon {
+      width: var(--br-spacing-x-large);
+      height: var(--br-spacing-x-large);
+
+      svg {
+        width: var(--br-spacing-x-large);
+        height: var(--br-spacing-x-large);
+      }
+    }
+  }
+
+  &--large {
+    padding: var(--br-spacing-medium) var(--br-spacing-medium);
+
+    .br-icon {
+      width: var(--br-spacing-2x-large);
+      height: var(--br-spacing-2x-large);
+
+      svg {
+        width: var(--br-spacing-2x-large);
+        height: var(--br-spacing-2x-large);
+      }
+    }
+  }
+
+  &.rounded {
+    border-radius: var(--br-border-radius-circle);
+  }
+}

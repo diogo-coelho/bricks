@@ -18,3 +18,13 @@ export type ButtonLink = {
   target?: '_blank' | '_self' | '_parent' | '_top' | 'framename'
   download?: string
 }
+
+export type IconButton = {
+  name: string
+  type?: ButtonHTMLAttributes['type']
+  disabled?: boolean
+  color?: string
+  noBorders?: boolean
+  size?: string
+  rounded?: boolean
+}
