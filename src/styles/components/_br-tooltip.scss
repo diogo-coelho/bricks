@@ -1,6 +1,7 @@
 .br-tooltip {
   &-container {
     position: relative;
+    display: inline-block;
   }
 
   &-trigger {
@@ -23,12 +24,34 @@
       bottom: -3px;
       transform: rotate(45deg);
     }
+
+    &.bottom,
+    &.bottom-start,
+    &.bottom-end {
+      top: -3px;
+      transform: rotate(-135deg);
+    }
+
+    &.left,
+    &.left-start,
+    &.left-end {
+      right: -3px;
+      transform: rotate(-45deg);
+    }
+
+    &.right,
+    &.right-start,
+    &.right-end {
+      left: -3px;
+      transform: rotate(135deg);
+    }
   }
 
   display: flex;
   justify-content: center;
+  align-items: center;
   position: absolute;
-  padding: var(--br-spacing-x-small) var(--br-spacing-small);
+  padding: var(--br-spacing-2x-small) var(--br-spacing-x-small);
   background-color: var(--br-color-neutral-800);
   color: var(--br-color-neutral-50);
   border-radius: var(--br-border-radius-medium);

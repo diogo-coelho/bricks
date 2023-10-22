@@ -1,6 +1,7 @@
 <template>
   <div class="br-tooltip-container">
     <div
+      ref="tooltipElementRef"
       class="br-tooltip"
       :class="{ visible: isVisible }"
       :style="{
@@ -15,6 +16,7 @@
     </div>
 
     <div
+      ref="elementTriggerRef"
       class="br-tooltip-trigger"
       @mouseover="setIsVisible(true)"
       @mouseleave="setIsVisible(false)"
@@ -25,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import { Ref, defineComponent, onMounted, ref } from 'vue'
+import { Ref, defineComponent, onMounted, ref, watch } from 'vue'
 import { TooltipPosition, TooltipProps } from '../../types/_tooltip'
 
 export default defineComponent({
@@ -66,6 +68,8 @@ export default defineComponent({
   setup(props: TooltipProps) {
     const tooltipPosition: Ref<TooltipPosition | null> = ref(null)
     const arrowTooltipPosition: Ref<TooltipPosition | null> = ref(null)
+    const tooltipElementRef: Ref<HTMLElement | null> = ref(null)
+    const elementTriggerRef: Ref<HTMLElement | null> = ref(null)
     const isVisible: Ref<boolean> = ref(false)
 
     const setIsVisible = (value: boolean): void => {
@@ -73,15 +77,13 @@ export default defineComponent({
     }
 
     const getTooltipTriggerDomRect = (): DOMRect | void => {
-      const element = document.querySelector(
-        '.br-tooltip-trigger'
-      ) as HTMLElement
+      const element = elementTriggerRef.value as HTMLElement
       if (!element) return
       return element.getBoundingClientRect()
     }
 
     const getTooltipElementDomRect = (): DOMRect | void => {
-      const element = document.querySelector('.br-tooltip') as HTMLElement
+      const element = tooltipElementRef.value as HTMLElement
       if (!element) return
       return element.getBoundingClientRect()
     }
@@ -92,33 +94,210 @@ export default defineComponent({
     ): TooltipPosition => {
       return {
         bottom: Math.abs(positions.bottom - positions.top) + 5,
-        left: Math.ceil(positions.width / 2 - tooltipDomRect.width / 2),
+        left: Math.round((positions.width - tooltipDomRect.width * 2) / 2),
+      }
+    }
+
+    const setPositionOfElementOnTopStart = (
+      positions: DOMRect
+    ): TooltipPosition => {
+      return {
+        bottom: Math.abs(positions.bottom - positions.top) + 5,
+        left: 0,
+      }
+    }
+
+    const setPositionOfElementOnTopEnd = (
+      positions: DOMRect
+    ): TooltipPosition => {
+      return {
+        bottom: Math.abs(positions.bottom - positions.top) + 5,
+        right: 0,
+      }
+    }
+
+    const setPositionOfElementOnBottom = (
+      positions: DOMRect,
+      tooltipDomRect: DOMRect
+    ): TooltipPosition => {
+      return {
+        top: Math.abs(positions.bottom - positions.top) + 5,
+        left: Math.round((positions.width - tooltipDomRect.width * 2) / 2),
+      }
+    }
+
+    const setPositionOfElementOnBottomStart = (
+      positions: DOMRect
+    ): TooltipPosition => {
+      return {
+        top: Math.abs(positions.bottom - positions.top) + 5,
+        left: 0,
+      }
+    }
+
+    const setPositionOfElementOnBottomEnd = (
+      positions: DOMRect
+    ): TooltipPosition => {
+      return {
+        top: Math.abs(positions.bottom - positions.top) + 5,
+        right: 0,
+      }
+    }
+
+    const setPositionOfElementOnLeft = (
+      positions: DOMRect,
+      tooltipDomRect: DOMRect
+    ): TooltipPosition => {
+      console.log('positions', positions)
+      return {
+        left: -Math.round(tooltipDomRect.width * 2 + 5),
+        top: Math.round((positions.height - tooltipDomRect.height * 2) / 2),
+      }
+    }
+
+    const setPositionOfElementOnLeftStart = (
+      tooltipDomRect: DOMRect
+    ): TooltipPosition => {
+      return {
+        left: -Math.round(tooltipDomRect.width * 2 + 5),
+        top: 0,
+      }
+    }
+
+    const setPositionOfElementOnLeftEnd = (
+      tooltipDomRect: DOMRect
+    ): TooltipPosition => {
+      return {
+        left: -Math.round(tooltipDomRect.width * 2 + 5),
+        bottom: 0,
+      }
+    }
+
+    const setPositionOfElementOnRight = (
+      positions: DOMRect,
+      tooltipDomRect: DOMRect
+    ): TooltipPosition => {
+      return {
+        right: -Math.round(tooltipDomRect.width * 2 + 5),
+        top: Math.round((positions.height - tooltipDomRect.height * 2) / 2),
+      }
+    }
+
+    const setPositionOfElementOnRightStart = (
+      tooltipDomRect: DOMRect
+    ): TooltipPosition => {
+      return {
+        right: -Math.round(tooltipDomRect.width * 2 + 5),
+        top: 0,
+      }
+    }
+
+    const setPositionOfElementOnRightEnd = (
+      tooltipDomRect: DOMRect
+    ): TooltipPosition => {
+      return {
+        right: -Math.round(tooltipDomRect.width * 2 + 5),
+        bottom: 0,
       }
     }
 
     const setTooltipPosition = () => {
-      const positions = getTooltipTriggerDomRect()
-      const tooltipDomRect = getTooltipElementDomRect()
-      if (!positions || !tooltipDomRect) return
-      console.log('positions', positions)
+      setTimeout(() => {
+        const positions = getTooltipTriggerDomRect()
+        const tooltipDomRect = getTooltipElementDomRect()
+        if (!positions || !tooltipDomRect) return
 
-      switch (props.placement) {
-        case 'top':
-          tooltipPosition.value = setPositionOfElementOnTop(
-            positions,
-            tooltipDomRect
-          )
-          break
-      }
+        switch (props.placement) {
+          case 'top':
+            tooltipPosition.value = setPositionOfElementOnTop(
+              positions,
+              tooltipDomRect
+            )
+            break
+
+          case 'top-start':
+            tooltipPosition.value = setPositionOfElementOnTopStart(positions)
+            break
+
+          case 'top-end':
+            tooltipPosition.value = setPositionOfElementOnTopEnd(positions)
+            break
+
+          case 'bottom':
+            tooltipPosition.value = setPositionOfElementOnBottom(
+              positions,
+              tooltipDomRect
+            )
+            break
+
+          case 'bottom-start':
+            tooltipPosition.value = setPositionOfElementOnBottomStart(positions)
+            break
+
+          case 'bottom-end':
+            tooltipPosition.value = setPositionOfElementOnBottomEnd(positions)
+            break
+
+          case 'left':
+            tooltipPosition.value = setPositionOfElementOnLeft(
+              positions,
+              tooltipDomRect
+            )
+            break
+
+          case 'left-start':
+            tooltipPosition.value =
+              setPositionOfElementOnLeftStart(tooltipDomRect)
+            break
+
+          case 'left-end':
+            tooltipPosition.value =
+              setPositionOfElementOnLeftEnd(tooltipDomRect)
+            break
+
+          case 'right':
+            tooltipPosition.value = setPositionOfElementOnRight(
+              positions,
+              tooltipDomRect
+            )
+            break
+
+          case 'right-start':
+            tooltipPosition.value =
+              setPositionOfElementOnRightStart(tooltipDomRect)
+            break
+
+          case 'right-end':
+            tooltipPosition.value =
+              setPositionOfElementOnRightEnd(tooltipDomRect)
+            break
+        }
+      }, 200)
     }
 
-    onMounted(() => {
-      setTooltipPosition()
+    watch(
+      () => props.content,
+      async () => {
+        await setTooltipPosition()
+      }
+    )
+
+	watch(
+      () => props.placement,
+      async () => {
+        await setTooltipPosition()
+      }
+    )
+
+    onMounted(async () => {
+      await setTooltipPosition()
     })
 
     return {
       tooltipPosition,
       arrowTooltipPosition,
+      tooltipElementRef,
+      elementTriggerRef,
       isVisible,
       setIsVisible,
     }

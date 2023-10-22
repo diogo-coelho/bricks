@@ -1,7 +1,7 @@
 import { App, Plugin } from 'vue'
 import BrButton from './BrButton.vue'
 import BrButtonGroup from './BrButtonGroup.vue'
-import BrIconButton from './BrButtonIcon.vue'
+import BrIconButton from './BrIconButton.vue'
 
 export default {
   install(app: App) {
@@ -11,4 +11,4 @@ export default {
   },
 } as Plugin
 
-export { BrButton, BrIconButton }
+export { BrButton, BrIconButton, BrButtonGroup }
