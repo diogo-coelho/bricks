@@ -27,18 +27,13 @@ import { Ref, defineComponent, onMounted, ref } from 'vue';
 import BrInput from '../input/BrInput.vue'
 import { formatDateToStringDate } from '../../utils/formatDate'
 
-
-import { Datepicker } from 'vanillajs-datepicker'
-import es from 'vanillajs-datepicker/locales/es'
-import ptBR from 'vanillajs-datepicker/locales/pt-BR'
-
 export default defineComponent({
 	name: 'BrCalendar',
 	components: {
 		BrInput
 	},
 	setup () {
-		const datepicker = ref(null)
+		const datepicker = ref<any>(null)
 		const currentDate: string = new Date().toString()
 		const stringDate: Ref<string | null> = ref(null)
 		const selectedDate: Ref<string> = ref('')
@@ -89,24 +84,31 @@ export default defineComponent({
 			return new URL('@/svgs/NextArrowIcon.svg', import.meta.url).href
 		}
 
-		const setCalendarDate = (): void => {
-			//const elem = calendarRef.value as HTMLElement
+		const setCalendarDate = async (): Promise<void> => {
+			if (typeof window === 'undefined') return
+
 			const elem = document.querySelector('.calendar') as HTMLElement
 			if (!elem) return
 
+			const { Datepicker } = await import('vanillajs-datepicker')
+			const es = (await import('vanillajs-datepicker/locales/es')).default
+			const ptBR = (await import('vanillajs-datepicker/locales/pt-BR')).default
+
 			stringDate.value = formatDateToStringDate(currentDate)
-			if (Datepicker.locales) Object.assign(Datepicker.locales, es, ptBR);
+			if (Datepicker.locales) Object.assign(Datepicker.locales, es, ptBR)
 
 			datepicker.value = new Datepicker(elem, {
-				format: "dd/mm/yyyy",
-				language: "pt-BR",
+				format: 'dd/mm/yyyy',
+				language: 'pt-BR',
 				maxDate: stringDate.value,
 				prevIcon: `<img src='${ getPrevArrowIcon() }' alt='prev-arrow-icon' />`,
 				nextIcon: `<img src='${ getNextArrowIcon() }' alt='next-arrow-icon' />`
 			})
 		}
 
-		onMounted(() => setCalendarDate())
+		onMounted(() => {
+			void setCalendarDate()
+		})
 
 		return {
 			stringDate,
