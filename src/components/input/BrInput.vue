@@ -32,12 +32,20 @@
         ...rootClasses,
       ]"
       :style="{ width: inputWidthComputed + 'px' }"
+	  @input="onInput"
       @focusin="setOnFocus(true)"
       @focusout="setOnFocus(false)"
       @enter="onEnter"
     />
-    <button v-if="suffix" name="input" :class="rootClasses" @click="onClick">
-      <br-icon :name="suffix" />
+    <button 
+		v-if="suffix" 
+		name="input" 
+		:class="rootClasses" 
+		@click="onClick"
+		@mouseover="setIconColorOnMouseOver"
+    	@mouseout="setIconColor"
+	>
+      <br-icon :name="suffix" :color="iconColor" />
     </button>
   </div>
 </template>
@@ -53,6 +61,11 @@ import {
 } from 'vue'
 import { InputProps } from '../../types/_input'
 import BrIcon from '../icon/BrIcon.vue'
+import {
+  colorOnMouseOver,
+  colorOnMouseOut,
+  ColorConfiguration,
+} from '../../helpers/iconButtonColorHandler'
 
 export default defineComponent({
   name: 'BrInput',
@@ -150,12 +163,16 @@ export default defineComponent({
       default: () => undefined,
     },
   },
-  emits: ['on-click', 'on-enter', 'on-blur'],
+  emits: ['on-click', 'on-enter', 'on-blur', 'on-input'],
   setup(props: InputProps, { emit }) {
     const BrInputRef = ref(null)
     const InputRef = ref(null)
     const paragraphRef = ref(null)
     const onFocus: Ref<boolean> = ref(false)
+	const iconColor: Ref<string | undefined> = ref(undefined)
+	const colorConfiguration: ColorConfiguration = {
+      disabled: props.disabled
+    }
 
     const rootClasses: ComputedRef<string[]> = computed(() => {
       return [
@@ -201,6 +218,14 @@ export default defineComponent({
       const paragraphElement = paragraphRef.value as unknown as HTMLElement
       return inputContainer?.clientWidth - paragraphElement?.clientWidth
     }
+	
+	const setIconColor = () => {
+      iconColor.value = colorOnMouseOut(colorConfiguration)
+    }
+
+    const setIconColorOnMouseOver = () => {
+      iconColor.value = colorOnMouseOver(colorConfiguration)
+    }
 
     const onClick = () => {
       emit('on-click', (InputRef.value as unknown as HTMLInputElement).value)
@@ -213,6 +238,10 @@ export default defineComponent({
     const onBlur = () => {
       emit('on-blur', (InputRef.value as unknown as HTMLInputElement).value)
     }
+
+	const onInput = () => {
+	  emit('on-input', (InputRef.value as unknown as HTMLInputElement).value)
+	}
 
     const setOnFocus = (value: boolean): void => {
       onFocus.value = value
@@ -228,7 +257,10 @@ export default defineComponent({
       )
     }
 
-    onMounted(() => onWindowResize())
+    onMounted(() => {
+		onWindowResize()
+		setIconColor()
+	})
 
     return {
       BrInputRef,
@@ -241,11 +273,15 @@ export default defineComponent({
       computedDisabled,
       computedValue,
       computedReadonly,
+	  iconColor,
       onClick,
-      setOnFocus,
       onEnter,
       onBlur,
+	  onInput,
+	  setOnFocus,
       inputWidth,
+	  setIconColor,
+      setIconColorOnMouseOver,
     }
   },
 })

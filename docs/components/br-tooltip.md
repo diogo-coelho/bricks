@@ -7,7 +7,7 @@ import BrButton from '../../src/components/button/BrButton.vue'
 
 `BrTooltip` apresenta informação adicional com base numa ação do usuário.
 
-<BrTooltip content="Isso aqui é um tooltip" placement="right">
+<BrTooltip content="Isso aqui é um tooltip">
 	<BrButton>Passe o mouse sobre o botão</BrButton>
 </BrTooltip>
 
@@ -102,6 +102,62 @@ Utilize o atributo `placement` para pocionar o tooltip em relação ao elemento 
 	</BrTooltip>
 </div>
 </div>
+
+```jsx
+<div class="flex mb-medium">
+	<BrTooltip content="top-start" placement="top-start">
+		<BrButton>Mostre acima</BrButton>
+	</BrTooltip>
+	<BrTooltip content="top" placement="top">
+		<BrButton>Mostre acima</BrButton>
+	</BrTooltip>
+	<BrTooltip content="top-end" placement="top-end">
+		<BrButton>Mostre acima</BrButton>
+	</BrTooltip>
+</div>
+
+<div class="flex mb-medium">
+	<BrTooltip content="bottom-start" placement="bottom-start">
+		<BrButton>Mostre abaixo</BrButton>
+	</BrTooltip>
+
+	<BrTooltip content="bottom" placement="bottom">
+		<BrButton>Mostre abaixo</BrButton>
+	</BrTooltip>
+
+	<BrTooltip content="bottom-end" placement="bottom-end">
+		<BrButton>Mostre abaixo</BrButton>
+	</BrTooltip>
+</div>
+
+<div class="flex mb-medium">
+	<BrTooltip content="left-start" placement="left-start">
+		<BrButton>Mostre à esquerda</BrButton>
+	</BrTooltip>
+
+	<BrTooltip content="left" placement="left">
+		<BrButton>Mostre à esquerda</BrButton>
+	</BrTooltip>
+
+	<BrTooltip content="left-end" placement="left-end">
+		<BrButton>Mostre à esquerda</BrButton>
+	</BrTooltip>
+</div>
+
+<div class="flex mb-medium">
+	<BrTooltip content="right-start" placement="right-start">
+		<BrButton>Mostre à direita</BrButton>
+	</BrTooltip>
+
+	<BrTooltip content="right" placement="right">
+		<BrButton>Mostre à direita</BrButton>
+	</BrTooltip>
+
+	<BrTooltip content="right-end" placement="right-end">
+		<BrButton>Mostre à direita</BrButton>
+	</BrTooltip>
+</div>
+```
 
 <style lang="scss">
 @import '../../src/styles/index.scss'

@@ -6,6 +6,7 @@ export default defineConfig({
   title: "Bricks",
   description: "A UI components library for Vue.js",
   base: '/bricks/',
+  appearance: false,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -21,9 +22,10 @@ export default defineConfig({
 		  { text: 'Badge', link: '/components/br-badge' },
 		  { text: 'Breadcrumb', link: '/components/br-breadcrumb' },
 		  { text: 'Botão', link: '/components/br-button' },
-		  { text: 'Grupo de botão', link: '/components/br-button-group' },
 		  { text: 'Botão de Ícone', link: '/components/br-icon-button' },
+		  //{ text: 'Calendário', link: '/components/br-calendar' },
 		  { text: 'Checkbox', link: '/components/br-checkbox' },
+		  { text: 'Grupo de botão', link: '/components/br-button-group' },
 		  { text: 'Ícone', link: '/components/br-icon' },
 		  { text: 'Input', link: '/components/br-input' },
 		  { text: 'Modal', link: '/components/br-modal' },

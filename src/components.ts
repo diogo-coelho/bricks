@@ -5,6 +5,7 @@ import BrBadge from './components/badge'
 import BrBreadcrumb from './components/breadcrumb'
 import BrButton from './components/button'
 import BrButtonGroup from './components/button'
+import BrCalendar from './components/calendar'
 import BrCheckbox from './components/checkbox'
 import BrIcon from './components/icon'
 import BrIconButton from './components/button'
@@ -28,6 +29,7 @@ export {
   BrBreadcrumb,
   BrButton,
   BrButtonGroup,
+  BrCalendar,
   BrCheckbox,
   BrIcon,
   BrIconButton,

@@ -1,0 +1,114 @@
+.datepicker {
+    position: absolute;
+    z-index: 99;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    font-family: var(--br-font-sans);
+
+    .datepicker-header {
+        .datepicker-controls {
+            margin-bottom: 20px;
+
+            .prev-btn, .next-btn {
+                background-color: var(--br-color-neutral-50);
+                border-radius: var(--br-border-radius-circle);
+                color: var(--br-color-primary-500);
+                padding-right: 0px;
+                padding-left: 0px;
+                padding-bottom: 8px;
+                width: 25px;
+                height: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 5px;
+                padding-top: 7px;
+            }
+
+            .prev-btn {
+                margin-left: 5px;
+                padding-right: 2px;
+            }
+
+            .next-btn {
+                margin-right: 5px;
+                padding-left: 2px;
+            }
+
+            .prev-btn:not(.disabled):hover, 
+            .next-btn:not(.disabled):hover {
+                background-color: var(--ctx-color-gray-5);
+            }
+
+            .button[disabled]:hover {
+                background-color: var(--ctx-color-gray-4);
+            }
+            
+            .button.view-switch {
+                font-size: var(--ctx-font-size-medium);
+            }
+        }
+    }
+
+    .datepicker-main {
+        .datepicker-view.months.datepicker-grid {
+            .datepicker-cell.selected, .datepicker-cell.selected:hover {
+                background-color: var(--br-color-primary-500);
+                border-radius: var(--ctx-border-radius-small);
+                color: var(-ctx-color-white);
+                font-weight: var(--ctx-font-weight-bold);
+            }
+        }
+
+        .datepicker-view {
+            .days {
+                .days-of-week {
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid var(--ctx-color-gray-4);
+                }
+
+                .datepicker-grid {
+                    .datepicker-cell {
+                        font-size: var(--ctx-font-size-xx-small);
+                        line-height: var(--ctx-line-height-normal);
+                        font-weight: var(--ctx-font-weight-normal);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .datepicker-cell:not(.disabled):hover {
+                        background-color: var(--ctx-color-gray-4);
+                        border-radius: var(--ctx-border-radius-circle);
+                    }
+
+                    .datepicker-cell.prev:not(.disabled), 
+                    .datepicker-cell.next:not(.disabled) {
+                        color: var(--ctx-color-gray-5);
+                    }
+
+                    .datepicker-cell.day.focused {
+                        background-color: var(--ctx-color-gray-4);
+                        border-radius: var(--ctx-border-radius-circle);
+                    }
+
+                    .datepicker-cell.day.focused.selected,
+                    .datepicker-cell.day.selected {
+                        background-color: var(--ctx-color-gray-4);
+                        border-radius: var(--ctx-border-radius-circle);
+                        color: var(--ctx-color-info);
+                        font-weight: var(--ctx-font-weight-bold);
+                    }
+
+                    .datepicker-cell.day.next.selected, 
+                    .datepicker-cell.day.prev.selected {
+                        background-color: var(--ctx-color-gray-4);
+                        border-radius: var(--ctx-border-radius-circle);
+                        color: var(--ctx-color-gray-5);
+                        font-weight: var(--ctx-font-weight-bold);
+                    }
+                }
+            }
+        }
+    }
+}
