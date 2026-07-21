@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../node_modules/vanillajs-datepicker/js/i18n/locales/es.js"],
+  "sourcesContent": ["/**\n * Spanish translation for bootstrap-datepicker\n * Bruno Bonamin <bruno.bonamin@gmail.com>\n */\nexport default {\n  es: {\n    days: [\"Domingo\", \"Lunes\", \"Martes\", \"Miércoles\", \"Jueves\", \"Viernes\", \"Sábado\"],\n    daysShort: [\"Dom\", \"Lun\", \"Mar\", \"Mié\", \"Jue\", \"Vie\", \"Sáb\"],\n    daysMin: [\"Do\", \"Lu\", \"Ma\", \"Mi\", \"Ju\", \"Vi\", \"Sa\"],\n    months: [\"Enero\", \"Febrero\", \"Marzo\", \"Abril\", \"Mayo\", \"Junio\", \"Julio\", \"Agosto\", \"Septiembre\", \"Octubre\", \"Noviembre\", \"Diciembre\"],\n    monthsShort: [\"Ene\", \"Feb\", \"Mar\", \"Abr\", \"May\", \"Jun\", \"Jul\", \"Ago\", \"Sep\", \"Oct\", \"Nov\", \"Dic\"],\n    today: \"Hoy\",\n    monthsTitle: \"Meses\",\n    clear: \"Borrar\",\n    weekStart: 1,\n    format: \"dd/mm/yyyy\"\n  }\n};\n"],
+  "mappings": ";AAIA,IAAO,aAAQ;AAAA,EACb,IAAI;AAAA,IACF,MAAM,CAAC,WAAW,SAAS,UAAU,aAAa,UAAU,WAAW,QAAQ;AAAA,IAC/E,WAAW,CAAC,OAAO,OAAO,OAAO,OAAO,OAAO,OAAO,KAAK;AAAA,IAC3D,SAAS,CAAC,MAAM,MAAM,MAAM,MAAM,MAAM,MAAM,IAAI;AAAA,IAClD,QAAQ,CAAC,SAAS,WAAW,SAAS,SAAS,QAAQ,SAAS,SAAS,UAAU,cAAc,WAAW,aAAa,WAAW;AAAA,IACpI,aAAa,CAAC,OAAO,OAAO,OAAO,OAAO,OAAO,OAAO,OAAO,OAAO,OAAO,OAAO,OAAO,KAAK;AAAA,IAChG,OAAO;AAAA,IACP,aAAa;AAAA,IACb,OAAO;AAAA,IACP,WAAW;AAAA,IACX,QAAQ;AAAA,EACV;AACF;",
+  "names": []
+}

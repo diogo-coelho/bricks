@@ -138,15 +138,6 @@
       }
     }
 
-    .br-icon:not(.outline) svg path {
-      fill: var(--br-color-neutral-600) !important;
-    }
-
-    .br-icon.outline svg line,
-    polyline {
-      stroke: var(--br-color-neutral-600) !important;
-    }
-
     &:focus-visible,
     &:active,
     &:visited,
@@ -155,17 +146,6 @@
       background-color: transparent;
       outline: none;
       -webkit-appearance: none;
-    }
-
-    &:hover {
-      .br-icon:not(.outline) svg path {
-        fill: var(--br-color-primary-500) !important;
-      }
-
-      .br-icon.outline svg line,
-      polyline {
-        stroke: var(--br-color-primary-500) !important;
-      }
     }
   }
 
@@ -286,10 +266,5 @@
 .br-input {
   input.has-suffix {
     padding-right: 48px;
-  }
-
-  button:hover .br-icon * {
-    fill: var(--br-color-primary-500);
-    stroke: var(--br-color-primary-500) !important;
   }
 }

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../node_modules/vanillajs-datepicker/js/i18n/locales/pt-BR.js"],
+  "sourcesContent": ["/**\n * Brazilian translation for bootstrap-datepicker\n * Cauan Cabral <cauan@radig.com.br>\n */\nexport default {\n  'pt-BR': {\n    days: [\"Domingo\", \"Segunda\", \"Terça\", \"Quarta\", \"Quinta\", \"Sexta\", \"Sábado\"],\n    daysShort: [\"Dom\", \"Seg\", \"Ter\", \"Qua\", \"Qui\", \"Sex\", \"Sáb\"],\n    daysMin: [\"Do\", \"Se\", \"Te\", \"Qu\", \"Qu\", \"Se\", \"Sa\"],\n    months: [\"Janeiro\", \"Fevereiro\", \"Março\", \"Abril\", \"Maio\", \"Junho\", \"Julho\", \"Agosto\", \"Setembro\", \"Outubro\", \"Novembro\", \"Dezembro\"],\n    monthsShort: [\"Jan\", \"Fev\", \"Mar\", \"Abr\", \"Mai\", \"Jun\", \"Jul\", \"Ago\", \"Set\", \"Out\", \"Nov\", \"Dez\"],\n    today: \"Hoje\",\n    monthsTitle: \"Meses\",\n    clear: \"Limpar\",\n    format: \"dd/mm/yyyy\"\n  }\n};\n"],
+  "mappings": ";AAIA,IAAO,gBAAQ;AAAA,EACb,SAAS;AAAA,IACP,MAAM,CAAC,WAAW,WAAW,SAAS,UAAU,UAAU,SAAS,QAAQ;AAAA,IAC3E,WAAW,CAAC,OAAO,OAAO,OAAO,OAAO,OAAO,OAAO,KAAK;AAAA,IAC3D,SAAS,CAAC,MAAM,MAAM,MAAM,MAAM,MAAM,MAAM,IAAI;AAAA,IAClD,QAAQ,CAAC,WAAW,aAAa,SAAS,SAAS,QAAQ,SAAS,SAAS,UAAU,YAAY,WAAW,YAAY,UAAU;AAAA,IACpI,aAAa,CAAC,OAAO,OAAO,OAAO,OAAO,OAAO,OAAO,OAAO,OAAO,OAAO,OAAO,OAAO,KAAK;AAAA,IAChG,OAAO;AAAA,IACP,aAAa;AAAA,IACb,OAAO;AAAA,IACP,QAAQ;AAAA,EACV;AACF;",
+  "names": []
+}

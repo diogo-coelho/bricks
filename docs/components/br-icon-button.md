@@ -1,5 +1,6 @@
 <script setup>
 import BrIconButton from '../../src/components/button/BrIconButton.vue'
+import BrTooltip from '../../src/components/tooltip/BrTooltip.vue'
 </script>
 
 # BrIconButton <Badge type="warning" text="alpha" />
@@ -85,6 +86,20 @@ Caso queria deixar o botão com o formato arredondado, passe o atributo `rounded
 <BrIconButton class="mr-x-small" name="chatbubble-ellipses" size="small" rounded></BrIconButton>
 <BrIconButton class="mr-x-small" name="chatbubble-ellipses" size="medium" rounded></BrIconButton>
 <BrIconButton name="chatbubble-ellipses" size="large" rounded></BrIconButton>
+```
+
+### Botão de ícone com tooltip
+
+É possível encapsular um botão de ícone dentro de um elemento `BrTooltip` para exibir informação de contexto para o usuário.
+
+<BrTooltip content="configurações">
+	<BrIconButton name="settings" no-borders></BrIconButton>
+</BrTooltip>
+
+```jsx
+<BrTooltip content="configurações">
+	<BrIconButton name="settings" no-borders></BrIconButton>
+</BrTooltip>
 ```
 
 ## Eventos

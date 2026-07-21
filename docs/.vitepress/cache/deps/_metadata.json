@@ -1,11 +1,29 @@
 {
-  "hash": "344c27d0",
-  "browserHash": "57f9374b",
+  "hash": "bc83891a",
+  "browserHash": "9979c798",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "fc98b659",
+      "fileHash": "f3775e9a",
+      "needsInterop": false
+    },
+    "vanillajs-datepicker": {
+      "src": "../../../../node_modules/vanillajs-datepicker/js/main.js",
+      "file": "vanillajs-datepicker.js",
+      "fileHash": "6d46f643",
+      "needsInterop": false
+    },
+    "vanillajs-datepicker/locales/es": {
+      "src": "../../../../node_modules/vanillajs-datepicker/js/i18n/locales/es.js",
+      "file": "vanillajs-datepicker_locales_es.js",
+      "fileHash": "cc270d70",
+      "needsInterop": false
+    },
+    "vanillajs-datepicker/locales/pt-BR": {
+      "src": "../../../../node_modules/vanillajs-datepicker/js/i18n/locales/pt-BR.js",
+      "file": "vanillajs-datepicker_locales_pt-BR.js",
+      "fileHash": "3abb448c",
       "needsInterop": false
     }
   },
